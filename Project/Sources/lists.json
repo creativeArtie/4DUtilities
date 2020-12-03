@@ -1,0 +1,22 @@
+﻿{
+	"Gender": {
+		"editable": true,
+		"items": [
+			{
+				"text": "Male",
+				"ref": 1,
+				"editable": true
+			},
+			{
+				"text": "Female",
+				"ref": 2,
+				"editable": true
+			},
+			{
+				"text": "Non-binary",
+				"ref": 3,
+				"editable": true
+			}
+		]
+	}
+}

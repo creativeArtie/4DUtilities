@@ -1,0 +1,106 @@
+﻿{
+	"(Default Classes)": {},
+	"(Default Folder)": {
+		"groups": [
+			"(Default Classes)",
+			"(Default Forms)",
+			"(Default Project Methods)",
+			"(Default Tables)"
+		]
+	},
+	"(Default Forms)": {},
+	"(Default Project Methods)": {},
+	"(Default Tables)": {},
+	"(Folder)": {},
+	"Check": {
+		"classes": [
+			"CheckAge",
+			"CheckFilled",
+			"CheckNot",
+			"CheckReal",
+			"CheckWhen"
+		]
+	},
+	"core": {
+		"methods": [
+			"dao_findId",
+			"dao_findName"
+		],
+		"classes": [
+			"Property",
+			"TransferObject"
+		]
+	},
+	"doa": {
+		"groups": [
+			"core",
+			"doa tests",
+			"strategy"
+		],
+		"classes": [
+			"DataAccess"
+		]
+	},
+	"doa tests": {
+		"methods": [
+			"accessAndDeleteTest",
+			"accessAndEditTest",
+			"createTest",
+			"propertyTest"
+		]
+	},
+	"strategy": {
+		"classes": [
+			"DOAstrategy",
+			"KeyValueDOA",
+			"StorageDOA"
+		]
+	},
+	"test": {
+		"methods": [
+			"test_validator"
+		],
+		"forms": [
+			"Test"
+		]
+	},
+	"Use": {
+		"classes": [
+			"UseField",
+			"UseValue"
+		]
+	},
+	"utiles": {
+		"groups": [
+			"utils_tests"
+		],
+		"methods": [
+			"utils_countParams",
+			"utils_setObjectParam",
+			"utils_setParam"
+		]
+	},
+	"utils_tests": {
+		"methods": [
+			"test_setParam"
+		]
+	},
+	"validator": {
+		"groups": [
+			"Check",
+			"test",
+			"Use"
+		],
+		"classes": [
+			"Check",
+			"Use",
+			"Validator"
+		]
+	},
+	"trash": {
+		"groups": [
+			"(Default Folder)",
+			"(Folder)"
+		]
+	}
+}

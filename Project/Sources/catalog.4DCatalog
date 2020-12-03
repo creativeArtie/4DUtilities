@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE base SYSTEM "http://www.4d.com/dtd/2007/base.dtd" >
+<base name="Project" uuid="328C30C9000610489A5B36D59F114E78" collation_locale="en-ca">
+	<schema name="DEFAULT_SCHEMA"/>
+	<table name="(KeyValues)" uuid="622227F6CEE2BC499874EC59EE99393A" id="1" hide_in_REST="true">
+		<field name="ID" uuid="8AB2E1EC59E87547B3223B7A9B74E604" type="4" unique="true" autosequence="true" not_null="true" id="1"/>
+		<field name="Key" uuid="15C8D3CD49C2B9448FD4B99087D0CB43" type="10" limiting_length="80" unique="true" never_null="true" id="2"/>
+		<field name="Value" uuid="51147B6E58EB7A4CB5917383936E5D0D" type="10" limiting_length="255" never_null="true" id="3"/>
+		<field name="Type" uuid="5FC9684508EE3E449D5E663CA28FCD47" type="3" never_null="true" id="4"/>
+		<field name="Description" uuid="013FC4C1439F7843B61E1E3C15DF1BBB" type="10" limiting_length="255" never_null="true" id="5"/>
+		<primary_key field_name="ID" field_uuid="8AB2E1EC59E87547B3223B7A9B74E604"/>
+		<table_extra trashed="true">
+			<editor_table_info displayable_fields_count="6">
+				<color red="255" green="255" blue="255" alpha="0"/>
+				<coordinates left="40" top="40" width="120" height="167.33203125"/>
+			</editor_table_info>
+		</table_extra>
+	</table>
+	<index kind="regular" unique_keys="true" uuid="8F43D2E68906EB4E9DE6D31CB229B97D" type="1">
+		<field_ref uuid="15C8D3CD49C2B9448FD4B99087D0CB43" name="Key">
+			<table_ref uuid="622227F6CEE2BC499874EC59EE99393A" name="(KeyValues)"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="FD93CD10F203CF4E8B5ACCD0CD2FA7D3" type="7">
+		<field_ref uuid="8AB2E1EC59E87547B3223B7A9B74E604" name="ID">
+			<table_ref uuid="622227F6CEE2BC499874EC59EE99393A" name="(KeyValues)"/>
+		</field_ref>
+	</index>
+	<base_extra __stringCompHash="icu:63.1.0" __keywordBuildingHash="icu:63.1.0">
+		<journal_file journal_file_enabled="true"/>
+	</base_extra>
+</base>
