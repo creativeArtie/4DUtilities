@@ -15,15 +15,15 @@ Case of
 		End if 
 		$0:=$1
 	: (Count parameters:C259=3)
-		If (Value type:C1509($1)#Is undefined:K8:13)
+		If (Value type:C1509($1)=Is undefined:K8:13)
 			If ($2#Is variant:K8:33)
 				ASSERT:C1129(Value type:C1509($3)=$2;"Default"+$message)
 			End if 
 			$0:=$3
 		Else 
 			If ($2#Is variant:K8:33)
-				ASSERT:C1129(Value type:C1509($1=$2;"Parameter"+$message))
+				ASSERT:C1129(Value type:C1509($1)=$2;"Parameter"+$message))
 			End if 
-			$0:=$2
+			$0:=$1
 		End if 
 End case 

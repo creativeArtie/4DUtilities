@@ -82,7 +82,9 @@
 	},
 	"utils_tests": {
 		"methods": [
-			"test_setParam"
+			"test_setParam",
+			"utils_params1",
+			"utils_params2"
 		]
 	},
 	"validator": {
