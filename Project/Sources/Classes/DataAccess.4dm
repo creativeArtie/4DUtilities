@@ -1,5 +1,5 @@
 Class constructor
-	This:C1470.strategy:=utils_setObjectParam($1;cs:C1710.DOAstrategy;cs:C1710.KeyValueDOA.new())
+	This:C1470.strategy:=utils_setObjectParam($1;cs:C1710.DOAstrategy;cs:C1710.StorageDOA.new())
 	utils_countParams(2;Count parameters:C259)
 	
 Function createObject
@@ -51,11 +51,15 @@ Function getObject
 	var $2 : Integer
 	var $id : Integer
 	
-	$name:=utils_setParam(Lowercase:C14($1);Is text:K8:3)
-	$id:=utils_setParam(Lowercase:C14($2);Is variant:K8:33;"")
-	utils_countParams(2;Count parameters:C259)
+	$name:=Lowercase:C14(utils_setParam($1;Is text:K8:3);*)
+	// + many paramters
+	var $params : Collection
+	$params:=New collection:C1472
+	For ($idx;2;Count parameters:C259)
+		$params.push(${$idx})
+	End for 
 	
-	$0:=This:C1470.strategy.get($name;$id)
+	$0:=This:C1470.strategy.get($name;$params)
 	
 Function saveObject
 	ASSERT:C1129(OB Instance of:C1731($1;cs:C1710.TransferObject))  // object to save

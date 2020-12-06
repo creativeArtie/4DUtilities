@@ -1,12 +1,13 @@
 Class constructor
-	ASSERT:C1129(Value type:C1509($1)=Is text:K8:3)
-	ASSERT:C1129(Value type:C1509($2)=Is longint:K8:6)
 	var $1 : Text
 	var $2 : Integer
 	var $3 : Variant
+	This:C1470.key:=Lowercase:C14(utils_setParam($1;Is text:K8:3);*)
+	This:C1470.type:=utils_setParam($2;Is longint:K8:6)
+	
+	var $type : Integer
+	$type:=This:C1470.type
 	var $default : Variant
-	$id:=Lowercase:C14($1)
-	$type:=$2
 	Case of 
 		: ($type=Is boolean:K8:9)
 			$default:=False:C215
@@ -32,39 +33,26 @@ Class constructor
 		Else 
 			ASSERT:C1129(False:C215;"Unaccepted type:"+String:C10($type))
 	End case 
+	This:C1470.value:=utils_setParam($3;This:C1470.type;$default)
+	utils_countParams(3;Count parameters:C259)
 	
-	Case of 
-		: (Count parameters:C259=2)
-			This:C1470.key:=$id
-			This:C1470.type:=$type
-			This:C1470.value:=$default
-		: (Count parameters:C259=3)
-			This:C1470.key:=$id
-			This:C1470.type:=$type
-			ASSERT:C1129(Value type:C1509($3)=This:C1470.type)
-			This:C1470.value:=$3
-			This:C1470.old:=$3
-		Else 
-			ASSERT:C1129(False:C215;"Wrong number of params.")
-	End case 
+	If (Count parameters:C259=3)
+		This:C1470.old:=This:C1470.value
+	End if 
 	
 Function setValue
 	var $0 : cs:C1710.Property
 	var $1 : Variant
-	Case of 
-		: (Count parameters:C259=1)
-			ASSERT:C1129(Value type:C1509($1)=This:C1470.type)
-			This:C1470.value:=$1
-	End case 
+	var $value : Variant
+	$value:=utils_setParam($1;This:C1470.type)
+	utils_countParams(1;Count parameters:C259)
+	
 	$0:=cs:C1710.Property
 	
 Function getValue
 	var $0 : Variant
-	Case of 
-		: (Count parameters:C259=0)
-		Else 
-			ASSERT:C1129(False:C215;"Wrong number of params.")
-	End case 
+	utils_countParams(0;Count parameters:C259)
+	
 	Case of 
 		: (This:C1470.type=Is time:K8:8)
 			$0:=Time:C179(This:C1470.value)
@@ -74,33 +62,23 @@ Function getValue
 	
 Function getType
 	var $0 : Integer
-	Case of 
-		: (Count parameters:C259=0)
-		Else 
-			ASSERT:C1129(False:C215;"Wrong number of params.")
-	End case 
+	utils_countParams(0;Count parameters:C259)
 	$0:=This:C1470.type
 	
 Function hasEdited
 	var $0 : Boolean
+	
 	$0:=This:C1470.value=This:C1470.old
+	utils_countParams(0;Count parameters:C259)
 	
 Function canSave
 	var $1 : Variant
 	var $0 : Boolean
-	$0:=True:C214
-	Case of 
-		: (Count parameters:C259=1)
-			$0:=$1=This:C1470.old
-		Else 
-			ASSERT:C1129(False:C215;"Wrong number of params.")
-	End case 
+	
+	$0:=utils_setParam($1;Is variant:K8:33)=This:C1470.old
+	utils_countParams(1;Count parameters:C259)
 	
 Function getKey
 	var $0 : Text
-	Case of 
-		: (Count parameters:C259=0)
-		Else 
-			ASSERT:C1129(False:C215;"Wrong number of params.")
-	End case 
+	utils_countParams(0;Count parameters:C259)
 	$0:=This:C1470.key

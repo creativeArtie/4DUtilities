@@ -12,20 +12,11 @@ Function create
 	
 	var $1 : Text
 	var $name : Text
-	ASSERT:C1129(Value type:C1509($1)=Is text:K8:3)
 	
 	var $2 : Collection
 	var $params : Collection
-	ASSERT:C1129(Value type:C1509($2)=Is collection:K8:32)
-	
-	// Parameter Check
-	Case of 
-		: (Count parameters:C259=2)
-			$name:=Lowercase:C14($1)
-			$params:=$2
-		Else 
-			ASSERT:C1129(False:C215;"Wrong number of params.")
-	End case 
+	$name:=Lowercase:C14(utils_setParam($1;Is text:K8:3);*)
+	$params:=utils_setParam($2;Is collection:K8:32)
 	
 	var $prop : cs:C1710.Property
 	Case of 
@@ -63,7 +54,6 @@ Function create
 	
 	
 Function get
-	ASSERT:C1129(Value type:C1509($1)=Is text:K8:3)  // name
 	// return object
 	var $0 : cs:C1710.TransferObject
 	var $obj : cs:C1710.TransferObject
@@ -71,11 +61,8 @@ Function get
 	var $1 : Text
 	var $name : Text
 	
-	// parameter check
-	Case of 
-		: (Count parameters:C259=1)
-			$name:=Lowercase:C14($1;*)
-	End case 
+	$name:=Lowercase:C14(utils_setParam($1;Is text:K8:3);*)
+	utils_countParams(1;Count parameters:C259)
 	
 	var $ready : Boolean
 	$ready:=False:C215
@@ -104,21 +91,15 @@ Function get
 	End case 
 	
 Function delete
-	ASSERT:C1129(OB Instance of:C1731($1;cs:C1710.Property))
 	var $0 : Boolean
-	
 	var $1 : cs:C1710.Property
 	var $prop : cs:C1710.Property
 	
 	var $name : Text
 	
-	Case of 
-		: (Count parameters:C259=1)
-			$prop:=$1
-			$name:=Lowercase:C14($prop.name;*)
-		Else 
-			ASSERT:C1129(False:C215;"Wrong number of params.")
-	End case 
+	$prop:=utils_setObjectParam($1;cs:C1710.Property)
+	utils_countParams(1;Count parameters:C259)
+	$name:=Lowercase:C14($prop.key)
 	
 	var $idx : Integer
 	
@@ -142,11 +123,8 @@ Function delete
 	End use 
 	
 Function list
-	Case of 
-		: (Count parameters:C259=0)
-		Else 
-			ASSERT:C1129(False:C215;"Wrong number of params.")
-	End case 
+	utils_countParams(0;Count parameters:C259)
+	
 	var $list : Integer
 	$list:=Load list:C383("KeyValue_KeyList")
 	ARRAY TEXT:C222($array;0)
@@ -163,24 +141,14 @@ Function list
 	End for 
 	$0:=$collect
 Function save
-	ASSERT:C1129(OB Instance of:C1731($1;cs:C1710.TransferObject))  // object to save
-	
 	// true if a new saved object has been created
 	var $0 : Boolean
-	
 	var $1 : cs:C1710.Property
 	var $obj : cs:C1710.Property
-	
 	var $name : Text
 	
-	// parameter check
-	Case of 
-		: (Count parameters:C259=1)
-			$obj:=$1
-			$name:=$obj.key
-		Else 
-			ASSERT:C1129(False:C215;"Wrong number of params.")
-	End case 
+	$obj:=utils_setObjectParam($1;cs:C1710.Property)
+	$name:=Lowercase:C14($obj.key)
 	
 	var $entity : 4D:C1709.Entity
 	$entity:=ds:C1482.KeyValues.query("name=\""+$name+"\"")

@@ -14,21 +14,13 @@ Function create
 	
 	var $1 : Text
 	var $name : Text
-	ASSERT:C1129(Value type:C1509($1)=Is text:K8:3)
+	$name:=Lowercase:C14(utils_setParam($1;Is text:K8:3);*)
 	
 	var $2 : Collection
 	var $params : Collection
-	ASSERT:C1129(Value type:C1509($2)=Is collection:K8:32)
+	$params:=utils_setParam($param;Is collection:K8:32)
 	
-	
-	// Parameter Check
-	Case of 
-		: (Count parameters:C259=2)
-			$name:=Lowercase:C14($1)
-			$params:=$2
-		Else 
-			ASSERT:C1129(False:C215;"Wrong number of params.")
-	End case 
+	utils_countParams(2;Count parameters:C259)
 	
 	// Create an unique id + name
 	var $id : Integer
@@ -56,26 +48,23 @@ Function create
 	$0:=$obj
 	
 Function get
-	ASSERT:C1129(Value type:C1509($1)=Is text:K8:3)  // name
-	ASSERT:C1129(Value type:C1509($2)=Is longint:K8:6)  // object id
 	// return object
 	var $0 : cs:C1710.TransferObject
 	var $obj : cs:C1710.TransferObject
 	// doa name
 	var $1 : Text
 	var $name : Text
-	// object id
-	var $2 : Integer
-	var $id : Integer
+	$name:=Lowercase:C14(utils_setParam($1;Is text:K8:3);*)
 	
-	// parameter check
-	Case of 
-		: (Count parameters:C259=2)
-			$name:=Lowercase:C14($1;*)
-			$id:=$2
-		Else 
-			ASSERT:C1129(False:C215;"Wrong number of params.")
-	End case 
+	// object id
+	var $2 : Collection
+	var $params : Collection
+	var $id : Integer
+	$params:=utils_setParam($2;Is collection:K8:32)
+	$id:=utils_setParam($params[0];Is real:K8:4)
+	utils_countParams(2;Count parameters:C259)
+	
+	
 	// finds the stored object
 	ASSERT:C1129(OB Is defined:C1231(Storage:C1525.doa;$name))
 	$stored:=Storage:C1525.doa[$name].data.find("dao_findId";$id)
@@ -102,7 +91,6 @@ Function get
 	
 	$0:=$obj
 Function delete
-	ASSERT:C1129(OB Instance of:C1731($1;cs:C1710.TransferObject))
 	// Returns success or not
 	var $0 : Boolean
 	
@@ -115,14 +103,9 @@ Function delete
 	var $id : Integer
 	
 	// Parameter Check
-	Case of 
-		: (Count parameters:C259=1)
-			$obj:=$1
-			$name:=Lowercase:C14($obj.name;*)
-			$id:=$obj.id
-		Else 
-			ASSERT:C1129(False:C215;"Wrong number of params.")
-	End case 
+	$obj:=utils_setObjectParam($1;cs:C1710.TransferObject)
+	$name:=Lowercase:C14($obj.name;*)
+	utils_countParams(0;Count parameters:C259)
 	
 	// Check if the name exists
 	ASSERT:C1129(OB Is defined:C1231(Storage:C1525.doa;$name))
@@ -141,22 +124,16 @@ Function delete
 		End if 
 	End use 
 Function list
-	ASSERT:C1129(Value type:C1509($1)=Is text:K8:3)  // name
 	// The result
 	var $0 : Collection
 	var $list : Collection
 	$list:=New collection:C1472
+	
 	// name of the list
 	var $1 : Text
 	var $name : Text
-	
-	// parameter check
-	Case of 
-		: (Count parameters:C259=1)
-			$name:=Lowercase:C14($1;*)
-		Else 
-			ASSERT:C1129(False:C215;"Wrong number of params.")
-	End case 
+	$name:=Lowercase:C14(utils_setParam($1;Is text:K8:3);*)
+	utils_countParams(1;Count parameters:C259)
 	
 	// search for the name
 	ASSERT:C1129(OB Is defined:C1231(Storage:C1525.dao;$name))
@@ -176,16 +153,12 @@ Function save
 	
 	var $1 : cs:C1710.TransferObject
 	var $obj : cs:C1710.TransferObject
+	$obj:=utils_setObjectParam($1;cs:C1710.TransferObject)
+	utils_countParams(0;Count parameters:C259)
 	
-	// parameter check
-	Case of 
-		: (Count parameters:C259=1)
-			$obj:=$1
-			$name:=Lowercase:C14($obj.name;*)
-			$id:=$obj.id
-		Else 
-			ASSERT:C1129(False:C215;"Wrong number of params.")
-	End case 
+	$name:=Lowercase:C14($obj.name;*)
+	$id:=$obj.id
+	
 	var $saved : Object
 	
 	// search for the name object

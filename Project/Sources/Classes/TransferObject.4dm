@@ -7,12 +7,9 @@ Function hasProperty
 	var $1 : Text
 	var $name : Text
 	
-	Case of 
-		: (Count parameters:C259=1)
-			$key:=Lowercase:C14($1;*)
-		Else 
-			ASSERT:C1129(False:C215;"Wrong number of params.")
-	End case 
+	$key:=Lowercase:C14(utils_setParam($1;Is text:K8:3);*)
+	utils_countParams(1;Count parameters:C259)
+	
 	$0:=OB Is defined:C1231(This:C1470.data;$key)
 	
 Function getProperty
@@ -20,12 +17,7 @@ Function getProperty
 	var $0 : cs:C1710.TransferObject
 	var $1 : Text
 	var $key : Text
-	Case of 
-		: (Count parameters:C259=1)
-			$key:=Lowercase:C14($1;*)
-		Else 
-			ASSERT:C1129(False:C215;"Wrong number of params.")
-	End case 
+	$key:=Lowercase:C14(utils_setParam($1;Is text:K8:3);*)
 	ASSERT:C1129(OB Is defined:C1231(This:C1470.data;$key))
 	$0:=This:C1470.data[$key]
 	
@@ -45,7 +37,7 @@ Function addProperty
 		Else 
 			ASSERT:C1129(False:C215;"Wrong number of params.")
 	End case 
-	$key:=Lowercase:C14($1)
+	$key:=Lowercase:C14(utils_setParam($1;Is text:K8:3);*)
 	
 	ASSERT:C1129(Not:C34(OB Is defined:C1231(This:C1470;$key)))
 	This:C1470.data[$key]:=$prop
@@ -58,13 +50,10 @@ Function setPropertyValue
 	var $key : Text
 	var $2 : Variant
 	var $value : Variant
-	Case of 
-		: (Count parameters:C259=2)
-			$key:=Lowercase:C14($1)
-			$value:=$2
-		Else 
-			ASSERT:C1129(False:C215;"Wrong number of params.")
-	End case 
+	
+	$key:=Lowercase:C14(utils_setParam($1;Is text:K8:3);*)
+	$value:=utils_setParam($2;Is variant:K8:33)
+	utils_countParams(2;Count parameters:C259)
 	
 	ASSERT:C1129(OB Is defined:C1231(This:C1470.data;$key))
 	This:C1470.data[$key].setValue($value)
@@ -75,22 +64,16 @@ Function getPropertyValue
 	var $0 : Variant
 	var $1 : Text
 	var $key : Text
-	Case of 
-		: (Count parameters:C259=1)
-			$key:=Lowercase:C14($1)
-		Else 
-			ASSERT:C1129(False:C215;"Wrong number of params.")
-	End case 
+	
+	$key:=Lowercase:C14(utils_setParam($1;Is text:K8:3);*)
+	utils_countParams(1;Count parameters:C259)
+	
 	ASSERT:C1129(OB Is defined:C1231(This:C1470.data;$key))
 	$0:=This:C1470.data[$key].getValue()
 	
 Function getPropertyKeys
 	var $0 : Collection
-	Case of 
-		: (Count parameters:C259=0)
-		Else 
-			ASSERT:C1129(False:C215;"Wrong number of params.")
-	End case 
+	utils_countParams(0;Count parameters:C259)
 	
 	$0:=OB Keys:C1719(This:C1470.data)
 	
@@ -99,12 +82,7 @@ Function removeProperty
 	var $0 : cs:C1710.TransferObject
 	var $1 : Text
 	var $key : Text
-	Case of 
-		: (Count parameters:C259=1)
-			$key:=Lowercase:C14($key;*)
-		Else 
-			ASSERT:C1129(False:C215;"Wrong number of params.")
-	End case 
-	ASSERT:C1129(OB Is defined:C1231(This:C1470.data;$key))
+	$key:=Lowercase:C14(utils_setParam($1;Is text:K8:3);*)
+	utils_countParams(1;Count parameters:C259)
 	OB REMOVE:C1226(This:C1470.data;$key)
 	$0:=This:C1470
