@@ -1,9 +1,9 @@
 Class extends Check
 Class constructor
-	var $1 : Integer
-	var $min : Integer
-	var $2 : Integer
-	var $max : Integer
+	var $1 : Real
+	var $min : Real
+	var $2 : Real
+	var $max : Real
 	
 	This:C1470.min:=utils_setParam($1;Is real:K8:4;18)
 	This:C1470.max:=utils_setParam($2;Is real:K8:4;100)

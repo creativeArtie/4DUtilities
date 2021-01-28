@@ -103,7 +103,7 @@ Function delete
 	var $id : Integer
 	
 	// Parameter Check
-	$obj:=utils_setObjectParam($1;cs:C1710.TransferObject)
+	$obj:=utils_setParam($1;cs:C1710.TransferObject)
 	$name:=Lowercase:C14($obj.name;*)
 	utils_countParams(0;Count parameters:C259)
 	
@@ -153,7 +153,7 @@ Function save
 	
 	var $1 : cs:C1710.TransferObject
 	var $obj : cs:C1710.TransferObject
-	$obj:=utils_setObjectParam($1;cs:C1710.TransferObject)
+	$obj:=utils_setParam($1;cs:C1710.TransferObject)
 	utils_countParams(0;Count parameters:C259)
 	
 	$name:=Lowercase:C14($obj.name;*)

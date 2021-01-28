@@ -1,5 +1,5 @@
 Class constructor
-	This:C1470.strategy:=utils_setObjectParam($1;cs:C1710.DOAstrategy;cs:C1710.StorageDOA.new())
+	This:C1470.strategy:=utils_setParam($1;cs:C1710.DOAstrategy;cs:C1710.StorageDOA.new())
 	utils_countParams(2;Count parameters:C259)
 	
 Function createObject
@@ -27,7 +27,7 @@ Function deleteObject
 	var $1 : Object
 	var $obj : Object
 	
-	$obj:=utils_setObjectParam($1;cs:C1710.Object)
+	$obj:=utils_setParam($1;cs:C1710.Object)
 	utils_countParams(1;Count parameters:C259)
 	
 	$0:=This:C1470.strategy.delete($obj)

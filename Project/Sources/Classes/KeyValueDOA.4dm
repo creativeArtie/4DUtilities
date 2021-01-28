@@ -97,7 +97,7 @@ Function delete
 	
 	var $name : Text
 	
-	$prop:=utils_setObjectParam($1;cs:C1710.Property)
+	$prop:=utils_setParam($1;cs:C1710.Property)
 	utils_countParams(1;Count parameters:C259)
 	$name:=Lowercase:C14($prop.key)
 	
@@ -147,7 +147,7 @@ Function save
 	var $obj : cs:C1710.Property
 	var $name : Text
 	
-	$obj:=utils_setObjectParam($1;cs:C1710.Property)
+	$obj:=utils_setParam($1;cs:C1710.Property)
 	$name:=Lowercase:C14($obj.key)
 	
 	var $entity : 4D:C1709.Entity

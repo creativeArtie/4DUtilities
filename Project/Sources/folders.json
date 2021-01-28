@@ -1,4 +1,9 @@
 ﻿{
+	"(bitwise)": {
+		"classes": [
+			"Bitwise"
+		]
+	},
 	"(Default Classes)": {},
 	"(Default Folder)": {
 		"groups": [
@@ -49,6 +54,14 @@
 			"propertyTest"
 		]
 	},
+	"exception": {
+		"methods": [
+			"except_throw"
+		],
+		"classes": [
+			"Exception"
+		]
+	},
 	"strategy": {
 		"classes": [
 			"DOAstrategy",
@@ -66,6 +79,7 @@
 	},
 	"Use": {
 		"classes": [
+			"UseCombo",
 			"UseField",
 			"UseValue"
 		]
@@ -76,7 +90,9 @@
 		],
 		"methods": [
 			"utils_countParams",
-			"utils_setObjectParam",
+			"utils_getPointerDisplayName",
+			"utils_lazyAnd",
+			"utils_lazyOr",
 			"utils_setParam"
 		]
 	},
@@ -101,6 +117,7 @@
 	},
 	"trash": {
 		"groups": [
+			"(bitwise)",
 			"(Default Folder)",
 			"(Folder)"
 		]

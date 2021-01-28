@@ -130,10 +130,68 @@
 					"left": 11,
 					"width": 92,
 					"height": 15
+				},
+				"List Box": {
+					"type": "listbox",
+					"left": 239,
+					"top": 14,
+					"width": 346,
+					"height": 164,
+					"events": [
+						"onClick",
+						"onHeaderClick",
+						"onDataChange",
+						"onSelectionChange"
+					],
+					"listboxType": "collection",
+					"dataSource": "Form:C1466.validate.warnings",
+					"columns": [
+						{
+							"header": {
+								"text": "Warning Messages",
+								"name": "Header1"
+							},
+							"name": "Column1",
+							"dataSource": "This:C1470.message",
+							"footer": {
+								"name": "Footer1"
+							},
+							"width": 327
+						}
+					]
+				},
+				"List Box1": {
+					"type": "listbox",
+					"left": 239,
+					"top": 191,
+					"width": 346,
+					"height": 164,
+					"events": [
+						"onClick",
+						"onHeaderClick",
+						"onDataChange",
+						"onSelectionChange"
+					],
+					"listboxType": "collection",
+					"dataSource": "Form:C1466.validate.errors",
+					"columns": [
+						{
+							"header": {
+								"text": "Error Messages",
+								"name": "Header2"
+							},
+							"name": "Column2",
+							"dataSource": "This:C1470.message",
+							"footer": {
+								"name": "Footer2"
+							},
+							"width": 327
+						}
+					]
 				}
 			}
 		}
 	],
-	"geometryStamp": 35,
+	"geometryStamp": 39,
 	"method": "method.4dm"
 }

@@ -1,5 +1,6 @@
 Class extends Use
 Class constructor
+	
 	var $1 : Text
 	var $2 : Text
 	C_POINTER:C301($pointer)
@@ -9,7 +10,7 @@ Class constructor
 	utils_countParams(2;Count parameters:C259)
 	
 Function getValue
-	$0:=(This:C1470.pointer)->
+	$0:=(This:C1470.pointer)->{0}
 	
 Function setError
 	var $1 : Text

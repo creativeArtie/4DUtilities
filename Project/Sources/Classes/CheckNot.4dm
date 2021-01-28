@@ -5,7 +5,7 @@ Class constructor
 		: (Count parameters:C259=1)
 			This:C1470.check:=$1
 		Else 
-			ASSERT:C1129(False:C215;"Wrong number of parameters."
+			ASSERT:C1129(False:C215;"Wrong number of parameters.")
 	End case 
 Function setValue
 	var $1 : Variant
@@ -22,6 +22,7 @@ Function setValue
 	Super:C1706.setValue($1)
 	
 Function test
+	var $1 : Variant
 	Case of 
 		: (Count parameters:C259=1)
 			This:C1470.value:=$1
