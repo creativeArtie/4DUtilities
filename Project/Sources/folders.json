@@ -4,6 +4,16 @@
 			"Bitwise"
 		]
 	},
+	"(core)": {
+		"methods": [
+			"(dao_findId)",
+			"(dao_findName)"
+		],
+		"classes": [
+			"Property",
+			"TransferObject"
+		]
+	},
 	"(Default Classes)": {},
 	"(Default Folder)": {
 		"groups": [
@@ -16,7 +26,32 @@
 	"(Default Forms)": {},
 	"(Default Project Methods)": {},
 	"(Default Tables)": {},
+	"(doa tests)": {
+		"methods": [
+			"(accessAndDeleteTest)",
+			"(accessAndEditTest)",
+			"(createTest)",
+			"(propertyTest)"
+		]
+	},
+	"(doa)": {
+		"groups": [
+			"(core)",
+			"(doa tests)",
+			"(strategy)"
+		],
+		"classes": [
+			"DataAccess"
+		]
+	},
 	"(Folder)": {},
+	"(strategy)": {
+		"classes": [
+			"DOAstrategy",
+			"KeyValueDOA",
+			"StorageDOA"
+		]
+	},
 	"Check": {
 		"classes": [
 			"CheckAge",
@@ -26,47 +61,12 @@
 			"CheckWhen"
 		]
 	},
-	"core": {
-		"methods": [
-			"dao_findId",
-			"dao_findName"
-		],
-		"classes": [
-			"Property",
-			"TransferObject"
-		]
-	},
-	"doa": {
-		"groups": [
-			"core",
-			"doa tests",
-			"strategy"
-		],
-		"classes": [
-			"DataAccess"
-		]
-	},
-	"doa tests": {
-		"methods": [
-			"accessAndDeleteTest",
-			"accessAndEditTest",
-			"createTest",
-			"propertyTest"
-		]
-	},
 	"exception": {
 		"methods": [
 			"except_throw"
 		],
 		"classes": [
 			"Exception"
-		]
-	},
-	"strategy": {
-		"classes": [
-			"DOAstrategy",
-			"KeyValueDOA",
-			"StorageDOA"
 		]
 	},
 	"test": {
@@ -119,6 +119,7 @@
 		"groups": [
 			"(bitwise)",
 			"(Default Folder)",
+			"(doa)",
 			"(Folder)"
 		]
 	}
