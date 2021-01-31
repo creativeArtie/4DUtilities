@@ -188,10 +188,36 @@
 							"width": 327
 						}
 					]
+				},
+				"Check Box": {
+					"type": "checkbox",
+					"text": "No Issues",
+					"top": 190,
+					"left": 12,
+					"width": 214,
+					"height": 19,
+					"events": [
+						"onClick"
+					],
+					"focusable": false,
+					"dataSource": "Form:C1466.validate.hasNoIssues()"
+				},
+				"Check Box1": {
+					"type": "checkbox",
+					"text": "Can Ignore issues",
+					"top": 218,
+					"left": 12,
+					"width": 214,
+					"height": 19,
+					"events": [
+						"onClick"
+					],
+					"focusable": false,
+					"dataSource": "Form:C1466.validate.canIgnore()"
 				}
 			}
 		}
 	],
-	"geometryStamp": 39,
+	"geometryStamp": 53,
 	"method": "method.4dm"
 }

@@ -17,7 +17,7 @@ Function setWarning
 	var $1 : Text
 	$message:=utils_setParam($1;Is text:K8:3)
 	utils_countParams(1;Count parameters:C259)
-	This:C1470.message:=Replace string:C233($1;"$1";This:C1470.name))
+	This:C1470.message:=Replace string:C233($1;"$1";This:C1470.name)
 	
 Function setPass
 	This:C1470.message:=""

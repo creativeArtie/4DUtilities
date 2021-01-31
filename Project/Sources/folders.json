@@ -1,17 +1,9 @@
 ﻿{
-	"(bitwise)": {
-		"classes": [
-			"Bitwise"
-		]
-	},
+	"(bitwise)": {},
 	"(core)": {
 		"methods": [
 			"(dao_findId)",
 			"(dao_findName)"
-		],
-		"classes": [
-			"Property",
-			"TransferObject"
 		]
 	},
 	"(Default Classes)": {},
@@ -39,19 +31,10 @@
 			"(core)",
 			"(doa tests)",
 			"(strategy)"
-		],
-		"classes": [
-			"DataAccess"
 		]
 	},
 	"(Folder)": {},
-	"(strategy)": {
-		"classes": [
-			"DOAstrategy",
-			"KeyValueDOA",
-			"StorageDOA"
-		]
-	},
+	"(strategy)": {},
 	"Check": {
 		"classes": [
 			"CheckAge",
@@ -63,10 +46,15 @@
 	},
 	"exception": {
 		"methods": [
+			"except_manageThrowables",
+			"except_setupTable",
+			"except_startup",
+			"except_startup_thread",
 			"except_throw"
 		],
 		"classes": [
-			"Exception"
+			"Exception",
+			"Loggable"
 		]
 	},
 	"test": {
@@ -86,21 +74,37 @@
 	},
 	"utiles": {
 		"groups": [
-			"utils_tests"
+			"utils_lazy",
+			"utils_methodCaller",
+			"utils_params"
 		],
 		"methods": [
-			"utils_countParams",
+			"Compiler_Methods",
+			"Compiler_Variables",
 			"utils_getPointerDisplayName",
-			"utils_lazyAnd",
-			"utils_lazyOr",
-			"utils_setParam"
+			"utils_ut_exceptions"
 		]
 	},
-	"utils_tests": {
+	"utils_lazy": {
 		"methods": [
-			"test_setParam",
-			"utils_params1",
-			"utils_params2"
+			"ut_lazy",
+			"utils_lazyAnd",
+			"utils_lazyOr"
+		]
+	},
+	"utils_methodCaller": {
+		"methods": [
+			"test_ut_child",
+			"ut_getMethodCaller",
+			"utils_getMethodCaller"
+		]
+	},
+	"utils_params": {
+		"methods": [
+			"template_params",
+			"ut_params",
+			"utils_countParams",
+			"utils_setParam"
 		]
 	},
 	"validator": {

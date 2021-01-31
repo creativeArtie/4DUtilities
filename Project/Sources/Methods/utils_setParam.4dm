@@ -19,7 +19,7 @@ End case
 
 
 C_OBJECT:C1216($caller)
-$caller:=Get call chain:C1662[1]
+$caller:=utils_getMethodCaller(Current method name:C684)
 $message:=" type error at "+$caller.name+" line "+String:C10($caller.line)
 
 If (Value type:C1509($type)=Is object:K8:27)

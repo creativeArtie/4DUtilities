@@ -72,10 +72,10 @@ Function hasWarnings
 	$0:=This:C1470.warnings.length>0
 	
 Function hasNoIssues
-	$0:=Not:C34(This:C1470.hasErrors()) & Not:C34(This:C1470.hasWarnings()) & This:C1470.testRan
+	$0:=Not:C34(This:C1470.hasErrors()) & Not:C34(This:C1470.hasWarnings())
 	
 Function canIgnore
-	$0:=Not:C34(This:C1470.hasErrors()) & This:C1470.testRan
+	$0:=Not:C34(This:C1470.hasErrors())
 	
 Function getErrorCount
 	$0:=This:C1470.errors.length
