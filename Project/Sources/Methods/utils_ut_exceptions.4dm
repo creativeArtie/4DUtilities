@@ -1,4 +1,4 @@
-//%attributes = {}
+//%attributes = {"shared":true}
 C_OBJECT:C1216(ut_exceptions)
 ut_exceptions:=New object:C1471
 

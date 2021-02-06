@@ -1,5 +1,8 @@
-//%attributes = {}
+//%attributes = {"shared":true}
+
+C_TEXT:C284($1)
 ASSERT:C1129(Value type:C1509($1)=Is text:K8:3)
+
 
 C_COLLECTION:C1488($callers)
 C_OBJECT:C1216($caller)

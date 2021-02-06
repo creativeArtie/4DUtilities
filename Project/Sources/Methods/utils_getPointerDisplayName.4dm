@@ -1,4 +1,4 @@
-//%attributes = {}
+//%attributes = {"shared":true}
 
 $pointer:=utils_setParam($1;Is pointer:K8:14)
 utils_countParams(1;Count parameters:C259)

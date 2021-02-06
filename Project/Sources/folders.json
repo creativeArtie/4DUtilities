@@ -1,40 +1,4 @@
 ﻿{
-	"(bitwise)": {},
-	"(core)": {
-		"methods": [
-			"(dao_findId)",
-			"(dao_findName)"
-		]
-	},
-	"(Default Classes)": {},
-	"(Default Folder)": {
-		"groups": [
-			"(Default Classes)",
-			"(Default Forms)",
-			"(Default Project Methods)",
-			"(Default Tables)"
-		]
-	},
-	"(Default Forms)": {},
-	"(Default Project Methods)": {},
-	"(Default Tables)": {},
-	"(doa tests)": {
-		"methods": [
-			"(accessAndDeleteTest)",
-			"(accessAndEditTest)",
-			"(createTest)",
-			"(propertyTest)"
-		]
-	},
-	"(doa)": {
-		"groups": [
-			"(core)",
-			"(doa tests)",
-			"(strategy)"
-		]
-	},
-	"(Folder)": {},
-	"(strategy)": {},
 	"Check": {
 		"classes": [
 			"CheckAge",
@@ -45,16 +9,37 @@
 		]
 	},
 	"exception": {
+		"groups": [
+			"manager",
+			"templates"
+		],
+		"tables": [
+			"Exceptions"
+		],
 		"methods": [
-			"except_manageThrowables",
-			"except_setupTable",
-			"except_startup",
-			"except_startup_thread",
-			"except_throw"
+			"except_catch",
+			"except_throw",
+			"except_trapErrors",
+			"except_try"
 		],
 		"classes": [
-			"Exception",
-			"Loggable"
+			"Exception"
+		]
+	},
+	"manager": {
+		"methods": [
+			"except_addException",
+			"except_getExceptions",
+			"except_setupTable",
+			"except_startup",
+			"except_startup_thread"
+		]
+	},
+	"templates": {
+		"methods": [
+			"except_demo",
+			"except_listAllExceptions",
+			"except_runTest"
 		]
 	},
 	"test": {
@@ -79,9 +64,8 @@
 			"utils_params"
 		],
 		"methods": [
-			"Compiler_Methods",
-			"Compiler_Variables",
 			"utils_getPointerDisplayName",
+			"utils_saveToStorage",
 			"utils_ut_exceptions"
 		]
 	},
@@ -119,12 +103,5 @@
 			"Validator"
 		]
 	},
-	"trash": {
-		"groups": [
-			"(bitwise)",
-			"(Default Folder)",
-			"(doa)",
-			"(Folder)"
-		]
-	}
+	"trash": {}
 }

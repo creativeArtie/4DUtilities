@@ -1,2 +1,3 @@
 //%attributes = {"shared":true}
-AJ_Tools_UT_LaunchMainWindow
+//ALERT(AJ_Tools_UT_getInfo)
+//AJ_Tools_UT_LaunchMainWindow

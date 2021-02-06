@@ -1,4 +1,4 @@
-//%attributes = {"shared":true}
+//%attributes = {}
 Use (Storage:C1525)
 	Storage:C1525.utils_except:=New shared object:C1526
 End use 
@@ -24,10 +24,13 @@ While (True:C214)
 				For each ($throwable;Storage:C1525.utils_except.uncaught[$key])
 					$uncaught.push(cs:C1710.Exception.new(\
 						"Uncaught Exception in process: "+String:C10($key);\
+						Get call chain:C1662[0];Warning message:K38:2;\
 						$throwable))
 				End for each 
 				OB REMOVE:C1226(Storage:C1525.utils_except.uncaught;$key)
 				If (OB Is defined:C1231(Storage:C1525.utils_except;"logTable"))
+					C_POINTER:C301($tablePtr)
+					$tablePtr:=Table:C252(Storage:C1525.utils_except.logTable)
 					Storage:C1525.utils_except.logTable.fromCollection($uncaught).save()
 				End if 
 			End if 

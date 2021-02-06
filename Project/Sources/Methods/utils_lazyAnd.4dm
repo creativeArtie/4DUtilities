@@ -1,4 +1,4 @@
-//%attributes = {}
+//%attributes = {"shared":true}
 
 $0:=True:C214
 For ($i;1;Count parameters:C259)

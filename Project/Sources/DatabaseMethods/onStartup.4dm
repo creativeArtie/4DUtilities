@@ -1,1 +1,2 @@
+except_setupTable(ds:C1482.Exceptions)
 except_startup_thread

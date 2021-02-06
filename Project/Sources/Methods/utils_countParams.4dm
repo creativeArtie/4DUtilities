@@ -1,4 +1,4 @@
-//%attributes = {}
+//%attributes = {"shared":true}
 // assert the paramters
 
 $atMost:=utils_setParam($1;Is real:K8:4)

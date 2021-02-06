@@ -1,4 +1,4 @@
-//%attributes = {}
+//%attributes = {"shared":true}
 // Sets the parameters
 C_VARIANT:C1683($0;$result)  // output
 C_VARIANT:C1683($1;$actual)  // actual parameter
@@ -31,7 +31,7 @@ End if
 Case of 
 	: (Count parameters:C259=2)
 		If ($isObject)
-			ASSERT:C1129(OB Instance of:C1731($type;$actual);"Parameter"+$message)
+			ASSERT:C1129(OB Instance of:C1731($actual;$type);"Parameter"+$message)
 			
 		Else 
 			If ($type#Is variant:K8:33)
