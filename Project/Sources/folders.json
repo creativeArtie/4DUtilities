@@ -30,7 +30,6 @@
 		"methods": [
 			"except_addException",
 			"except_getExceptions",
-			"except_setupTable",
 			"except_startup",
 			"except_startup_thread"
 		]

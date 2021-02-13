@@ -1,11 +1,9 @@
 //%attributes = {}
 C_OBJECT:C1216($signal)
-$signal:=New signal:C1641("Except Demo")
+ALL RECORDS:C47([Exceptions:2])
+DELETE RECORD:C58([Exceptions:2])
 
-CALL WORKER:C1389("Exception Demo";"except_runTest";$signal)
-
-While ($signal.wait())
-End while 
+except_runTest
 TRACE:C157
 
 except_listAllExceptions
