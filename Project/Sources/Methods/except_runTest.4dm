@@ -1,9 +1,9 @@
 //%attributes = {}
-C_OBJECT:C1216($randomer)
-C_OBJECT:C1216($exception)
-C_REAL:C285($pass)
+var $randomer : Object
+var $exception : cs:C1710.Exception
 
 TRACE:C157
+var $pass : Integer
 If (except_try(Formula:C1597($pass:=2)))
 	ALERT:C41("Passed")
 Else 
@@ -20,7 +20,7 @@ $randomer:=$randomer.error/5230
 except_trapErrors
 $randomer:=$randomer.trapped/5
 
-utils_setParam("";Is real:K8:4)
+utils_setParam(""; Is real:K8:4)
 
 While (except_catch(->$exception))
 	ALERT:C41($exception.message)

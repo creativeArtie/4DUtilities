@@ -7,32 +7,27 @@ Use (Storage:C1525.utils_except)
 	Storage:C1525.utils_except.uncaught:=New shared object:C1526
 End use 
 
-C_COLLECTION:C1488($uncaught)
+var $uncaught : Collection
 
-C_OBJECT:C1216($caller)
+var $caller : Object
 $caller:=utils_getMethodCaller(Current method name:C684)
 
 While (True:C214)
 	Use (Storage:C1525.utils_except.uncaught)
-		For each ($key;OB Keys:C1719(Storage:C1525.utils_except.uncaught))
-			C_TEXT:C284($key)
-			C_LONGINT:C283($id)
+		For each ($key; OB Keys:C1719(Storage:C1525.utils_except.uncaught))
+			var $key : Text
+			var $id : Integer
+			
 			$id:=Num:C11($key)
 			If (Process state:C330($id)=Aborted:K13:1)
 				// Add error to 
-				$uncaught:=New collection:C1472
-				For each ($throwable;Storage:C1525.utils_except.uncaught[$key])
-					$uncaught.push(cs:C1710.Exception.new(\
-						"Uncaught Exception in process: "+String:C10($key);\
-						Get call chain:C1662[0];Warning message:K38:2;\
+				For each ($throwable; Storage:C1525.utils_except.uncaught[$key])
+					except_addException(cs:C1710.Exception.new(\
+						"Uncaught Exception in process: "+String:C10($key); \
+						Get call chain:C1662[0]; Warning message:K38:2; \
 						$throwable))
 				End for each 
-				OB REMOVE:C1226(Storage:C1525.utils_except.uncaught;$key)
-				If (OB Is defined:C1231(Storage:C1525.utils_except;"logTable"))
-					C_POINTER:C301($tablePtr)
-					$tablePtr:=Table:C252(Storage:C1525.utils_except.logTable)
-					Storage:C1525.utils_except.logTable.fromCollection($uncaught).save()
-				End if 
+				OB REMOVE:C1226(Storage:C1525.utils_except.uncaught; $key)
 			End if 
 		End for each 
 	End use 

@@ -3,6 +3,7 @@
 		"classes": [
 			"CheckAge",
 			"CheckFilled",
+			"CheckFormat",
 			"CheckNot",
 			"CheckReal",
 			"CheckWhen"
@@ -53,6 +54,7 @@
 		"classes": [
 			"UseCombo",
 			"UseField",
+			"UsePhoneField",
 			"UseValue"
 		]
 	},
@@ -95,6 +97,9 @@
 			"Check",
 			"test",
 			"Use"
+		],
+		"tables": [
+			"PhoneFormats"
 		],
 		"classes": [
 			"Check",

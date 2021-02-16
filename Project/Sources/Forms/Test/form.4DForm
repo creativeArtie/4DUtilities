@@ -95,7 +95,11 @@
 					"left": 114,
 					"top": 129,
 					"width": 112,
-					"height": 16
+					"height": 16,
+					"method": "ObjectMethods/i_phone.4dm",
+					"events": [
+						"onDataChange"
+					]
 				},
 				"l_company2": {
 					"type": "text",
@@ -219,5 +223,12 @@
 		}
 	],
 	"geometryStamp": 53,
-	"method": "method.4dm"
+	"method": "method.4dm",
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {}
+		}
+	}
 }

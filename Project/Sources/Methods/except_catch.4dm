@@ -1,15 +1,14 @@
 //%attributes = {}
-C_POINTER:C301($1;$export)
-C_BOOLEAN:C305($noErrors)
-C_COLLECTION:C1488($collection)
+#DECLARE($export : Pointer)->$hasErrors : Boolean
 
+var $collection : Collection
 $collection:=except_getExceptions
 
 If ($collection.length>0)
 	Use ($collection)
-		$1->:=$collection.pop()
+		$export->:=$collection.pop()
 	End use 
-	$0:=True:C214
+	$hasErrors:=True:C214
 Else 
-	$0:=False:C215
+	$hasErrors:=False:C215
 End if 

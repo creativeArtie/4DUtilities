@@ -1,20 +1,21 @@
 //%attributes = {}
-C_OBJECT:C1216($1;$forumla;$exception)
-$forumla:=utils_setParam($1;4D:C1709.Function;Formula:C1597($exception:=Null:C1517))
+#DECLARE($forumla : 4D:C1709.Function)->$result : Boolean
+$forumla:=utils_setParam($1; 4D:C1709.Function; Formula:C1597($exception:=Null:C1517))
 
-C_COLLECTION:C1488($params)
+var $params : Collection
 $params:=New collection:C1472
-For ($i;2;Count parameters:C259)
+For ($i; 2; Count parameters:C259)
 	$params.push(${$i})
 End for 
 
+var $old : Text
 $old:=Method called on error:C704
 except_trapErrors
 
-C_REAL:C285($size)
+var $size : Integer
 $size:=except_getExceptions.length
-$forumla.apply(Null:C1517;$params)
+$forumla.apply(Null:C1517; $params)
 
-$0:=$size=except_getExceptions.length
+$result:=$size=except_getExceptions.length
 
 ON ERR CALL:C155($old)
