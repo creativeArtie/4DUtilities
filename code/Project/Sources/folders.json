@@ -96,11 +96,15 @@
 	"utils_params": {
 		"methods": [
 			"template_params",
-			"ut_getOptValue",
-			"ut_params",
+			"ut_countParams",
+			"ut_getOptValueClass",
+			"ut_getOptValueDefault",
+			"ut_getOptValueFunction",
+			"ut_getOptValueType",
 			"utils_countParams",
-			"utils_getOptValue",
-			"utils_setParam"
+			"utils_getCheckFunc_",
+			"utils_getOptionValue",
+			"utils_getRequireValue"
 		]
 	},
 	"validator": {

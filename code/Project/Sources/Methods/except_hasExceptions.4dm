@@ -7,7 +7,7 @@ $result:=$exceptions.length#0
 
 If ($unitTest#Null:C1517)
 	$unitTest.given:="Missing exception check"
-	$unitTest.should:="No exception should be found"
+	$unitTest.should:="return no exception"
 	$unitTest.expected:=False:C215
 	$unitTest.actual:=$result
 	$unitTest.assert()

@@ -21,7 +21,7 @@ $randomer:=$randomer.error/5230
 except_trapErrors
 $randomer:=$randomer.trapped/5
 
-utils_setParam(""; Is real:K8:4)
+utils_getRequireValue(""; Is real:K8:4)
 
 While (except_catch(->$exception))
 	ALERT:C41($exception.message)

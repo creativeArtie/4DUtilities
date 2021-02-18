@@ -7,7 +7,7 @@ Class constructor
 			This:C1470.function:=$1
 			This:C1470.check:=$2
 		Else 
-			ASSERT:C1129(False:C215;"Missing parameters.")
+			ASSERT:C1129(False:C215; "Missing parameters.")
 	End case 
 	
 Function setValue
@@ -17,7 +17,7 @@ Function setValue
 		: (Count parameters:C259=1)
 			This:C1470.value:=$1
 		Else 
-			ASSERT:C1129(False:C215;"Not enough parameters.")
+			ASSERT:C1129(False:C215; "Not enough parameters.")
 	End case 
 	This:C1470.check.setValue($1)
 	
@@ -28,5 +28,5 @@ Function test
 		$0:=True:C214
 	End if 
 	
-Function getMessage
-	$0:=This:C1470.check.getMessage()
+Function getMessageTemplate
+	$0:=This:C1470.check.getMessageTemplate()

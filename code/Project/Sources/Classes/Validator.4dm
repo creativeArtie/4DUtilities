@@ -9,12 +9,12 @@ Function addMandatory
 	var $2 : cs:C1710.Use
 	Case of 
 		: (Count parameters:C259=2)
-			ASSERT:C1129(OB Instance of:C1731($1;cs:C1710.Check))
-			ASSERT:C1129(OB Instance of:C1731($2;cs:C1710.Use))
+			ASSERT:C1129(OB Instance of:C1731($1; cs:C1710.Check))
+			ASSERT:C1129(OB Instance of:C1731($2; cs:C1710.Use))
 			$1.setValue($2)
 			This:C1470.mandatory.push($1)
 		Else 
-			ASSERT:C1129(False:C215;"Wrong number of parameters.")
+			ASSERT:C1129(False:C215; "Wrong number of parameters.")
 	End case 
 	
 Function addOptional
@@ -22,19 +22,19 @@ Function addOptional
 	var $2 : cs:C1710.Use
 	Case of 
 		: (Count parameters:C259=2)
-			ASSERT:C1129(OB Instance of:C1731($1;cs:C1710.Check))
-			ASSERT:C1129(OB Instance of:C1731($2;cs:C1710.Use))
+			ASSERT:C1129(OB Instance of:C1731($1; cs:C1710.Check))
+			ASSERT:C1129(OB Instance of:C1731($2; cs:C1710.Use))
 			$1.setValue($2)
 			This:C1470.optional.push($1)
 		Else 
-			ASSERT:C1129(False:C215;"Wrong number of parameters.")
+			ASSERT:C1129(False:C215; "Wrong number of parameters.")
 	End case 
 	
 Function runChecks
 	Case of 
 		: (Count parameters:C259=0)
 		Else 
-			ASSERT:C1129(False:C215;"Wrong number of parameters.")
+			ASSERT:C1129(False:C215; "Wrong number of parameters.")
 	End case 
 	
 	var $result : Boolean
@@ -42,25 +42,25 @@ Function runChecks
 	var $value : cs:C1710.Use
 	
 	This:C1470.errors:=New collection:C1472
-	For each ($ptr;This:C1470.mandatory)
+	For each ($ptr; This:C1470.mandatory)
 		$result:=$ptr.test()
 		$value:=$ptr.value
 		If ($result)
 			$value.setPass()
 		Else 
-			$value.setError($ptr.getMessage())
+			$value.setError($ptr.getMessageTemplate())
 			This:C1470.errors.push($value)
 		End if 
 	End for each 
 	
 	This:C1470.warnings:=New collection:C1472
-	For each ($ptr;This:C1470.optional)
+	For each ($ptr; This:C1470.optional)
 		$result:=$ptr.test()
 		$value:=$ptr.value
 		If ($ptr.test())
 			$value.setPass()
 		Else 
-			$value.setWarning($ptr.getMessage())
+			$value.setWarning($ptr.getMessageTemplate())
 			This:C1470.warnings.push($value)
 		End if 
 	End for each 

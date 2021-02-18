@@ -5,11 +5,11 @@ Class constructor
 	var $3 : Boolean
 	var $4 : Boolean
 	
-	This:C1470.min:=utils_setParam($1;Is real:K8:4;0)
-	This:C1470.max:=utils_setParam($2;Is real:K8:4;100)
-	This:C1470.minClosed:=utils_setParam($3;Is boolean:K8:9;True:C214)
-	This:C1470.maxClosed:=utils_setParam($4;Is boolean:K8:9;True:C214)
-	utils_countParams(4;Count parameters:C259)
+	This:C1470.min:=utils_getRequireValue($1; 0; Is real:K8:4)
+	This:C1470.max:=utils_getRequireValue($2; 100; Is real:K8:4)
+	This:C1470.minClosed:=utils_getOptionValue($3; Is boolean:K8:9; True:C214)
+	This:C1470.maxClosed:=utils_getOptionValue($4; Is boolean:K8:9; True:C214)
+	utils_countParams(4; Count parameters:C259)
 Function test
 	var $value : Variant
 	var $isMin : Boolean
@@ -28,5 +28,5 @@ Function test
 	End if 
 	
 	$0:=$isMin & $isMax
-Function getMessage
+Function getMessageTemplate
 	$0:="$1 is not within "+String:C10($isMin)+" and "+String:C10($isMax)

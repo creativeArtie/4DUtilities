@@ -6,7 +6,7 @@ Class constructor
 	C_POINTER:C301($pointer)
 	$pointer:=OBJECT Get pointer:C1124(Object named:K67:5; $1)
 	Super:C1705(utils_getPointerDisplayName($pointer))
-	This:C1470.pointer:=utils_setParam($pointer; Is pointer:K8:14)
+	This:C1470.pointer:=utils_getRequireValue($pointer; Is pointer:K8:14)
 	utils_countParams(2; Count parameters:C259)
 	
 Function getValue

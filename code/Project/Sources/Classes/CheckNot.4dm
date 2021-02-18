@@ -5,7 +5,7 @@ Class constructor
 		: (Count parameters:C259=1)
 			This:C1470.check:=$1
 		Else 
-			ASSERT:C1129(False:C215;"Wrong number of parameters.")
+			ASSERT:C1129(False:C215; "Wrong number of parameters.")
 	End case 
 Function setValue
 	var $1 : Variant
@@ -15,7 +15,7 @@ Function setValue
 		: (Count parameters:C259=1)
 			This:C1470.value:=$1
 		Else 
-			ASSERT:C1129(False:C215;"Not enough parameters.")
+			ASSERT:C1129(False:C215; "Not enough parameters.")
 	End case 
 	This:C1470.check.setValue($1)
 	var $1 : Variant
@@ -27,10 +27,10 @@ Function test
 		: (Count parameters:C259=1)
 			This:C1470.value:=$1
 		Else 
-			ASSERT:C1129(False:C215;"Not enough parameters.")
+			ASSERT:C1129(False:C215; "Not enough parameters.")
 	End case 
 	$0:=Not:C34(This:C1470.check())
 	
-Function getMessage
-	$0:=Replace string:C233($checker.getMessage();"not ";"";1)
+Function getMessageTemplate
+	$0:=Replace string:C233($checker.getMessageTemplate(); "not "; ""; 1)
 	

@@ -6,12 +6,12 @@ var $basic : Object
 var $use : Object
 
 // required
-$text1:=utils_setParam($1; Is text:K8:3)
-$int1:=utils_setParam($2; Is integer:K8:5)
-$use:=utils_setParam($3; cs:C1710.Use)
+$text1:=utils_getRequireValue($1; Is text:K8:3)
+$int1:=utils_getRequireValue($2; Is integer:K8:5)
+$use:=utils_getRequireValue($3; cs:C1710.Use)
 
 // optional
-$basic:=utils_setParam($4; Is object:K8:27; New object:C1471("prop"; "value"))
-$text2:=utils_setParam($5; Is text:K8:3; "Default Text")
+$basic:=utils_getOptionValue($4; New object:C1471("prop"; "value"); Is object:K8:27)
+$text2:=utils_getOptionValue($5; "Default Text"; Is text:K8:3)
 
 utils_countParams(5; Count parameters:C259)  // max parameters

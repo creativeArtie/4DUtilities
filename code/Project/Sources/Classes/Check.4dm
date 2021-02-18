@@ -1,7 +1,7 @@
 // Runs the test and gets the template message
 Function test
 	ASSERT:C1129(False:C215; "Needs implementation.")
-Function getMessage
+Function getMessageTemplate
 	ASSERT:C1129(False:C215; "Needs implementation.")
 Function setValue
 	var $1 : Variant

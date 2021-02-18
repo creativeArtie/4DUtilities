@@ -1,9 +1,9 @@
 //%attributes = {}
 #DECLARE($value : Variant; $key : Text; $storage : Object)
 
-$value:=utils_setParam($1; Is variant:K8:33)
-$key:=utils_setParam($2; Is text:K8:3; "")
-$storage:=utils_setParam($3; Is object:K8:27; Storage:C1525)
+$value:=utils_getRequireValue($1; Is variant:K8:33)
+$key:=utils_getOptionValue($2; ""; Is text:K8:3)
+$storage:=utils_getOptionValue($3; Storage:C1525; Is object:K8:27)
 
 
 Use ($storage)

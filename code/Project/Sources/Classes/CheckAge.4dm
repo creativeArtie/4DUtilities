@@ -5,9 +5,9 @@ Class constructor
 	var $2 : Real
 	var $max : Real
 	
-	This:C1470.min:=utils_setParam($1;Is real:K8:4;18)
-	This:C1470.max:=utils_setParam($2;Is real:K8:4;100)
-	utils_countParams(2;Count parameters:C259)
+	This:C1470.min:=utils_getOptionValue($1; 18; Is real:K8:4)
+	This:C1470.max:=utils_getOptionValue($2; 100; Is real:K8:4)
+	utils_countParams(2; Count parameters:C259)
 	
 Function test
 	var $value : Variant
@@ -20,6 +20,6 @@ Function test
 	End case 
 	$0:=(This:C1470.min<=$age) & ($age<=This:C1470.max)
 	
-Function getMessage
+Function getMessageTemplate
 	$0:="$1 is not within the ages of "+String:C10(This:C1470.min)+\
 		" and "+String:C10(This:C1470.max)

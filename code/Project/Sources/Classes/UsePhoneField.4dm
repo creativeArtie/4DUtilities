@@ -1,6 +1,6 @@
 Class extends UseField
 Class constructor($name : Text; $countryCode : Text)
-	Super:C1705(utils_setParam($1; Is text:K8:3))
+	Super:C1705(utils_getRequireValue($1; Is text:K8:3))
 	This:C1470.digits:=""
 	This:C1470.countryCode:=Uppercase:C13($countryCode)
 	This:C1470.text:=""
@@ -71,7 +71,7 @@ Function formatPhone($token : Text)->$answer : Text
 		$trying:=True:C214
 		
 		// assumes phone number include international format
-		If (Match regex:C1019([PhoneFormats:1]matchFormat:6; $copy)
+		If (Match regex:C1019([PhoneFormats:1]matchFormat:6; $copy))
 			$answer:=String:C10(Num:C11($copy); [PhoneFormats:1]outputFormat:7)
 			This:C1470.findMatch:=True:C214
 			$trying:=False:C215
@@ -81,7 +81,7 @@ Function formatPhone($token : Text)->$answer : Text
 		
 		// assumes the phone number has no calling code
 		If ($trying & (This:C1470.countryCode=[PhoneFormats:1]countryCode:3))
-			If (Match regex:C1019([PhoneFormats:1]matchFormat:6; [PhoneFormats:1]callingCode:4+$copy)
+			If (Match regex:C1019([PhoneFormats:1]matchFormat:6; [PhoneFormats:1]callingCode:4+$copy))
 				$answer:=String:C10(Num:C11([PhoneFormats:1]callingCode:4+$copy); [PhoneFormats:1]outputFormat:7)
 				This:C1470.findMatch:=True:C214
 				LAST RECORD:C200([PhoneFormats:1])
@@ -91,8 +91,8 @@ Function formatPhone($token : Text)->$answer : Text
 		End if 
 		
 		// if the trunk code is not equal to the calling code, strip and retry
-		If (([PhoneFormats:1]trunkCode:5="") & ([PhoneFormats:1]trunkCode:5#[PhoneFormats:1]callingCode:4)
-			If (Match regex:C1019([PhoneFormats:1]trunkCode:5+".*"; $copy)
+		If (([PhoneFormats:1]trunkCode:5="") & ([PhoneFormats:1]trunkCode:5#[PhoneFormats:1]callingCode:4))
+			If (Match regex:C1019([PhoneFormats:1]trunkCode:5+".*"; $copy))
 				$copy:=Substring:C12($copy; Length:C16([PhoneFormats:1]trunkCode:5))
 				$trying:=False:C215
 			End if 

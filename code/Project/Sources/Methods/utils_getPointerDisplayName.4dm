@@ -1,6 +1,6 @@
 //%attributes = {"shared":true}
 #DECLARE($pointer : Pointer)->$result : Text
-$pointer:=utils_setParam($1; Is pointer:K8:14)
+$pointer:=utils_getRequireValue($1; Is pointer:K8:14)
 utils_countParams(1; Count parameters:C259)
 var $name : Text
 var $tableNum : Integer

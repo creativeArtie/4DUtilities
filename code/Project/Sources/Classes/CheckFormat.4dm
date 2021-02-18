@@ -1,7 +1,7 @@
 Class extends Check
 Class constructor($filled : Boolean)
 	Super:C1705()
-	This:C1470.filled:=utils_setParam($filled; Is boolean:K8:9; False:C215)
+	This:C1470.filled:=utils_getOptionValue($filled; False:C215; Is boolean:K8:9)
 	This:C1470.message:=""
 	utils_countParams(1; Count parameters:C259)
 Function test->$result : Boolean
@@ -27,5 +27,5 @@ Function test->$result : Boolean
 		End if 
 	End if 
 	
-Function getMessage()->$template : Text
+Function getMessageTemplate()->$template : Text
 	$template:=This:C1470.message

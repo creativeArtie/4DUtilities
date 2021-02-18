@@ -13,5 +13,5 @@ Function test
 			$0:=$value#Null:C1517
 	End case 
 	
-Function getMessage
+Function getMessageTemplate
 	$0:="$1 is not filled."

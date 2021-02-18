@@ -474,8 +474,8 @@
 
 <body>
   
-  <span class="badge badge-success">Total : 15</span>
-  <span class="badge badge-success">Pass : 15</span>
+  <span class="badge badge-success">Total : 3</span>
+  <span class="badge badge-success">Pass : 3</span>
   <span class="badge badge-danger">Fail : 0</span>
   
   
@@ -486,13 +486,13 @@
       <div class="card-header text-white bg-success" id="category0_header"
         data-toggle="collapse" data-target="#category0_body" aria-expanded="true"
         aria-controls="category0_body">
-        <span style="font-size:21pt"><b>Utilities</b></span>
+        <span style="font-size:21pt"><b>Utlities</b></span>
       </div>
       <div id="category0_body" class="collapse show" aria-labelledby="category0_header">
         <div class="card-body">
 
-          <span class="badge badge-success">Total : 15</span>
-          <span class="badge badge-success">Pass : 15</span>
+          <span class="badge badge-success">Total : 3</span>
+          <span class="badge badge-success">Pass : 3</span>
           <span class="badge badge-danger">Fail : 0</span>
 
           
@@ -503,9 +503,9 @@
               <div class="card-header text-white bg-success" id="description0_0_header"
                 data-toggle="collapse" data-target="#description0_0_body" aria-expanded="true"
                 aria-controls="description0_0_body">
-                <span style="font-size:17pt">utils_getOptValues</span>
+                <span style="font-size:17pt">utils_countParams</span>
                 <button onClick="methodButton_cb(event)"
-                  data-methodname="ut_getOptValue"
+                  data-methodname="ut_params"
                   class="methodButton btn btn-primary">Open Method</button>
               </div>
               <div id="description0_0_body" class="collapse show"
@@ -513,9 +513,9 @@
                 <div class="card-body">
 
                   <span class="badge badge-success">Total :
-                    15</span>
+                    3</span>
                   <span class="badge badge-success">Pass :
-                    15</span>
+                    3</span>
                   <span class="badge badge-danger">Fail :
                     0</span>
 
@@ -529,17 +529,17 @@
                       <div class="card-header text-white bg-success" id="test0_0_0_header"
                         data-toggle="collapse" data-target="#test0_0_0_body" aria-expanded="true"
                         aria-controls="test0_0_0_body">
-                        #1 ok - Given no checker, use default: should 6
+                        #1 ok - Given utils_countParams(2;Count parameters): should No errors
                       </div>
                       <div id="test0_0_0_body" class="collapse hide"
                         aria-labelledby="test0_0_0_header">
                         <div class="card-body">
                           <div class="text-success">Expected : <br />
-                            <div class="expected">6</div>
+                            <div class="expected">False</div>
                           </div>
                           <br />
                           <div class="text-success"> Actual : <br />
-                            <div class="actual success">6</div>
+                            <div class="actual success">False</div>
                           </div>
                         </div>
                       </div>
@@ -555,17 +555,17 @@
                       <div class="card-header text-white bg-success" id="test0_0_1_header"
                         data-toggle="collapse" data-target="#test0_0_1_body" aria-expanded="true"
                         aria-controls="test0_0_1_body">
-                        #2 ok - Given no checker, use input: should 4
+                        #2 ok - Given utils_countParams(2;4): should return error
                       </div>
                       <div id="test0_0_1_body" class="collapse hide"
                         aria-labelledby="test0_0_1_header">
                         <div class="card-body">
                           <div class="text-success">Expected : <br />
-                            <div class="expected">4</div>
+                            <div class="expected">ASSERT($atMost>=$actual; "Method "+$caller.name+" needs at most "+String($atMost)+" parameters"): Assert failed: Method except_try needs at most 2 parameters</div>
                           </div>
                           <br />
                           <div class="text-success"> Actual : <br />
-                            <div class="actual success">4</div>
+                            <div class="actual success">ASSERT($atMost>=$actual; "Method "+$caller.name+" needs at most "+String($atMost)+" parameters"): Assert failed: Method except_try needs at most 2 parameters</div>
                           </div>
                         </div>
                       </div>
@@ -581,322 +581,10 @@
                       <div class="card-header text-white bg-success" id="test0_0_2_header"
                         data-toggle="collapse" data-target="#test0_0_2_body" aria-expanded="true"
                         aria-controls="test0_0_2_body">
-                        #3 ok - Given Null checker: should an exception thrown
+                        #3 ok - Given Missing exception check: should No exception should be found
                       </div>
                       <div id="test0_0_2_body" class="collapse hide"
                         aria-labelledby="test0_0_2_header">
-                        <div class="card-body">
-                          <div class="text-success">Expected : <br />
-                            <div class="expected">ASSERT(False; "Not accepted checker type"): Assert failed: Not accepted checker type</div>
-                          </div>
-                          <br />
-                          <div class="text-success"> Actual : <br />
-                            <div class="actual success">ASSERT(False; "Not accepted checker type"): Assert failed: Not accepted checker type</div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  
-                  
-                  
-
-                  <div class="accordion" id="test0_0_3">
-                    <div class="card border-success">
-                      <div class="card-header text-white bg-success" id="test0_0_3_header"
-                        data-toggle="collapse" data-target="#test0_0_3_body" aria-expanded="true"
-                        aria-controls="test0_0_3_body">
-                        #4 ok - Given Use value with function check: should 8
-                      </div>
-                      <div id="test0_0_3_body" class="collapse hide"
-                        aria-labelledby="test0_0_3_header">
-                        <div class="card-body">
-                          <div class="text-success">Expected : <br />
-                            <div class="expected">8</div>
-                          </div>
-                          <br />
-                          <div class="text-success"> Actual : <br />
-                            <div class="actual success">8</div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  
-                  
-                  
-
-                  <div class="accordion" id="test0_0_4">
-                    <div class="card border-success">
-                      <div class="card-header text-white bg-success" id="test0_0_4_header"
-                        data-toggle="collapse" data-target="#test0_0_4_body" aria-expanded="true"
-                        aria-controls="test0_0_4_body">
-                        #5 ok - Given Use value with function check: should 10
-                      </div>
-                      <div id="test0_0_4_body" class="collapse hide"
-                        aria-labelledby="test0_0_4_header">
-                        <div class="card-body">
-                          <div class="text-success">Expected : <br />
-                            <div class="expected">10</div>
-                          </div>
-                          <br />
-                          <div class="text-success"> Actual : <br />
-                            <div class="actual success">10</div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  
-                  
-                  
-
-                  <div class="accordion" id="test0_0_5">
-                    <div class="card border-success">
-                      <div class="card-header text-white bg-success" id="test0_0_5_header"
-                        data-toggle="collapse" data-target="#test0_0_5_body" aria-expanded="true"
-                        aria-controls="test0_0_5_body">
-                        #6 ok - Given Default is not allowed: should an exception thrown
-                      </div>
-                      <div id="test0_0_5_body" class="collapse hide"
-                        aria-labelledby="test0_0_5_header">
-                        <div class="card-body">
-                          <div class="text-success">Expected : <br />
-                            <div class="expected">ASSERT($passing; "Failed default : "+$methodCheck.source): Assert failed: Failed default : $1>6</div>
-                          </div>
-                          <br />
-                          <div class="text-success"> Actual : <br />
-                            <div class="actual success">ASSERT($passing; "Failed default : "+$methodCheck.source): Assert failed: Failed default : $1>6</div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  
-                  
-                  
-
-                  <div class="accordion" id="test0_0_6">
-                    <div class="card border-success">
-                      <div class="card-header text-white bg-success" id="test0_0_6_header"
-                        data-toggle="collapse" data-target="#test0_0_6_body" aria-expanded="true"
-                        aria-controls="test0_0_6_body">
-                        #7 ok - Given Value is not allowed: should an exception thrown
-                      </div>
-                      <div id="test0_0_6_body" class="collapse hide"
-                        aria-labelledby="test0_0_6_header">
-                        <div class="card-body">
-                          <div class="text-success">Expected : <br />
-                            <div class="expected">ASSERT($passing; "Failed value: "+$methodCheck.source): Assert failed: Failed value: $1>6</div>
-                          </div>
-                          <br />
-                          <div class="text-success"> Actual : <br />
-                            <div class="actual success">ASSERT($passing; "Failed value: "+$methodCheck.source): Assert failed: Failed value: $1>6</div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  
-                  
-                  
-
-                  <div class="accordion" id="test0_0_7">
-                    <div class="card border-success">
-                      <div class="card-header text-white bg-success" id="test0_0_7_header"
-                        data-toggle="collapse" data-target="#test0_0_7_body" aria-expanded="true"
-                        aria-controls="test0_0_7_body">
-                        #8 ok - Given Object Class check: should CheckFilled object
-                      </div>
-                      <div id="test0_0_7_body" class="collapse hide"
-                        aria-labelledby="test0_0_7_header">
-                        <div class="card-body">
-                          <div class="text-success">Expected : <br />
-                            <div class="expected">{}</div>
-                          </div>
-                          <br />
-                          <div class="text-success"> Actual : <br />
-                            <div class="actual success">{}</div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  
-                  
-                  
-
-                  <div class="accordion" id="test0_0_8">
-                    <div class="card border-success">
-                      <div class="card-header text-white bg-success" id="test0_0_8_header"
-                        data-toggle="collapse" data-target="#test0_0_8_body" aria-expanded="true"
-                        aria-controls="test0_0_8_body">
-                        #9 ok - Given Object Class check: should Value not allowed
-                      </div>
-                      <div id="test0_0_8_body" class="collapse hide"
-                        aria-labelledby="test0_0_8_header">
-                        <div class="card-body">
-                          <div class="text-success">Expected : <br />
-                            <div class="expected">ASSERT($passing; "Failed value: "+$methodCheck.source): Assert failed: Failed value: OB Instance of($1; $2)</div>
-                          </div>
-                          <br />
-                          <div class="text-success"> Actual : <br />
-                            <div class="actual success">ASSERT($passing; "Failed value: "+$methodCheck.source): Assert failed: Failed value: OB Instance of($1; $2)</div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  
-                  
-                  
-
-                  <div class="accordion" id="test0_0_9">
-                    <div class="card border-success">
-                      <div class="card-header text-white bg-success" id="test0_0_9_header"
-                        data-toggle="collapse" data-target="#test0_0_9_body" aria-expanded="true"
-                        aria-controls="test0_0_9_body">
-                        #10 ok - Given Object Class check: should Value not allowed
-                      </div>
-                      <div id="test0_0_9_body" class="collapse hide"
-                        aria-labelledby="test0_0_9_header">
-                        <div class="card-body">
-                          <div class="text-success">Expected : <br />
-                            <div class="expected">ASSERT(False; "$checker object must be a 4D.Function or a 4d.Class."): Assert failed: $checker object must be a 4D.Function or a 4d.Class.</div>
-                          </div>
-                          <br />
-                          <div class="text-success"> Actual : <br />
-                            <div class="actual success">ASSERT(False; "$checker object must be a 4D.Function or a 4d.Class."): Assert failed: $checker object must be a 4D.Function or a 4d.Class.</div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  
-                  
-                  
-
-                  <div class="accordion" id="test0_0_10">
-                    <div class="card border-success">
-                      <div class="card-header text-white bg-success" id="test0_0_10_header"
-                        data-toggle="collapse" data-target="#test0_0_10_body" aria-expanded="true"
-                        aria-controls="test0_0_10_body">
-                        #11 ok - Given Object Class check with value: should Default not allowed
-                      </div>
-                      <div id="test0_0_10_body" class="collapse hide"
-                        aria-labelledby="test0_0_10_header">
-                        <div class="card-body">
-                          <div class="text-success">Expected : <br />
-                            <div class="expected">ASSERT(False; "$input or the $default is not an object."): Assert failed: $input or the $default is not an object.</div>
-                          </div>
-                          <br />
-                          <div class="text-success"> Actual : <br />
-                            <div class="actual success">ASSERT(False; "$input or the $default is not an object."): Assert failed: $input or the $default is not an object.</div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  
-                  
-                  
-
-                  <div class="accordion" id="test0_0_11">
-                    <div class="card border-success">
-                      <div class="card-header text-white bg-success" id="test0_0_11_header"
-                        data-toggle="collapse" data-target="#test0_0_11_body" aria-expanded="true"
-                        aria-controls="test0_0_11_body">
-                        #12 ok - Given Object Class check with object: should Value not allowed
-                      </div>
-                      <div id="test0_0_11_body" class="collapse hide"
-                        aria-labelledby="test0_0_11_header">
-                        <div class="card-body">
-                          <div class="text-success">Expected : <br />
-                            <div class="expected">ASSERT($passing; "Failed value: "+$methodCheck.source): Assert failed: Failed value: OB Instance of($1; $2)</div>
-                          </div>
-                          <br />
-                          <div class="text-success"> Actual : <br />
-                            <div class="actual success">ASSERT($passing; "Failed value: "+$methodCheck.source): Assert failed: Failed value: OB Instance of($1; $2)</div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  
-                  
-                  
-
-                  <div class="accordion" id="test0_0_12">
-                    <div class="card border-success">
-                      <div class="card-header text-white bg-success" id="test0_0_12_header"
-                        data-toggle="collapse" data-target="#test0_0_12_body" aria-expanded="true"
-                        aria-controls="test0_0_12_body">
-                        #13 ok - Given Set type as null: should Value type not allowed
-                      </div>
-                      <div id="test0_0_12_body" class="collapse hide"
-                        aria-labelledby="test0_0_12_header">
-                        <div class="card-body">
-                          <div class="text-success">Expected : <br />
-                            <div class="expected">ASSERT(False; "Method can not assert undefined and null"): Assert failed: Method can not assert undefined and null</div>
-                          </div>
-                          <br />
-                          <div class="text-success"> Actual : <br />
-                            <div class="actual success">ASSERT(False; "Method can not assert undefined and null"): Assert failed: Method can not assert undefined and null</div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  
-                  
-                  
-
-                  <div class="accordion" id="test0_0_13">
-                    <div class="card border-success">
-                      <div class="card-header text-white bg-success" id="test0_0_13_header"
-                        data-toggle="collapse" data-target="#test0_0_13_body" aria-expanded="true"
-                        aria-controls="test0_0_13_body">
-                        #14 ok - Given Set type as null: should Value type not allowed
-                      </div>
-                      <div id="test0_0_13_body" class="collapse hide"
-                        aria-labelledby="test0_0_13_header">
-                        <div class="card-body">
-                          <div class="text-success">Expected : <br />
-                            <div class="expected">ASSERT($passing; "Failed default : "+$methodCheck.source): Assert failed: Failed default : Value type($1)=38</div>
-                          </div>
-                          <br />
-                          <div class="text-success"> Actual : <br />
-                            <div class="actual success">ASSERT($passing; "Failed default : "+$methodCheck.source): Assert failed: Failed default : Value type($1)=38</div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  
-                  
-                  
-
-                  <div class="accordion" id="test0_0_14">
-                    <div class="card border-success">
-                      <div class="card-header text-white bg-success" id="test0_0_14_header"
-                        data-toggle="collapse" data-target="#test0_0_14_body" aria-expanded="true"
-                        aria-controls="test0_0_14_body">
-                        #15 ok - Given Missing exception check: should No exception should be found
-                      </div>
-                      <div id="test0_0_14_body" class="collapse hide"
-                        aria-labelledby="test0_0_14_header">
                         <div class="card-body">
                           <div class="text-success">Expected : <br />
                             <div class="expected">False</div>

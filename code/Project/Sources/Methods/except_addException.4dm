@@ -1,6 +1,6 @@
 //%attributes = {}
 #DECLARE($exception : cs:C1710.Exception)
-$exception:=utils_setParam($1; cs:C1710.Exception)
+$exception:=utils_getRequireValue($1; cs:C1710.Exception)
 utils_countParams(1; Count parameters:C259)
 
 var $collection : Collection
