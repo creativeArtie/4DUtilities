@@ -6,7 +6,8 @@ $collection:=except_getExceptions
 
 If ($collection.length>0)
 	Use ($collection)
-		$export->:=$collection.pop()
+		$error:=$collection.pop()
+		$export->:=OB Copy:C1225($error)
 	End use 
 	$hasErrors:=True:C214
 Else 

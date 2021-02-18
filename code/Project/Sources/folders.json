@@ -9,6 +9,13 @@
 			"CheckWhen"
 		]
 	},
+	"documentation": {
+		"methods": [
+			"doc_listChildren",
+			"doc_loadMethods",
+			"doc_test"
+		]
+	},
 	"exception": {
 		"groups": [
 			"manager",
@@ -19,6 +26,8 @@
 		],
 		"methods": [
 			"except_catch",
+			"except_hasExceptions",
+			"except_onErrCall",
 			"except_throw",
 			"except_trapErrors",
 			"except_try"
@@ -87,8 +96,10 @@
 	"utils_params": {
 		"methods": [
 			"template_params",
+			"ut_getOptValue",
 			"ut_params",
 			"utils_countParams",
+			"utils_getOptValue",
 			"utils_setParam"
 		]
 	},

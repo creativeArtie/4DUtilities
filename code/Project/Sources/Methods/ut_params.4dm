@@ -1,5 +1,5 @@
 //%attributes = {"shared":true}
-// __UNIT_TEST
+// _UNIT_TEST
 
 
 $test:=AJ_UnitTest.new("utils_countParams, utils_setParam"; Current method name:C684; "Utlities")

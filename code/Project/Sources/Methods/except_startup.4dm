@@ -22,10 +22,15 @@ While (True:C214)
 			If (Process state:C330($id)=Aborted:K13:1)
 				// Add error to 
 				For each ($throwable; Storage:C1525.utils_except.uncaught[$key])
-					except_addException(cs:C1710.Exception.new(\
+					var $exception : cs:C1710.Exception
+					$exception:=cs:C1710.Exception.new(\
 						"Uncaught Exception in process: "+String:C10($key); \
 						Get call chain:C1662[0]; Warning message:K38:2; \
-						$throwable))
+						$throwable)
+					var $entity : cs:C1710.ExceptionsEntity
+					$entity:=ds:C1482.Exceptions.new()
+					$entity.fromObject($exception)
+					$entity.save()
 				End for each 
 				OB REMOVE:C1226(Storage:C1525.utils_except.uncaught; $key)
 			End if 
