@@ -2,7 +2,7 @@
 #DECLARE($export : Pointer)->$hasErrors : Boolean
 
 var $collection : Collection
-$collection:=except_getExceptions
+$collection:=except_getExceptions_
 
 If ($collection.length>0)
 	Use ($collection)

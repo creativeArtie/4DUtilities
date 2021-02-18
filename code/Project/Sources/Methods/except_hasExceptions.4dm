@@ -2,7 +2,7 @@
 #DECLARE($unitTest : Object)->$result : Boolean
 
 var $exceptions : Collection
-$exceptions:=except_getExceptions
+$exceptions:=except_getExceptions_
 $result:=$exceptions.length#0
 
 If ($unitTest#Null:C1517)

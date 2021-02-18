@@ -27,7 +27,7 @@
 		"methods": [
 			"except_catch",
 			"except_hasExceptions",
-			"except_onErrCall",
+			"except_onErrCall_",
 			"except_throw",
 			"except_trapErrors",
 			"except_try"
@@ -38,10 +38,10 @@
 	},
 	"manager": {
 		"methods": [
-			"except_addException",
-			"except_getExceptions",
-			"except_startup",
-			"except_startup_thread"
+			"except_addException_",
+			"except_getExceptions_",
+			"except_startup_",
+			"except_startup_thread_"
 		]
 	},
 	"templates": {
@@ -57,6 +57,16 @@
 		],
 		"forms": [
 			"Test"
+		]
+	},
+	"tests": {
+		"methods": [
+			"template_params",
+			"ut_countParams",
+			"ut_getOptValueClass",
+			"ut_getOptValueDefault",
+			"ut_getOptValueFunction",
+			"ut_getOptValueType"
 		]
 	},
 	"Use": {
@@ -94,15 +104,13 @@
 		]
 	},
 	"utils_params": {
+		"groups": [
+			"tests"
+		],
 		"methods": [
-			"template_params",
-			"ut_countParams",
-			"ut_getOptValueClass",
-			"ut_getOptValueDefault",
-			"ut_getOptValueFunction",
-			"ut_getOptValueType",
 			"utils_countParams",
 			"utils_getCheckFunc_",
+			"utils_getObjectValue",
 			"utils_getOptionValue",
 			"utils_getRequireValue"
 		]
@@ -115,6 +123,10 @@
 		],
 		"tables": [
 			"PhoneFormats"
+		],
+		"methods": [
+			"phone_createFormat",
+			"phone_loadPhoneFormats"
 		],
 		"classes": [
 			"Check",

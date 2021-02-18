@@ -36,4 +36,4 @@ $exception:=cs:C1710.Exception.new(\
 Error formula+": "+$text{1}; $caller; \
 Error message:K38:3; $reason\
 )
-except_addException($exception)
+except_addException_($exception)

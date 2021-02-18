@@ -1,5 +1,7 @@
 //%attributes = {}
-#DECLARE($isObject : Boolean; $passing : Pointer; $checker : Variant)->$methodCheck : 4D:C1709.Function
+#DECLARE($isObject : Boolean; $passing : Pointer; \
+$checker : Variant; $isPointer : Boolean; $valueType : Real\
+)->$methodCheck : 4D:C1709.Function
 
 $passing->:=True:C214
 Case of 
@@ -37,6 +39,25 @@ Case of
 			Else 
 				ASSERT:C1129(False:C215; "Not accepted checker type")
 				$passing->:=False:C215
+		End case 
+	: ((Count parameters:C259=4) | (Count parameters:C259=5))
+		Case of 
+				
+			: (Not:C34($isPointer))
+				ASSERT:C1129($false; "$input or the $default is not a pointer.")
+				$passing->:=False:C215
+				
+			: (Count parameters:C259=4)
+				$methodCheck:=Formula:C1597(True:C214)
+				
+			: ($checker=Is pointer:K8:14)
+				ASSERT:C1129($checker=Is pointer:K8:14; "Not acceptable for 4 arguements.")
+				$passing->:=False:C215
+				
+			: ($valueType=Is variant:K8:33)
+				$methodCheck:=Formula:C1597(True:C214)
+			Else 
+				$methodCheck:=Formula:C1597(Value type:C1509($1)=$valueType)
 		End case 
 	Else 
 		ASSERT:C1129(False:C215; "Not enough paramters")

@@ -3,7 +3,8 @@
 
 $value:=utils_getRequireValue($1; Is variant:K8:33)
 $key:=utils_getOptionValue($2; ""; Is text:K8:3)
-$storage:=utils_getOptionValue($3; Storage:C1525; Is object:K8:27)
+$storage:=utils_getOptionValue($3; Storage:C1525; \
+Formula:C1597(OB Is shared:C1759($3)))
 
 
 Use ($storage)

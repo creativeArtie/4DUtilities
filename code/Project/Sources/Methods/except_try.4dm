@@ -14,11 +14,11 @@ $old:=Method called on error:C704
 except_trapErrors
 
 var $size : Integer
-$size:=except_getExceptions.length
+$size:=except_getExceptions_.length
 $object:=New object:C1471("params"; $params)
 $forumla.apply($object; $1)
 
-$result:=$size=except_getExceptions.length
+$result:=$size=except_getExceptions_.length
 
 If (Not:C34($result))
 	C_BOOLEAN:C305($tmp)
