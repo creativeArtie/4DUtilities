@@ -17,17 +17,14 @@ Function setError
 	Super:C1706.setError($1)
 	
 	OBJECT SET RGB COLORS:C628(This:C1470.pointer->; Foreground color:K23:1; "#ff0000")
-	This:C1470.state:=2
 	
 Function setWarning
 	var $1 : Text
 	utils_countParams(1; Count parameters:C259)
 	Super:C1706.setWarning($1)
 	OBJECT SET RGB COLORS:C628(This:C1470.pointer->; Foreground color:K23:1; "#ffff00")
-	This:C1470.state:=1
 	
 Function setPass
 	utils_countParams(0; Count parameters:C259)
 	Super:C1706.setPass()
 	OBJECT SET RGB COLORS:C628(This:C1470.pointer->; Foreground color:K23:1; Background color:K23:2)
-	This:C1470.state:=0

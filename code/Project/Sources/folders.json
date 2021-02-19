@@ -32,6 +32,9 @@
 			"except_trapErrors",
 			"except_try"
 		],
+		"forms": [
+			"ExceptionMonitor"
+		],
 		"classes": [
 			"Exception"
 		]

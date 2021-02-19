@@ -13,15 +13,18 @@ Function setError
 	$message:=utils_getRequireValue($1; Is text:K8:3)
 	utils_countParams(1; Count parameters:C259)
 	This:C1470.message:=Replace string:C233($1; "$1"; This:C1470.name)
+	This:C1470.state:=2
 	
 Function setWarning
 	var $1 : Text
 	$message:=utils_getRequireValue($1; Is text:K8:3)
 	utils_countParams(1; Count parameters:C259)
 	This:C1470.message:=Replace string:C233($1; "$1"; This:C1470.name)
+	This:C1470.state:=1
 	
 Function setPass
 	This:C1470.message:=""
+	This:C1470.state:=0
 	
 Function getText
 	$0:=This:C1470.message

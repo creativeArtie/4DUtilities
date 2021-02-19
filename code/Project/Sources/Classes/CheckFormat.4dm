@@ -1,7 +1,8 @@
 Class extends Check
-Class constructor($filled : Boolean)
+Class constructor($filled : Boolean; $type : Text)
 	Super:C1705()
 	This:C1470.filled:=utils_getOptionValue($filled; False:C215; Is boolean:K8:9)
+	This:C1470.type:=utils_getOptionValue($filled; "phone"; Is text:K8:3)
 	This:C1470.message:=""
 	utils_countParams(1; Count parameters:C259)
 Function test->$result : Boolean
@@ -21,7 +22,7 @@ Function test->$result : Boolean
 	
 	If ($continue & $result)
 		If (Not:C34($value.findMatch))
-			This:C1470.message:="$1 does not match a known phone format."
+			This:C1470.message:="$1 does not match a known "+This:C1470.type+" format."
 			$result:=False:C215
 			$continue:=False:C215
 		End if 
