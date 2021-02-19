@@ -17,18 +17,18 @@ Things it can do:
 ### Handle 4D thrown errors
 ```4D
 except_trapError
-// Method calle on error = "except_onErrCall" (method to handle 4D errors)
+// Method calle on error = "except_onErrCall_" (method to handle 4D errors)
 ```
 
 ### Try Catch
 
 ```4D
 var $exception : cs.Exception
-if (except_try(Forumla(True); ->$exception)) 
+If (except_try(Forumla(True); ->$exception)) 
     // code if no error
-else
+Else
     // code if there is an exception 
-end if
+End if
 ```
 
 ### Handle exceptions not catched throw "Try Catch"
@@ -42,10 +42,11 @@ End while
 ### Check for exceptions
 
 ```4D
-if (except_hasExceptions)
+If (except_hasExceptions)
     // exceptions find for the current process
-else
+Else
     // no exceptions find for the current process
+End if
 ```
 
 It is also can be used for unit testing
@@ -73,7 +74,7 @@ except_throw("Your error message")
 This is useful when you are using this project and want to find a 4D error.
 
 When you are using `except_trapError`, if there are new 4D error, the code
-will not stopped the program and terminate. The `ExceptionMonitor` form along 
+will not call `Trace` nor `Abort`. The `ExceptionMonitor` form along 
 with the debugger will let you know when the error is being thrown.
 
 The `ExceptionMonitor` form will work by clicking run form.
