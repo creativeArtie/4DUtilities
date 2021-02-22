@@ -12,9 +12,9 @@
 		<field name="outputFormat" uuid="4C747F4DF4B19C4BAB8F5F1C56BBC818" type="10" limiting_length="255" never_null="true" id="7"/>
 		<primary_key field_name="ID" field_uuid="6BD4B9BDD425D849BB80563E3475A1C2"/>
 		<table_extra>
-			<editor_table_info displayable_fields_count="7">
+			<editor_table_info displayable_fields_count="9">
 				<color red="255" green="255" blue="255" alpha="0"/>
-				<coordinates left="40" top="40" width="120" height="197.33203125"/>
+				<coordinates left="40" top="40" width="120" height="244.33203125"/>
 			</editor_table_info>
 		</table_extra>
 	</table>

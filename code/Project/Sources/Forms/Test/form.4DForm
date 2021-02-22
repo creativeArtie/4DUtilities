@@ -196,7 +196,7 @@
 				"Check Box": {
 					"type": "checkbox",
 					"text": "No Issues",
-					"top": 190,
+					"top": 219,
 					"left": 12,
 					"width": 214,
 					"height": 19,
@@ -209,7 +209,7 @@
 				"Check Box1": {
 					"type": "checkbox",
 					"text": "Can Ignore issues",
-					"top": 218,
+					"top": 247,
 					"left": 12,
 					"width": 214,
 					"height": 19,
@@ -218,11 +218,28 @@
 					],
 					"focusable": false,
 					"dataSource": "Form:C1466.validate.canIgnore()"
+				},
+				"l_company3": {
+					"type": "text",
+					"text": "Random:",
+					"top": 184,
+					"left": 12,
+					"width": 92,
+					"height": 15
+				},
+				"i_random": {
+					"type": "input",
+					"left": 115,
+					"top": 183,
+					"width": 112,
+					"height": 16,
+					"dataSourceTypeHint": "text",
+					"dataSource": ""
 				}
 			}
 		}
 	],
-	"geometryStamp": 53,
+	"geometryStamp": 57,
 	"method": "method.4dm",
 	"editor": {
 		"activeView": "View 1",

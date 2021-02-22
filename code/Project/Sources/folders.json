@@ -5,7 +5,8 @@
 			"CheckFilled",
 			"CheckFormat",
 			"CheckNot",
-			"CheckReal",
+			"CheckTrue",
+			"CheckValue",
 			"CheckWhen"
 		]
 	},

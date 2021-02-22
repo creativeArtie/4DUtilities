@@ -31,6 +31,11 @@ Case of
 			cs:C1710.UseField.new("i_age")\
 			)
 		
+		Form:C1466.validate.addOptional(\
+			cs:C1710.CheckTrue.new(Formula:C1597($1#"")); \
+			cs:C1710.UseField.new("i_random")\
+			)
+		
 		Form:C1466.phoneField:=cs:C1710.UsePhoneField.new("i_phone"; "CA")
 		Form:C1466.validate.addMandatory(cs:C1710.CheckFormat.new(True:C214); \
 			Form:C1466.phoneField)

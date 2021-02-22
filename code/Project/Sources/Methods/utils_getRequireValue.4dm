@@ -11,9 +11,14 @@ Case of
 		$methodCheck:=utils_getCheckFunc_(Value type:C1509($input)=Is object:K8:27; \
 			->$passing)
 	: (Count parameters:C259=2)
-		If ($checker=Is pointer:K8:14)
-			$methodCheck:=utils_getCheckFunc_(Value type:C1509($input)=Is object:K8:27; \
-				->$passing; $checker; Value type:C1509($input)=Is pointer:K8:14)
+		If (Value type:C1509($checker)=Is longint:K8:6)
+			If ($checker=Is pointer:K8:14)
+				$methodCheck:=utils_getCheckFunc_(Value type:C1509($input)=Is object:K8:27; \
+					->$passing; $checker; Value type:C1509($input)=Is pointer:K8:14)
+			Else 
+				$methodCheck:=utils_getCheckFunc_(Value type:C1509($input)=Is object:K8:27; \
+					->$passing; $checker)
+			End if 
 		Else 
 			$methodCheck:=utils_getCheckFunc_(Value type:C1509($input)=Is object:K8:27; \
 				->$passing; $checker)

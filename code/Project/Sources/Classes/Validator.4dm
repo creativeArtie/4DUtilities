@@ -43,9 +43,8 @@ Function runChecks
 	
 	This:C1470.errors:=New collection:C1472
 	For each ($ptr; This:C1470.mandatory)
-		$result:=$ptr.test()
 		$value:=$ptr.value
-		If ($result)
+		If ($ptr.test())
 			$value.setPass()
 		Else 
 			$value.setError($ptr.getMessageTemplate())
@@ -55,7 +54,6 @@ Function runChecks
 	
 	This:C1470.warnings:=New collection:C1472
 	For each ($ptr; This:C1470.optional)
-		$result:=$ptr.test()
 		$value:=$ptr.value
 		If ($ptr.test())
 			$value.setPass()
