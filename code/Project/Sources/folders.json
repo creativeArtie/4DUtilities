@@ -26,6 +26,7 @@
 			"Exceptions"
 		],
 		"methods": [
+			"except_assert",
 			"except_catch",
 			"except_hasExceptions",
 			"except_onErrCall_",
