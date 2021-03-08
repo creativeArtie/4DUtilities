@@ -1,9 +1,11 @@
-// Runs the test and gets the template message
+/// #brief Runs the test and gets the template message
 Function test
-	ASSERT:C1129(False:C215; "Needs implementation.")
-Function getMessageTemplate
-	ASSERT:C1129(False:C215; "Needs implementation.")
-Function setValue
+	/// #brief Test the values
+	ASSERT:C1129(False:C215; "Needs implementation.")  /// #abstract
+Function getMessageTemplate->$template : Text
+	/// #brief Gets the template message
+	ASSERT:C1129(False:C215; "Needs implementation.")  /// #abstract
+Function setValue($value : Text)
 	var $1 : Variant
 	Case of 
 		: (Count parameters:C259=1)

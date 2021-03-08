@@ -1,6 +1,6 @@
 Class extends Check
 Class constructor($min : Variant; $max : Variant; \
-$minInclude : Boolean; $maxInclude : Variant)
+$minInclude : Boolean; $maxInclude : Boolean)
 	var $1 : Variant
 	var $2 : Variant
 	var $3 : Boolean

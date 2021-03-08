@@ -12,9 +12,20 @@
 	},
 	"documentation": {
 		"methods": [
+			"doc_buildClass_",
+			"doc_findFiles_",
 			"doc_listChildren",
 			"doc_loadMethods",
+			"doc_parseCommonTags",
+			"doc_parseTag_",
+			"doc_run",
 			"doc_test"
+		],
+		"classes": [
+			"Comment_",
+			"DocClass_",
+			"DocFunction_",
+			"DocSection_"
 		]
 	},
 	"exception": {
@@ -113,11 +124,15 @@
 			"tests"
 		],
 		"methods": [
+			"ut_paramChecker",
 			"utils_countParams",
 			"utils_getCheckFunc_",
 			"utils_getObjectValue",
 			"utils_getOptionValue",
 			"utils_getRequireValue"
+		],
+		"classes": [
+			"ParamChecker"
 		]
 	},
 	"validator": {

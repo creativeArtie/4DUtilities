@@ -1,6 +1,6 @@
 //%attributes = {}
 #DECLARE($input : Variant; $default : Variant; \
-$checker : Variant; $valueType)->$output : Variant
+$checker : Variant; $valueType : Integer)->$output : Variant
 
 var $methodCheck : 4D:C1709.Function
 var $passing : Boolean
