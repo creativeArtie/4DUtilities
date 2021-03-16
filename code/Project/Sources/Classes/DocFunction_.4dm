@@ -3,7 +3,7 @@ Class constructor($line : Text)
 	Super:C1705()
 	This:C1470.name:=""
 	This:C1470.return:=New object:C1471
-	
+	var $raw : Text
 	$raw:=Substring:C12($line; Length:C16("Function "))
 	var $locate : Integer
 	$locate:=Position:C15("("; $raw)

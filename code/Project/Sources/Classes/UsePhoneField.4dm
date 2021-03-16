@@ -16,6 +16,7 @@ Function extractDigits->$answer : Text
 	$answer:=""
 	$input:=Super:C1706.getValue()
 	// Couldn't use String(Num($token)) because the phone number can get too long
+	var $elmt : Integer
 	For ($elmt; 1; Length:C16($input))
 		If (Match regex:C1019("[0-9]"; Substring:C12($input; $elmt; 1)))
 			$answer:=$answer+Substring:C12($input; $elmt; 1)
@@ -33,6 +34,7 @@ Function handleEvents
 	
 Function formatPhone($token : Text)->$answer : Text
 	This:C1470.findMatch:=False:C215
+	var $search : Text
 	$answer:=$token
 	$search:=""
 	READ ONLY:C145([PhoneFormats:1])
@@ -64,10 +66,11 @@ Function formatPhone($token : Text)->$answer : Text
 		ORDER BY:C49([PhoneFormats:1]order:2; >)
 	End if 
 	
+	var $copy : Text
 	FIRST RECORD:C50([PhoneFormats:1])
 	$copy:=$token
 	While (Not:C34(End selection:C36([PhoneFormats:1])))
-		
+		var $trying : Boolean
 		$trying:=True:C214
 		
 		// assumes phone number include international format

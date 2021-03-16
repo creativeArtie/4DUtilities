@@ -4,8 +4,6 @@ C_OBJECT:C1216(doc_buildClass_; $1)
 C_OBJECT:C1216(doc_buildClass_; $2)
 C_OBJECT:C1216(doc_findFiles_; $0)
 C_TEXT:C284(doc_findFiles_; $1)
-C_COLLECTION:C1488(doc_listChildren; $0)
-C_COLLECTION:C1488(doc_listChildren; $1)
 C_OBJECT:C1216(doc_parseCommonTags_; $1)
 C_OBJECT:C1216(doc_parseCommonTags_; $2)
 C_BOOLEAN:C305(doc_parseTag_; $0)
@@ -85,3 +83,26 @@ C_TEXT:C284(utils_saveToStorage; $2)
 C_OBJECT:C1216(utils_saveToStorage; $3)
 C_LONGINT:C283(param_method1; $1)
 C_OBJECT:C1216(param_method1; $2)
+
+//doc_outputBadge_
+C_TEXT:C284(doc_outputBadge_; $0)
+C_TEXT:C284(doc_outputBadge_; $1)
+C_TEXT:C284(doc_outputBadge_; $2)
+C_TEXT:C284(doc_outputBadge_; $3)
+
+//doc_outputBody_
+C_TEXT:C284(doc_outputBody_; $0)
+C_TEXT:C284(doc_outputBody_; $1)
+
+//doc_outputClass_
+C_OBJECT:C1216(doc_outputClass_; $1)
+
+//doc_outputHeader_
+C_TEXT:C284(doc_outputHeader_; $0)
+C_TEXT:C284(doc_outputHeader_; $1)
+
+//param_method2
+C_POINTER:C301(param_method2; $1)
+C_VARIANT:C1683(except_try; ${3})
+C_OBJECT:C1216(utils_lazyAnd; ${1})
+C_OBJECT:C1216(utils_lazyOr; ${1})

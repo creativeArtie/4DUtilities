@@ -1,5 +1,5 @@
 Class extends Check
-Function test
+Function test->$result : Boolean
 	var $value : Variant
 	$value:=This:C1470.getValue()
 	Case of 
@@ -13,5 +13,5 @@ Function test
 			$0:=$value#Null:C1517
 	End case 
 	
-Function getMessageTemplate
+Function getMessageTemplate->$template : Text
 	$0:="$1 is not filled."

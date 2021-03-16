@@ -8,6 +8,7 @@ Class constructor($filled : Boolean; $type : Text)
 Function test->$result : Boolean
 	var $value : Object
 	$value:=Super:C1706.getValue()
+	var $continue : Boolean
 	$result:=True:C214
 	$continue:=True:C214
 	

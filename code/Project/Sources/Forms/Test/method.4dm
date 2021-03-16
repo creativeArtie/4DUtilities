@@ -43,5 +43,6 @@ Case of
 		Form:C1466.validate.runChecks()
 	: (Form event code:C388=On Data Change:K2:15)
 		Form:C1466.validate.runChecks()
-		$data:=Form:C1466.validate.canIgnore()
+		var $pass : Boolean
+		$pass:=Form:C1466.validate.canIgnore()
 End case 

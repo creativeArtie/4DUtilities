@@ -3,6 +3,7 @@
 
 except_trapErrors
 
+var $test : Object
 $test:=AJ_UnitTest.new("Default"; Current method name:C684; "Utils_OptValues")
 
 $test.given:="no checker, use default"

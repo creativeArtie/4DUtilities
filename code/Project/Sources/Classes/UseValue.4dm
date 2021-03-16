@@ -7,5 +7,5 @@ Class constructor
 	This:C1470.value:=utils_getRequireValue($1; Is variant:K8:33)
 	utils_countParams(2; Count parameters:C259)
 	
-Function getValue
+Function getValue->$answer : Variant
 	$0:=This:C1470.value

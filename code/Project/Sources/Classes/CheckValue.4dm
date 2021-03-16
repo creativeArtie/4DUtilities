@@ -6,6 +6,7 @@ $minInclude : Boolean; $maxInclude : Boolean)
 	var $3 : Boolean
 	var $4 : Boolean
 	
+	var $type : Variant
 	$type:=utils_getRequireValue(Value type:C1509($1); Formula:C1597(\
 		($1=Is real:K8:4) | ($1=Is longint:K8:6) | \
 		($1=Is time:K8:8) | ($1=Is date:K8:7)\
@@ -17,7 +18,7 @@ $minInclude : Boolean; $maxInclude : Boolean)
 	This:C1470.minClosed:=utils_getOptionValue($3; Is boolean:K8:9; True:C214)
 	This:C1470.maxClosed:=utils_getOptionValue($4; Is boolean:K8:9; True:C214)
 	utils_countParams(4; Count parameters:C259)
-Function test
+Function test->$result : Boolean
 	var $value : Variant
 	var $isMin : Boolean
 	var $isMax : Boolean
@@ -35,5 +36,5 @@ Function test
 	End if 
 	
 	$0:=$isMin & $isMax
-Function getMessageTemplate
-	$0:="$1 is not within "+String:C10($isMin)+" and "+String:C10($isMax)
+Function getMessageTemplate->$template : Text
+	$0:="$1 is not within "+String:C10(This:C1470.min)+" and "+String:C10(This:C1470.max)

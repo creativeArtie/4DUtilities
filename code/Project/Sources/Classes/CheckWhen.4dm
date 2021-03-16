@@ -21,12 +21,12 @@ Function setValue
 	End case 
 	This:C1470.check.setValue($1)
 	
-Function test
+Function test->$result : Boolean
 	If (This:C1470.function.call())
 		$0:=This:C1470.check.test()
 	Else 
 		$0:=True:C214
 	End if 
 	
-Function getMessageTemplate
+Function getMessageTemplate->$template : Text
 	$0:=This:C1470.check.getMessageTemplate()

@@ -9,7 +9,7 @@ Class constructor
 	This:C1470.pointer:=utils_getRequireValue($pointer; Is pointer:K8:14)
 	utils_countParams(2; Count parameters:C259)
 	
-Function getValue
+Function getValue->$value : Variant
 	$0:=(This:C1470.pointer)->{0}
 	
 Function setError

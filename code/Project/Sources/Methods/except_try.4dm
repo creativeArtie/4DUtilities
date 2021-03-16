@@ -3,11 +3,11 @@
 $forumla:=utils_getRequireValue($1; 4D:C1709.Function)
 
 
+C_VARIANT:C1683(${3})
 var $params : Collection
 $params:=New collection:C1472
 var $i : Integer
-For ($i; 2; Count parameters:C259)
-	C_VARIANT:C1683(${$i})
+For ($i; 3; Count parameters:C259)
 	$params.push(${$i})
 End for 
 

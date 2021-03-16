@@ -3,6 +3,9 @@
 
 except_trapErrors
 
+var $test : Object
+var $failed : Boolean
+var $exception : cs:C1710.Exception
 $test:=AJ_UnitTest.new("Function"; Current method name:C684; "Utils_OptValues")
 
 $test.given:="Use value with function check"

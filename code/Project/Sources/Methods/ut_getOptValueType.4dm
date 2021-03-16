@@ -2,6 +2,9 @@
 // __UNIT_TEST
 
 except_trapErrors
+var $test : Object
+var $failed : Boolean
+var $exception : cs:C1710.Exception
 
 $test:=AJ_UnitTest.new("Value Type"; Current method name:C684; "Utils_OptValues")
 

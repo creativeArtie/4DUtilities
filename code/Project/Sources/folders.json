@@ -144,9 +144,6 @@
 			"utils_getObjectValue",
 			"utils_getOptionValue",
 			"utils_getRequireValue"
-		],
-		"classes": [
-			"ParamChecker"
 		]
 	},
 	"validator": {

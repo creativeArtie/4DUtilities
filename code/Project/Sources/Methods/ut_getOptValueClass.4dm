@@ -3,6 +3,9 @@
 
 except_trapErrors
 
+var $test : Object
+var $exception : cs:C1710.Exception
+var $failed : Boolean
 $test:=AJ_UnitTest.new("Class"; Current method name:C684; "Utils_OptValues")
 
 $test.given:="Object Class check"

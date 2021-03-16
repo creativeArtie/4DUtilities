@@ -15,7 +15,7 @@ End for each
 var $functionList : cs:C1710.DocFunctionTable_
 $functionList:=cs:C1710.DocFunctionTable_.new()
 
-
+var $function : cs:C1710.DocFunction_
 For each ($function; $class.functions)
 	$functionList.addFunction($function)
 End for each 

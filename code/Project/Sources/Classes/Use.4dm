@@ -1,5 +1,5 @@
 // Stores the error message and access the value to test
-Class constructor
+Class constructor($name : Text)
 	This:C1470.state:=0
 	This:C1470.message:=""
 	This:C1470.name:=utils_getRequireValue($1; Is text:K8:3)
@@ -10,6 +10,7 @@ Function getValue
 	
 Function setError
 	var $1 : Text
+	var $message : Text
 	$message:=utils_getRequireValue($1; Is text:K8:3)
 	utils_countParams(1; Count parameters:C259)
 	This:C1470.message:=Replace string:C233($1; "$1"; This:C1470.name)
@@ -17,6 +18,7 @@ Function setError
 	
 Function setWarning
 	var $1 : Text
+	var $message : Text
 	$message:=utils_getRequireValue($1; Is text:K8:3)
 	utils_countParams(1; Count parameters:C259)
 	This:C1470.message:=Replace string:C233($1; "$1"; This:C1470.name)
@@ -26,13 +28,13 @@ Function setPass
 	This:C1470.message:=""
 	This:C1470.state:=0
 	
-Function getText
+Function getText->$message : Text
 	$0:=This:C1470.message
-Function hasError
+Function hasError->$answer : Boolean
 	$0:=This:C1470.state=2
-Function canIgnore
+Function canIgnore->$answer : Boolean
 	$0:=This:C1470.state#2
-Function isPassed
+Function isPassed->$answer : Boolean
 	$0:=This:C1470.state=0
-Function hasIssues
+Function hasIssues->$answer : Boolean
 	$0:=This:C1470.state#0

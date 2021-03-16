@@ -16,6 +16,6 @@ Function setValue($value : Variant)
 			ASSERT:C1129(False:C215; "Not enough parameters.")
 	End case 
 	
-Function getValue
+Function getValue->$result
 	/// #brief Gets the checking value
 	$0:=This:C1470.value.getValue()

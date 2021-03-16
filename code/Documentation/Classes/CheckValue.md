@@ -45,6 +45,7 @@
 
 
 
+
 <h2> Methods </h2><table class='table table-hover'>
   <thead>
   <tr>  <th class='table-primary'>Method Name</th>

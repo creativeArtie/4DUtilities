@@ -63,30 +63,30 @@ Function runChecks
 		End if 
 	End for each 
 	
-Function hasErrors
+Function hasErrors->$answer : Boolean
 	$0:=This:C1470.errors.length>0
 	
-Function hasWarnings
+Function hasWarnings->$answer : Boolean
 	$0:=This:C1470.warnings.length>0
 	
-Function hasNoIssues
+Function hasNoIssues->$answer : Boolean
 	$0:=Not:C34(This:C1470.hasErrors()) & Not:C34(This:C1470.hasWarnings())
 	
-Function canIgnore
+Function canIgnore->$answer : Boolean
 	$0:=Not:C34(This:C1470.hasErrors())
 	
-Function getErrorCount
+Function getErrorCount->$answer : Integer
 	$0:=This:C1470.errors.length
 	
-Function getWarningCount
+Function getWarningCount->$answer : Integer
 	$0:=This:C1470.warnings.length
 	
-Function getTotal
+Function getTotal->$answer : Integer
 	$0:=This:C1470.optional.length+This:C1470.mandatory.length
 	
-Function listErrors
+Function listErrors->$answer : Collection
 	$0:=This:C1470.errors.extract("message")
 	
-Function listWarnings
+Function listWarnings->$answer : Collection
 	$0:=This:C1470.warnings.extract("message")
 	

@@ -4,10 +4,11 @@ $checker : Variant; $valueType)->$output : Variant
 
 var $methodCheck : 4D:C1709.Function
 var $passing : Boolean
-$passing:=$input#Null:C1517
+$passing:=$object#Null:C1517
 ASSERT:C1129($passing; "$object is null")
 
 If ($passing)
+	var $input : Variant
 	If (OB Is defined:C1231($object; $property))
 		$input:=$object[$property]
 	Else 

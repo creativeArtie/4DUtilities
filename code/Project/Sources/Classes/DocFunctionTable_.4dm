@@ -19,6 +19,7 @@ Function addFunction($function : cs:C1710.DocFunction_)
 			$class:="table-success"
 			$name:=$function.name
 	End case 
+	var $data : Collection
 	$data:=New collection:C1472($name; $function.brief)
 	This:C1470.addData($class; $data)
 Function getHTMLtable->$doc : Text

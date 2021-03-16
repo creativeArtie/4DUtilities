@@ -21,7 +21,7 @@ Function setValue
 	var $1 : Variant
 	Super:C1706.setValue($1)
 	
-Function test
+Function test->$result : Boolean
 	var $1 : Variant
 	Case of 
 		: (Count parameters:C259=1)
@@ -29,8 +29,9 @@ Function test
 		Else 
 			ASSERT:C1129(False:C215; "Not enough parameters.")
 	End case 
-	$0:=Not:C34(This:C1470.check())
+	$0:=Not:C34(This:C1470.check.test())
 	
-Function getMessageTemplate
-	$0:=Replace string:C233($checker.getMessageTemplate(); "not "; ""; 1)
+Function getMessageTemplate->$template : Text
+	
+	$0:=Replace string:C233(This:C1470.check.getMessageTemplate(); "not "; ""; 1)
 	

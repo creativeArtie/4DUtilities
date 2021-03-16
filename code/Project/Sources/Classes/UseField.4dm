@@ -9,6 +9,7 @@ Class constructor
 	utils_countParams(2; Count parameters:C259)
 	
 Function getValue
+	var $0 : Variant
 	$0:=(This:C1470.pointer)->
 	
 Function setError
