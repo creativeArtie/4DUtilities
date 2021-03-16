@@ -23,7 +23,9 @@ $reason.codes:=$codes
 $reason.intComp:=$comp
 $reason.text:=$text
 
+var $i : Integer
 var $caller : Object
+var $callers : Collection
 $callers:=Get call chain:C1662
 For ($i; 0; $callers.count()-1)
 	If ($callers[$i].name=Error method)

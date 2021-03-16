@@ -21,6 +21,7 @@ While (True:C214)
 			$id:=Num:C11($key)
 			If (Process state:C330($id)=Aborted:K13:1)
 				// Add error to 
+				var $throwable : cs:C1710.Exception
 				For each ($throwable; Storage:C1525.utils_except.uncaught[$key])
 					var $exception : cs:C1710.Exception
 					$exception:=cs:C1710.Exception.new(\

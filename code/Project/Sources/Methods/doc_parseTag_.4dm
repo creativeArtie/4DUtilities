@@ -12,6 +12,7 @@ End if
 
 
 If (Match regex:C1019(".*"+$tag+".*"; $line))
+	var $pos : Integer
 	$pos:=Position:C15($tag; $line)
 	$parsed.begin:=Substring:C12($line; 0; $pos-1)
 	$parsed.end:=Substring:C12($line; $pos+Length:C16($tag))

@@ -12,6 +12,8 @@ For each ($name; $data.classes)
 	$data.classes[$name]:=doc_buildClass_($data.classes[$name]; $data)
 End for each 
 
-// 3. parse doc lines into tag parsing
+// 3. Output the documents
 
-// 4. output the documents
+For each ($name; $data.classes)
+	doc_outputClass_($data.classes[$name])
+End for each 

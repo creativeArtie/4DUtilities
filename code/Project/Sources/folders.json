@@ -14,9 +14,11 @@
 		"methods": [
 			"doc_buildClass_",
 			"doc_findFiles_",
-			"doc_listChildren",
-			"doc_loadMethods",
-			"doc_parseCommonTags",
+			"doc_outputBadge_",
+			"doc_outputBody_",
+			"doc_outputClass_",
+			"doc_outputHeader_",
+			"doc_parseCommonTags_",
 			"doc_parseTag_",
 			"doc_run",
 			"doc_test"
@@ -25,6 +27,9 @@
 			"Comment_",
 			"DocClass_",
 			"DocFunction_",
+			"DocFunctionTable_",
+			"DocHtmlTable_",
+			"DocParam_",
 			"DocSection_"
 		]
 	},
@@ -60,6 +65,13 @@
 			"except_startup_thread_"
 		]
 	},
+	"research": {
+		"methods": [
+			"param_method1",
+			"param_method2",
+			"param_runParams"
+		]
+	},
 	"templates": {
 		"methods": [
 			"except_demo",
@@ -78,6 +90,7 @@
 	"tests": {
 		"methods": [
 			"template_params",
+			"test_params",
 			"ut_countParams",
 			"ut_getOptValueClass",
 			"ut_getOptValueDefault",
@@ -121,6 +134,7 @@
 	},
 	"utils_params": {
 		"groups": [
+			"research",
 			"tests"
 		],
 		"methods": [

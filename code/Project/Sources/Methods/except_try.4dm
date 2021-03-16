@@ -5,7 +5,9 @@ $forumla:=utils_getRequireValue($1; 4D:C1709.Function)
 
 var $params : Collection
 $params:=New collection:C1472
+var $i : Integer
 For ($i; 2; Count parameters:C259)
+	C_VARIANT:C1683(${$i})
 	$params.push(${$i})
 End for 
 
@@ -15,6 +17,7 @@ except_trapErrors
 
 var $size : Integer
 $size:=except_getExceptions_.length
+var $object : Object
 $object:=New object:C1471("params"; $params)
 $forumla.apply($object; $1)
 

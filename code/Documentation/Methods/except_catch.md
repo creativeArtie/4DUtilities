@@ -1,21 +1,26 @@
 <!DOCTYPE html>
-<!-- Type your summary here -->
+<!-- Except catch -->
 <html>
 <head>
 <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 <script>mermaid.initialize({startOnLoad:true});</script>
 
 <title>Page Title</title>
 </head>
 <body>
 
-<h2> Catch </h2>
+<div id="content">
 
 ## Example
 
-<code>
+~~~
 Type your example here
-</code>
+~~~
+
+1. Test 1
+2. Test 2
+</div>
 
 Here is one mermaid diagram:
 
@@ -36,5 +41,9 @@ And here is another:
 </div>
 ```
 
+<script>
+document.getElementById('content').innerHTML =
+  marked(document.getElementById('content').innerHTML);
+</script>
 </body>
 </html> 

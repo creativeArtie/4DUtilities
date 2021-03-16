@@ -44,7 +44,7 @@ Case of
 		Case of 
 				
 			: (Not:C34($isPointer))
-				ASSERT:C1129($false; "$input or the $default is not a pointer.")
+				ASSERT:C1129(False:C215; "$input or the $default is not a pointer.")
 				$passing->:=False:C215
 				
 			: (Count parameters:C259=4)
