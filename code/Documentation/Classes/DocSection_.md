@@ -5,15 +5,17 @@
   <script src='https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js'></script>
   <script src='https://cdn.jsdelivr.net/npm/marked/marked.min.js'></script>
   <script>mermaid.initialize({startOnLoad:true});</script>
-  <link     href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css'
+  <link 
+    href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css'
     rel='stylesheet'
     integrity='sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl'
     crossorigin='anonymous'>
-  <script     src='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js'
+  <script 
+    src='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js'
     integrity='sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0'
     crossorigin='anonymous'
   ></script>
-  <title>ClassDocSection_</title>
+  <title>Class DocSection_</title>
   <meta charset='ASCII' />
   <meta name='generator' value='4D Documentation' />
 </header>
@@ -26,28 +28,58 @@
 
 
 
+## Method list
 
-
-
-
-
-
-<h2> Methods </h2><table class='table table-hover'>
+<table class='table table-hover'>
   <thead>
   <tr>  <th class='table-primary'>Method Name</th>
   <th class='table-primary'>Method Brief</th>
   </tr></thead>
   <tbody>
   <tr>
-    <td class='table-danger'><em> setPrivate_</em> <span class='badge bg-danger' data-bs-toggle='tooltip' title='To be use internally in a namespace' >private</span>
+    <td class='table-success'><strong>Class constructor<strong> <span class='badge bg-primary' data-bs-toggle='tooltip' title='Class Constructor' >constructor</span>
+</td>
+    <td class='table-success'></td>
+  </tr>
+  <tr>
+    <td class='table-danger'><em>setPrivate_</em> <span class='badge bg-danger' data-bs-toggle='tooltip' title='To be use internally in a namespace' >private</span>
 </td>
     <td class='table-danger'>check if the name ends with "_" meaning private</td>
   </tr>
+  <tr>
+    <td class='table-success'>generateText</td>
+    <td class='table-success'></td>
+  </tr>
+  <tr>
+    <td class='table-success'>getFile</td>
+    <td class='table-success'></td>
+  </tr>
+  <tr>
+    <td class='table-success'>generate</td>
+    <td class='table-success'></td>
+  </tr>
+  <tr>
+    <td class='table-success'>addHeading($header : Text; $level : Integer; $withSummary : Boolean)</td>
+    <td class='table-success'></td>
+  </tr>
+  <tr>
+    <td class='table-success'>addDescription</td>
+    <td class='table-success'></td>
+  </tr>
+  <tr>
+    <td class='table-success'>addLine</td>
+    <td class='table-success'></td>
+  </tr>
+  <tr>
+    <td class='table-success'>paraseCommonTags</td>
+    <td class='table-success'></td>
+  </tr>
 </tbody>
-</table></div>
+</table>
+
+</div>
     <script>
       document.getElementById('content').innerHTML =
       marked(document.getElementById('content').innerHTML);
 </script>
 </body>
-</html>

@@ -12,14 +12,8 @@
 	},
 	"documentation": {
 		"methods": [
-			"doc_buildClass_",
 			"doc_findFiles_",
 			"doc_outputBadge_",
-			"doc_outputBody_",
-			"doc_outputClass_",
-			"doc_outputHeader_",
-			"doc_parseCommonTags_",
-			"doc_parseTag_",
 			"doc_run",
 			"doc_test"
 		],
@@ -27,10 +21,10 @@
 			"Comment_",
 			"DocClass_",
 			"DocFunction_",
-			"DocFunctionTable_",
 			"DocHtmlTable_",
 			"DocParam_",
-			"DocSection_"
+			"DocSection_",
+			"DocValue_"
 		]
 	},
 	"exception": {
