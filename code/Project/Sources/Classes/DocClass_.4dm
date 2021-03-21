@@ -1,4 +1,4 @@
-Class extends DocSection_
+Class extends DocFile_
 Class constructor($name : Text; $path : cs:C1710.File)
 	Super:C1705()
 	This:C1470.functions:=New collection:C1472
@@ -6,19 +6,14 @@ Class constructor($name : Text; $path : cs:C1710.File)
 	This:C1470.name:=utils_getRequireValue($1)
 	Super:C1706.setPrivate_()
 	
-	var $code : Text
-	$code:=Document to text:C1236(Convert path POSIX to system:C1107($path.path))
-	
-	var $lines : Collection
 	var $details : cs:C1710.DocClass_
 	var $comments : Collection
-	$lines:=Split string:C1554($code; "\r\n")
 	$comments:=New collection:C1472
 	
 	var $parsed : cs:C1710.Comment_
 	var $function : cs:C1710.DocFunction_
 	var $line : Text
-	For each ($line; $lines)
+	For each ($line; doc_splitLines($path))
 		$parsed:=cs:C1710.Comment_.new($line)
 		
 		Case of 
@@ -28,7 +23,7 @@ Class constructor($name : Text; $path : cs:C1710.File)
 				End if 
 				$function:=cs:C1710.DocFunction_.new($parsed.code)
 				
-			: ($parsed.code="Function@")
+			: ($parsed.code="Function @")
 				If ($function#Null:C1517)
 					This:C1470.functions.push($function)
 				End if 
@@ -68,10 +63,11 @@ Function generateText
 	This:C1470.title:="Class "+This:C1470.name
 	
 	/// 1. Adds the header
-	This:C1470.addHeading("Class <mark>cs."+This:C1470.name+"</mark>"; 1; True:C214)
+	This:C1470.addHeading("Class <mark>cs."+This:C1470.name+"</mark>"+This:C1470.getTypeBadge(); \
+		1; ""; True:C214)
 	This:C1470.addDescription(True:C214)
 	
-	This:C1470.addHeading("Method list"; 2; False:C215)
+	This:C1470.addHeading("Method list"; 2)
 	
 	var $htmlTable : cs:C1710.DocHtmlTable_
 	var $function : cs:C1710.DocFunction_
@@ -85,11 +81,10 @@ Function generateText
 	End for each 
 	This:C1470.addLine($htmlTable.getHTMLtable())
 	
-	This:C1470.addHeading("Methods"; 2; False:C215)
+	This:C1470.addHeading("Methods"; 2)
 	
 	For each ($function; This:C1470.functions)
 		$function.text_:=""
-		$function.generateText()
-		This:C1470.addLine($function.addDescription())
+		$function.addDetail(This:C1470)
 	End for each 
 	

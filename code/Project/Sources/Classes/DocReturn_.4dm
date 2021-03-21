@@ -1,7 +1,7 @@
 Class extends DocValue_
-Class constructor($value : Text; $from : Text)
+Class constructor($value : Text; $type : Text)
 	If (Count parameters:C259=2)
-		Super:C1705($value; $from)
+		Super:C1705($value; $type)
 	Else 
 		Super:C1705($value)
 	End if 

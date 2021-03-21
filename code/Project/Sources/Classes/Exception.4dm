@@ -17,5 +17,5 @@ Class constructor
 	This:C1470.type:=$caller.type
 	This:C1470.processName:=Current process name:C1392
 	This:C1470.processId:=Current process:C322
-	This:C1470.timestamp:=Timestamp:C1445
+	This:C1470.thrownTimestamp:=Timestamp:C1445
 	

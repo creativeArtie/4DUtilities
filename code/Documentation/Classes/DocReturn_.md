@@ -15,14 +15,15 @@
     integrity='sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0'
     crossorigin='anonymous'
   ></script>
-  <title>Class UseCombo</title>
+  <title>Class DocReturn_</title>
   <meta charset='ASCII' />
   <meta name='generator' value='4D Documentation' />
 </header>
 <body>
 <div id='content' class='container'>
 
-<h1>Class <mark>cs.UseCombo</mark></h1>
+<h1>Class <mark>cs.DocReturn_</mark> <span class='badge bg-danger' data-bs-toggle='tooltip' title='To be use internally in a namespace' >private</span>
+</h1>
 
 <h2>Description</h2>
 
@@ -40,23 +41,7 @@
   </tr></thead>
   <tbody>
   <tr>
-    <td class='table-success'><a href='#class-constructor'><strong>Class constructor()<strong> <span class='badge bg-primary' data-bs-toggle='tooltip' title='Class Constructor' >constructor</span></a></td>
-    <td class='table-success'></td>
-  </tr>
-  <tr>
-    <td class='table-success'><a href='#getValue'>getValue() -> $value : Variant</a></td>
-    <td class='table-success'></td>
-  </tr>
-  <tr>
-    <td class='table-success'><a href='#setError'>setError()</a></td>
-    <td class='table-success'></td>
-  </tr>
-  <tr>
-    <td class='table-success'><a href='#setWarning'>setWarning()</a></td>
-    <td class='table-success'></td>
-  </tr>
-  <tr>
-    <td class='table-success'><a href='#setPass'>setPass()</a></td>
+    <td class='table-success'><a href='#class-constructor'><strong>Class constructor($value : Text; $type : Text)<strong> <span class='badge bg-primary' data-bs-toggle='tooltip' title='Class Constructor' >constructor</span></a></td>
     <td class='table-success'></td>
   </tr>
 </tbody>
@@ -74,97 +59,20 @@
   </tr></thead>
   <tbody>
   <tr>
-    <td class='table-info'>$pointer</td>
-    <td class='table-info'>POINTER</td>
-    <td class='table-info'></td>
+    <td class='table-primary'>$value (parameter 1)</td>
+    <td class='table-primary'>Text</td>
+    <td class='table-primary'></td>
   </tr>
-</tbody>
-</table>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h3 id='getValue'>getValue</h3>
-
-<table class='table '>
-  <thead>
-  <tr>  <td>Name</th>
-  <td>Type</th>
-  <td>Brief</th>
-  </tr></thead>
-  <tbody>
   <tr>
-    <td class='table-secondary'>$value (return value)</td>
-    <td class='table-secondary'>Variant</td>
-    <td class='table-secondary'></td>
+    <td class='table-primary'>$type (parameter 2)</td>
+    <td class='table-primary'>Text</td>
+    <td class='table-primary'></td>
   </tr>
 </tbody>
 </table>
 
 
 
-
-
-
-
-
-
-<h3 id='setError'>setError</h3>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h3 id='setWarning'>setWarning</h3>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h3 id='setPass'>setPass</h3>
 
 
 

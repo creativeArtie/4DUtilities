@@ -22,11 +22,11 @@
 <body>
 <div id='content' class='container'>
 
-# Class <mark>cs.Validator</mark>
+<h1>Class <mark>cs.Validator</mark></h1>
 
 **Author**: *Wai-Kin Chau*
 
-## Description
+<h2>Description</h2>
 
 manager for the validations
 
@@ -36,69 +36,501 @@ manager for the validations
  Optional fields does not need to be valid, while required fields does
 
 
-## Method list
+<h2>Method list</h2>
 
 <table class='table table-hover'>
   <thead>
-  <tr>  <th class='table-primary'>Method Name</th>
-  <th class='table-primary'>Method Brief</th>
+  <tr>  <td>Method Name</th>
+  <td>Method Brief</th>
   </tr></thead>
   <tbody>
   <tr>
-    <td class='table-success'><strong>Class constructor<strong> <span class='badge bg-primary' data-bs-toggle='tooltip' title='Class Constructor' >constructor</span>
-</td>
+    <td class='table-success'><a href='#class-constructor'><strong>Class constructor()<strong> <span class='badge bg-primary' data-bs-toggle='tooltip' title='Class Constructor' >constructor</span></a></td>
     <td class='table-success'></td>
   </tr>
   <tr>
-    <td class='table-success'>addMandatory</td>
+    <td class='table-success'><a href='#addMandatory'>addMandatory()</a></td>
     <td class='table-success'>adds fields that need to be valid</td>
   </tr>
   <tr>
-    <td class='table-success'>addOptional</td>
+    <td class='table-success'><a href='#addOptional'>addOptional()</a></td>
     <td class='table-success'>adds fields that can be valid</td>
   </tr>
   <tr>
-    <td class='table-success'>runChecks</td>
+    <td class='table-success'><a href='#runChecks'>runChecks()</a></td>
     <td class='table-success'>runs the check</td>
   </tr>
   <tr>
-    <td class='table-success'>hasErrors</td>
+    <td class='table-success'><a href='#hasErrors'>hasErrors() -> $answer : Boolean</a></td>
     <td class='table-success'>check if there are errors</td>
   </tr>
   <tr>
-    <td class='table-success'>hasWarnings</td>
+    <td class='table-success'><a href='#hasWarnings'>hasWarnings() -> $answer : Boolean</a></td>
     <td class='table-success'>check if there are warnings</td>
   </tr>
   <tr>
-    <td class='table-success'>hasNoIssues</td>
+    <td class='table-success'><a href='#hasNoIssues'>hasNoIssues() -> $answer : Boolean</a></td>
     <td class='table-success'>check if there are no issues</td>
   </tr>
   <tr>
-    <td class='table-success'>canIgnore</td>
+    <td class='table-success'><a href='#canIgnore'>canIgnore() -> $answer : Boolean</a></td>
     <td class='table-success'>check if the remaining issues can be ignored</td>
   </tr>
   <tr>
-    <td class='table-success'>getErrorCount</td>
+    <td class='table-success'><a href='#getErrorCount'>getErrorCount() -> $answer : Integer</a></td>
     <td class='table-success'>count the number of errors</td>
   </tr>
   <tr>
-    <td class='table-success'>getWarningCount</td>
+    <td class='table-success'><a href='#getWarningCount'>getWarningCount() -> $answer : Integer</a></td>
     <td class='table-success'>count the number of warning</td>
   </tr>
   <tr>
-    <td class='table-success'>getTotal</td>
+    <td class='table-success'><a href='#getTotal'>getTotal() -> $answer : Integer</a></td>
     <td class='table-success'>count the number of issues</td>
   </tr>
   <tr>
-    <td class='table-success'>listErrors</td>
+    <td class='table-success'><a href='#listErrors'>listErrors() -> $answer : Collection</a></td>
     <td class='table-success'>list the errors</td>
   </tr>
   <tr>
-    <td class='table-success'>listWarnings</td>
+    <td class='table-success'><a href='#listWarnings'>listWarnings() -> $answer : Collection</a></td>
     <td class='table-success'>list the warnings</td>
   </tr>
 </tbody>
 </table>
+
+<h2>Methods</h2>
+
+<h3 id='class-constructor'><strong>Class Constructor</strong></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h3 id='addMandatory'>addMandatory</h3>
+
+adds fields that need to be valid
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h3 id='addOptional'>addOptional</h3>
+
+adds fields that can be valid
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h3 id='runChecks'>runChecks</h3>
+
+<table class='table '>
+  <thead>
+  <tr>  <td>Name</th>
+  <td>Type</th>
+  <td>Brief</th>
+  </tr></thead>
+  <tbody>
+  <tr>
+    <td class='table-info'>$result</td>
+    <td class='table-info'>Boolean</td>
+    <td class='table-info'></td>
+  </tr>
+  <tr>
+    <td class='table-info'>$ptr</td>
+    <td class='table-info'>cs.Check</td>
+    <td class='table-info'></td>
+  </tr>
+  <tr>
+    <td class='table-info'>$value</td>
+    <td class='table-info'>cs.Use</td>
+    <td class='table-info'></td>
+  </tr>
+</tbody>
+</table>
+
+runs the check
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h3 id='hasErrors'>hasErrors</h3>
+
+<table class='table '>
+  <thead>
+  <tr>  <td>Name</th>
+  <td>Type</th>
+  <td>Brief</th>
+  </tr></thead>
+  <tbody>
+  <tr>
+    <td class='table-secondary'>$answer (return value)</td>
+    <td class='table-secondary'>Boolean</td>
+    <td class='table-secondary'></td>
+  </tr>
+</tbody>
+</table>
+
+check if there are errors
+
+
+
+
+
+
+
+<h3 id='hasWarnings'>hasWarnings</h3>
+
+<table class='table '>
+  <thead>
+  <tr>  <td>Name</th>
+  <td>Type</th>
+  <td>Brief</th>
+  </tr></thead>
+  <tbody>
+  <tr>
+    <td class='table-secondary'>$answer (return value)</td>
+    <td class='table-secondary'>Boolean</td>
+    <td class='table-secondary'></td>
+  </tr>
+</tbody>
+</table>
+
+check if there are warnings
+
+
+
+
+
+
+
+<h3 id='hasNoIssues'>hasNoIssues</h3>
+
+<table class='table '>
+  <thead>
+  <tr>  <td>Name</th>
+  <td>Type</th>
+  <td>Brief</th>
+  </tr></thead>
+  <tbody>
+  <tr>
+    <td class='table-secondary'>$answer (return value)</td>
+    <td class='table-secondary'>Boolean</td>
+    <td class='table-secondary'></td>
+  </tr>
+</tbody>
+</table>
+
+check if there are no issues
+
+
+
+
+
+
+
+<h3 id='canIgnore'>canIgnore</h3>
+
+<table class='table '>
+  <thead>
+  <tr>  <td>Name</th>
+  <td>Type</th>
+  <td>Brief</th>
+  </tr></thead>
+  <tbody>
+  <tr>
+    <td class='table-secondary'>$answer (return value)</td>
+    <td class='table-secondary'>Boolean</td>
+    <td class='table-secondary'></td>
+  </tr>
+</tbody>
+</table>
+
+check if the remaining issues can be ignored
+
+
+
+
+
+
+
+<h3 id='getErrorCount'>getErrorCount</h3>
+
+<table class='table '>
+  <thead>
+  <tr>  <td>Name</th>
+  <td>Type</th>
+  <td>Brief</th>
+  </tr></thead>
+  <tbody>
+  <tr>
+    <td class='table-secondary'>$answer (return value)</td>
+    <td class='table-secondary'>Integer</td>
+    <td class='table-secondary'></td>
+  </tr>
+</tbody>
+</table>
+
+count the number of errors
+
+
+
+
+
+
+
+<h3 id='getWarningCount'>getWarningCount</h3>
+
+<table class='table '>
+  <thead>
+  <tr>  <td>Name</th>
+  <td>Type</th>
+  <td>Brief</th>
+  </tr></thead>
+  <tbody>
+  <tr>
+    <td class='table-secondary'>$answer (return value)</td>
+    <td class='table-secondary'>Integer</td>
+    <td class='table-secondary'></td>
+  </tr>
+</tbody>
+</table>
+
+count the number of warning
+
+
+
+
+
+
+
+<h3 id='getTotal'>getTotal</h3>
+
+<table class='table '>
+  <thead>
+  <tr>  <td>Name</th>
+  <td>Type</th>
+  <td>Brief</th>
+  </tr></thead>
+  <tbody>
+  <tr>
+    <td class='table-secondary'>$answer (return value)</td>
+    <td class='table-secondary'>Integer</td>
+    <td class='table-secondary'></td>
+  </tr>
+</tbody>
+</table>
+
+count the number of issues
+
+
+
+
+
+
+
+<h3 id='listErrors'>listErrors</h3>
+
+<table class='table '>
+  <thead>
+  <tr>  <td>Name</th>
+  <td>Type</th>
+  <td>Brief</th>
+  </tr></thead>
+  <tbody>
+  <tr>
+    <td class='table-secondary'>$answer (return value)</td>
+    <td class='table-secondary'>Collection</td>
+    <td class='table-secondary'></td>
+  </tr>
+</tbody>
+</table>
+
+list the errors
+
+
+
+
+
+
+
+<h3 id='listWarnings'>listWarnings</h3>
+
+<table class='table '>
+  <thead>
+  <tr>  <td>Name</th>
+  <td>Type</th>
+  <td>Brief</th>
+  </tr></thead>
+  <tbody>
+  <tr>
+    <td class='table-secondary'>$answer (return value)</td>
+    <td class='table-secondary'>Collection</td>
+    <td class='table-secondary'></td>
+  </tr>
+</tbody>
+</table>
+
+list the warnings
+
+
+
+
+
+
 
 </div>
     <script>

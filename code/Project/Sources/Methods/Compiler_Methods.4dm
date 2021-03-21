@@ -73,3 +73,7 @@ C_OBJECT:C1216(utils_lazyOr; ${1})
 C_VARIANT:C1683(utils_saveToStorage; $1)
 C_TEXT:C284(utils_saveToStorage; $2)
 C_OBJECT:C1216(utils_saveToStorage; $3)
+
+//doc_splitLines
+C_COLLECTION:C1488(doc_splitLines; $0)
+C_OBJECT:C1216(doc_splitLines; $1)

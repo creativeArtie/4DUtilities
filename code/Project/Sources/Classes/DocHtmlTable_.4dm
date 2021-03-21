@@ -9,12 +9,15 @@ Function addHeader($header : Text)
 Function addData($class : Text; $data : Collection)
 	This:C1470.row.push(New object:C1471("class"; $class; "data"; $data))
 	
+Function hasData->$isFilled : Boolean
+	$isFilled:=This:C1470.row.length>0
+	
 Function getHTMLtable->$doc : Text
 	var $headers : Text
 	var $cell : Text
 	$headers:="  <tr>"
 	For each ($cell; This:C1470.headers)
-		$headers:=$headers+"  <th class='table-primary'>"+$cell+"</th>\n"
+		$headers:=$headers+"  <td>"+$cell+"</th>\n"
 	End for each 
 	$headers:=$headers+"  </tr>"
 	

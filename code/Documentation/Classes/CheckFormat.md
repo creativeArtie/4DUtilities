@@ -22,38 +22,192 @@
 <body>
 <div id='content' class='container'>
 
-# Class <mark>cs.CheckFormat</mark>
+<h1>Class <mark>cs.CheckFormat</mark></h1>
 
-## Description
-
-
+<h2>Description</h2>
 
 
 
 
-## Method list
+
+
+<h2>Method list</h2>
 
 <table class='table table-hover'>
   <thead>
-  <tr>  <th class='table-primary'>Method Name</th>
-  <th class='table-primary'>Method Brief</th>
+  <tr>  <td>Method Name</th>
+  <td>Method Brief</th>
   </tr></thead>
   <tbody>
   <tr>
-    <td class='table-success'><strong>Class constructor<strong> <span class='badge bg-primary' data-bs-toggle='tooltip' title='Class Constructor' >constructor</span>
-</td>
+    <td class='table-success'><a href='#class-constructor'><strong>Class constructor($filled : Boolean; $type : Text)<strong> <span class='badge bg-primary' data-bs-toggle='tooltip' title='Class Constructor' >constructor</span></a></td>
     <td class='table-success'></td>
   </tr>
   <tr>
-    <td class='table-success'>test</td>
+    <td class='table-success'><a href='#test'>test() -> $result : Boolean</a></td>
     <td class='table-success'></td>
   </tr>
   <tr>
-    <td class='table-success'>getMessageTemplate()</td>
+    <td class='table-success'><a href='#getMessageTemplate'>getMessageTemplate() -> $template : Text</a></td>
     <td class='table-success'></td>
   </tr>
 </tbody>
 </table>
+
+<h2>Methods</h2>
+
+<h3 id='class-constructor'><strong>Class Constructor</strong></h3>
+
+<table class='table '>
+  <thead>
+  <tr>  <td>Name</th>
+  <td>Type</th>
+  <td>Brief</th>
+  </tr></thead>
+  <tbody>
+  <tr>
+    <td class='table-primary'>$filled (parameter 1)</td>
+    <td class='table-primary'>Boolean</td>
+    <td class='table-primary'></td>
+  </tr>
+  <tr>
+    <td class='table-primary'>$type (parameter 2)</td>
+    <td class='table-primary'>Text</td>
+    <td class='table-primary'></td>
+  </tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h3 id='test'>test</h3>
+
+<table class='table '>
+  <thead>
+  <tr>  <td>Name</th>
+  <td>Type</th>
+  <td>Brief</th>
+  </tr></thead>
+  <tbody>
+  <tr>
+    <td class='table-secondary'>$result (return value)</td>
+    <td class='table-secondary'>Boolean</td>
+    <td class='table-secondary'></td>
+  </tr>
+  <tr>
+    <td class='table-info'>$value</td>
+    <td class='table-info'>Object</td>
+    <td class='table-info'></td>
+  </tr>
+  <tr>
+    <td class='table-info'>$continue</td>
+    <td class='table-info'>Boolean</td>
+    <td class='table-info'></td>
+  </tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h3 id='getMessageTemplate'>getMessageTemplate</h3>
+
+<table class='table '>
+  <thead>
+  <tr>  <td>Name</th>
+  <td>Type</th>
+  <td>Brief</th>
+  </tr></thead>
+  <tbody>
+  <tr>
+    <td class='table-secondary'>$template (return value)</td>
+    <td class='table-secondary'>Text</td>
+    <td class='table-secondary'></td>
+  </tr>
+</tbody>
+</table>
+
+
+
+
+
 
 </div>
     <script>

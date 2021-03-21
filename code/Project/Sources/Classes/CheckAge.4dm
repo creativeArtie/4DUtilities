@@ -10,8 +10,8 @@ Class constructor
 	utils_countParams(2; Count parameters:C259)
 	
 Function test->$result : Boolean
-	var $value : Variant
-	var $age : Integer
+	var $value : Variant  /// value to check, can be number or date
+	var $age : Integer  /// the calculated age
 	$value:=This:C1470.getValue()
 	Case of 
 		: (Value type:C1509($value)=Is date:K8:7)

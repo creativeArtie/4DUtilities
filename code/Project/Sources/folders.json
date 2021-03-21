@@ -15,14 +15,17 @@
 			"doc_findFiles_",
 			"doc_outputBadge_",
 			"doc_run",
+			"doc_splitLines",
 			"doc_test"
 		],
 		"classes": [
 			"Comment_",
 			"DocClass_",
+			"DocFile_",
 			"DocFunction_",
 			"DocHtmlTable_",
 			"DocParam_",
+			"DocReturn_",
 			"DocSection_",
 			"DocValue_"
 		]

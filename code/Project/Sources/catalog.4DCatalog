@@ -4,7 +4,7 @@
 	<schema name="DEFAULT_SCHEMA"/>
 	<table name="PhoneFormats" uuid="9EE6CD4AE856C240933998C5CFF00898" id="1">
 		<field name="ID" uuid="6BD4B9BDD425D849BB80563E3475A1C2" type="4" unique="true" autosequence="true" not_null="true" id="1"/>
-		<field name="order" uuid="A2733E1FBED0C347B56931CF368ADD9E" type="3" never_null="true" id="2"/>
+		<field name="formatOrder" uuid="A2733E1FBED0C347B56931CF368ADD9E" type="3" never_null="true" id="2"/>
 		<field name="countryCode" uuid="5A151AEDAC943945A4D29EC45F8CF0D6" type="10" limiting_length="255" never_null="true" id="3"/>
 		<field name="callingCode" uuid="B93092832C41584B93F813E1A80ED411" type="10" limiting_length="255" id="4" hide_in_REST="true"/>
 		<field name="trunkCode" uuid="B050283E3839F94D9CBC21297C178614" type="10" limiting_length="255" never_null="true" id="5"/>
@@ -28,7 +28,7 @@
 		<field name="type" uuid="B3C6A12849D1BF4B8236CCF7806835D1" type="10" limiting_length="255" never_null="true" id="7"/>
 		<field name="processName" uuid="FF3BBEA182195C4ABAE05A9BB91A0F3A" type="10" limiting_length="255" never_null="true" id="8"/>
 		<field name="processId" uuid="2295C20E66F9C94AB7A441AB5B358EC5" type="5" never_null="true" id="9"/>
-		<field name="timestamp" uuid="17D9BD3CB57ABA488F028A916EDB4674" type="10" limiting_length="255" never_null="true" id="10"/>
+		<field name="thrownTimestamp" uuid="17D9BD3CB57ABA488F028A916EDB4674" type="10" limiting_length="255" never_null="true" id="10"/>
 		<primary_key field_name="ID" field_uuid="3BAB6B00D81F974CA083E70DBE4E622C"/>
 		<table_extra>
 			<editor_table_info displayable_fields_count="10">

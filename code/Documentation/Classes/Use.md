@@ -22,65 +22,301 @@
 <body>
 <div id='content' class='container'>
 
-# Class <mark>cs.Use</mark>
+<h1>Class <mark>cs.Use</mark></h1>
 
 **Author**: *Wai-Kin Chau*
 
-## Description
+<h2>Description</h2>
 
 Stores the error message and access the value to test
 
-## Method list
+<h2>Method list</h2>
 
 <table class='table table-hover'>
   <thead>
-  <tr>  <th class='table-primary'>Method Name</th>
-  <th class='table-primary'>Method Brief</th>
+  <tr>  <td>Method Name</th>
+  <td>Method Brief</th>
   </tr></thead>
   <tbody>
   <tr>
-    <td class='table-success'><strong>Class constructor<strong> <span class='badge bg-primary' data-bs-toggle='tooltip' title='Class Constructor' >constructor</span>
-</td>
+    <td class='table-success'><a href='#class-constructor'><strong>Class constructor($name : Text)<strong> <span class='badge bg-primary' data-bs-toggle='tooltip' title='Class Constructor' >constructor</span></a></td>
     <td class='table-success'></td>
   </tr>
   <tr>
-    <td class='table-success'>getValue</td>
+    <td class='table-success'><a href='#getValue'>getValue()</a></td>
     <td class='table-success'></td>
   </tr>
   <tr>
-    <td class='table-success'>setError</td>
+    <td class='table-success'><a href='#setError'>setError()</a></td>
     <td class='table-success'></td>
   </tr>
   <tr>
-    <td class='table-success'>setWarning</td>
+    <td class='table-success'><a href='#setWarning'>setWarning()</a></td>
     <td class='table-success'></td>
   </tr>
   <tr>
-    <td class='table-success'>setPass</td>
+    <td class='table-success'><a href='#setPass'>setPass()</a></td>
     <td class='table-success'></td>
   </tr>
   <tr>
-    <td class='table-success'>getText</td>
+    <td class='table-success'><a href='#getText'>getText() -> $message : Text</a></td>
     <td class='table-success'></td>
   </tr>
   <tr>
-    <td class='table-success'>hasError</td>
+    <td class='table-success'><a href='#hasError'>hasError() -> $answer : Boolean</a></td>
     <td class='table-success'></td>
   </tr>
   <tr>
-    <td class='table-success'>canIgnore</td>
+    <td class='table-success'><a href='#canIgnore'>canIgnore() -> $answer : Boolean</a></td>
     <td class='table-success'></td>
   </tr>
   <tr>
-    <td class='table-success'>isPassed</td>
+    <td class='table-success'><a href='#isPassed'>isPassed() -> $answer : Boolean</a></td>
     <td class='table-success'></td>
   </tr>
   <tr>
-    <td class='table-success'>hasIssues</td>
+    <td class='table-success'><a href='#hasIssues'>hasIssues() -> $answer : Boolean</a></td>
     <td class='table-success'></td>
   </tr>
 </tbody>
 </table>
+
+<h2>Methods</h2>
+
+<h3 id='class-constructor'><strong>Class Constructor</strong></h3>
+
+<table class='table '>
+  <thead>
+  <tr>  <td>Name</th>
+  <td>Type</th>
+  <td>Brief</th>
+  </tr></thead>
+  <tbody>
+  <tr>
+    <td class='table-primary'>$name (parameter 1)</td>
+    <td class='table-primary'>Text</td>
+    <td class='table-primary'></td>
+  </tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h3 id='getValue'>getValue</h3>
+
+
+
+
+
+
+
+
+
+<h3 id='setError'>setError</h3>
+
+<table class='table '>
+  <thead>
+  <tr>  <td>Name</th>
+  <td>Type</th>
+  <td>Brief</th>
+  </tr></thead>
+  <tbody>
+  <tr>
+    <td class='table-info'>$message</td>
+    <td class='table-info'>Text</td>
+    <td class='table-info'></td>
+  </tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h3 id='setWarning'>setWarning</h3>
+
+<table class='table '>
+  <thead>
+  <tr>  <td>Name</th>
+  <td>Type</th>
+  <td>Brief</th>
+  </tr></thead>
+  <tbody>
+  <tr>
+    <td class='table-info'>$message</td>
+    <td class='table-info'>Text</td>
+    <td class='table-info'></td>
+  </tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h3 id='setPass'>setPass</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+<h3 id='getText'>getText</h3>
+
+<table class='table '>
+  <thead>
+  <tr>  <td>Name</th>
+  <td>Type</th>
+  <td>Brief</th>
+  </tr></thead>
+  <tbody>
+  <tr>
+    <td class='table-secondary'>$message (return value)</td>
+    <td class='table-secondary'>Text</td>
+    <td class='table-secondary'></td>
+  </tr>
+</tbody>
+</table>
+
+
+
+
+
+
+<h3 id='hasError'>hasError</h3>
+
+<table class='table '>
+  <thead>
+  <tr>  <td>Name</th>
+  <td>Type</th>
+  <td>Brief</th>
+  </tr></thead>
+  <tbody>
+  <tr>
+    <td class='table-secondary'>$answer (return value)</td>
+    <td class='table-secondary'>Boolean</td>
+    <td class='table-secondary'></td>
+  </tr>
+</tbody>
+</table>
+
+
+
+
+
+
+<h3 id='canIgnore'>canIgnore</h3>
+
+<table class='table '>
+  <thead>
+  <tr>  <td>Name</th>
+  <td>Type</th>
+  <td>Brief</th>
+  </tr></thead>
+  <tbody>
+  <tr>
+    <td class='table-secondary'>$answer (return value)</td>
+    <td class='table-secondary'>Boolean</td>
+    <td class='table-secondary'></td>
+  </tr>
+</tbody>
+</table>
+
+
+
+
+
+
+<h3 id='isPassed'>isPassed</h3>
+
+<table class='table '>
+  <thead>
+  <tr>  <td>Name</th>
+  <td>Type</th>
+  <td>Brief</th>
+  </tr></thead>
+  <tbody>
+  <tr>
+    <td class='table-secondary'>$answer (return value)</td>
+    <td class='table-secondary'>Boolean</td>
+    <td class='table-secondary'></td>
+  </tr>
+</tbody>
+</table>
+
+
+
+
+
+
+<h3 id='hasIssues'>hasIssues</h3>
+
+<table class='table '>
+  <thead>
+  <tr>  <td>Name</th>
+  <td>Type</th>
+  <td>Brief</th>
+  </tr></thead>
+  <tbody>
+  <tr>
+    <td class='table-secondary'>$answer (return value)</td>
+    <td class='table-secondary'>Boolean</td>
+    <td class='table-secondary'></td>
+  </tr>
+</tbody>
+</table>
+
+
+
+
+
 
 </div>
     <script>

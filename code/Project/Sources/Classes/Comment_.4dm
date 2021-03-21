@@ -5,10 +5,13 @@ Class constructor($line : Text)
 	This:C1470.tag:=""
 	
 	var $doc : Text
-	$doc:="///"
+	$doc:="///"  // The line `$doc:="///"` is sadly adding into 4D Docs...
 	If ($line=("@"+$doc+"@"))
 		This:C1470.doc:=Substring:C12($line; Position:C15($doc; $line)+Length:C16($doc))
 		This:C1470.code:=Substring:C12($line; 0; Position:C15($doc; $line)-1)
+	End if 
+	If (This:C1470.code#"")
+		This:C1470.code:=Split string:C1554(This:C1470.code; "//")[0]
 	End if 
 	
 	If (This:C1470.doc="@#@")

@@ -22,31 +22,165 @@
 <body>
 <div id='content' class='container'>
 
-# Class <mark>cs.Comment_</mark>
+<h1>Class <mark>cs.Comment_</mark> <span class='badge bg-danger' data-bs-toggle='tooltip' title='To be use internally in a namespace' >private</span>
+</h1>
 
-## Description
+<h2>Description</h2>
 
 
 
-## Method list
+<h2>Method list</h2>
 
 <table class='table table-hover'>
   <thead>
-  <tr>  <th class='table-primary'>Method Name</th>
-  <th class='table-primary'>Method Brief</th>
+  <tr>  <td>Method Name</th>
+  <td>Method Brief</th>
   </tr></thead>
   <tbody>
   <tr>
-    <td class='table-success'><strong>Class constructor<strong> <span class='badge bg-primary' data-bs-toggle='tooltip' title='Class Constructor' >constructor</span>
-</td>
+    <td class='table-success'><a href='#class-constructor'><strong>Class constructor($line : Text)<strong> <span class='badge bg-primary' data-bs-toggle='tooltip' title='Class Constructor' >constructor</span></a></td>
     <td class='table-success'></td>
   </tr>
   <tr>
-    <td class='table-success'>addDoc</td>
+    <td class='table-success'><a href='#addDoc'>addDoc($doc : Text)</a></td>
     <td class='table-success'></td>
   </tr>
 </tbody>
 </table>
+
+<h2>Methods</h2>
+
+<h3 id='class-constructor'><strong>Class Constructor</strong></h3>
+
+<table class='table '>
+  <thead>
+  <tr>  <td>Name</th>
+  <td>Type</th>
+  <td>Brief</th>
+  </tr></thead>
+  <tbody>
+  <tr>
+    <td class='table-primary'>$line (parameter 1)</td>
+    <td class='table-primary'>Text</td>
+    <td class='table-primary'></td>
+  </tr>
+  <tr>
+    <td class='table-info'>$doc</td>
+    <td class='table-info'>Text</td>
+    <td class='table-info'></td>
+  </tr>
+  <tr>
+    <td class='table-info'>$tagged</td>
+    <td class='table-info'>Text</td>
+    <td class='table-info'></td>
+  </tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+"  // The line `$doc:="///"` is sadly adding into 4D Docs...
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h3 id='addDoc'>addDoc</h3>
+
+<table class='table '>
+  <thead>
+  <tr>  <td>Name</th>
+  <td>Type</th>
+  <td>Brief</th>
+  </tr></thead>
+  <tbody>
+  <tr>
+    <td class='table-primary'>$doc (parameter 1)</td>
+    <td class='table-primary'>Text</td>
+    <td class='table-primary'></td>
+  </tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 </div>
     <script>
