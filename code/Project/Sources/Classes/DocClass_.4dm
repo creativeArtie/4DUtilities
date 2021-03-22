@@ -10,11 +10,11 @@ Class constructor($name : Text; $path : cs:C1710.File)
 	var $comments : Collection
 	$comments:=New collection:C1472
 	
-	var $parsed : cs:C1710.Comment_
+	var $parsed : cs:C1710.DocLine_
 	var $function : cs:C1710.DocFunction_
 	var $line : Text
 	For each ($line; doc_splitLines($path))
-		$parsed:=cs:C1710.Comment_.new($line)
+		$parsed:=cs:C1710.DocLine_.new($line)
 		
 		Case of 
 			: ($parsed.code="Class constructor@")

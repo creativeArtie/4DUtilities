@@ -15,14 +15,14 @@
     integrity='sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0'
     crossorigin='anonymous'
   ></script>
-  <title>Class Comment_</title>
+  <title>Class DocLine_</title>
   <meta charset='ASCII' />
   <meta name='generator' value='4D Documentation' />
 </header>
 <body>
 <div id='content' class='container'>
 
-<h1>Class <mark>cs.Comment_</mark> <span class='badge bg-danger' data-bs-toggle='tooltip' title='To be use internally in a namespace' >private</span>
+<h1>Class <mark>cs.DocLine_</mark> <span class='badge bg-danger' data-bs-toggle='tooltip' title='To be use internally in a namespace' >private</span>
 </h1>
 
 <h2>Description</h2>

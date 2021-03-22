@@ -47,7 +47,7 @@
     <td class='table-danger'>check if the name ends with "_" meaning private</td>
   </tr>
   <tr>
-    <td class='table-success'><a href='#paraseCommonTags'>paraseCommonTags($comment : cs.Comment_)</a></td>
+    <td class='table-success'><a href='#paraseCommonTags'>paraseCommonTags($comment : cs.DocLine_)</a></td>
     <td class='table-success'></td>
   </tr>
   <tr>
@@ -109,7 +109,7 @@ check if the name ends with "_" meaning private
   <tbody>
   <tr>
     <td class='table-primary'>$comment (parameter 1)</td>
-    <td class='table-primary'>cs.Comment_</td>
+    <td class='table-primary'>cs.DocLine_</td>
     <td class='table-primary'></td>
   </tr>
   <tr>

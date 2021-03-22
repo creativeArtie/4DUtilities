@@ -88,7 +88,7 @@
   </tr>
   <tr>
     <td class='table-info'>$parsed</td>
-    <td class='table-info'>cs.Comment_</td>
+    <td class='table-info'>cs.DocLine_</td>
     <td class='table-info'></td>
   </tr>
   <tr>

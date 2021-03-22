@@ -19,7 +19,7 @@
 			"doc_test"
 		],
 		"classes": [
-			"Comment_",
+			"DocLine_",
 			"DocClass_",
 			"DocFile_",
 			"DocFunction_",

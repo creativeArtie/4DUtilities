@@ -11,7 +11,7 @@ Function setPrivate_
 		This:C1470.type:="private"
 	End if 
 	
-Function paraseCommonTags($comment : cs:C1710.Comment_)
+Function paraseCommonTags($comment : cs:C1710.DocLine_)
 	Case of 
 		: ($comment.tag="brief")
 			This:C1470.brief:=$comment.doc
