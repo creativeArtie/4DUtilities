@@ -42,7 +42,7 @@ Function paraseCommonTags($comment : cs:C1710.DocLine_)
 						: (Match regex:C1019("\\$[0-9]+"; $raw))
 						: (Match regex:C1019("\\$[:alpha:].*"; $raw))
 							var $value : cs:C1710.DocValue_
-							$value:=cs:C1710.DocValue_.new($raw)
+							$value:=cs:C1710.DocValue_.new($comment; $raw)
 							$value.brief:=$comment.doc
 							This:C1470.local.push($value)
 					End case 
@@ -61,7 +61,7 @@ Function paraseCommonTags($comment : cs:C1710.DocLine_)
 						$split:=Split string:C1554($split[1]; ";")
 						var $name : Text
 						For each ($name; $split)
-							$value:=cs:C1710.DocValue_.new($name; $type)
+							$value:=cs:C1710.DocValue_.new($comment; $name; $type)
 							$value.brief:=$comment.doc
 							This:C1470.local.push($value)
 						End for each 

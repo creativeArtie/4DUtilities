@@ -9,7 +9,8 @@
     href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css'
     rel='stylesheet'
     integrity='sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl'
-    crossorigin='anonymous'>
+    crossorigin='anonymous'
+  >
   <script 
     src='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js'
     integrity='sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0'
@@ -68,12 +69,12 @@
   <tr>
     <td class='table-primary'>$filled (parameter 1)</td>
     <td class='table-primary'>Boolean</td>
-    <td class='table-primary'></td>
+    <td class='table-primary'><em>Declared on line 2.</n></td>
   </tr>
   <tr>
     <td class='table-primary'>$type (parameter 2)</td>
     <td class='table-primary'>Text</td>
-    <td class='table-primary'></td>
+    <td class='table-primary'><em>Declared on line 2.</n></td>
   </tr>
 </tbody>
 </table>
@@ -107,17 +108,17 @@
   <tr>
     <td class='table-secondary'>$result (return value)</td>
     <td class='table-secondary'>Boolean</td>
-    <td class='table-secondary'></td>
+    <td class='table-secondary'><em>Declared on line 8.</n></td>
   </tr>
   <tr>
     <td class='table-info'>$value</td>
     <td class='table-info'>Object</td>
-    <td class='table-info'></td>
+    <td class='table-info'><em>Declared on line 9.</n></td>
   </tr>
   <tr>
     <td class='table-info'>$continue</td>
     <td class='table-info'>Boolean</td>
-    <td class='table-info'></td>
+    <td class='table-info'><em>Declared on line 11.</n></td>
   </tr>
 </tbody>
 </table>
@@ -199,7 +200,7 @@
   <tr>
     <td class='table-secondary'>$template (return value)</td>
     <td class='table-secondary'>Text</td>
-    <td class='table-secondary'></td>
+    <td class='table-secondary'><em>Declared on line 32.</n></td>
   </tr>
 </tbody>
 </table>

@@ -9,7 +9,8 @@
     href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css'
     rel='stylesheet'
     integrity='sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl'
-    crossorigin='anonymous'>
+    crossorigin='anonymous'
+  >
   <script 
     src='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js'
     integrity='sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0'
@@ -101,7 +102,7 @@ create a file for the 4D Documentation and for browser
   <tr>
     <td class='table-secondary'>$text (return value)</td>
     <td class='table-secondary'>Text</td>
-    <td class='table-secondary'></td>
+    <td class='table-secondary'><em>Declared on line 7.</n></td>
   </tr>
 </tbody>
 </table>
@@ -121,7 +122,7 @@ create a file for the 4D Documentation and for browser
   <tr>
     <td class='table-secondary'>$file (return value)</td>
     <td class='table-secondary'>4D.File</td>
-    <td class='table-secondary'></td>
+    <td class='table-secondary'><em>Declared on line 9.</n></td>
   </tr>
 </tbody>
 </table>
@@ -140,12 +141,12 @@ create a file for the 4D Documentation and for browser
   <tr>
     <td class='table-info'>$file</td>
     <td class='table-info'>4D.File</td>
-    <td class='table-info'> the generated file</td>
+    <td class='table-info'> the generated file<br /><em>Declared on line 13.</n></td>
   </tr>
   <tr>
     <td class='table-info'>$text</td>
     <td class='table-info'>Text</td>
-    <td class='table-info'> the template HTML, hard coded</td>
+    <td class='table-info'> the template HTML, hard coded<br /><em>Declared on line 20.</n></td>
   </tr>
 </tbody>
 </table>
@@ -194,12 +195,12 @@ generate the file
   <tr>
     <td class='table-primary'>$useHeading (parameter 1)</td>
     <td class='table-primary'>Boolean</td>
-    <td class='table-primary'></td>
+    <td class='table-primary'><em>Declared on line 25.</n></td>
   </tr>
   <tr>
     <td class='table-info'>$line</td>
     <td class='table-info'>Text</td>
-    <td class='table-info'> a single line from `This.comments` loop</td>
+    <td class='table-info'> a single line from `This.comments` loop<br /><em>Declared on line 35.</n></td>
   </tr>
 </tbody>
 </table>
@@ -254,32 +255,32 @@ add the file discription
   <tr>
     <td class='table-primary'>$header (parameter 1)</td>
     <td class='table-primary'>Text</td>
-    <td class='table-primary'></td>
+    <td class='table-primary'><em>Declared on line 40.</n></td>
   </tr>
   <tr>
     <td class='table-primary'>$level (parameter 2)</td>
     <td class='table-primary'>Integer</td>
-    <td class='table-primary'></td>
+    <td class='table-primary'><em>Declared on line 40.</n></td>
   </tr>
   <tr>
     <td class='table-primary'>$id (parameter 3)</td>
     <td class='table-primary'>Text</td>
-    <td class='table-primary'></td>
+    <td class='table-primary'><em>Declared on line 40.</n></td>
   </tr>
   <tr>
     <td class='table-primary'>$withSummary (parameter 4)</td>
     <td class='table-primary'>Boolean</td>
-    <td class='table-primary'></td>
+    <td class='table-primary'><em>Declared on line 40.</n></td>
   </tr>
   <tr>
     <td class='table-secondary'>$answer (return value)</td>
     <td class='table-secondary'>Text</td>
-    <td class='table-secondary'></td>
+    <td class='table-secondary'><em>Declared on line 40.</n></td>
   </tr>
   <tr>
     <td class='table-info'>$idAttr</td>
     <td class='table-info'>Text</td>
-    <td class='table-info'> id attribute which can be linked from the "Method list" section.</td>
+    <td class='table-info'> id attribute which can be linked from the "Method list" section.<br /><em>Declared on line 47.</n></td>
   </tr>
 </tbody>
 </table>
@@ -352,7 +353,7 @@ helper function for adding a markdown header
   <tr>
     <td class='table-primary'>$line (parameter 1)</td>
     <td class='table-primary'>Text</td>
-    <td class='table-primary'></td>
+    <td class='table-primary'><em>Declared on line 61.</n></td>
   </tr>
 </tbody>
 </table>

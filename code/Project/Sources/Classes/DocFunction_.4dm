@@ -1,8 +1,11 @@
 Class extends DocSection_
-Class constructor($line : Text)
+Class constructor($parsed : cs:C1710.DocLine_)
 	Super:C1705()
 	This:C1470.name:=""
 	This:C1470.params:=New collection:C1472
+	
+	var $line : Text
+	$line:=$parsed.code
 	
 	var $paramSplit : Collection
 	$paramSplit:=Split string:C1554($line; "(")
@@ -22,7 +25,7 @@ Class constructor($line : Text)
 		
 		var $param : Text
 		For each ($param; $params)
-			This:C1470.params.push(cs:C1710.DocParam_.new($param))
+			This:C1470.params.push(cs:C1710.DocParam_.new($parsed; $param))
 		End for each 
 	End if 
 	
@@ -32,7 +35,7 @@ Class constructor($line : Text)
 		End if 
 		
 		var $return : Text
-		This:C1470.return:=cs:C1710.DocReturn_.new($returnSplit[1])
+		This:C1470.return:=cs:C1710.DocReturn_.new($parsed; $returnSplit[1])
 	End if 
 	
 	If ($named="")
@@ -84,22 +87,23 @@ Function addDetail($class : cs:C1710.DocClass_)
 	$i:=1
 	For each ($param; This:C1470.params)
 		$table.addData("table-primary"; \
-			New collection:C1472($param.name+" (parameter "+String:C10($i)+")"; $param.type; $param.brief)\
-			)
+			New collection:C1472(\
+			$param.name+" (parameter "+String:C10($i)+")"; $param.type; $param.getDescription()\
+			))
 		$i:=$i+1
 		
 	End for each 
 	If (OB Is defined:C1231(This:C1470; "return"))
 		$table.addData("table-secondary"; \
 			New collection:C1472(This:C1470.return.name+" (return value)"; This:C1470.return.type; \
-			This:C1470.return.brief)\
+			This:C1470.return.getDescription())\
 			)
 	End if 
 	
 	var $value : cs:C1710.DocValue_
 	For each ($value; This:C1470.local)
 		$table.addData("table-info"; \
-			New collection:C1472($value.name; $value.type; $value.brief)\
+			New collection:C1472($value.name; $value.type; $value.getDescription())\
 			)
 	End for each 
 	

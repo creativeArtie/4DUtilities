@@ -9,7 +9,8 @@
     href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css'
     rel='stylesheet'
     integrity='sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl'
-    crossorigin='anonymous'>
+    crossorigin='anonymous'
+  >
   <script 
     src='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js'
     integrity='sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0'
@@ -203,17 +204,17 @@ adds fields that can be valid
   <tr>
     <td class='table-info'>$result</td>
     <td class='table-info'>Boolean</td>
-    <td class='table-info'></td>
+    <td class='table-info'><em>Declared on line 48.</n></td>
   </tr>
   <tr>
     <td class='table-info'>$ptr</td>
     <td class='table-info'>cs.Check</td>
-    <td class='table-info'></td>
+    <td class='table-info'><em>Declared on line 49.</n></td>
   </tr>
   <tr>
     <td class='table-info'>$value</td>
     <td class='table-info'>cs.Use</td>
-    <td class='table-info'></td>
+    <td class='table-info'><em>Declared on line 50.</n></td>
   </tr>
 </tbody>
 </table>
@@ -319,7 +320,7 @@ runs the check
   <tr>
     <td class='table-secondary'>$answer (return value)</td>
     <td class='table-secondary'>Boolean</td>
-    <td class='table-secondary'></td>
+    <td class='table-secondary'><em>Declared on line 74.</n></td>
   </tr>
 </tbody>
 </table>
@@ -344,7 +345,7 @@ check if there are errors
   <tr>
     <td class='table-secondary'>$answer (return value)</td>
     <td class='table-secondary'>Boolean</td>
-    <td class='table-secondary'></td>
+    <td class='table-secondary'><em>Declared on line 78.</n></td>
   </tr>
 </tbody>
 </table>
@@ -369,7 +370,7 @@ check if there are warnings
   <tr>
     <td class='table-secondary'>$answer (return value)</td>
     <td class='table-secondary'>Boolean</td>
-    <td class='table-secondary'></td>
+    <td class='table-secondary'><em>Declared on line 82.</n></td>
   </tr>
 </tbody>
 </table>
@@ -394,7 +395,7 @@ check if there are no issues
   <tr>
     <td class='table-secondary'>$answer (return value)</td>
     <td class='table-secondary'>Boolean</td>
-    <td class='table-secondary'></td>
+    <td class='table-secondary'><em>Declared on line 86.</n></td>
   </tr>
 </tbody>
 </table>
@@ -419,7 +420,7 @@ check if the remaining issues can be ignored
   <tr>
     <td class='table-secondary'>$answer (return value)</td>
     <td class='table-secondary'>Integer</td>
-    <td class='table-secondary'></td>
+    <td class='table-secondary'><em>Declared on line 90.</n></td>
   </tr>
 </tbody>
 </table>
@@ -444,7 +445,7 @@ count the number of errors
   <tr>
     <td class='table-secondary'>$answer (return value)</td>
     <td class='table-secondary'>Integer</td>
-    <td class='table-secondary'></td>
+    <td class='table-secondary'><em>Declared on line 94.</n></td>
   </tr>
 </tbody>
 </table>
@@ -469,7 +470,7 @@ count the number of warning
   <tr>
     <td class='table-secondary'>$answer (return value)</td>
     <td class='table-secondary'>Integer</td>
-    <td class='table-secondary'></td>
+    <td class='table-secondary'><em>Declared on line 98.</n></td>
   </tr>
 </tbody>
 </table>
@@ -494,7 +495,7 @@ count the number of issues
   <tr>
     <td class='table-secondary'>$answer (return value)</td>
     <td class='table-secondary'>Collection</td>
-    <td class='table-secondary'></td>
+    <td class='table-secondary'><em>Declared on line 102.</n></td>
   </tr>
 </tbody>
 </table>
@@ -519,7 +520,7 @@ list the errors
   <tr>
     <td class='table-secondary'>$answer (return value)</td>
     <td class='table-secondary'>Collection</td>
-    <td class='table-secondary'></td>
+    <td class='table-secondary'><em>Declared on line 106.</n></td>
   </tr>
 </tbody>
 </table>

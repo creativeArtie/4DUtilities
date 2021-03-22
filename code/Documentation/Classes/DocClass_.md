@@ -9,7 +9,8 @@
     href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css'
     rel='stylesheet'
     integrity='sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl'
-    crossorigin='anonymous'>
+    crossorigin='anonymous'
+  >
   <script 
     src='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js'
     integrity='sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0'
@@ -69,43 +70,35 @@
   <tr>
     <td class='table-primary'>$name (parameter 1)</td>
     <td class='table-primary'>Text</td>
-    <td class='table-primary'></td>
+    <td class='table-primary'><em>Declared on line 2.</n></td>
   </tr>
   <tr>
     <td class='table-primary'>$path (parameter 2)</td>
     <td class='table-primary'>cs.File</td>
-    <td class='table-primary'></td>
+    <td class='table-primary'><em>Declared on line 2.</n></td>
   </tr>
   <tr>
     <td class='table-info'>$details</td>
     <td class='table-info'>cs.DocClass_</td>
-    <td class='table-info'></td>
+    <td class='table-info'><em>Declared on line 9.</n></td>
   </tr>
   <tr>
     <td class='table-info'>$comments</td>
     <td class='table-info'>Collection</td>
-    <td class='table-info'></td>
+    <td class='table-info'><em>Declared on line 10.</n></td>
   </tr>
   <tr>
     <td class='table-info'>$parsed</td>
     <td class='table-info'>cs.DocLine_</td>
-    <td class='table-info'></td>
+    <td class='table-info'><em>Declared on line 13.</n></td>
   </tr>
   <tr>
     <td class='table-info'>$function</td>
     <td class='table-info'>cs.DocFunction_</td>
-    <td class='table-info'></td>
-  </tr>
-  <tr>
-    <td class='table-info'>$line</td>
-    <td class='table-info'>Text</td>
-    <td class='table-info'></td>
+    <td class='table-info'><em>Declared on line 14.</n></td>
   </tr>
 </tbody>
 </table>
-
-
-
 
 
 
@@ -241,12 +234,12 @@
   <tr>
     <td class='table-secondary'>$file (return value)</td>
     <td class='table-secondary'>4D.File</td>
-    <td class='table-secondary'></td>
+    <td class='table-secondary'><em>Declared on line 47.</n></td>
   </tr>
   <tr>
     <td class='table-info'>$path</td>
     <td class='table-info'>Text</td>
-    <td class='table-info'></td>
+    <td class='table-info'><em>Declared on line 48.</n></td>
   </tr>
 </tbody>
 </table>
@@ -283,27 +276,27 @@
   <tr>
     <td class='table-info'>$text</td>
     <td class='table-info'>Text</td>
-    <td class='table-info'></td>
+    <td class='table-info'><em>Declared on line 57.</n></td>
   </tr>
   <tr>
     <td class='table-info'>$classDoc</td>
     <td class='table-info'>Text</td>
-    <td class='table-info'></td>
+    <td class='table-info'><em>Declared on line 58.</n></td>
   </tr>
   <tr>
     <td class='table-info'>$commentLine</td>
     <td class='table-info'>Text</td>
-    <td class='table-info'></td>
+    <td class='table-info'><em>Declared on line 59.</n></td>
   </tr>
   <tr>
     <td class='table-info'>$htmlTable</td>
     <td class='table-info'>cs.DocHtmlTable_</td>
-    <td class='table-info'></td>
+    <td class='table-info'><em>Declared on line 69.</n></td>
   </tr>
   <tr>
     <td class='table-info'>$function</td>
     <td class='table-info'>cs.DocFunction_</td>
-    <td class='table-info'></td>
+    <td class='table-info'><em>Declared on line 70.</n></td>
   </tr>
 </tbody>
 </table>

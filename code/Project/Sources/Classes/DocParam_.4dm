@@ -1,7 +1,7 @@
 Class extends DocValue_
-Class constructor($value : Text; $from : Text)
-	If (Count parameters:C259=2)
-		Super:C1705($value; $from)
+Class constructor($line : cs:C1710.DocLine_; $value : Text; $type : Text)
+	If (Count parameters:C259=3)
+		Super:C1705($line; $value; $type)
 	Else 
-		Super:C1705($value)
+		Super:C1705($line; $value)
 	End if 

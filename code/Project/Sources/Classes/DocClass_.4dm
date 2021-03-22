@@ -4,6 +4,7 @@ Class constructor($name : Text; $path : cs:C1710.File)
 	This:C1470.functions:=New collection:C1472
 	This:C1470.code:=New collection:C1472
 	This:C1470.name:=utils_getRequireValue($1)
+	This:C1470.extends:="Object"
 	Super:C1706.setPrivate_()
 	
 	var $details : cs:C1710.DocClass_
@@ -12,22 +13,23 @@ Class constructor($name : Text; $path : cs:C1710.File)
 	
 	var $parsed : cs:C1710.DocLine_
 	var $function : cs:C1710.DocFunction_
-	var $line : Text
-	For each ($line; doc_splitLines($path))
-		$parsed:=cs:C1710.DocLine_.new($line)
+	For each ($parsed; doc_splitLines($path))
 		
 		Case of 
+			: ($parsed.code="Class extends @")
+				This:C1470.extends:=Split string:C1554($parsed.code; " ")[2]
+				
 			: ($parsed.code="Class constructor@")
 				If ($function#Null:C1517)
 					This:C1470.functions.push($function)
 				End if 
-				$function:=cs:C1710.DocFunction_.new($parsed.code)
+				$function:=cs:C1710.DocFunction_.new($parsed)
 				
 			: ($parsed.code="Function @")
 				If ($function#Null:C1517)
 					This:C1470.functions.push($function)
 				End if 
-				$function:=cs:C1710.DocFunction_.new($parsed.code)
+				$function:=cs:C1710.DocFunction_.new($parsed)
 				
 			: (($parsed.tag="abstract") & ($function#Null:C1517))
 				$function.type:="abstract"

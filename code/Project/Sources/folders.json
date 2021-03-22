@@ -19,11 +19,11 @@
 			"doc_test"
 		],
 		"classes": [
-			"DocLine_",
 			"DocClass_",
 			"DocFile_",
 			"DocFunction_",
 			"DocHtmlTable_",
+			"DocLine_",
 			"DocMethod_",
 			"DocParam_",
 			"DocReturn_",

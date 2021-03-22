@@ -10,11 +10,14 @@ $lines:=New collection:C1472
 var $line : Text
 var $final : Text
 var $nextLine : Text
+var $number : Integer
+$number:=1
 For each ($line; $raw)
 	If ($line="@\\")
 		$nextLine:=Substring:C12($line; 0; Length:C16($line)-1)+" "
 	Else 
-		$lines.push($nextLine+$line)
+		$lines.push(cs:C1710.DocLine_.new($nextLine+$line; $file.name; $number))
 		$nextLine:=""
+		$number:=$number+1
 	End if 
 End for each 

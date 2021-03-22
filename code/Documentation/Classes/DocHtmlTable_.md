@@ -9,7 +9,8 @@
     href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css'
     rel='stylesheet'
     integrity='sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl'
-    crossorigin='anonymous'>
+    crossorigin='anonymous'
+  >
   <script 
     src='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js'
     integrity='sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0'
@@ -74,7 +75,7 @@
   <tr>
     <td class='table-primary'>$classes (parameter 1)</td>
     <td class='table-primary'>Text</td>
-    <td class='table-primary'></td>
+    <td class='table-primary'><em>Declared on line 1.</n></td>
   </tr>
 </tbody>
 </table>
@@ -105,7 +106,7 @@
   <tr>
     <td class='table-primary'>$header (parameter 1)</td>
     <td class='table-primary'>Text</td>
-    <td class='table-primary'></td>
+    <td class='table-primary'><em>Declared on line 6.</n></td>
   </tr>
 </tbody>
 </table>
@@ -130,12 +131,12 @@
   <tr>
     <td class='table-primary'>$class (parameter 1)</td>
     <td class='table-primary'>Text</td>
-    <td class='table-primary'></td>
+    <td class='table-primary'><em>Declared on line 9.</n></td>
   </tr>
   <tr>
     <td class='table-primary'>$data (parameter 2)</td>
     <td class='table-primary'>Collection</td>
-    <td class='table-primary'></td>
+    <td class='table-primary'><em>Declared on line 9.</n></td>
   </tr>
 </tbody>
 </table>
@@ -160,7 +161,7 @@
   <tr>
     <td class='table-secondary'>$isFilled (return value)</td>
     <td class='table-secondary'>Boolean</td>
-    <td class='table-secondary'></td>
+    <td class='table-secondary'><em>Declared on line 12.</n></td>
   </tr>
 </tbody>
 </table>
@@ -185,27 +186,27 @@
   <tr>
     <td class='table-secondary'>$doc (return value)</td>
     <td class='table-secondary'>Text</td>
-    <td class='table-secondary'></td>
+    <td class='table-secondary'><em>Declared on line 15.</n></td>
   </tr>
   <tr>
     <td class='table-info'>$headers</td>
     <td class='table-info'>Text</td>
-    <td class='table-info'></td>
+    <td class='table-info'><em>Declared on line 16.</n></td>
   </tr>
   <tr>
     <td class='table-info'>$cell</td>
     <td class='table-info'>Text</td>
-    <td class='table-info'></td>
+    <td class='table-info'><em>Declared on line 17.</n></td>
   </tr>
   <tr>
     <td class='table-info'>$content</td>
     <td class='table-info'>Text</td>
-    <td class='table-info'></td>
+    <td class='table-info'><em>Declared on line 24.</n></td>
   </tr>
   <tr>
     <td class='table-info'>$row</td>
     <td class='table-info'>Object</td>
-    <td class='table-info'></td>
+    <td class='table-info'><em>Declared on line 25.</n></td>
   </tr>
 </tbody>
 </table>

@@ -9,7 +9,8 @@
     href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css'
     rel='stylesheet'
     integrity='sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl'
-    crossorigin='anonymous'>
+    crossorigin='anonymous'
+  >
   <script 
     src='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js'
     integrity='sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0'
@@ -41,7 +42,7 @@
   </tr></thead>
   <tbody>
   <tr>
-    <td class='table-success'><a href='#class-constructor'><strong>Class constructor($value : Text; $from : Text)<strong> <span class='badge bg-primary' data-bs-toggle='tooltip' title='Class Constructor' >constructor</span></a></td>
+    <td class='table-success'><a href='#class-constructor'><strong>Class constructor($line : cs.DocLine_; $value : Text; $type : Text)<strong> <span class='badge bg-primary' data-bs-toggle='tooltip' title='Class Constructor' >constructor</span></a></td>
     <td class='table-success'></td>
   </tr>
 </tbody>
@@ -59,14 +60,19 @@
   </tr></thead>
   <tbody>
   <tr>
-    <td class='table-primary'>$value (parameter 1)</td>
-    <td class='table-primary'>Text</td>
-    <td class='table-primary'></td>
+    <td class='table-primary'>$line (parameter 1)</td>
+    <td class='table-primary'>cs.DocLine_</td>
+    <td class='table-primary'><em>Declared on line 2.</n></td>
   </tr>
   <tr>
-    <td class='table-primary'>$from (parameter 2)</td>
+    <td class='table-primary'>$value (parameter 2)</td>
     <td class='table-primary'>Text</td>
-    <td class='table-primary'></td>
+    <td class='table-primary'><em>Declared on line 2.</n></td>
+  </tr>
+  <tr>
+    <td class='table-primary'>$type (parameter 3)</td>
+    <td class='table-primary'>Text</td>
+    <td class='table-primary'><em>Declared on line 2.</n></td>
   </tr>
 </tbody>
 </table>

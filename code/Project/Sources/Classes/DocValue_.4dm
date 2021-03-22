@@ -1,7 +1,10 @@
-Class constructor($value : Text; $type : Text)
+Class constructor($line : cs:C1710.DocLine_; $value : Text; $type : Text)
+	
+	This:C1470.file:=utils_getRequireValue($line; cs:C1710.DocLine_).file
+	This:C1470.line:=$line.line
 	
 	Case of 
-		: (Count parameters:C259=1)
+		: (Count parameters:C259=2)
 			var $split : Collection
 			$split:=Split string:C1554($value; ":"; sk trim spaces:K86:2)
 			This:C1470.name:=$split[0]
@@ -15,7 +18,8 @@ Class constructor($value : Text; $type : Text)
 				Else 
 					This:C1470.type:="Variant"
 			End case 
-		: (Count parameters:C259=2)
+			
+		: (Count parameters:C259=3)
 			This:C1470.name:=$value
 			This:C1470.type:=$type
 	End case 
@@ -27,4 +31,10 @@ Function getDeclare->$text : Text
 	If (This:C1470.defaults#"")
 		$text:=$text+" = "+This:C1470.defaults
 	End if 
+	
+Function getDescription()->$text : Text
+	If (This:C1470.brief#"")
+		$text:=This:C1470.brief+"<br />"
+	End if 
+	$text:=$text+"<em>Declared on line "+String:C10(This:C1470.line)+".</n>"
 	

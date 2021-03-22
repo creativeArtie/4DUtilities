@@ -9,7 +9,8 @@
     href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css'
     rel='stylesheet'
     integrity='sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl'
-    crossorigin='anonymous'>
+    crossorigin='anonymous'
+  >
   <script 
     src='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js'
     integrity='sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0'
@@ -41,7 +42,7 @@
   </tr></thead>
   <tbody>
   <tr>
-    <td class='table-success'><a href='#class-constructor'><strong>Class constructor($line : Text)<strong> <span class='badge bg-primary' data-bs-toggle='tooltip' title='Class Constructor' >constructor</span></a></td>
+    <td class='table-success'><a href='#class-constructor'><strong>Class constructor($parsed : cs.DocLine_)<strong> <span class='badge bg-primary' data-bs-toggle='tooltip' title='Class Constructor' >constructor</span></a></td>
     <td class='table-success'></td>
   </tr>
   <tr>
@@ -75,47 +76,58 @@
   </tr></thead>
   <tbody>
   <tr>
-    <td class='table-primary'>$line (parameter 1)</td>
-    <td class='table-primary'>Text</td>
-    <td class='table-primary'></td>
+    <td class='table-primary'>$parsed (parameter 1)</td>
+    <td class='table-primary'>cs.DocLine_</td>
+    <td class='table-primary'><em>Declared on line 2.</n></td>
+  </tr>
+  <tr>
+    <td class='table-info'>$line</td>
+    <td class='table-info'>Text</td>
+    <td class='table-info'><em>Declared on line 7.</n></td>
   </tr>
   <tr>
     <td class='table-info'>$paramSplit</td>
     <td class='table-info'>Collection</td>
-    <td class='table-info'></td>
+    <td class='table-info'><em>Declared on line 10.</n></td>
   </tr>
   <tr>
     <td class='table-info'>$returnSplit</td>
     <td class='table-info'>Collection</td>
-    <td class='table-info'></td>
+    <td class='table-info'><em>Declared on line 13.</n></td>
   </tr>
   <tr>
     <td class='table-info'>$named</td>
     <td class='table-info'>Text</td>
-    <td class='table-info'></td>
+    <td class='table-info'><em>Declared on line 16.</n></td>
   </tr>
   <tr>
     <td class='table-info'>$rawParams</td>
     <td class='table-info'>Text</td>
-    <td class='table-info'></td>
+    <td class='table-info'><em>Declared on line 20.</n></td>
   </tr>
   <tr>
     <td class='table-info'>$params</td>
     <td class='table-info'>Collection</td>
-    <td class='table-info'></td>
+    <td class='table-info'><em>Declared on line 23.</n></td>
   </tr>
   <tr>
     <td class='table-info'>$param</td>
     <td class='table-info'>Text</td>
-    <td class='table-info'></td>
+    <td class='table-info'><em>Declared on line 26.</n></td>
   </tr>
   <tr>
     <td class='table-info'>$return</td>
     <td class='table-info'>Text</td>
-    <td class='table-info'></td>
+    <td class='table-info'><em>Declared on line 37.</n></td>
   </tr>
 </tbody>
 </table>
+
+
+
+
+
+
 
 
 
@@ -254,12 +266,12 @@
   <tr>
     <td class='table-secondary'>$answer (return value)</td>
     <td class='table-secondary'>Text</td>
-    <td class='table-secondary'></td>
+    <td class='table-secondary'><em>Declared on line 54.</n></td>
   </tr>
   <tr>
     <td class='table-info'>$param</td>
     <td class='table-info'>cs.DocParam_</td>
-    <td class='table-info'></td>
+    <td class='table-info'><em>Declared on line 56.</n></td>
   </tr>
 </tbody>
 </table>
@@ -302,7 +314,7 @@
   <tr>
     <td class='table-secondary'>$answer (return value)</td>
     <td class='table-secondary'>Text</td>
-    <td class='table-secondary'></td>
+    <td class='table-secondary'><em>Declared on line 64.</n></td>
   </tr>
 </tbody>
 </table>
@@ -333,37 +345,37 @@
   <tr>
     <td class='table-primary'>$class (parameter 1)</td>
     <td class='table-primary'>cs.DocClass_</td>
-    <td class='table-primary'></td>
+    <td class='table-primary'><em>Declared on line 69.</n></td>
   </tr>
   <tr>
     <td class='table-info'>$id</td>
     <td class='table-info'>Text</td>
-    <td class='table-info'></td>
+    <td class='table-info'><em>Declared on line 74.</n></td>
   </tr>
   <tr>
     <td class='table-info'>$table</td>
     <td class='table-info'>cs.DocHtmlTable_</td>
-    <td class='table-info'></td>
+    <td class='table-info'><em>Declared on line 79.</n></td>
   </tr>
   <tr>
     <td class='table-info'>$param</td>
     <td class='table-info'>cs.DocParam_</td>
-    <td class='table-info'></td>
+    <td class='table-info'><em>Declared on line 85.</n></td>
   </tr>
   <tr>
     <td class='table-info'>$i</td>
     <td class='table-info'>Integer</td>
-    <td class='table-info'></td>
+    <td class='table-info'><em>Declared on line 86.</n></td>
   </tr>
   <tr>
     <td class='table-info'>$value</td>
     <td class='table-info'>cs.DocValue_</td>
-    <td class='table-info'></td>
+    <td class='table-info'><em>Declared on line 97.</n></td>
   </tr>
   <tr>
     <td class='table-info'>$line</td>
     <td class='table-info'>Text</td>
-    <td class='table-info'></td>
+    <td class='table-info'><em>Declared on line 108.</n></td>
   </tr>
 </tbody>
 </table>
@@ -493,22 +505,22 @@
   <tr>
     <td class='table-primary'>$table (parameter 1)</td>
     <td class='table-primary'>cs.DocFunctionTable_</td>
-    <td class='table-primary'></td>
+    <td class='table-primary'><em>Declared on line 113.</n></td>
   </tr>
   <tr>
     <td class='table-info'>$rowCss</td>
     <td class='table-info'>Text</td>
-    <td class='table-info'></td>
+    <td class='table-info'><em>Declared on line 114.</n></td>
   </tr>
   <tr>
     <td class='table-info'>$name</td>
     <td class='table-info'>Text</td>
-    <td class='table-info'></td>
+    <td class='table-info'><em>Declared on line 115.</n></td>
   </tr>
   <tr>
     <td class='table-info'>$id</td>
     <td class='table-info'>Text</td>
-    <td class='table-info'></td>
+    <td class='table-info'><em>Declared on line 117.</n></td>
   </tr>
 </tbody>
 </table>

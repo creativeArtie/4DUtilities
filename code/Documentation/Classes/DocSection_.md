@@ -9,7 +9,8 @@
     href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css'
     rel='stylesheet'
     integrity='sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl'
-    crossorigin='anonymous'>
+    crossorigin='anonymous'
+  >
   <script 
     src='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js'
     integrity='sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0'
@@ -110,57 +111,57 @@ check if the name ends with "_" meaning private
   <tr>
     <td class='table-primary'>$comment (parameter 1)</td>
     <td class='table-primary'>cs.DocLine_</td>
-    <td class='table-primary'></td>
+    <td class='table-primary'><em>Declared on line 14.</n></td>
   </tr>
   <tr>
     <td class='table-info'>$pos</td>
     <td class='table-info'>Integer</td>
-    <td class='table-info'></td>
+    <td class='table-info'><em>Declared on line 35.</n></td>
   </tr>
   <tr>
     <td class='table-info'>$len</td>
     <td class='table-info'>Integer</td>
-    <td class='table-info'></td>
+    <td class='table-info'><em>Declared on line 36.</n></td>
   </tr>
   <tr>
     <td class='table-info'>$raw</td>
     <td class='table-info'>Text</td>
-    <td class='table-info'></td>
+    <td class='table-info'><em>Declared on line 39.</n></td>
   </tr>
   <tr>
     <td class='table-info'>$value</td>
     <td class='table-info'>cs.DocValue_</td>
-    <td class='table-info'></td>
+    <td class='table-info'><em>Declared on line 44.</n></td>
   </tr>
   <tr>
     <td class='table-info'>$start</td>
     <td class='table-info'>LONGINT</td>
-    <td class='table-info'> Start and end of the match</td>
+    <td class='table-info'> Start and end of the match<br /><em>Declared on line 52.</n></td>
   </tr>
   <tr>
     <td class='table-info'> $end) </td>
     <td class='table-info'>LONGINT</td>
-    <td class='table-info'> Start and end of the match</td>
+    <td class='table-info'> Start and end of the match<br /><em>Declared on line 52.</n></td>
   </tr>
   <tr>
     <td class='table-info'>$match) </td>
     <td class='table-info'>BOOLEAN</td>
-    <td class='table-info'> use to make Match regex happy</td>
+    <td class='table-info'> use to make Match regex happy<br /><em>Declared on line 53.</n></td>
   </tr>
   <tr>
     <td class='table-info'>$split</td>
     <td class='table-info'>Collection</td>
-    <td class='table-info'></td>
+    <td class='table-info'><em>Declared on line 56.</n></td>
   </tr>
   <tr>
     <td class='table-info'>$type</td>
     <td class='table-info'>Text</td>
-    <td class='table-info'></td>
+    <td class='table-info'><em>Declared on line 58.</n></td>
   </tr>
   <tr>
     <td class='table-info'>$name</td>
     <td class='table-info'>Text</td>
-    <td class='table-info'></td>
+    <td class='table-info'><em>Declared on line 62.</n></td>
   </tr>
 </tbody>
 </table>
@@ -329,7 +330,7 @@ check if the name ends with "_" meaning private
   <tr>
     <td class='table-secondary'>$badge (return value)</td>
     <td class='table-secondary'>Text</td>
-    <td class='table-secondary'></td>
+    <td class='table-secondary'><em>Declared on line 75.</n></td>
   </tr>
 </tbody>
 </table>

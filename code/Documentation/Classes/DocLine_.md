@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!---->
+<!--a single line of 4D code splitted into comment and code-->
 <html>
 <header>
   <script src='https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js'></script>
@@ -16,19 +16,19 @@
     integrity='sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0'
     crossorigin='anonymous'
   ></script>
-  <title>Class DocValue_</title>
+  <title>Class DocLine_</title>
   <meta charset='ASCII' />
   <meta name='generator' value='4D Documentation' />
 </header>
 <body>
 <div id='content' class='container'>
 
-<h1>Class <mark>cs.DocValue_</mark> <span class='badge bg-danger' data-bs-toggle='tooltip' title='To be use internally in a namespace' >private</span>
+<h1>Class <mark>cs.DocLine_</mark> <span class='badge bg-danger' data-bs-toggle='tooltip' title='To be use internally in a namespace' >private</span>
 </h1>
 
 <h2>Description</h2>
 
-
+a single line of 4D code splitted into comment and code
 
 <h2>Method list</h2>
 
@@ -39,15 +39,11 @@
   </tr></thead>
   <tbody>
   <tr>
-    <td class='table-success'><a href='#class-constructor'><strong>Class constructor($line : cs.DocLine_; $value : Text; $type : Text)<strong> <span class='badge bg-primary' data-bs-toggle='tooltip' title='Class Constructor' >constructor</span></a></td>
+    <td class='table-success'><a href='#class-constructor'><strong>Class constructor($text : Text; $file : Text; $line : Integer)<strong> <span class='badge bg-primary' data-bs-toggle='tooltip' title='Class Constructor' >constructor</span></a></td>
     <td class='table-success'></td>
   </tr>
   <tr>
-    <td class='table-success'><a href='#getDeclare'>getDeclare() -> $text : Text</a></td>
-    <td class='table-success'></td>
-  </tr>
-  <tr>
-    <td class='table-success'><a href='#getDescription'>getDescription() -> $text : Text</a></td>
+    <td class='table-success'><a href='#addDoc'>addDoc($doc : Text)</a></td>
     <td class='table-success'></td>
   </tr>
 </tbody>
@@ -65,29 +61,29 @@
   </tr></thead>
   <tbody>
   <tr>
-    <td class='table-primary'>$line (parameter 1)</td>
-    <td class='table-primary'>cs.DocLine_</td>
-    <td class='table-primary'><em>Declared on line 1.</n></td>
-  </tr>
-  <tr>
-    <td class='table-primary'>$value (parameter 2)</td>
+    <td class='table-primary'>$text (parameter 1)</td>
     <td class='table-primary'>Text</td>
-    <td class='table-primary'><em>Declared on line 1.</n></td>
+    <td class='table-primary'><em>Declared on line 2.</n></td>
   </tr>
   <tr>
-    <td class='table-primary'>$type (parameter 3)</td>
+    <td class='table-primary'>$file (parameter 2)</td>
     <td class='table-primary'>Text</td>
-    <td class='table-primary'><em>Declared on line 1.</n></td>
+    <td class='table-primary'><em>Declared on line 2.</n></td>
   </tr>
   <tr>
-    <td class='table-info'>$split</td>
-    <td class='table-info'>Collection</td>
-    <td class='table-info'><em>Declared on line 8.</n></td>
+    <td class='table-primary'>$line (parameter 3)</td>
+    <td class='table-primary'>Integer</td>
+    <td class='table-primary'><em>Declared on line 2.</n></td>
   </tr>
   <tr>
-    <td class='table-info'>$typeFirst</td>
+    <td class='table-info'>$doc</td>
     <td class='table-info'>Text</td>
-    <td class='table-info'><em>Declared on line 13.</n></td>
+    <td class='table-info'><em>Declared on line 10.</n></td>
+  </tr>
+  <tr>
+    <td class='table-info'>$tagged</td>
+    <td class='table-info'>Text</td>
+    <td class='table-info'><em>Declared on line 21.</n></td>
   </tr>
 </tbody>
 </table>
@@ -115,6 +111,7 @@
 
 
 
+"  // The line `$doc:="///"` is sadly adding into 4D Docs...
 
 
 
@@ -169,7 +166,9 @@
 
 
 
-<h3 id='getDeclare'>getDeclare</h3>
+
+
+<h3 id='addDoc'>addDoc</h3>
 
 <table class='table '>
   <thead>
@@ -179,49 +178,12 @@
   </tr></thead>
   <tbody>
   <tr>
-    <td class='table-secondary'>$text (return value)</td>
-    <td class='table-secondary'>Text</td>
-    <td class='table-secondary'><em>Declared on line 29.</n></td>
+    <td class='table-primary'>$doc (parameter 1)</td>
+    <td class='table-primary'>Text</td>
+    <td class='table-primary'><em>Declared on line 31.</n></td>
   </tr>
 </tbody>
 </table>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h3 id='getDescription'>getDescription</h3>
-
-<table class='table '>
-  <thead>
-  <tr>  <td>Name</th>
-  <td>Type</th>
-  <td>Brief</th>
-  </tr></thead>
-  <tbody>
-  <tr>
-    <td class='table-secondary'>$text (return value)</td>
-    <td class='table-secondary'>Text</td>
-    <td class='table-secondary'><em>Declared on line 35.</n></td>
-  </tr>
-</tbody>
-</table>
-
-
-
 
 
 
