@@ -1,3 +1,4 @@
+/// #brief a single line of 4D code splitted into comment and code
 Class constructor($line : Text)
 	utils_getRequireValue($1; Is text:K8:3)
 	This:C1470.code:=$line

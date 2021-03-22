@@ -24,6 +24,7 @@
 			"DocFile_",
 			"DocFunction_",
 			"DocHtmlTable_",
+			"DocMethod_",
 			"DocParam_",
 			"DocReturn_",
 			"DocSection_",
