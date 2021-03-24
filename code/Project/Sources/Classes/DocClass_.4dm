@@ -67,7 +67,12 @@ Function generateText
 	/// 1. Adds the header
 	This:C1470.addHeading("Class <mark>cs."+This:C1470.name+"</mark>"+This:C1470.getTypeBadge(); \
 		1; ""; True:C214)
-	This:C1470.addDescription(True:C214)
+	
+	This:C1470.addHeading("Description"; 2)
+	
+	This:C1470.addLine(This:C1470.root.printGraph(This:C1470.name))
+	
+	This:C1470.addDescription()
 	
 	This:C1470.addHeading("Method list"; 2)
 	

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!---->
+<!--create a mermaid chart-->
 <html>
 <header>
   <script src='https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js'></script>
@@ -15,38 +15,25 @@
     integrity='sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0'
     crossorigin='anonymous'
   ></script>
-  <title>Class CheckNot</title>
+  <title>Class DocMermaid_</title>
   <meta charset='ASCII' />
   <meta name='generator' value='4D Documentation' />
 </header>
 <body>
 <div id='content' class='container'>
 
-<h1>Class <mark>cs.CheckNot</mark></h1>
+<h1>Class <mark>cs.DocMermaid_</mark> <span class='badge bg-danger' data-bs-toggle='tooltip' title='To be use internally in a namespace' >private</span>
+</h1>
 
 <h2>Description</h2>
 
 <pre class='mermaid'>
 graph TB
-    classCheck[cs.Check]
-    classCheck --> classCheckAge
-    classCheckAge[cs.CheckAge]
-    classCheck --> classCheckFilled
-    classCheckFilled[cs.CheckFilled]
-    classCheck --> classCheckFormat
-    classCheckFormat[cs.CheckFormat]
-    classCheck --> classCheckNot
-    classCheckNot([Current Class: cs.CheckNot])
-    classCheck --> classCheckTrue
-    classCheckTrue[cs.CheckTrue]
-    classCheck --> classCheckValue
-    classCheckValue[cs.CheckValue]
-    classCheck --> classCheckWhen
-    classCheckWhen[cs.CheckWhen]
+    classDocMermaid_([Current Class: cs.DocMermaid_])
 
 </pre>
 
-
+create a mermaid chart
 
 <h2>Method list</h2>
 
@@ -61,15 +48,11 @@ graph TB
     <td class='table-success'></td>
   </tr>
   <tr>
-    <td class='table-success'><a href='#setValue'>setValue()</a></td>
+    <td class='table-success'><a href='#addLine'>addLine($line : Text)</a></td>
     <td class='table-success'></td>
   </tr>
   <tr>
-    <td class='table-success'><a href='#test'>test() -> $result : Boolean</a></td>
-    <td class='table-success'></td>
-  </tr>
-  <tr>
-    <td class='table-success'><a href='#getMessageTemplate'>getMessageTemplate() -> $template : Text</a></td>
+    <td class='table-success'><a href='#getText'>getText() -> $answer : Text</a></td>
     <td class='table-success'></td>
   </tr>
 </tbody>
@@ -87,53 +70,7 @@ graph TB
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-<h3 id='setValue'>setValue</h3>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h3 id='test'>test</h3>
+<h3 id='addLine'>addLine</h3>
 
 <table class='table '>
   <thead>
@@ -143,9 +80,9 @@ graph TB
   </tr></thead>
   <tbody>
   <tr>
-    <td class='table-secondary'>$result (return value)</td>
-    <td class='table-secondary'>Boolean</td>
-    <td class='table-secondary'><em>Declared on line 24.</n></td>
+    <td class='table-primary'>$line (parameter 1)</td>
+    <td class='table-primary'>Text</td>
+    <td class='table-primary'><em>Declared on line 5.</n></td>
   </tr>
 </tbody>
 </table>
@@ -158,25 +95,7 @@ graph TB
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h3 id='getMessageTemplate'>getMessageTemplate</h3>
+<h3 id='getText'>getText</h3>
 
 <table class='table '>
   <thead>
@@ -186,9 +105,9 @@ graph TB
   </tr></thead>
   <tbody>
   <tr>
-    <td class='table-secondary'>$template (return value)</td>
+    <td class='table-secondary'>$answer (return value)</td>
     <td class='table-secondary'>Text</td>
-    <td class='table-secondary'><em>Declared on line 34.</n></td>
+    <td class='table-secondary'><em>Declared on line 8.</n></td>
   </tr>
 </tbody>
 </table>

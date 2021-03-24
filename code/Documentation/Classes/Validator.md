@@ -4,7 +4,6 @@
 <header>
   <script src='https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js'></script>
   <script src='https://cdn.jsdelivr.net/npm/marked/marked.min.js'></script>
-  <script>mermaid.initialize({startOnLoad:true});</script>
   <link 
     href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css'
     rel='stylesheet'
@@ -28,6 +27,12 @@
 **Author**: *Wai-Kin Chau*
 
 <h2>Description</h2>
+
+<pre class='mermaid'>
+graph TB
+    classValidator([Current Class: cs.Validator])
+
+</pre>
 
 manager for the validations
 
@@ -534,8 +539,8 @@ list the warnings
 
 
 </div>
-    <script>
-      document.getElementById('content').innerHTML =
-      marked(document.getElementById('content').innerHTML);
-</script>
+  <script>
+    document.getElementById('content').innerHTML =
+    marked(document.getElementById('content').innerHTML);
+    mermaid.initialize({startOnLoad:true});  </script>
 </body>

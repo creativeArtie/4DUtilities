@@ -4,7 +4,6 @@
 <header>
   <script src='https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js'></script>
   <script src='https://cdn.jsdelivr.net/npm/marked/marked.min.js'></script>
-  <script>mermaid.initialize({startOnLoad:true});</script>
   <link 
     href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css'
     rel='stylesheet'
@@ -28,8 +27,19 @@
 
 <h2>Description</h2>
 
+<pre class='mermaid'>
+graph TB
+    classDocSection_[cs.DocSection_]
+    classDocSection_ --> classDocFile_
+    classDocFile_[cs.DocFile_]
+    classDocFile_ --> classDocClass_
+    classDocClass_([Current Class: cs.DocClass_])
+    classDocClass_ --> classDocMethod_
+    classDocMethod_[cs.DocMethod_]
+    classDocSection_ --> classDocFunction_
+    classDocFunction_[cs.DocFunction_]
 
-
+</pre>
 
 
 
@@ -80,25 +90,37 @@
   <tr>
     <td class='table-info'>$details</td>
     <td class='table-info'>cs.DocClass_</td>
-    <td class='table-info'><em>Declared on line 9.</n></td>
+    <td class='table-info'><em>Declared on line 10.</n></td>
   </tr>
   <tr>
     <td class='table-info'>$comments</td>
     <td class='table-info'>Collection</td>
-    <td class='table-info'><em>Declared on line 10.</n></td>
+    <td class='table-info'><em>Declared on line 11.</n></td>
   </tr>
   <tr>
     <td class='table-info'>$parsed</td>
     <td class='table-info'>cs.DocLine_</td>
-    <td class='table-info'><em>Declared on line 13.</n></td>
+    <td class='table-info'><em>Declared on line 14.</n></td>
   </tr>
   <tr>
     <td class='table-info'>$function</td>
     <td class='table-info'>cs.DocFunction_</td>
-    <td class='table-info'><em>Declared on line 14.</n></td>
+    <td class='table-info'><em>Declared on line 15.</n></td>
   </tr>
 </tbody>
 </table>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -234,12 +256,12 @@
   <tr>
     <td class='table-secondary'>$file (return value)</td>
     <td class='table-secondary'>4D.File</td>
-    <td class='table-secondary'><em>Declared on line 47.</n></td>
+    <td class='table-secondary'><em>Declared on line 51.</n></td>
   </tr>
   <tr>
     <td class='table-info'>$path</td>
     <td class='table-info'>Text</td>
-    <td class='table-info'><em>Declared on line 48.</n></td>
+    <td class='table-info'><em>Declared on line 52.</n></td>
   </tr>
 </tbody>
 </table>
@@ -276,27 +298,27 @@
   <tr>
     <td class='table-info'>$text</td>
     <td class='table-info'>Text</td>
-    <td class='table-info'><em>Declared on line 57.</n></td>
+    <td class='table-info'><em>Declared on line 61.</n></td>
   </tr>
   <tr>
     <td class='table-info'>$classDoc</td>
     <td class='table-info'>Text</td>
-    <td class='table-info'><em>Declared on line 58.</n></td>
+    <td class='table-info'><em>Declared on line 62.</n></td>
   </tr>
   <tr>
     <td class='table-info'>$commentLine</td>
     <td class='table-info'>Text</td>
-    <td class='table-info'><em>Declared on line 59.</n></td>
+    <td class='table-info'><em>Declared on line 63.</n></td>
   </tr>
   <tr>
     <td class='table-info'>$htmlTable</td>
     <td class='table-info'>cs.DocHtmlTable_</td>
-    <td class='table-info'><em>Declared on line 69.</n></td>
+    <td class='table-info'><em>Declared on line 78.</n></td>
   </tr>
   <tr>
     <td class='table-info'>$function</td>
     <td class='table-info'>cs.DocFunction_</td>
-    <td class='table-info'><em>Declared on line 70.</n></td>
+    <td class='table-info'><em>Declared on line 79.</n></td>
   </tr>
 </tbody>
 </table>
@@ -381,9 +403,24 @@ print the class
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </div>
-    <script>
-      document.getElementById('content').innerHTML =
-      marked(document.getElementById('content').innerHTML);
-</script>
+  <script>
+    document.getElementById('content').innerHTML =
+    marked(document.getElementById('content').innerHTML);
+    mermaid.initialize({startOnLoad:true});  </script>
 </body>

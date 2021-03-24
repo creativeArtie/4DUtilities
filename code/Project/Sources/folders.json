@@ -24,10 +24,12 @@
 			"DocFunction_",
 			"DocHtmlTable_",
 			"DocLine_",
+			"DocMermaid_",
 			"DocMethod_",
 			"DocParam_",
 			"DocReturn_",
 			"DocSection_",
+			"DocTree_",
 			"DocValue_"
 		]
 	},
@@ -136,12 +138,14 @@
 			"tests"
 		],
 		"methods": [
+			"test_param",
 			"ut_paramChecker",
 			"utils_countParams",
 			"utils_getCheckFunc_",
 			"utils_getObjectValue",
 			"utils_getOptionValue",
-			"utils_getRequireValue"
+			"utils_getRequireValue",
+			"utils_setParam"
 		]
 	},
 	"validator": {

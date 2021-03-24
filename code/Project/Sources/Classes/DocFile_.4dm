@@ -24,7 +24,6 @@ Function generate
 		"<header>\n"+\
 		"  <script src='https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js'></script>\n"+\
 		"  <script src='https://cdn.jsdelivr.net/npm/marked/marked.min.js'></script>\n"+\
-		"  <script>mermaid.initialize({startOnLoad:true});</script>\n"+\
 		"  <link \n"+\
 		"    href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css'\n"+\
 		"    rel='stylesheet'\n"+\
@@ -42,21 +41,17 @@ Function generate
 		"</header>\n"+\
 		"<body>\n"+\
 		"<div id='content' class='container'>\n\n"+(This:C1470.text_)+"</div>\n"+\
-		"    <script>\n"+\
-		"      document.getElementById('content').innerHTML =\n"+\
-		"      marked(document.getElementById('content').innerHTML);\n"+\
-		"</script>\n"+\
+		"  <script>\n"+\
+		"    document.getElementById('content').innerHTML =\n"+\
+		"    marked(document.getElementById('content').innerHTML);\n"+\
+		"    mermaid.initialize({startOnLoad:true});"+\
+		"  </script>\n"+\
 		"</body>\n"
 	
 	TEXT TO DOCUMENT:C1237(Convert path POSIX to system:C1107($file.path); $text; "ASCII")
 	
-Function addDescription($useHeading : Boolean)
+Function addDescription
 	/// #brief add the file discription
-	$useHeading:=utils_getOptionValue($1; True:C214)
-	
-	If ($useHeading)
-		This:C1470.addHeading("Description"; 2)
-	End if 
 	
 	This:C1470.addLine(This:C1470.brief)
 	
