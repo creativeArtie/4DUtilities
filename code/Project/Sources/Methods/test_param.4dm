@@ -1,8 +1,14 @@
 //%attributes = {}
-#DECLARE($a : Text; $b : Integer; $opt1 : Variant; $opt2)
+#DECLARE($a : Text; $b : Integer; $opt1 : Variant; $opt2)->$result : Object
 
-$a:=utils_setParam($a; 1; Count parameters:C259)
-$b:=utils_setParam($b; 2; Count parameters:C259)
-$opt1:=utils_setParam($opt1; 3; Count parameters:C259; 23)
-$opt2:=utils_setParam($opt2; 4; Count parameters:C259; "Hello World")
-utils_countParam(4; Count parameters:C259)
+var $count : Integer
+$a:=utils_assertParameter($a; ->$count; Count parameters:C259)
+$b:=utils_assertParameter($b; ->$count; Count parameters:C259)
+$opt1:=utils_assertParameter($opt1; ->$count; Count parameters:C259; 23)
+$opt2:=utils_assertParameter($opt2; ->$count; Count parameters:C259; "Hello World")
+utils_countParam($count; Count parameters:C259)
+
+$result:=New object:C1471("a"; $a; \
+"b"; $b; \
+"opt1"; $opt1; \
+"opt2"; $opt2)

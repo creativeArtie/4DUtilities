@@ -1,5 +1,6 @@
 //%attributes = {}
 #DECLARE($forumla : 4D:C1709.Function; $exceptPtr : Pointer)->$result : Boolean
+
 $forumla:=utils_getRequireValue($1; 4D:C1709.Function)
 
 

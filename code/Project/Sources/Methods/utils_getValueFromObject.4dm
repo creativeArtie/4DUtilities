@@ -13,16 +13,18 @@ If (OB Is defined:C1231($input))
 	var $findKey : Boolean
 	$findKey:=True:C214
 	
-	For ($i; 3; Count parameters:C259) While ($findKey)
+	For ($i; 3; Count parameters:C259)
 		If (OB Is defined:C1231($pointer; ${$i}))
 			$value:=$pointer[${$i}]
-			If ((Value type:C1509($pointer[${$i}))=Is object:K8:27)
+			If ((Value type:C1509($pointer[${$i}]))=Is object:K8:27)
 				$pointer:=$pointer[${$i}]
 			Else 
 				$findKey:=$i=Count parameters:C259
+				$i:=Count parameters:C259
 			End if 
 		Else 
 			$findKey:=False:C215
+			$i:=Count parameters:C259
 		End if 
 	End for 
 	

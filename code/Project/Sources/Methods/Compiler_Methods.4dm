@@ -75,3 +75,27 @@ C_OBJECT:C1216(utils_lazyOr; ${1})
 C_VARIANT:C1683(utils_saveToStorage; $1)
 C_TEXT:C284(utils_saveToStorage; $2)
 C_OBJECT:C1216(utils_saveToStorage; $3)
+
+//test_param
+C_OBJECT:C1216(test_param; $0)
+C_TEXT:C284(test_param; $1)
+C_LONGINT:C283(test_param; $2)
+C_VARIANT:C1683(test_param; $3)
+C_VARIANT:C1683(test_param; $4)
+
+//utils_countParam
+C_REAL:C285(utils_countParam; $1)
+C_LONGINT:C283(utils_countParam; $2)
+
+//utils_getValueFromObject
+C_VARIANT:C1683(utils_getValueFromObject; $0)
+C_TEXT:C284(utils_getValueFromObject; ${3})
+C_OBJECT:C1216(utils_getValueFromObject; $1)
+C_VARIANT:C1683(utils_getValueFromObject; $2)
+
+//utils_setParam
+C_VARIANT:C1683(utils_assertParameter; $0)
+C_VARIANT:C1683(utils_assertParameter; $1)
+C_POINTER:C301(utils_assertParameter; $2)
+C_LONGINT:C283(utils_assertParameter; $3)
+C_VARIANT:C1683(utils_assertParameter; $4)
