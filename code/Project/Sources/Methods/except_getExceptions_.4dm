@@ -1,5 +1,5 @@
 //%attributes = {}
-utils_countParams(0; Count parameters:C259)
+utils_assertParameterCount(0; Count parameters:C259)
 
 var $process : Text
 $process:=String:C10(Current process:C322)

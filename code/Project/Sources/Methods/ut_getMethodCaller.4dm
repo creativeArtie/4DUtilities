@@ -2,7 +2,7 @@
 // __UNIT_TEST
 
 var $test : Object
-$test:=AJ_UnitTest.new("utils_MethodCaller"; Current method name:C684; "Utlities")
+$test:=AJ_UnitTest.new("utils_MethodCaller"; Current method name:C684; "Utilities")
 
 $test.given:="Get caller of test_ut_child"
 $test.should:="ut_getMethodCaller"

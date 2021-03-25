@@ -4,7 +4,7 @@
 var $test : Object
 var $error : Text
 
-$test:=AJ_UnitTest.new("utils_lazyAnd, utils_lazyOr"; Current method name:C684; "Utlities")
+$test:=AJ_UnitTest.new("utils_lazyAnd, utils_lazyOr"; Current method name:C684; "Utilities")
 
 $error:=Method called on error:C704
 ON ERR CALL:C155("utils_ut_exceptions")

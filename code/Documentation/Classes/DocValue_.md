@@ -89,17 +89,31 @@ graph TB
     <td class='table-primary'><em>Declared on line 1.</n></td>
   </tr>
   <tr>
+    <td class='table-info'>$count</td>
+    <td class='table-info'>Real</td>
+    <td class='table-info'><em>Declared on line 3.</n></td>
+  </tr>
+  <tr>
     <td class='table-info'>$split</td>
     <td class='table-info'>Collection</td>
-    <td class='table-info'><em>Declared on line 8.</n></td>
+    <td class='table-info'><em>Declared on line 12.</n></td>
   </tr>
   <tr>
     <td class='table-info'>$typeFirst</td>
     <td class='table-info'>Text</td>
-    <td class='table-info'><em>Declared on line 13.</n></td>
+    <td class='table-info'><em>Declared on line 17.</n></td>
   </tr>
 </tbody>
 </table>
+
+
+
+
+
+
+
+
+
 
 
 
@@ -190,7 +204,7 @@ graph TB
   <tr>
     <td class='table-secondary'>$text (return value)</td>
     <td class='table-secondary'>Text</td>
-    <td class='table-secondary'><em>Declared on line 29.</n></td>
+    <td class='table-secondary'><em>Declared on line 33.</n></td>
   </tr>
 </tbody>
 </table>
@@ -224,7 +238,7 @@ graph TB
   <tr>
     <td class='table-secondary'>$text (return value)</td>
     <td class='table-secondary'>Text</td>
-    <td class='table-secondary'><em>Declared on line 35.</n></td>
+    <td class='table-secondary'><em>Declared on line 39.</n></td>
   </tr>
 </tbody>
 </table>

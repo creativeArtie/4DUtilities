@@ -1,7 +1,10 @@
 //%attributes = {}
 #DECLARE($forumla : 4D:C1709.Function; $exceptPtr : Pointer)->$result : Boolean
 
-$forumla:=utils_getRequireValue($1; 4D:C1709.Function)
+var $count : Real
+$forumla:=utils_assertParameter($1; ->$count; Count parameters:C259)
+$exceptPtr:=utils_assertParameter($2; ->$count; Count parameters:C259)
+utils_assertParameterCount($count; Count parameters:C259)
 
 
 C_VARIANT:C1683(${3})

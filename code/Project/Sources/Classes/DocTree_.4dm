@@ -1,11 +1,20 @@
 Class constructor($name : Text)
 	This:C1470.children:=New object:C1471
-	This:C1470.name:=utils_getOptionValue($name; "Object")
+	var $count : Real
+	This:C1470.name:=utils_assertParameter($name; ->$count; Count parameters:C259; "Object")
+	utils_assertParameterCount($count; Count parameters:C259)
 	
 Function addClass($class : cs:C1710.DocClass_; $root : cs:C1710.DocTree_)->$filled : Boolean
+	
+	var $count : Real
+	$class:=utils_assertParameter($class; ->$count; Count parameters:C259)
+	
 	var $current : cs:C1710.DocTree_
 	$current:=cs:C1710.DocTree_.new($class.name)
-	$root:=utils_getOptionValue($root; $current)
+	$root:=utils_assertParameter($root; ->$count; Count parameters:C259; $current)
+	utils_assertParameterCount($count; Count parameters:C259)
+	
+	
 	C_BOOLEAN:C305($filled)
 	$filled:=False:C215
 	If ($class.extends=This:C1470.name)
@@ -24,8 +33,10 @@ Function addClass($class : cs:C1710.DocClass_; $root : cs:C1710.DocTree_)->$fill
 	End for each 
 	
 Function printGraph($current : Text; $input : cs:C1710.DocMermaid_)->$graph : Text
-	$current:=utils_getRequireValue($1)
-	$input:=utils_getOptionValue($2; cs:C1710.DocMermaid_.new())
+	var $count : Real
+	$current:=utils_assertParameter($1; ->$count; Count parameters:C259)
+	$input:=utils_assertParameter($2; ->$count; Count parameters:C259; cs:C1710.DocMermaid_.new())
+	utils_assertParameterCount($count; Count parameters:C259)
 	
 	var $name : Text
 	$name:="class"+This:C1470.name

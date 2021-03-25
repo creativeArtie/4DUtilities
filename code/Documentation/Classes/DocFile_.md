@@ -67,7 +67,7 @@ create a file for the 4D Documentation and for browser
   </tr>
   <tr>
     <td class='table-success'><a href='#generate'>generate()</a></td>
-    <td class='table-success'>generate the file </td>
+    <td class='table-success'>generate the file</td>
   </tr>
   <tr>
     <td class='table-success'><a href='#addDescription'>addDescription()</a></td>
@@ -161,7 +161,7 @@ create a file for the 4D Documentation and for browser
 </tbody>
 </table>
 
-generate the file 
+generate the file
 
 
 
@@ -268,14 +268,25 @@ add the file discription
     <td class='table-secondary'><em>Declared on line 35.</n></td>
   </tr>
   <tr>
+    <td class='table-info'>$count</td>
+    <td class='table-info'>Real</td>
+    <td class='table-info'><em>Declared on line 38.</n></td>
+  </tr>
+  <tr>
     <td class='table-info'>$idAttr</td>
     <td class='table-info'>Text</td>
-    <td class='table-info'> id attribute which can be linked from the "Method list" section.<br /><em>Declared on line 42.</n></td>
+    <td class='table-info'> id attribute which can be linked from the "Method list" section.<br /><em>Declared on line 45.</n></td>
   </tr>
 </tbody>
 </table>
 
 helper function for adding a markdown header
+
+
+
+
+
+
 
 
 
@@ -343,7 +354,7 @@ helper function for adding a markdown header
   <tr>
     <td class='table-primary'>$line (parameter 1)</td>
     <td class='table-primary'>Text</td>
-    <td class='table-primary'><em>Declared on line 56.</n></td>
+    <td class='table-primary'><em>Declared on line 59.</n></td>
   </tr>
 </tbody>
 </table>

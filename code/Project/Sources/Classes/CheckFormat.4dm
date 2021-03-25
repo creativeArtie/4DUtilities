@@ -1,10 +1,13 @@
 Class extends Check
 Class constructor($filled : Boolean; $type : Text)
 	Super:C1705()
-	This:C1470.filled:=utils_getOptionValue($filled; False:C215; Is boolean:K8:9)
-	This:C1470.type:=utils_getOptionValue($type; "phone"; Is text:K8:3)
+	var $count : Real
+	This:C1470.filled:=utils_assertParameter($filled; ->$count; Count parameters:C259; False:C215)
+	This:C1470.type:=utils_assertParameter($type; ->$count; Count parameters:C259; "phone")
+	utils_assertParameterCount(1; Count parameters:C259)
+	
 	This:C1470.message:=""
-	utils_countParams(1; Count parameters:C259)
+	
 Function test->$result : Boolean
 	var $value : Object
 	$value:=Super:C1706.getValue()

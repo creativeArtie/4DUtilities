@@ -94,8 +94,16 @@ graph TB
     <td class='table-primary'>Text</td>
     <td class='table-primary'><em>Declared on line 2.</n></td>
   </tr>
+  <tr>
+    <td class='table-info'>$count</td>
+    <td class='table-info'>Real</td>
+    <td class='table-info'><em>Declared on line 3.</n></td>
+  </tr>
 </tbody>
 </table>
+
+
+
 
 
 
@@ -129,7 +137,7 @@ graph TB
   <tr>
     <td class='table-secondary'>$value (return value)</td>
     <td class='table-secondary'>Object</td>
-    <td class='table-secondary'><em>Declared on line 9.</n></td>
+    <td class='table-secondary'><em>Declared on line 11.</n></td>
   </tr>
 </tbody>
 </table>
@@ -154,17 +162,17 @@ graph TB
   <tr>
     <td class='table-secondary'>$answer (return value)</td>
     <td class='table-secondary'>Text</td>
-    <td class='table-secondary'><em>Declared on line 12.</n></td>
+    <td class='table-secondary'><em>Declared on line 14.</n></td>
   </tr>
   <tr>
     <td class='table-info'>$input</td>
     <td class='table-info'>Text</td>
-    <td class='table-info'><em>Declared on line 13.</n></td>
+    <td class='table-info'><em>Declared on line 15.</n></td>
   </tr>
   <tr>
     <td class='table-info'>$elmt</td>
     <td class='table-info'>Integer</td>
-    <td class='table-info'><em>Declared on line 17.</n></td>
+    <td class='table-info'><em>Declared on line 19.</n></td>
   </tr>
 </tbody>
 </table>
@@ -238,27 +246,27 @@ graph TB
   <tr>
     <td class='table-primary'>$token (parameter 1)</td>
     <td class='table-primary'>Text</td>
-    <td class='table-primary'><em>Declared on line 33.</n></td>
+    <td class='table-primary'><em>Declared on line 35.</n></td>
   </tr>
   <tr>
     <td class='table-secondary'>$answer (return value)</td>
     <td class='table-secondary'>Text</td>
-    <td class='table-secondary'><em>Declared on line 33.</n></td>
+    <td class='table-secondary'><em>Declared on line 35.</n></td>
   </tr>
   <tr>
     <td class='table-info'>$search</td>
     <td class='table-info'>Text</td>
-    <td class='table-info'><em>Declared on line 35.</n></td>
+    <td class='table-info'><em>Declared on line 37.</n></td>
   </tr>
   <tr>
     <td class='table-info'>$copy</td>
     <td class='table-info'>Text</td>
-    <td class='table-info'><em>Declared on line 67.</n></td>
+    <td class='table-info'><em>Declared on line 69.</n></td>
   </tr>
   <tr>
     <td class='table-info'>$trying</td>
     <td class='table-info'>Boolean</td>
-    <td class='table-info'><em>Declared on line 71.</n></td>
+    <td class='table-info'><em>Declared on line 73.</n></td>
   </tr>
 </tbody>
 </table>

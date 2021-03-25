@@ -65,6 +65,26 @@ graph TB
 
 <h3 id='class-constructor'><strong>Class Constructor</strong></h3>
 
+<table class='table '>
+  <thead>
+  <tr>  <td>Name</th>
+  <td>Type</th>
+  <td>Brief</th>
+  </tr></thead>
+  <tbody>
+  <tr>
+    <td class='table-info'>$count</td>
+    <td class='table-info'>Real</td>
+    <td class='table-info'><em>Declared on line 5.</n></td>
+  </tr>
+  <tr>
+    <td class='table-info'>$value</td>
+    <td class='table-info'>Variant</td>
+    <td class='table-info'><em>Declared on line 6.</n></td>
+  </tr>
+</tbody>
+</table>
+
 
 
 
@@ -94,7 +114,7 @@ graph TB
   <tr>
     <td class='table-secondary'>$answer (return value)</td>
     <td class='table-secondary'>Variant</td>
-    <td class='table-secondary'><em>Declared on line 10.</n></td>
+    <td class='table-secondary'><em>Declared on line 12.</n></td>
   </tr>
 </tbody>
 </table>

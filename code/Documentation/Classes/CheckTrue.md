@@ -92,8 +92,22 @@ graph TB
     <td class='table-primary'>Text</td>
     <td class='table-primary'><em>Declared on line 2.</n></td>
   </tr>
+  <tr>
+    <td class='table-info'>$count</td>
+    <td class='table-info'>Real</td>
+    <td class='table-info'><em>Declared on line 4.</n></td>
+  </tr>
 </tbody>
 </table>
+
+
+
+
+
+
+
+
+
 
 
 
@@ -115,12 +129,12 @@ graph TB
   <tr>
     <td class='table-secondary'>$result (return value)</td>
     <td class='table-secondary'>Boolean</td>
-    <td class='table-secondary'><em>Declared on line 5.</n></td>
+    <td class='table-secondary'><em>Declared on line 9.</n></td>
   </tr>
   <tr>
     <td class='table-info'>$value</td>
     <td class='table-info'>Variant</td>
-    <td class='table-info'><em>Declared on line 6.</n></td>
+    <td class='table-info'><em>Declared on line 10.</n></td>
   </tr>
 </tbody>
 </table>
@@ -145,7 +159,7 @@ graph TB
   <tr>
     <td class='table-secondary'>$template (return value)</td>
     <td class='table-secondary'>Text</td>
-    <td class='table-secondary'><em>Declared on line 9.</n></td>
+    <td class='table-secondary'><em>Declared on line 13.</n></td>
   </tr>
 </tbody>
 </table>

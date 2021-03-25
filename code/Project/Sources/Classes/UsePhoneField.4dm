@@ -1,6 +1,9 @@
 Class extends UseField
 Class constructor($name : Text; $countryCode : Text)
-	Super:C1705(utils_getRequireValue($1; Is text:K8:3))
+	var $count : Real
+	Super:C1705(utils_assertParameter($1; ->$count; Count parameters:C259))
+	$countryCode:=utils_assertParameter($2; ->$count; Count parameters:C259; "")
+	utils_assertParameterCount($count; Count parameters:C259)
 	This:C1470.digits:=""
 	This:C1470.countryCode:=Uppercase:C13($countryCode)
 	This:C1470.text:=""
@@ -58,12 +61,12 @@ Function formatPhone($token : Text)->$answer : Text
 	
 	If (This:C1470.countryCode#"")
 		If (Match regex:C1019("[a-zA-Z]{2}"; This:C1470.countryCode))
-			ORDER BY FORMULA:C300([PhoneFormats:1]; [PhoneFormats:1]countryCode:3=This:C1470.countryCode; >; [PhoneFormats:1]order:2; >)
+			ORDER BY FORMULA:C300([PhoneFormats:1]; [PhoneFormats:1]countryCode:3=This:C1470.countryCode; >; [PhoneFormats:1]formatOrder:2; >)
 		Else 
-			ORDER BY FORMULA:C300([PhoneFormats:1]; [PhoneFormats:1]callingCode:4=This:C1470.countryCode; >; [PhoneFormats:1]order:2; >)
+			ORDER BY FORMULA:C300([PhoneFormats:1]; [PhoneFormats:1]callingCode:4=This:C1470.countryCode; >; [PhoneFormats:1]formatOrder:2; >)
 		End if 
 	Else 
-		ORDER BY:C49([PhoneFormats:1]order:2; >)
+		ORDER BY:C49([PhoneFormats:1]formatOrder:2; >)
 	End if 
 	
 	var $copy : Text

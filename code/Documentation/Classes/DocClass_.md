@@ -88,27 +88,38 @@ graph TB
     <td class='table-primary'><em>Declared on line 2.</n></td>
   </tr>
   <tr>
+    <td class='table-info'>$count</td>
+    <td class='table-info'>Real</td>
+    <td class='table-info'><em>Declared on line 6.</n></td>
+  </tr>
+  <tr>
     <td class='table-info'>$details</td>
     <td class='table-info'>cs.DocClass_</td>
-    <td class='table-info'><em>Declared on line 10.</n></td>
+    <td class='table-info'><em>Declared on line 13.</n></td>
   </tr>
   <tr>
     <td class='table-info'>$comments</td>
     <td class='table-info'>Collection</td>
-    <td class='table-info'><em>Declared on line 11.</n></td>
+    <td class='table-info'><em>Declared on line 14.</n></td>
   </tr>
   <tr>
     <td class='table-info'>$parsed</td>
     <td class='table-info'>cs.DocLine_</td>
-    <td class='table-info'><em>Declared on line 14.</n></td>
+    <td class='table-info'><em>Declared on line 17.</n></td>
   </tr>
   <tr>
     <td class='table-info'>$function</td>
     <td class='table-info'>cs.DocFunction_</td>
-    <td class='table-info'><em>Declared on line 15.</n></td>
+    <td class='table-info'><em>Declared on line 18.</n></td>
   </tr>
 </tbody>
 </table>
+
+
+
+
+
+
 
 
 
@@ -256,12 +267,12 @@ graph TB
   <tr>
     <td class='table-secondary'>$file (return value)</td>
     <td class='table-secondary'>4D.File</td>
-    <td class='table-secondary'><em>Declared on line 51.</n></td>
+    <td class='table-secondary'><em>Declared on line 54.</n></td>
   </tr>
   <tr>
     <td class='table-info'>$path</td>
     <td class='table-info'>Text</td>
-    <td class='table-info'><em>Declared on line 52.</n></td>
+    <td class='table-info'><em>Declared on line 55.</n></td>
   </tr>
 </tbody>
 </table>
@@ -298,27 +309,27 @@ graph TB
   <tr>
     <td class='table-info'>$text</td>
     <td class='table-info'>Text</td>
-    <td class='table-info'><em>Declared on line 61.</n></td>
+    <td class='table-info'><em>Declared on line 64.</n></td>
   </tr>
   <tr>
     <td class='table-info'>$classDoc</td>
     <td class='table-info'>Text</td>
-    <td class='table-info'><em>Declared on line 62.</n></td>
+    <td class='table-info'><em>Declared on line 65.</n></td>
   </tr>
   <tr>
     <td class='table-info'>$commentLine</td>
     <td class='table-info'>Text</td>
-    <td class='table-info'><em>Declared on line 63.</n></td>
+    <td class='table-info'><em>Declared on line 66.</n></td>
   </tr>
   <tr>
     <td class='table-info'>$htmlTable</td>
     <td class='table-info'>cs.DocHtmlTable_</td>
-    <td class='table-info'><em>Declared on line 78.</n></td>
+    <td class='table-info'><em>Declared on line 81.</n></td>
   </tr>
   <tr>
     <td class='table-info'>$function</td>
     <td class='table-info'>cs.DocFunction_</td>
-    <td class='table-info'><em>Declared on line 79.</n></td>
+    <td class='table-info'><em>Declared on line 82.</n></td>
   </tr>
 </tbody>
 </table>

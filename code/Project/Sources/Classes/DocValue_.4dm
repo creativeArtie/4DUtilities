@@ -1,6 +1,10 @@
 Class constructor($line : cs:C1710.DocLine_; $value : Text; $type : Text)
 	
-	This:C1470.file:=utils_getRequireValue($line; cs:C1710.DocLine_).file
+	var $count : Real
+	This:C1470.file:=utils_assertParameter($line; ->$count; Count parameters:C259).file
+	$value:=utils_assertParameter($value; ->$count; Count parameters:C259)
+	$type:=utils_assertParameter($type; ->$count; Count parameters:C259; "")
+	utils_assertParameterCount($count; Count parameters:C259)
 	This:C1470.line:=$line.line
 	
 	Case of 

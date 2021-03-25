@@ -4,14 +4,15 @@ $truckCode : Text; $matchFormat : Text; $outputFormat : Text)->$format : 4D:C170
 
 var $entity : cs:C1710.PhoneFormatsEntity
 
+var $count : Integer
 $entity:=ds:C1482.PhoneFormats.new()
-$entity.formatOrder:=utils_getRequireValue($1; Is real:K8:4)
-$entity.countryCode:=Uppercase:C13(utils_getRequireValue($2; Is text:K8:3))
-$entity.callingCode:=utils_getRequireValue($3; Is text:K8:3)
-$entity.trunkCode:=utils_getRequireValue($4; Is text:K8:3)
-$entity.matchFormat:=utils_getRequireValue($5; Is text:K8:3)
-$entity.outputFormat:=utils_getRequireValue($6; Is text:K8:3)
-utils_countParams(6; Count parameters:C259)
+$entity.formatOrder:=utils_assertParameter($1; ->$count; Count parameters:C259)
+$entity.countryCode:=Uppercase:C13(utils_assertParameter($2; ->$count; Count parameters:C259))
+$entity.callingCode:=utils_assertParameter($3; ->$count; Count parameters:C259)
+$entity.trunkCode:=utils_assertParameter($4; ->$count; Count parameters:C259)
+$entity.matchFormat:=utils_assertParameter($5; ->$count; Count parameters:C259)
+$entity.outputFormat:=utils_assertParameter($6; ->$count; Count parameters:C259)
+utils_assertParameterCount($count; Count parameters:C259)
 
 var $find : cs:C1710.PhoneFormatsSelection
 $find:=ds:C1482.PhoneFormats.query("countryCode=:1 & formatOrder=:2"; $entity.countryCode; $entity.order)

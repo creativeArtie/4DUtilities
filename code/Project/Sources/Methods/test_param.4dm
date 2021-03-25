@@ -6,7 +6,7 @@ $a:=utils_assertParameter($a; ->$count; Count parameters:C259)
 $b:=utils_assertParameter($b; ->$count; Count parameters:C259)
 $opt1:=utils_assertParameter($opt1; ->$count; Count parameters:C259; 23)
 $opt2:=utils_assertParameter($opt2; ->$count; Count parameters:C259; "Hello World")
-utils_countParam($count; Count parameters:C259)
+utils_assertParameterCount($count; Count parameters:C259)
 
 $result:=New object:C1471("a"; $a; \
 "b"; $b; \

@@ -92,6 +92,11 @@ graph TB
     <td class='table-info'>Real</td>
     <td class='table-info'><em>Declared on line 6.</n></td>
   </tr>
+  <tr>
+    <td class='table-info'>$count</td>
+    <td class='table-info'>Real</td>
+    <td class='table-info'><em>Declared on line 8.</n></td>
+  </tr>
 </tbody>
 </table>
 
@@ -124,17 +129,17 @@ graph TB
   <tr>
     <td class='table-secondary'>$result (return value)</td>
     <td class='table-secondary'>Boolean</td>
-    <td class='table-secondary'><em>Declared on line 12.</n></td>
+    <td class='table-secondary'><em>Declared on line 13.</n></td>
   </tr>
   <tr>
     <td class='table-info'>$value</td>
     <td class='table-info'>Variant</td>
-    <td class='table-info'> value to check, can be number or date<br /><em>Declared on line 13.</n></td>
+    <td class='table-info'> value to check, can be number or date<br /><em>Declared on line 14.</n></td>
   </tr>
   <tr>
     <td class='table-info'>$age</td>
     <td class='table-info'>Integer</td>
-    <td class='table-info'> the calculated age<br /><em>Declared on line 14.</n></td>
+    <td class='table-info'> the calculated age<br /><em>Declared on line 15.</n></td>
   </tr>
 </tbody>
 </table>
@@ -180,7 +185,7 @@ graph TB
   <tr>
     <td class='table-secondary'>$template (return value)</td>
     <td class='table-secondary'>Text</td>
-    <td class='table-secondary'><em>Declared on line 24.</n></td>
+    <td class='table-secondary'><em>Declared on line 25.</n></td>
   </tr>
 </tbody>
 </table>

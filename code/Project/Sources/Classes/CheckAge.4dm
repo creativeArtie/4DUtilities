@@ -5,9 +5,10 @@ Class constructor
 	var $2 : Real
 	var $max : Real
 	
-	This:C1470.min:=utils_getOptionValue($1; 18; Is real:K8:4)
-	This:C1470.max:=utils_getOptionValue($2; 100; Is real:K8:4)
-	utils_countParams(2; Count parameters:C259)
+	var $count : Real
+	This:C1470.min:=utils_assertParameter($1; ->$count; Count parameters:C259)
+	This:C1470.max:=utils_assertParameter($2; ->$count; Count parameters:C259)
+	utils_assertParameterCount($count; Count parameters:C259)
 	
 Function test->$result : Boolean
 	var $value : Variant  /// value to check, can be number or date

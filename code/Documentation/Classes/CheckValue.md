@@ -103,12 +103,15 @@ graph TB
     <td class='table-primary'><em>Declared on line 2.</n></td>
   </tr>
   <tr>
-    <td class='table-info'>$type</td>
-    <td class='table-info'>Variant</td>
+    <td class='table-info'>$count</td>
+    <td class='table-info'>Real</td>
     <td class='table-info'><em>Declared on line 8.</n></td>
   </tr>
 </tbody>
 </table>
+
+
+
 
 
 
@@ -151,22 +154,22 @@ graph TB
   <tr>
     <td class='table-secondary'>$result (return value)</td>
     <td class='table-secondary'>Boolean</td>
-    <td class='table-secondary'><em>Declared on line 17.</n></td>
+    <td class='table-secondary'><em>Declared on line 18.</n></td>
   </tr>
   <tr>
     <td class='table-info'>$value</td>
     <td class='table-info'>Variant</td>
-    <td class='table-info'><em>Declared on line 18.</n></td>
+    <td class='table-info'><em>Declared on line 19.</n></td>
   </tr>
   <tr>
     <td class='table-info'>$isMin</td>
     <td class='table-info'>Boolean</td>
-    <td class='table-info'><em>Declared on line 19.</n></td>
+    <td class='table-info'><em>Declared on line 20.</n></td>
   </tr>
   <tr>
     <td class='table-info'>$isMax</td>
     <td class='table-info'>Boolean</td>
-    <td class='table-info'><em>Declared on line 20.</n></td>
+    <td class='table-info'><em>Declared on line 21.</n></td>
   </tr>
 </tbody>
 </table>
@@ -227,7 +230,7 @@ graph TB
   <tr>
     <td class='table-secondary'>$template (return value)</td>
     <td class='table-secondary'>Text</td>
-    <td class='table-secondary'><em>Declared on line 35.</n></td>
+    <td class='table-secondary'><em>Declared on line 36.</n></td>
   </tr>
 </tbody>
 </table>

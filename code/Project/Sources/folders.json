@@ -1,4 +1,14 @@
 ﻿{
+	"(tests)": {
+		"methods": [
+			"(test_params)",
+			"(ut_countParams)",
+			"(ut_getOptValueClass)",
+			"(ut_getOptValueDefault)",
+			"(ut_getOptValueFunction)",
+			"(ut_getOptValueType)"
+		]
+	},
 	"Check": {
 		"classes": [
 			"CheckAge",
@@ -87,17 +97,6 @@
 			"Test"
 		]
 	},
-	"tests": {
-		"methods": [
-			"template_params",
-			"test_params",
-			"ut_countParams",
-			"ut_getOptValueClass",
-			"ut_getOptValueDefault",
-			"ut_getOptValueFunction",
-			"ut_getOptValueType"
-		]
-	},
 	"Use": {
 		"classes": [
 			"UseCombo",
@@ -134,21 +133,14 @@
 	},
 	"utils_params": {
 		"groups": [
-			"research",
-			"tests"
+			"research"
 		],
 		"methods": [
 			"test_param",
 			"ut_param",
-			"ut_paramChecker",
 			"ut_valueFromObject",
 			"utils_assertParameter",
-			"utils_countParam",
-			"utils_countParams",
-			"utils_getCheckFunc_",
-			"utils_getObjectValue",
-			"utils_getOptionValue",
-			"utils_getRequireValue",
+			"utils_assertParameterCount",
 			"utils_getValueFromObject"
 		]
 	},
@@ -171,5 +163,9 @@
 			"Validator"
 		]
 	},
-	"trash": {}
+	"trash": {
+		"groups": [
+			"(tests)"
+		]
+	}
 }

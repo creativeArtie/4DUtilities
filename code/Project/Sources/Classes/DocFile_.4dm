@@ -9,7 +9,7 @@ Function generateText->$text : Text
 Function getFile->$file : 4D:C1709.File
 	/// #abstract
 Function generate
-	/// #brief generate the file 
+	/// #brief generate the file
 	var $file : 4D:C1709.File  /// the generated file
 	
 	$file:=This:C1470.getFile()
@@ -62,10 +62,13 @@ Function addDescription
 	
 Function addHeading($header : Text; $level : Integer; $id : Text; $withSummary : Boolean)->$answer : Text
 	/// #brief helper function for adding a markdown header
-	$header:=utils_getRequireValue($1)
-	$level:=utils_getOptionValue($2; 1)
-	$id:=utils_getOptionValue($3; "")
-	$withSummary:=utils_getOptionValue($4; False:C215)
+	
+	var $count : Real
+	$header:=utils_assertParameter($1; ->$count; Count parameters:C259)
+	$level:=utils_assertParameter($2; ->$count; Count parameters:C259; 1)
+	$id:=utils_assertParameter($3; ->$count; Count parameters:C259; "")
+	$withSummary:=utils_assertParameter($4; ->$count; Count parameters:C259; False:C215)
+	utils_assertParameterCount($count; Count parameters:C259)
 	
 	var $idAttr : Text  /// id attribute which can be linked from the "Method list" section.
 	If ($id="")

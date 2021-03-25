@@ -70,8 +70,16 @@ graph TB
     <td class='table-info'>Object</td>
     <td class='table-info'><em>Declared on line 6.</n></td>
   </tr>
+  <tr>
+    <td class='table-info'>$count</td>
+    <td class='table-info'>Real</td>
+    <td class='table-info'><em>Declared on line 8.</n></td>
+  </tr>
 </tbody>
 </table>
+
+
+
 
 
 

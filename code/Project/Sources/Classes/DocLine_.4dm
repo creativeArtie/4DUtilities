@@ -1,11 +1,13 @@
 /// #brief a single line of 4D code splitted into comment and code
 Class constructor($text : Text; $file : Text; $line : Integer)
 	
-	This:C1470.code:=utils_getRequireValue($1; Is text:K8:3)
+	var $count : Real
+	This:C1470.code:=utils_assertParameter($1; ->$count; Count parameters:C259)
 	This:C1470.doc:=""
 	This:C1470.tag:=""
-	This:C1470.file:=$file
-	This:C1470.line:=$line
+	This:C1470.file:=utils_assertParameter($2; ->$count; Count parameters:C259)
+	This:C1470.line:=utils_assertParameter($3; ->$count; Count parameters:C259)
+	utils_assertParameterCount($count; Count parameters:C259)
 	
 	var $doc : Text
 	$doc:="///"  // The line `$doc:="///"` is sadly adding into 4D Docs...

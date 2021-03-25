@@ -1,10 +1,12 @@
 //%attributes = {}
 #DECLARE($value : Variant; $key : Text; $storage : Object)
 
-$value:=utils_getRequireValue($1; Is variant:K8:33)
-$key:=utils_getOptionValue($2; ""; Is text:K8:3)
-$storage:=utils_getOptionValue($3; Storage:C1525; \
-Formula:C1597(OB Is shared:C1759($3)))
+var $count : Real
+$value:=utils_assertParameter($1; ->$count; Count parameters:C259)
+$key:=utils_assertParameter($2; ->$count; Count parameters:C259; "")
+$storage:=utils_assertParameter($3; ->$count; Count parameters:C259; \
+Storage:C1525)  //! #todo check shared
+utils_assertParameterCount($count; Count parameters:C259)
 
 
 Use ($storage)

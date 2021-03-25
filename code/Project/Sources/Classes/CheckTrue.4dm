@@ -1,8 +1,12 @@
 Class extends Check
 Class constructor($function : 4D:C1709.Function; $template : Text)
-	This:C1470.tester:=utils_getRequireValue($1; 4D:C1709.Function)
-	This:C1470.template:=utils_getOptionValue($2; "$1 is not pass "\
-		+This:C1470.tester.source; Is text:K8:3)
+	
+	var $count : Real
+	This:C1470.tester:=utils_assertParameter($1; ->$count; Count parameters:C259)
+	This:C1470.template:=utils_assertParameter($2; ->$count; Count parameters:C259; \
+		"$1 is not pass "+This:C1470.tester.source)
+	utils_assertParameterCount($count; Count parameters:C259)
+	
 Function test->$result : Boolean
 	var $value : Variant
 	$value:=This:C1470.getValue()

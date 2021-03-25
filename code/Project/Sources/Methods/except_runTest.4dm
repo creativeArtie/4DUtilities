@@ -20,8 +20,7 @@ End if
 $randomer:=$randomer.error/5230
 except_trapErrors
 $randomer:=$randomer.trapped/5
-
-utils_getRequireValue(""; Is real:K8:4)
+ASSERT:C1129(False:C215)
 
 While (except_catch(->$exception))
 	ALERT:C41($exception.message)

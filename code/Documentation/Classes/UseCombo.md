@@ -89,8 +89,22 @@ graph TB
     <td class='table-info'>POINTER</td>
     <td class='table-info'><em>Declared on line 6.</n></td>
   </tr>
+  <tr>
+    <td class='table-info'>$count</td>
+    <td class='table-info'>Real</td>
+    <td class='table-info'><em>Declared on line 8.</n></td>
+  </tr>
 </tbody>
 </table>
+
+
+
+
+
+
+
+
+
 
 
 
@@ -124,7 +138,7 @@ graph TB
   <tr>
     <td class='table-secondary'>$value (return value)</td>
     <td class='table-secondary'>Variant</td>
-    <td class='table-secondary'><em>Declared on line 12.</n></td>
+    <td class='table-secondary'><em>Declared on line 16.</n></td>
   </tr>
 </tbody>
 </table>
@@ -138,6 +152,21 @@ graph TB
 
 
 <h3 id='setError'>setError</h3>
+
+<table class='table '>
+  <thead>
+  <tr>  <td>Name</th>
+  <td>Type</th>
+  <td>Brief</th>
+  </tr></thead>
+  <tbody>
+  <tr>
+    <td class='table-info'>$count</td>
+    <td class='table-info'>Real</td>
+    <td class='table-info'><em>Declared on line 21.</n></td>
+  </tr>
+</tbody>
+</table>
 
 
 
@@ -158,6 +187,27 @@ graph TB
 
 <h3 id='setWarning'>setWarning</h3>
 
+<table class='table '>
+  <thead>
+  <tr>  <td>Name</th>
+  <td>Type</th>
+  <td>Brief</th>
+  </tr></thead>
+  <tbody>
+  <tr>
+    <td class='table-info'>$count</td>
+    <td class='table-info'>Real</td>
+    <td class='table-info'><em>Declared on line 30.</n></td>
+  </tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
 
 
 
@@ -176,6 +226,9 @@ graph TB
 
 
 <h3 id='setPass'>setPass</h3>
+
+
+
 
 
 

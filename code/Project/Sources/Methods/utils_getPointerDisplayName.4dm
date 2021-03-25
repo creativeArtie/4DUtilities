@@ -1,7 +1,9 @@
 //%attributes = {"shared":true}
 #DECLARE($pointer : Pointer)->$result : Text
-$pointer:=utils_getRequireValue($1; Is pointer:K8:14)
-utils_countParams(1; Count parameters:C259)
+var $count : Integer
+$pointer:=utils_assertParameter($1; ->$count; Count parameters:C259)
+utils_assertParameterCount($count; Count parameters:C259)
+
 var $name : Text
 var $tableNum : Integer
 var $fieldNum : Integer

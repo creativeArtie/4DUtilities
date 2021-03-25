@@ -1,8 +1,9 @@
 //%attributes = {"shared":true}
 #DECLARE($message : Text)->$thrown : cs:C1710.Exception
 
-$message:=utils_getOptionValue($1; ""; Is text:K8:3)  /// message
-utils_countParams(1; Count parameters:C259)
+var $count : Real
+$message:=utils_assertParameter($1; ->$count; Count parameters:C259; "")  /// message
+utils_assertParameterCount($count; Count parameters:C259)
 
 var $caller : Object
 $caller:=utils_getMethodCaller(Current method name:C684)

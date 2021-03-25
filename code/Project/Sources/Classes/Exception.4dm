@@ -5,10 +5,12 @@ Class constructor
 	var $3 : Integer
 	var $caller : Object
 	var $4 : Object
-	This:C1470.message:=utils_getRequireValue($1; Is text:K8:3)
-	$caller:=utils_getRequireValue($2; Is object:K8:27)
-	This:C1470.importance:=utils_getRequireValue($3; Is longint:K8:6)
-	This:C1470.reason:=utils_getOptionValue($4; New object:C1471; Is object:K8:27)
+	var $count : Real
+	This:C1470.message:=utils_assertParameter($1; ->$count; Count parameters:C259)
+	$caller:=utils_assertParameter($2; ->$count; Count parameters:C259)
+	This:C1470.importance:=utils_assertParameter($3; ->$count; Count parameters:C259)
+	This:C1470.reason:=utils_assertParameter($4; ->$count; Count parameters:C259; New object:C1471)
+	utils_assertParameterCount($count; Count parameters:C259)
 	
 	
 	This:C1470.database:=$caller.database

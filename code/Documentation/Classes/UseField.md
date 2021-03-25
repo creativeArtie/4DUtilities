@@ -85,12 +85,23 @@ graph TB
   </tr></thead>
   <tbody>
   <tr>
+    <td class='table-info'>$count</td>
+    <td class='table-info'>Real</td>
+    <td class='table-info'><em>Declared on line 5.</n></td>
+  </tr>
+  <tr>
     <td class='table-info'>$pointer</td>
     <td class='table-info'>POINTER</td>
-    <td class='table-info'><em>Declared on line 5.</n></td>
+    <td class='table-info'><em>Declared on line 6.</n></td>
   </tr>
 </tbody>
 </table>
+
+
+
+
+
+
 
 
 

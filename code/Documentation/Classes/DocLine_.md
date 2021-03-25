@@ -81,17 +81,25 @@ a single line of 4D code splitted into comment and code
     <td class='table-primary'><em>Declared on line 2.</n></td>
   </tr>
   <tr>
+    <td class='table-info'>$count</td>
+    <td class='table-info'>Real</td>
+    <td class='table-info'><em>Declared on line 4.</n></td>
+  </tr>
+  <tr>
     <td class='table-info'>$doc</td>
     <td class='table-info'>Text</td>
-    <td class='table-info'><em>Declared on line 10.</n></td>
+    <td class='table-info'><em>Declared on line 12.</n></td>
   </tr>
   <tr>
     <td class='table-info'>$tagged</td>
     <td class='table-info'>Text</td>
-    <td class='table-info'><em>Declared on line 21.</n></td>
+    <td class='table-info'><em>Declared on line 23.</n></td>
   </tr>
 </tbody>
 </table>
+
+
+
 
 
 
@@ -185,7 +193,7 @@ a single line of 4D code splitted into comment and code
   <tr>
     <td class='table-primary'>$doc (parameter 1)</td>
     <td class='table-primary'>Text</td>
-    <td class='table-primary'><em>Declared on line 31.</n></td>
+    <td class='table-primary'><em>Declared on line 33.</n></td>
   </tr>
 </tbody>
 </table>

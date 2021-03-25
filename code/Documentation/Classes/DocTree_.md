@@ -74,8 +74,16 @@ graph TB
     <td class='table-primary'>Text</td>
     <td class='table-primary'><em>Declared on line 1.</n></td>
   </tr>
+  <tr>
+    <td class='table-info'>$count</td>
+    <td class='table-info'>Real</td>
+    <td class='table-info'><em>Declared on line 3.</n></td>
+  </tr>
 </tbody>
 </table>
+
+
+
 
 
 
@@ -100,35 +108,58 @@ graph TB
   <tr>
     <td class='table-primary'>$class (parameter 1)</td>
     <td class='table-primary'>cs.DocClass_</td>
-    <td class='table-primary'><em>Declared on line 5.</n></td>
+    <td class='table-primary'><em>Declared on line 7.</n></td>
   </tr>
   <tr>
     <td class='table-primary'>$root (parameter 2)</td>
     <td class='table-primary'>cs.DocTree_</td>
-    <td class='table-primary'><em>Declared on line 5.</n></td>
+    <td class='table-primary'><em>Declared on line 7.</n></td>
   </tr>
   <tr>
     <td class='table-secondary'>$filled (return value)</td>
     <td class='table-secondary'>Boolean</td>
-    <td class='table-secondary'><em>Declared on line 5.</n></td>
+    <td class='table-secondary'><em>Declared on line 7.</n></td>
+  </tr>
+  <tr>
+    <td class='table-info'>$count</td>
+    <td class='table-info'>Real</td>
+    <td class='table-info'><em>Declared on line 9.</n></td>
   </tr>
   <tr>
     <td class='table-info'>$current</td>
     <td class='table-info'>cs.DocTree_</td>
-    <td class='table-info'><em>Declared on line 6.</n></td>
+    <td class='table-info'><em>Declared on line 12.</n></td>
   </tr>
   <tr>
     <td class='table-info'>$filled</td>
     <td class='table-info'>BOOLEAN</td>
-    <td class='table-info'><em>Declared on line 9.</n></td>
+    <td class='table-info'><em>Declared on line 18.</n></td>
   </tr>
   <tr>
     <td class='table-info'>$child</td>
     <td class='table-info'>Text</td>
-    <td class='table-info'><em>Declared on line 17.</n></td>
+    <td class='table-info'><em>Declared on line 26.</n></td>
   </tr>
 </tbody>
 </table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -195,45 +226,53 @@ graph TB
   <tr>
     <td class='table-primary'>$current (parameter 1)</td>
     <td class='table-primary'>Text</td>
-    <td class='table-primary'><em>Declared on line 26.</n></td>
+    <td class='table-primary'><em>Declared on line 35.</n></td>
   </tr>
   <tr>
     <td class='table-primary'>$input (parameter 2)</td>
     <td class='table-primary'>cs.DocMermaid_</td>
-    <td class='table-primary'><em>Declared on line 26.</n></td>
+    <td class='table-primary'><em>Declared on line 35.</n></td>
   </tr>
   <tr>
     <td class='table-secondary'>$graph (return value)</td>
     <td class='table-secondary'>Text</td>
-    <td class='table-secondary'><em>Declared on line 26.</n></td>
+    <td class='table-secondary'><em>Declared on line 35.</n></td>
   </tr>
   <tr>
-    <td class='table-info'>$name</td>
-    <td class='table-info'>Text</td>
-    <td class='table-info'><em>Declared on line 30.</n></td>
-  </tr>
-  <tr>
-    <td class='table-info'>$spaces</td>
-    <td class='table-info'>Text</td>
+    <td class='table-info'>$count</td>
+    <td class='table-info'>Real</td>
     <td class='table-info'><em>Declared on line 36.</n></td>
   </tr>
   <tr>
     <td class='table-info'>$name</td>
     <td class='table-info'>Text</td>
-    <td class='table-info'><em>Declared on line 44.</n></td>
+    <td class='table-info'><em>Declared on line 41.</n></td>
+  </tr>
+  <tr>
+    <td class='table-info'>$spaces</td>
+    <td class='table-info'>Text</td>
+    <td class='table-info'><em>Declared on line 47.</n></td>
+  </tr>
+  <tr>
+    <td class='table-info'>$name</td>
+    <td class='table-info'>Text</td>
+    <td class='table-info'><em>Declared on line 55.</n></td>
   </tr>
   <tr>
     <td class='table-info'>$child</td>
     <td class='table-info'>cs.DocTree_</td>
-    <td class='table-info'><em>Declared on line 45.</n></td>
+    <td class='table-info'><em>Declared on line 56.</n></td>
   </tr>
   <tr>
     <td class='table-info'>$temp</td>
     <td class='table-info'>Text</td>
-    <td class='table-info'><em>Declared on line 49.</n></td>
+    <td class='table-info'><em>Declared on line 60.</n></td>
   </tr>
 </tbody>
 </table>
+
+
+
 
 
 

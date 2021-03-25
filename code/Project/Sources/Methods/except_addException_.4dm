@@ -1,7 +1,8 @@
 //%attributes = {}
 #DECLARE($exception : cs:C1710.Exception)
-$exception:=utils_getRequireValue($1; cs:C1710.Exception)
-utils_countParams(1; Count parameters:C259)
+var $count : Integer
+$exception:=utils_assertParameter($1; ->$count; Count parameters:C259)
+utils_assertParameterCount($count; Count parameters:C259)
 
 var $collection : Collection
 var $shared : Object

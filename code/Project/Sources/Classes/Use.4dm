@@ -3,8 +3,9 @@
 Class constructor($name : Text)
 	This:C1470.state:=0
 	This:C1470.message:=""
-	This:C1470.name:=utils_getRequireValue($1; Is text:K8:3)
-	utils_countParams(1; Count parameters:C259)
+	var $count : Real
+	This:C1470.name:=utils_assertParameter($1; ->$count; Count parameters:C259)
+	utils_assertParameterCount($count; Count parameters:C259)
 	
 Function getValue
 	ASSERT:C1129(False:C215; "Need implementation.")
@@ -12,16 +13,22 @@ Function getValue
 Function setError
 	var $1 : Text
 	var $message : Text
-	$message:=utils_getRequireValue($1; Is text:K8:3)
-	utils_countParams(1; Count parameters:C259)
+	
+	var $count : Real
+	$message:=utils_assertParameter($1; ->$count; Count parameters:C259)
+	utils_assertParameterCount($count; Count parameters:C259)
+	
 	This:C1470.message:=Replace string:C233($1; "$1"; This:C1470.name)
 	This:C1470.state:=2
 	
 Function setWarning
 	var $1 : Text
 	var $message : Text
-	$message:=utils_getRequireValue($1; Is text:K8:3)
-	utils_countParams(1; Count parameters:C259)
+	
+	var $count : Real
+	$message:=utils_assertParameter($1; ->$count; Count parameters:C259)
+	utils_assertParameterCount($count; Count parameters:C259)
+	
 	This:C1470.message:=Replace string:C233($1; "$1"; This:C1470.name)
 	This:C1470.state:=1
 	

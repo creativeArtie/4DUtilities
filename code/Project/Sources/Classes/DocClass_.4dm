@@ -3,8 +3,11 @@ Class constructor($name : Text; $path : cs:C1710.File)
 	Super:C1705()
 	This:C1470.functions:=New collection:C1472
 	This:C1470.code:=New collection:C1472
-	This:C1470.name:=utils_getRequireValue($1)
+	var $count : Real
+	This:C1470.name:=utils_assertParameter($1; ->$count; Count parameters:C259)
+	$path:=utils_assertParameter($2; ->$count; Count parameters:C259)
 	This:C1470.extends:="Object"
+	utils_assertParameterCount($count; Count parameters:C259)
 	Super:C1706.setPrivate_()
 	
 	var $details : cs:C1710.DocClass_

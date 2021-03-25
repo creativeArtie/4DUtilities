@@ -1,7 +1,10 @@
 //%attributes = {}
 #DECLARE($type : Text)->$collection : Object
 
-$type:=utils_getRequireValue($type; Is text:K8:3)
+var $count : Real
+$type:=utils_assertParameter($type; ->$count; Count parameters:C259)
+utils_assertParameterCount($count; Count parameters:C259)
+
 var $path : Text
 var $baseFolder : 4D:C1709.Folder
 $collection:=New object:C1471
