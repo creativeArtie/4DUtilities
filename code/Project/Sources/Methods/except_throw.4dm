@@ -6,6 +6,6 @@ utils_countParams(1; Count parameters:C259)
 
 var $caller : Object
 $caller:=utils_getMethodCaller(Current method name:C684)
-$thrown:=cs:C1710.Exception.new($message; Error message:K38:3; $caller)
+$thrown:=cs:C1710.Exception.new($message; $caller; Error message:K38:3)
 
 except_addException_($thrown)

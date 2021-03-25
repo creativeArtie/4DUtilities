@@ -139,12 +139,16 @@
 		],
 		"methods": [
 			"test_param",
+			"ut_param",
 			"ut_paramChecker",
+			"ut_valueFromObject",
+			"utils_countParam",
 			"utils_countParams",
 			"utils_getCheckFunc_",
 			"utils_getObjectValue",
 			"utils_getOptionValue",
 			"utils_getRequireValue",
+			"utils_getValueFromObject",
 			"utils_setParam"
 		]
 	},

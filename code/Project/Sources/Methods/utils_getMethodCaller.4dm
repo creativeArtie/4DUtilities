@@ -1,7 +1,6 @@
 //%attributes = {"shared":true}
 #DECLARE($method : Text)->$caller : Object
 var $callers : Collection
-
 var $i : Integer
 $callers:=Get call chain:C1662
 $caller:=New object:C1471

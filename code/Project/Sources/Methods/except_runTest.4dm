@@ -28,3 +28,6 @@ While (except_catch(->$exception))
 End while 
 
 $randomer:=$randomer.uncaught/5
+
+var $user : cs:C1710.Exception
+$user:=except_throw("Some Error")
