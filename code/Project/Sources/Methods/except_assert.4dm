@@ -3,7 +3,7 @@
 
 var $count : Real
 $passed:=utils_assertParameter($1; ->$count; Count parameters:C259)
-$message:=utils_assertParameter($2; ->$count; Count parameters:C259; "")  /// message
+$message:=utils_assertParameter($2; ->$count; Count parameters:C259; "")  //! message
 $method:=utils_assertParameter($3; ->$count; Count parameters:C259; Current method name:C684)
 utils_assertParameterCount($count; Count parameters:C259)
 

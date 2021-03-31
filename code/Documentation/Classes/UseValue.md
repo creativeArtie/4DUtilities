@@ -44,19 +44,28 @@ graph TB
 
 <h2>Method list</h2>
 
-<table class='table table-hover'>
+<table class='table-hover'>
   <thead>
-  <tr>  <td>Method Name</th>
-  <td>Method Brief</th>
+  <tr>
+  <th>Method Name</th>
+  <th>Method Brief</th>
   </tr></thead>
   <tbody>
   <tr>
-    <td class='table-success'><a href='#class-constructor'><strong>Class constructor()<strong> <span class='badge bg-primary' data-bs-toggle='tooltip' title='Class Constructor' >constructor</span></a></td>
-    <td class='table-success'></td>
+    <td class='table-success'>
+<a href='#class-constructor'><strong>Class constructor()<strong> <span class='badge bg-primary' data-bs-toggle='tooltip' title='Class Constructor' >constructor</span></a>
+</td>
+    <td class='table-success'>
+
+</td>
   </tr>
   <tr>
-    <td class='table-success'><a href='#getValue'>getValue() -> $answer : Variant</a></td>
-    <td class='table-success'></td>
+    <td class='table-success'>
+<a href='#getValue'>getValue() -> $answer : Variant</a>
+</td>
+    <td class='table-success'>
+
+</td>
   </tr>
 </tbody>
 </table>
@@ -65,61 +74,64 @@ graph TB
 
 <h3 id='class-constructor'><strong>Class Constructor</strong></h3>
 
-<table class='table '>
+<table class=''>
   <thead>
-  <tr>  <td>Name</th>
-  <td>Type</th>
-  <td>Brief</th>
+  <tr>
+  <th>Name</th>
+  <th>Type</th>
+  <th>Brief</th>
   </tr></thead>
   <tbody>
   <tr>
-    <td class='table-info'>$count</td>
-    <td class='table-info'>Real</td>
-    <td class='table-info'><em>Declared on line 5.</n></td>
+    <td class='table-info'>
+$count
+</td>
+    <td class='table-info'>
+Real
+</td>
+    <td class='table-info'>
+<em>Declared on line 5.</em>
+</td>
   </tr>
   <tr>
-    <td class='table-info'>$value</td>
-    <td class='table-info'>Variant</td>
-    <td class='table-info'><em>Declared on line 6.</n></td>
+    <td class='table-info'>
+$value
+</td>
+    <td class='table-info'>
+Variant
+</td>
+    <td class='table-info'>
+<em>Declared on line 6.</em>
+</td>
   </tr>
 </tbody>
 </table>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
 <h3 id='getValue'>getValue</h3>
 
-<table class='table '>
+<table class=''>
   <thead>
-  <tr>  <td>Name</th>
-  <td>Type</th>
-  <td>Brief</th>
+  <tr>
+  <th>Name</th>
+  <th>Type</th>
+  <th>Brief</th>
   </tr></thead>
   <tbody>
   <tr>
-    <td class='table-secondary'>$answer (return value)</td>
-    <td class='table-secondary'>Variant</td>
-    <td class='table-secondary'><em>Declared on line 12.</n></td>
+    <td class='table-secondary'>
+$answer (return value)
+</td>
+    <td class='table-secondary'>
+Variant
+</td>
+    <td class='table-secondary'>
+<em>Declared on line 12.</em>
+</td>
   </tr>
 </tbody>
 </table>
-
-
 
 
 
@@ -128,5 +140,12 @@ graph TB
   <script>
     document.getElementById('content').innerHTML =
     marked(document.getElementById('content').innerHTML);
-    mermaid.initialize({startOnLoad:true});  </script>
+    mermaid.initialize({startOnLoad:true});
+    var nodes = document.querySelectorAll('#content table');
+    var i;
+    for (i=0; i< nodes.length; i++){
+      nodes[i].className=nodes[i].className+' table'; 
+    }
+  </script>
 </body>
+</html>

@@ -37,23 +37,36 @@ create a mermaid chart
 
 <h2>Method list</h2>
 
-<table class='table table-hover'>
+<table class='table-hover'>
   <thead>
-  <tr>  <td>Method Name</th>
-  <td>Method Brief</th>
+  <tr>
+  <th>Method Name</th>
+  <th>Method Brief</th>
   </tr></thead>
   <tbody>
   <tr>
-    <td class='table-success'><a href='#class-constructor'><strong>Class constructor()<strong> <span class='badge bg-primary' data-bs-toggle='tooltip' title='Class Constructor' >constructor</span></a></td>
-    <td class='table-success'></td>
+    <td class='table-success'>
+<a href='#class-constructor'><strong>Class constructor()<strong> <span class='badge bg-primary' data-bs-toggle='tooltip' title='Class Constructor' >constructor</span></a>
+</td>
+    <td class='table-success'>
+
+</td>
   </tr>
   <tr>
-    <td class='table-success'><a href='#addLine'>addLine($line : Text)</a></td>
-    <td class='table-success'></td>
+    <td class='table-success'>
+<a href='#addLine'>addLine($line : Text)</a>
+</td>
+    <td class='table-success'>
+
+</td>
   </tr>
   <tr>
-    <td class='table-success'><a href='#getText'>getText() -> $answer : Text</a></td>
-    <td class='table-success'></td>
+    <td class='table-success'>
+<a href='#getText'>getText() -> $answer : Text</a>
+</td>
+    <td class='table-success'>
+
+</td>
   </tr>
 </tbody>
 </table>
@@ -64,61 +77,55 @@ create a mermaid chart
 
 
 
-
-
-
-
-
-
 <h3 id='addLine'>addLine</h3>
 
-<table class='table '>
+<table class=''>
   <thead>
-  <tr>  <td>Name</th>
-  <td>Type</th>
-  <td>Brief</th>
+  <tr>
+  <th>Name</th>
+  <th>Type</th>
+  <th>Brief</th>
   </tr></thead>
   <tbody>
   <tr>
-    <td class='table-primary'>$line (parameter 1)</td>
-    <td class='table-primary'>Text</td>
-    <td class='table-primary'><em>Declared on line 5.</n></td>
+    <td class='table-primary'>
+$line (parameter 1)
+</td>
+    <td class='table-primary'>
+Text
+</td>
+    <td class='table-primary'>
+<em>Declared on line 5.</em>
+</td>
   </tr>
 </tbody>
 </table>
-
-
-
-
-
-
 
 
 
 <h3 id='getText'>getText</h3>
 
-<table class='table '>
+<table class=''>
   <thead>
-  <tr>  <td>Name</th>
-  <td>Type</th>
-  <td>Brief</th>
+  <tr>
+  <th>Name</th>
+  <th>Type</th>
+  <th>Brief</th>
   </tr></thead>
   <tbody>
   <tr>
-    <td class='table-secondary'>$answer (return value)</td>
-    <td class='table-secondary'>Text</td>
-    <td class='table-secondary'><em>Declared on line 8.</n></td>
+    <td class='table-secondary'>
+$answer (return value)
+</td>
+    <td class='table-secondary'>
+Text
+</td>
+    <td class='table-secondary'>
+<em>Declared on line 8.</em>
+</td>
   </tr>
 </tbody>
 </table>
-
-
-
-
-
-
-
-
 
 
 
@@ -127,5 +134,12 @@ create a mermaid chart
   <script>
     document.getElementById('content').innerHTML =
     marked(document.getElementById('content').innerHTML);
-    mermaid.initialize({startOnLoad:true});  </script>
+    mermaid.initialize({startOnLoad:true});
+    var nodes = document.querySelectorAll('#content table');
+    var i;
+    for (i=0; i< nodes.length; i++){
+      nodes[i].className=nodes[i].className+' table'; 
+    }
+  </script>
 </body>
+</html>

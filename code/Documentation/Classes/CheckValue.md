@@ -50,23 +50,36 @@ graph TB
 
 <h2>Method list</h2>
 
-<table class='table table-hover'>
+<table class='table-hover'>
   <thead>
-  <tr>  <td>Method Name</th>
-  <td>Method Brief</th>
+  <tr>
+  <th>Method Name</th>
+  <th>Method Brief</th>
   </tr></thead>
   <tbody>
   <tr>
-    <td class='table-success'><a href='#class-constructor'><strong>Class constructor($min : Variant; $max : Variant; $minInclude : Boolean; $maxInclude : Boolean)<strong> <span class='badge bg-primary' data-bs-toggle='tooltip' title='Class Constructor' >constructor</span></a></td>
-    <td class='table-success'></td>
+    <td class='table-success'>
+<a href='#class-constructor'><strong>Class constructor($min : Variant; $max : Variant; $minInclude : Boolean; $maxInclude : Boolean)<strong> <span class='badge bg-primary' data-bs-toggle='tooltip' title='Class Constructor' >constructor</span></a>
+</td>
+    <td class='table-success'>
+
+</td>
   </tr>
   <tr>
-    <td class='table-success'><a href='#test'>test() -> $result : Boolean</a></td>
-    <td class='table-success'></td>
+    <td class='table-success'>
+<a href='#test'>test() -> $result : Boolean</a>
+</td>
+    <td class='table-success'>
+
+</td>
   </tr>
   <tr>
-    <td class='table-success'><a href='#getMessageTemplate'>getMessageTemplate() -> $template : Text</a></td>
-    <td class='table-success'></td>
+    <td class='table-success'>
+<a href='#getMessageTemplate'>getMessageTemplate() -> $template : Text</a>
+</td>
+    <td class='table-success'>
+
+</td>
   </tr>
 </tbody>
 </table>
@@ -75,167 +88,163 @@ graph TB
 
 <h3 id='class-constructor'><strong>Class Constructor</strong></h3>
 
-<table class='table '>
+<table class=''>
   <thead>
-  <tr>  <td>Name</th>
-  <td>Type</th>
-  <td>Brief</th>
+  <tr>
+  <th>Name</th>
+  <th>Type</th>
+  <th>Brief</th>
   </tr></thead>
   <tbody>
   <tr>
-    <td class='table-primary'>$min (parameter 1)</td>
-    <td class='table-primary'>Variant</td>
-    <td class='table-primary'><em>Declared on line 2.</n></td>
+    <td class='table-primary'>
+$min (parameter 1)
+</td>
+    <td class='table-primary'>
+Variant
+</td>
+    <td class='table-primary'>
+<em>Declared on line 2.</em>
+</td>
   </tr>
   <tr>
-    <td class='table-primary'>$max (parameter 2)</td>
-    <td class='table-primary'>Variant</td>
-    <td class='table-primary'><em>Declared on line 2.</n></td>
+    <td class='table-primary'>
+$max (parameter 2)
+</td>
+    <td class='table-primary'>
+Variant
+</td>
+    <td class='table-primary'>
+<em>Declared on line 2.</em>
+</td>
   </tr>
   <tr>
-    <td class='table-primary'>$minInclude (parameter 3)</td>
-    <td class='table-primary'>Boolean</td>
-    <td class='table-primary'><em>Declared on line 2.</n></td>
+    <td class='table-primary'>
+$minInclude (parameter 3)
+</td>
+    <td class='table-primary'>
+Boolean
+</td>
+    <td class='table-primary'>
+<em>Declared on line 2.</em>
+</td>
   </tr>
   <tr>
-    <td class='table-primary'>$maxInclude (parameter 4)</td>
-    <td class='table-primary'>Boolean</td>
-    <td class='table-primary'><em>Declared on line 2.</n></td>
+    <td class='table-primary'>
+$maxInclude (parameter 4)
+</td>
+    <td class='table-primary'>
+Boolean
+</td>
+    <td class='table-primary'>
+<em>Declared on line 2.</em>
+</td>
   </tr>
   <tr>
-    <td class='table-info'>$count</td>
-    <td class='table-info'>Real</td>
-    <td class='table-info'><em>Declared on line 8.</n></td>
+    <td class='table-info'>
+$count
+</td>
+    <td class='table-info'>
+Real
+</td>
+    <td class='table-info'>
+<em>Declared on line 8.</em>
+</td>
   </tr>
 </tbody>
 </table>
 
 
 
+<div class='alert alert-warning'>
+<h4 class='alert-heading'>TODO</h4>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+check type
+</div>
 
 
 <h3 id='test'>test</h3>
 
-<table class='table '>
+<table class=''>
   <thead>
-  <tr>  <td>Name</th>
-  <td>Type</th>
-  <td>Brief</th>
+  <tr>
+  <th>Name</th>
+  <th>Type</th>
+  <th>Brief</th>
   </tr></thead>
   <tbody>
   <tr>
-    <td class='table-secondary'>$result (return value)</td>
-    <td class='table-secondary'>Boolean</td>
-    <td class='table-secondary'><em>Declared on line 18.</n></td>
+    <td class='table-secondary'>
+$result (return value)
+</td>
+    <td class='table-secondary'>
+Boolean
+</td>
+    <td class='table-secondary'>
+<em>Declared on line 18.</em>
+</td>
   </tr>
   <tr>
-    <td class='table-info'>$value</td>
-    <td class='table-info'>Variant</td>
-    <td class='table-info'><em>Declared on line 19.</n></td>
+    <td class='table-info'>
+$value
+</td>
+    <td class='table-info'>
+Variant
+</td>
+    <td class='table-info'>
+<em>Declared on line 19.</em>
+</td>
   </tr>
   <tr>
-    <td class='table-info'>$isMin</td>
-    <td class='table-info'>Boolean</td>
-    <td class='table-info'><em>Declared on line 20.</n></td>
+    <td class='table-info'>
+$isMin
+</td>
+    <td class='table-info'>
+Boolean
+</td>
+    <td class='table-info'>
+<em>Declared on line 20.</em>
+</td>
   </tr>
   <tr>
-    <td class='table-info'>$isMax</td>
-    <td class='table-info'>Boolean</td>
-    <td class='table-info'><em>Declared on line 21.</n></td>
+    <td class='table-info'>
+$isMax
+</td>
+    <td class='table-info'>
+Boolean
+</td>
+    <td class='table-info'>
+<em>Declared on line 21.</em>
+</td>
   </tr>
 </tbody>
 </table>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
 <h3 id='getMessageTemplate'>getMessageTemplate</h3>
 
-<table class='table '>
+<table class=''>
   <thead>
-  <tr>  <td>Name</th>
-  <td>Type</th>
-  <td>Brief</th>
+  <tr>
+  <th>Name</th>
+  <th>Type</th>
+  <th>Brief</th>
   </tr></thead>
   <tbody>
   <tr>
-    <td class='table-secondary'>$template (return value)</td>
-    <td class='table-secondary'>Text</td>
-    <td class='table-secondary'><em>Declared on line 36.</n></td>
+    <td class='table-secondary'>
+$template (return value)
+</td>
+    <td class='table-secondary'>
+Text
+</td>
+    <td class='table-secondary'>
+<em>Declared on line 36.</em>
+</td>
   </tr>
 </tbody>
 </table>
-
-
 
 
 
@@ -244,5 +253,12 @@ graph TB
   <script>
     document.getElementById('content').innerHTML =
     marked(document.getElementById('content').innerHTML);
-    mermaid.initialize({startOnLoad:true});  </script>
+    mermaid.initialize({startOnLoad:true});
+    var nodes = document.querySelectorAll('#content table');
+    var i;
+    for (i=0; i< nodes.length; i++){
+      nodes[i].className=nodes[i].className+' table'; 
+    }
+  </script>
 </body>
+</html>

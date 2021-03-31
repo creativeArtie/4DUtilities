@@ -1,5 +1,5 @@
-/// #brief Stores the error message and access the value to test
-/// #author Wai-Kin Chau
+//! #brief Stores the error message and access the value to test
+//! #author Wai-Kin Chau
 Class constructor($name : Text)
 	This:C1470.state:=0
 	This:C1470.message:=""

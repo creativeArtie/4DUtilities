@@ -1,11 +1,12 @@
 Class extends DocFile_
-Class constructor($name : Text; $path : cs:C1710.File)
+Class constructor($name : Text; $path : cs:C1710.File; $common : cs:C1710.DocCommon_)
 	Super:C1705()
 	This:C1470.functions:=New collection:C1472
 	This:C1470.code:=New collection:C1472
 	var $count : Real
 	This:C1470.name:=utils_assertParameter($1; ->$count; Count parameters:C259)
 	$path:=utils_assertParameter($2; ->$count; Count parameters:C259)
+	$common:=utils_assertParameter($3; ->$count; Count parameters:C259)
 	This:C1470.extends:="Object"
 	utils_assertParameterCount($count; Count parameters:C259)
 	Super:C1706.setPrivate_()
@@ -39,9 +40,9 @@ Class constructor($name : Text; $path : cs:C1710.File)
 				
 			Else 
 				If ($function#Null:C1517)
-					$function.paraseCommonTags($parsed)
+					$function.paraseCommonTags($parsed; $common)
 				Else 
-					This:C1470.paraseCommonTags($parsed)
+					This:C1470.paraseCommonTags($parsed; $common)
 				End if 
 		End case 
 	End for each 
@@ -60,14 +61,14 @@ Function getFile->$file : 4D:C1709.File
 	$file.create()
 	
 Function generateText
-	/// #brief print the class
+	//! #brief print the class
 	var $text : Text
 	var $classDoc : Text
 	var $commentLine : Text
 	
 	This:C1470.title:="Class "+This:C1470.name
 	
-	/// 1. Adds the header
+	//! 1. Adds the header
 	This:C1470.addHeading("Class <mark>cs."+This:C1470.name+"</mark>"+This:C1470.getTypeBadge(); \
 		1; ""; True:C214)
 	

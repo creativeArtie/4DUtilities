@@ -1,4 +1,4 @@
-/// #brief create a mermaid chart
+//! #brief create a mermaid chart
 Class constructor
 	This:C1470.text_:=""
 	

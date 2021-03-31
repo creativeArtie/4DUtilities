@@ -36,6 +36,8 @@ graph TB
     classDocClass_[cs.DocClass_]
     classDocClass_ --> classDocMethod_
     classDocMethod_[cs.DocMethod_]
+    classDocFile_ --> classDocCommon_
+    classDocCommon_[cs.DocCommon_]
     classDocSection_ --> classDocFunction_
     classDocFunction_[cs.DocFunction_]
 
@@ -45,41 +47,70 @@ create a file for the 4D Documentation and for browser
 
 <h2>Method list</h2>
 
-<table class='table table-hover'>
+<table class='table-hover'>
   <thead>
-  <tr>  <td>Method Name</th>
-  <td>Method Brief</th>
+  <tr>
+  <th>Method Name</th>
+  <th>Method Brief</th>
   </tr></thead>
   <tbody>
   <tr>
-    <td class='table-success'><a href='#class-constructor'><strong>Class constructor()<strong> <span class='badge bg-primary' data-bs-toggle='tooltip' title='Class Constructor' >constructor</span></a></td>
-    <td class='table-success'></td>
+    <td class='table-success'>
+<a href='#class-constructor'><strong>Class constructor()<strong> <span class='badge bg-primary' data-bs-toggle='tooltip' title='Class Constructor' >constructor</span></a>
+</td>
+    <td class='table-success'>
+
+</td>
   </tr>
   <tr>
-    <td class='table-warning'><a href='#generateText'><em>generateText() -> $text : Text</em> <span class='badge bg-warning' data-bs-toggle='tooltip' title='Needs implementation in subclass' >abstract</span>
-</a></td>
-    <td class='table-warning'></td>
+    <td class='table-warning'>
+<a href='#generateText'><em>generateText() -> $text : Text</em> <span class='badge bg-warning' data-bs-toggle='tooltip' title='Needs implementation in subclass' >abstract</span>
+</a>
+</td>
+    <td class='table-warning'>
+
+</td>
   </tr>
   <tr>
-    <td class='table-warning'><a href='#getFile'><em>getFile() -> $file : 4D.File</em> <span class='badge bg-warning' data-bs-toggle='tooltip' title='Needs implementation in subclass' >abstract</span>
-</a></td>
-    <td class='table-warning'></td>
+    <td class='table-warning'>
+<a href='#getFile'><em>getFile() -> $file : 4D.File</em> <span class='badge bg-warning' data-bs-toggle='tooltip' title='Needs implementation in subclass' >abstract</span>
+</a>
+</td>
+    <td class='table-warning'>
+
+</td>
   </tr>
   <tr>
-    <td class='table-success'><a href='#generate'>generate()</a></td>
-    <td class='table-success'>generate the file</td>
+    <td class='table-success'>
+<a href='#generate'>generate()</a>
+</td>
+    <td class='table-success'>
+generate the file
+</td>
   </tr>
   <tr>
-    <td class='table-success'><a href='#addDescription'>addDescription()</a></td>
-    <td class='table-success'>add the file discription</td>
+    <td class='table-success'>
+<a href='#addDescription'>addDescription()</a>
+</td>
+    <td class='table-success'>
+add the file discription
+</td>
   </tr>
   <tr>
-    <td class='table-success'><a href='#addHeading'>addHeading($header : Text; $level : Integer; $id : Text; $withSummary : Boolean) -> $answer : Text</a></td>
-    <td class='table-success'>helper function for adding a markdown header</td>
+    <td class='table-success'>
+<a href='#addHeading'>addHeading($header : Text; $level : Integer; $id : Text; $withSummary : Boolean) -> $answer : Text</a>
+</td>
+    <td class='table-success'>
+helper function for adding a markdown header
+</td>
   </tr>
   <tr>
-    <td class='table-success'><a href='#addLine'>addLine($line : Text)</a></td>
-    <td class='table-success'>helper function for adding a markdown paragraph</td>
+    <td class='table-success'>
+<a href='#addLine'>addLine($line : Text)</a>
+</td>
+    <td class='table-success'>
+helper function for adding a markdown paragraph
+</td>
   </tr>
 </tbody>
 </table>
@@ -90,29 +121,27 @@ create a file for the 4D Documentation and for browser
 
 
 
-
-
-
-
-
-
-
-
-
 <h3 id='generateText'>generateText <span class='badge bg-warning' data-bs-toggle='tooltip' title='Needs implementation in subclass' >abstract</span>
 </h3>
 
-<table class='table '>
+<table class=''>
   <thead>
-  <tr>  <td>Name</th>
-  <td>Type</th>
-  <td>Brief</th>
+  <tr>
+  <th>Name</th>
+  <th>Type</th>
+  <th>Brief</th>
   </tr></thead>
   <tbody>
   <tr>
-    <td class='table-secondary'>$text (return value)</td>
-    <td class='table-secondary'>Text</td>
-    <td class='table-secondary'><em>Declared on line 7.</n></td>
+    <td class='table-secondary'>
+$text (return value)
+</td>
+    <td class='table-secondary'>
+Text
+</td>
+    <td class='table-secondary'>
+<em>Declared on line 7.</em>
+</td>
   </tr>
 </tbody>
 </table>
@@ -122,17 +151,24 @@ create a file for the 4D Documentation and for browser
 <h3 id='getFile'>getFile <span class='badge bg-warning' data-bs-toggle='tooltip' title='Needs implementation in subclass' >abstract</span>
 </h3>
 
-<table class='table '>
+<table class=''>
   <thead>
-  <tr>  <td>Name</th>
-  <td>Type</th>
-  <td>Brief</th>
+  <tr>
+  <th>Name</th>
+  <th>Type</th>
+  <th>Brief</th>
   </tr></thead>
   <tbody>
   <tr>
-    <td class='table-secondary'>$file (return value)</td>
-    <td class='table-secondary'>4D.File</td>
-    <td class='table-secondary'><em>Declared on line 9.</n></td>
+    <td class='table-secondary'>
+$file (return value)
+</td>
+    <td class='table-secondary'>
+4D.File
+</td>
+    <td class='table-secondary'>
+<em>Declared on line 9.</em>
+</td>
   </tr>
 </tbody>
 </table>
@@ -141,220 +177,190 @@ create a file for the 4D Documentation and for browser
 
 <h3 id='generate'>generate</h3>
 
-<table class='table '>
+<table class=''>
   <thead>
-  <tr>  <td>Name</th>
-  <td>Type</th>
-  <td>Brief</th>
+  <tr>
+  <th>Name</th>
+  <th>Type</th>
+  <th>Brief</th>
   </tr></thead>
   <tbody>
   <tr>
-    <td class='table-info'>$file</td>
-    <td class='table-info'>4D.File</td>
-    <td class='table-info'> the generated file<br /><em>Declared on line 13.</n></td>
+    <td class='table-info'>
+$file
+</td>
+    <td class='table-info'>
+4D.File
+</td>
+    <td class='table-info'>
+ the generated file<br /><em>Declared on line 13.</em>
+</td>
   </tr>
   <tr>
-    <td class='table-info'>$text</td>
-    <td class='table-info'>Text</td>
-    <td class='table-info'> the template HTML, hard coded<br /><em>Declared on line 20.</n></td>
+    <td class='table-info'>
+$text
+</td>
+    <td class='table-info'>
+Text
+</td>
+    <td class='table-info'>
+ parsed text<br /><em>Declared on line 20.</em>
+</td>
+  </tr>
+  <tr>
+    <td class='table-info'>
+$template
+</td>
+    <td class='table-info'>
+Text
+</td>
+    <td class='table-info'>
+ parsing template<br /><em>Declared on line 21.</em>
+</td>
   </tr>
 </tbody>
 </table>
 
 generate the file
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <h3 id='addDescription'>addDescription</h3>
 
-<table class='table '>
+<table class=''>
   <thead>
-  <tr>  <td>Name</th>
-  <td>Type</th>
-  <td>Brief</th>
+  <tr>
+  <th>Name</th>
+  <th>Type</th>
+  <th>Brief</th>
   </tr></thead>
   <tbody>
   <tr>
-    <td class='table-info'>$line</td>
-    <td class='table-info'>Text</td>
-    <td class='table-info'> a single line from `This.comments` loop<br /><em>Declared on line 30.</n></td>
+    <td class='table-info'>
+$line
+</td>
+    <td class='table-info'>
+Text
+</td>
+    <td class='table-info'>
+ a single line from `This.comments` loop<br /><em>Declared on line 32.</em>
+</td>
   </tr>
 </tbody>
 </table>
 
 add the file discription
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <h3 id='addHeading'>addHeading</h3>
 
-<table class='table '>
+<table class=''>
   <thead>
-  <tr>  <td>Name</th>
-  <td>Type</th>
-  <td>Brief</th>
+  <tr>
+  <th>Name</th>
+  <th>Type</th>
+  <th>Brief</th>
   </tr></thead>
   <tbody>
   <tr>
-    <td class='table-primary'>$header (parameter 1)</td>
-    <td class='table-primary'>Text</td>
-    <td class='table-primary'><em>Declared on line 35.</n></td>
+    <td class='table-primary'>
+$header (parameter 1)
+</td>
+    <td class='table-primary'>
+Text
+</td>
+    <td class='table-primary'>
+<em>Declared on line 37.</em>
+</td>
   </tr>
   <tr>
-    <td class='table-primary'>$level (parameter 2)</td>
-    <td class='table-primary'>Integer</td>
-    <td class='table-primary'><em>Declared on line 35.</n></td>
+    <td class='table-primary'>
+$level (parameter 2)
+</td>
+    <td class='table-primary'>
+Integer
+</td>
+    <td class='table-primary'>
+<em>Declared on line 37.</em>
+</td>
   </tr>
   <tr>
-    <td class='table-primary'>$id (parameter 3)</td>
-    <td class='table-primary'>Text</td>
-    <td class='table-primary'><em>Declared on line 35.</n></td>
+    <td class='table-primary'>
+$id (parameter 3)
+</td>
+    <td class='table-primary'>
+Text
+</td>
+    <td class='table-primary'>
+<em>Declared on line 37.</em>
+</td>
   </tr>
   <tr>
-    <td class='table-primary'>$withSummary (parameter 4)</td>
-    <td class='table-primary'>Boolean</td>
-    <td class='table-primary'><em>Declared on line 35.</n></td>
+    <td class='table-primary'>
+$withSummary (parameter 4)
+</td>
+    <td class='table-primary'>
+Boolean
+</td>
+    <td class='table-primary'>
+<em>Declared on line 37.</em>
+</td>
   </tr>
   <tr>
-    <td class='table-secondary'>$answer (return value)</td>
-    <td class='table-secondary'>Text</td>
-    <td class='table-secondary'><em>Declared on line 35.</n></td>
+    <td class='table-secondary'>
+$answer (return value)
+</td>
+    <td class='table-secondary'>
+Text
+</td>
+    <td class='table-secondary'>
+<em>Declared on line 37.</em>
+</td>
   </tr>
   <tr>
-    <td class='table-info'>$count</td>
-    <td class='table-info'>Real</td>
-    <td class='table-info'><em>Declared on line 38.</n></td>
+    <td class='table-info'>
+$count
+</td>
+    <td class='table-info'>
+Real
+</td>
+    <td class='table-info'>
+<em>Declared on line 40.</em>
+</td>
   </tr>
   <tr>
-    <td class='table-info'>$idAttr</td>
-    <td class='table-info'>Text</td>
-    <td class='table-info'> id attribute which can be linked from the "Method list" section.<br /><em>Declared on line 45.</n></td>
+    <td class='table-info'>
+$idAttr
+</td>
+    <td class='table-info'>
+Text
+</td>
+    <td class='table-info'>
+ id attribute which can be linked from the "Method list" section.<br /><em>Declared on line 47.</em>
+</td>
   </tr>
 </tbody>
 </table>
 
 helper function for adding a markdown header
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <h3 id='addLine'>addLine</h3>
 
-<table class='table '>
+<table class=''>
   <thead>
-  <tr>  <td>Name</th>
-  <td>Type</th>
-  <td>Brief</th>
+  <tr>
+  <th>Name</th>
+  <th>Type</th>
+  <th>Brief</th>
   </tr></thead>
   <tbody>
   <tr>
-    <td class='table-primary'>$line (parameter 1)</td>
-    <td class='table-primary'>Text</td>
-    <td class='table-primary'><em>Declared on line 59.</n></td>
+    <td class='table-primary'>
+$line (parameter 1)
+</td>
+    <td class='table-primary'>
+Text
+</td>
+    <td class='table-primary'>
+<em>Declared on line 61.</em>
+</td>
   </tr>
 </tbody>
 </table>
@@ -362,14 +368,16 @@ helper function for adding a markdown header
 helper function for adding a markdown paragraph
 
 
-
-
-
-
-
 </div>
   <script>
     document.getElementById('content').innerHTML =
     marked(document.getElementById('content').innerHTML);
-    mermaid.initialize({startOnLoad:true});  </script>
+    mermaid.initialize({startOnLoad:true});
+    var nodes = document.querySelectorAll('#content table');
+    var i;
+    for (i=0; i< nodes.length; i++){
+      nodes[i].className=nodes[i].className+' table'; 
+    }
+  </script>
 </body>
+</html>

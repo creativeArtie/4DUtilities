@@ -2,7 +2,7 @@
 #DECLARE($input : Variant; $forParamPtr : Pointer; $count : Integer; \
 $default : Variant)->$result : Variant
 
-/// assumes that Compilation Path is set to "All variables are typed"
+//! assumes that Compilation Path is set to "All variables are typed"
 
 $forParamPtr->:=$forParamPtr->+1
 var $caller : Object

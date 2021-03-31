@@ -44,31 +44,52 @@ graph TB
 
 <h2>Method list</h2>
 
-<table class='table table-hover'>
+<table class='table-hover'>
   <thead>
-  <tr>  <td>Method Name</th>
-  <td>Method Brief</th>
+  <tr>
+  <th>Method Name</th>
+  <th>Method Brief</th>
   </tr></thead>
   <tbody>
   <tr>
-    <td class='table-success'><a href='#class-constructor'><strong>Class constructor($name : Text; $countryCode : Text)<strong> <span class='badge bg-primary' data-bs-toggle='tooltip' title='Class Constructor' >constructor</span></a></td>
-    <td class='table-success'></td>
+    <td class='table-success'>
+<a href='#class-constructor'><strong>Class constructor($name : Text; $countryCode : Text)<strong> <span class='badge bg-primary' data-bs-toggle='tooltip' title='Class Constructor' >constructor</span></a>
+</td>
+    <td class='table-success'>
+
+</td>
   </tr>
   <tr>
-    <td class='table-success'><a href='#getValue'>getValue() -> $value : Object</a></td>
-    <td class='table-success'></td>
+    <td class='table-success'>
+<a href='#getValue'>getValue() -> $value : Object</a>
+</td>
+    <td class='table-success'>
+
+</td>
   </tr>
   <tr>
-    <td class='table-success'><a href='#extractDigits'>extractDigits() -> $answer : Text</a></td>
-    <td class='table-success'></td>
+    <td class='table-success'>
+<a href='#extractDigits'>extractDigits() -> $answer : Text</a>
+</td>
+    <td class='table-success'>
+
+</td>
   </tr>
   <tr>
-    <td class='table-success'><a href='#handleEvents'>handleEvents()</a></td>
-    <td class='table-success'></td>
+    <td class='table-success'>
+<a href='#handleEvents'>handleEvents()</a>
+</td>
+    <td class='table-success'>
+
+</td>
   </tr>
   <tr>
-    <td class='table-success'><a href='#formatPhone'>formatPhone($token : Text) -> $answer : Text</a></td>
-    <td class='table-success'></td>
+    <td class='table-success'>
+<a href='#formatPhone'>formatPhone($token : Text) -> $answer : Text</a>
+</td>
+    <td class='table-success'>
+
+</td>
   </tr>
 </tbody>
 </table>
@@ -77,132 +98,123 @@ graph TB
 
 <h3 id='class-constructor'><strong>Class Constructor</strong></h3>
 
-<table class='table '>
+<table class=''>
   <thead>
-  <tr>  <td>Name</th>
-  <td>Type</th>
-  <td>Brief</th>
+  <tr>
+  <th>Name</th>
+  <th>Type</th>
+  <th>Brief</th>
   </tr></thead>
   <tbody>
   <tr>
-    <td class='table-primary'>$name (parameter 1)</td>
-    <td class='table-primary'>Text</td>
-    <td class='table-primary'><em>Declared on line 2.</n></td>
+    <td class='table-primary'>
+$name (parameter 1)
+</td>
+    <td class='table-primary'>
+Text
+</td>
+    <td class='table-primary'>
+<em>Declared on line 2.</em>
+</td>
   </tr>
   <tr>
-    <td class='table-primary'>$countryCode (parameter 2)</td>
-    <td class='table-primary'>Text</td>
-    <td class='table-primary'><em>Declared on line 2.</n></td>
+    <td class='table-primary'>
+$countryCode (parameter 2)
+</td>
+    <td class='table-primary'>
+Text
+</td>
+    <td class='table-primary'>
+<em>Declared on line 2.</em>
+</td>
   </tr>
   <tr>
-    <td class='table-info'>$count</td>
-    <td class='table-info'>Real</td>
-    <td class='table-info'><em>Declared on line 3.</n></td>
+    <td class='table-info'>
+$count
+</td>
+    <td class='table-info'>
+Real
+</td>
+    <td class='table-info'>
+<em>Declared on line 3.</em>
+</td>
   </tr>
 </tbody>
 </table>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
 <h3 id='getValue'>getValue</h3>
 
-<table class='table '>
+<table class=''>
   <thead>
-  <tr>  <td>Name</th>
-  <td>Type</th>
-  <td>Brief</th>
+  <tr>
+  <th>Name</th>
+  <th>Type</th>
+  <th>Brief</th>
   </tr></thead>
   <tbody>
   <tr>
-    <td class='table-secondary'>$value (return value)</td>
-    <td class='table-secondary'>Object</td>
-    <td class='table-secondary'><em>Declared on line 11.</n></td>
+    <td class='table-secondary'>
+$value (return value)
+</td>
+    <td class='table-secondary'>
+Object
+</td>
+    <td class='table-secondary'>
+<em>Declared on line 12.</em>
+</td>
   </tr>
 </tbody>
 </table>
-
-
-
-
-
-
 
 
 
 <h3 id='extractDigits'>extractDigits</h3>
 
-<table class='table '>
+<table class=''>
   <thead>
-  <tr>  <td>Name</th>
-  <td>Type</th>
-  <td>Brief</th>
+  <tr>
+  <th>Name</th>
+  <th>Type</th>
+  <th>Brief</th>
   </tr></thead>
   <tbody>
   <tr>
-    <td class='table-secondary'>$answer (return value)</td>
-    <td class='table-secondary'>Text</td>
-    <td class='table-secondary'><em>Declared on line 14.</n></td>
+    <td class='table-secondary'>
+$answer (return value)
+</td>
+    <td class='table-secondary'>
+Text
+</td>
+    <td class='table-secondary'>
+<em>Declared on line 15.</em>
+</td>
   </tr>
   <tr>
-    <td class='table-info'>$input</td>
-    <td class='table-info'>Text</td>
-    <td class='table-info'><em>Declared on line 15.</n></td>
+    <td class='table-info'>
+$input
+</td>
+    <td class='table-info'>
+Text
+</td>
+    <td class='table-info'>
+<em>Declared on line 16.</em>
+</td>
   </tr>
   <tr>
-    <td class='table-info'>$elmt</td>
-    <td class='table-info'>Integer</td>
-    <td class='table-info'><em>Declared on line 19.</n></td>
+    <td class='table-info'>
+$elmt
+</td>
+    <td class='table-info'>
+Integer
+</td>
+    <td class='table-info'>
+<em>Declared on line 20.</em>
+</td>
   </tr>
 </tbody>
 </table>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -210,281 +222,73 @@ graph TB
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <h3 id='formatPhone'>formatPhone</h3>
 
-<table class='table '>
+<table class=''>
   <thead>
-  <tr>  <td>Name</th>
-  <td>Type</th>
-  <td>Brief</th>
+  <tr>
+  <th>Name</th>
+  <th>Type</th>
+  <th>Brief</th>
   </tr></thead>
   <tbody>
   <tr>
-    <td class='table-primary'>$token (parameter 1)</td>
-    <td class='table-primary'>Text</td>
-    <td class='table-primary'><em>Declared on line 35.</n></td>
+    <td class='table-primary'>
+$token (parameter 1)
+</td>
+    <td class='table-primary'>
+Text
+</td>
+    <td class='table-primary'>
+<em>Declared on line 36.</em>
+</td>
   </tr>
   <tr>
-    <td class='table-secondary'>$answer (return value)</td>
-    <td class='table-secondary'>Text</td>
-    <td class='table-secondary'><em>Declared on line 35.</n></td>
+    <td class='table-secondary'>
+$answer (return value)
+</td>
+    <td class='table-secondary'>
+Text
+</td>
+    <td class='table-secondary'>
+<em>Declared on line 36.</em>
+</td>
   </tr>
   <tr>
-    <td class='table-info'>$search</td>
-    <td class='table-info'>Text</td>
-    <td class='table-info'><em>Declared on line 37.</n></td>
+    <td class='table-info'>
+$search
+</td>
+    <td class='table-info'>
+Text
+</td>
+    <td class='table-info'>
+<em>Declared on line 38.</em>
+</td>
   </tr>
   <tr>
-    <td class='table-info'>$copy</td>
-    <td class='table-info'>Text</td>
-    <td class='table-info'><em>Declared on line 69.</n></td>
+    <td class='table-info'>
+$copy
+</td>
+    <td class='table-info'>
+Text
+</td>
+    <td class='table-info'>
+<em>Declared on line 70.</em>
+</td>
   </tr>
   <tr>
-    <td class='table-info'>$trying</td>
-    <td class='table-info'>Boolean</td>
-    <td class='table-info'><em>Declared on line 73.</n></td>
+    <td class='table-info'>
+$trying
+</td>
+    <td class='table-info'>
+Boolean
+</td>
+    <td class='table-info'>
+<em>Declared on line 74.</em>
+</td>
   </tr>
 </tbody>
 </table>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -493,5 +297,12 @@ graph TB
   <script>
     document.getElementById('content').innerHTML =
     marked(document.getElementById('content').innerHTML);
-    mermaid.initialize({startOnLoad:true});  </script>
+    mermaid.initialize({startOnLoad:true});
+    var nodes = document.querySelectorAll('#content table');
+    var i;
+    for (i=0; i< nodes.length; i++){
+      nodes[i].className=nodes[i].className+' table'; 
+    }
+  </script>
 </body>
+</html>

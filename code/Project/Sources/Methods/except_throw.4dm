@@ -2,7 +2,7 @@
 #DECLARE($message : Text)->$thrown : cs:C1710.Exception
 
 var $count : Real
-$message:=utils_assertParameter($1; ->$count; Count parameters:C259; "")  /// message
+$message:=utils_assertParameter($1; ->$count; Count parameters:C259; "")  //! message
 utils_assertParameterCount($count; Count parameters:C259)
 
 var $caller : Object

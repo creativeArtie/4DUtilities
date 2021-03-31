@@ -46,51 +46,92 @@ Stores the error message and access the value to test
 
 <h2>Method list</h2>
 
-<table class='table table-hover'>
+<table class='table-hover'>
   <thead>
-  <tr>  <td>Method Name</th>
-  <td>Method Brief</th>
+  <tr>
+  <th>Method Name</th>
+  <th>Method Brief</th>
   </tr></thead>
   <tbody>
   <tr>
-    <td class='table-success'><a href='#class-constructor'><strong>Class constructor($name : Text)<strong> <span class='badge bg-primary' data-bs-toggle='tooltip' title='Class Constructor' >constructor</span></a></td>
-    <td class='table-success'></td>
+    <td class='table-success'>
+<a href='#class-constructor'><strong>Class constructor($name : Text)<strong> <span class='badge bg-primary' data-bs-toggle='tooltip' title='Class Constructor' >constructor</span></a>
+</td>
+    <td class='table-success'>
+
+</td>
   </tr>
   <tr>
-    <td class='table-success'><a href='#getValue'>getValue()</a></td>
-    <td class='table-success'></td>
+    <td class='table-success'>
+<a href='#getValue'>getValue()</a>
+</td>
+    <td class='table-success'>
+
+</td>
   </tr>
   <tr>
-    <td class='table-success'><a href='#setError'>setError()</a></td>
-    <td class='table-success'></td>
+    <td class='table-success'>
+<a href='#setError'>setError()</a>
+</td>
+    <td class='table-success'>
+
+</td>
   </tr>
   <tr>
-    <td class='table-success'><a href='#setWarning'>setWarning()</a></td>
-    <td class='table-success'></td>
+    <td class='table-success'>
+<a href='#setWarning'>setWarning()</a>
+</td>
+    <td class='table-success'>
+
+</td>
   </tr>
   <tr>
-    <td class='table-success'><a href='#setPass'>setPass()</a></td>
-    <td class='table-success'></td>
+    <td class='table-success'>
+<a href='#setPass'>setPass()</a>
+</td>
+    <td class='table-success'>
+
+</td>
   </tr>
   <tr>
-    <td class='table-success'><a href='#getText'>getText() -> $message : Text</a></td>
-    <td class='table-success'></td>
+    <td class='table-success'>
+<a href='#getText'>getText() -> $message : Text</a>
+</td>
+    <td class='table-success'>
+
+</td>
   </tr>
   <tr>
-    <td class='table-success'><a href='#hasError'>hasError() -> $answer : Boolean</a></td>
-    <td class='table-success'></td>
+    <td class='table-success'>
+<a href='#hasError'>hasError() -> $answer : Boolean</a>
+</td>
+    <td class='table-success'>
+
+</td>
   </tr>
   <tr>
-    <td class='table-success'><a href='#canIgnore'>canIgnore() -> $answer : Boolean</a></td>
-    <td class='table-success'></td>
+    <td class='table-success'>
+<a href='#canIgnore'>canIgnore() -> $answer : Boolean</a>
+</td>
+    <td class='table-success'>
+
+</td>
   </tr>
   <tr>
-    <td class='table-success'><a href='#isPassed'>isPassed() -> $answer : Boolean</a></td>
-    <td class='table-success'></td>
+    <td class='table-success'>
+<a href='#isPassed'>isPassed() -> $answer : Boolean</a>
+</td>
+    <td class='table-success'>
+
+</td>
   </tr>
   <tr>
-    <td class='table-success'><a href='#hasIssues'>hasIssues() -> $answer : Boolean</a></td>
-    <td class='table-success'></td>
+    <td class='table-success'>
+<a href='#hasIssues'>hasIssues() -> $answer : Boolean</a>
+</td>
+    <td class='table-success'>
+
+</td>
   </tr>
 </tbody>
 </table>
@@ -99,40 +140,38 @@ Stores the error message and access the value to test
 
 <h3 id='class-constructor'><strong>Class Constructor</strong></h3>
 
-<table class='table '>
+<table class=''>
   <thead>
-  <tr>  <td>Name</th>
-  <td>Type</th>
-  <td>Brief</th>
+  <tr>
+  <th>Name</th>
+  <th>Type</th>
+  <th>Brief</th>
   </tr></thead>
   <tbody>
   <tr>
-    <td class='table-primary'>$name (parameter 1)</td>
-    <td class='table-primary'>Text</td>
-    <td class='table-primary'><em>Declared on line 3.</n></td>
+    <td class='table-primary'>
+$name (parameter 1)
+</td>
+    <td class='table-primary'>
+Text
+</td>
+    <td class='table-primary'>
+<em>Declared on line 3.</em>
+</td>
   </tr>
   <tr>
-    <td class='table-info'>$count</td>
-    <td class='table-info'>Real</td>
-    <td class='table-info'><em>Declared on line 6.</n></td>
+    <td class='table-info'>
+$count
+</td>
+    <td class='table-info'>
+Real
+</td>
+    <td class='table-info'>
+<em>Declared on line 6.</em>
+</td>
   </tr>
 </tbody>
 </table>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -140,99 +179,77 @@ Stores the error message and access the value to test
 
 
 
-
-
-
-
-
-
 <h3 id='setError'>setError</h3>
 
-<table class='table '>
+<table class=''>
   <thead>
-  <tr>  <td>Name</th>
-  <td>Type</th>
-  <td>Brief</th>
+  <tr>
+  <th>Name</th>
+  <th>Type</th>
+  <th>Brief</th>
   </tr></thead>
   <tbody>
   <tr>
-    <td class='table-info'>$message</td>
-    <td class='table-info'>Text</td>
-    <td class='table-info'><em>Declared on line 15.</n></td>
+    <td class='table-info'>
+$message
+</td>
+    <td class='table-info'>
+Text
+</td>
+    <td class='table-info'>
+<em>Declared on line 15.</em>
+</td>
   </tr>
   <tr>
-    <td class='table-info'>$count</td>
-    <td class='table-info'>Real</td>
-    <td class='table-info'><em>Declared on line 17.</n></td>
+    <td class='table-info'>
+$count
+</td>
+    <td class='table-info'>
+Real
+</td>
+    <td class='table-info'>
+<em>Declared on line 17.</em>
+</td>
   </tr>
 </tbody>
 </table>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
 <h3 id='setWarning'>setWarning</h3>
 
-<table class='table '>
+<table class=''>
   <thead>
-  <tr>  <td>Name</th>
-  <td>Type</th>
-  <td>Brief</th>
+  <tr>
+  <th>Name</th>
+  <th>Type</th>
+  <th>Brief</th>
   </tr></thead>
   <tbody>
   <tr>
-    <td class='table-info'>$message</td>
-    <td class='table-info'>Text</td>
-    <td class='table-info'><em>Declared on line 26.</n></td>
+    <td class='table-info'>
+$message
+</td>
+    <td class='table-info'>
+Text
+</td>
+    <td class='table-info'>
+<em>Declared on line 26.</em>
+</td>
   </tr>
   <tr>
-    <td class='table-info'>$count</td>
-    <td class='table-info'>Real</td>
-    <td class='table-info'><em>Declared on line 28.</n></td>
+    <td class='table-info'>
+$count
+</td>
+    <td class='table-info'>
+Real
+</td>
+    <td class='table-info'>
+<em>Declared on line 28.</em>
+</td>
   </tr>
 </tbody>
 </table>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -240,121 +257,133 @@ Stores the error message and access the value to test
 
 
 
-
-
-
-
-
-
-
-
-
 <h3 id='getText'>getText</h3>
 
-<table class='table '>
+<table class=''>
   <thead>
-  <tr>  <td>Name</th>
-  <td>Type</th>
-  <td>Brief</th>
+  <tr>
+  <th>Name</th>
+  <th>Type</th>
+  <th>Brief</th>
   </tr></thead>
   <tbody>
   <tr>
-    <td class='table-secondary'>$message (return value)</td>
-    <td class='table-secondary'>Text</td>
-    <td class='table-secondary'><em>Declared on line 39.</n></td>
+    <td class='table-secondary'>
+$message (return value)
+</td>
+    <td class='table-secondary'>
+Text
+</td>
+    <td class='table-secondary'>
+<em>Declared on line 39.</em>
+</td>
   </tr>
 </tbody>
 </table>
-
-
-
 
 
 
 <h3 id='hasError'>hasError</h3>
 
-<table class='table '>
+<table class=''>
   <thead>
-  <tr>  <td>Name</th>
-  <td>Type</th>
-  <td>Brief</th>
+  <tr>
+  <th>Name</th>
+  <th>Type</th>
+  <th>Brief</th>
   </tr></thead>
   <tbody>
   <tr>
-    <td class='table-secondary'>$answer (return value)</td>
-    <td class='table-secondary'>Boolean</td>
-    <td class='table-secondary'><em>Declared on line 41.</n></td>
+    <td class='table-secondary'>
+$answer (return value)
+</td>
+    <td class='table-secondary'>
+Boolean
+</td>
+    <td class='table-secondary'>
+<em>Declared on line 41.</em>
+</td>
   </tr>
 </tbody>
 </table>
-
-
-
 
 
 
 <h3 id='canIgnore'>canIgnore</h3>
 
-<table class='table '>
+<table class=''>
   <thead>
-  <tr>  <td>Name</th>
-  <td>Type</th>
-  <td>Brief</th>
+  <tr>
+  <th>Name</th>
+  <th>Type</th>
+  <th>Brief</th>
   </tr></thead>
   <tbody>
   <tr>
-    <td class='table-secondary'>$answer (return value)</td>
-    <td class='table-secondary'>Boolean</td>
-    <td class='table-secondary'><em>Declared on line 43.</n></td>
+    <td class='table-secondary'>
+$answer (return value)
+</td>
+    <td class='table-secondary'>
+Boolean
+</td>
+    <td class='table-secondary'>
+<em>Declared on line 43.</em>
+</td>
   </tr>
 </tbody>
 </table>
-
-
-
 
 
 
 <h3 id='isPassed'>isPassed</h3>
 
-<table class='table '>
+<table class=''>
   <thead>
-  <tr>  <td>Name</th>
-  <td>Type</th>
-  <td>Brief</th>
+  <tr>
+  <th>Name</th>
+  <th>Type</th>
+  <th>Brief</th>
   </tr></thead>
   <tbody>
   <tr>
-    <td class='table-secondary'>$answer (return value)</td>
-    <td class='table-secondary'>Boolean</td>
-    <td class='table-secondary'><em>Declared on line 45.</n></td>
+    <td class='table-secondary'>
+$answer (return value)
+</td>
+    <td class='table-secondary'>
+Boolean
+</td>
+    <td class='table-secondary'>
+<em>Declared on line 45.</em>
+</td>
   </tr>
 </tbody>
 </table>
-
-
-
 
 
 
 <h3 id='hasIssues'>hasIssues</h3>
 
-<table class='table '>
+<table class=''>
   <thead>
-  <tr>  <td>Name</th>
-  <td>Type</th>
-  <td>Brief</th>
+  <tr>
+  <th>Name</th>
+  <th>Type</th>
+  <th>Brief</th>
   </tr></thead>
   <tbody>
   <tr>
-    <td class='table-secondary'>$answer (return value)</td>
-    <td class='table-secondary'>Boolean</td>
-    <td class='table-secondary'><em>Declared on line 47.</n></td>
+    <td class='table-secondary'>
+$answer (return value)
+</td>
+    <td class='table-secondary'>
+Boolean
+</td>
+    <td class='table-secondary'>
+<em>Declared on line 47.</em>
+</td>
   </tr>
 </tbody>
 </table>
-
-
 
 
 
@@ -363,5 +392,12 @@ Stores the error message and access the value to test
   <script>
     document.getElementById('content').innerHTML =
     marked(document.getElementById('content').innerHTML);
-    mermaid.initialize({startOnLoad:true});  </script>
+    mermaid.initialize({startOnLoad:true});
+    var nodes = document.querySelectorAll('#content table');
+    var i;
+    for (i=0; i< nodes.length; i++){
+      nodes[i].className=nodes[i].className+' table'; 
+    }
+  </script>
 </body>
+</html>

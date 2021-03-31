@@ -40,5 +40,5 @@ Function getDescription()->$text : Text
 	If (This:C1470.brief#"")
 		$text:=This:C1470.brief+"<br />"
 	End if 
-	$text:=$text+"<em>Declared on line "+String:C10(This:C1470.line)+".</n>"
+	$text:=$text+"<em>Declared on line "+String:C10(This:C1470.line)+".</em>"
 	

@@ -50,19 +50,28 @@ graph TB
 
 <h2>Method list</h2>
 
-<table class='table table-hover'>
+<table class='table-hover'>
   <thead>
-  <tr>  <td>Method Name</th>
-  <td>Method Brief</th>
+  <tr>
+  <th>Method Name</th>
+  <th>Method Brief</th>
   </tr></thead>
   <tbody>
   <tr>
-    <td class='table-success'><a href='#test'>test() -> $result : Boolean</a></td>
-    <td class='table-success'></td>
+    <td class='table-success'>
+<a href='#test'>test() -> $result : Boolean</a>
+</td>
+    <td class='table-success'>
+
+</td>
   </tr>
   <tr>
-    <td class='table-success'><a href='#getMessageTemplate'>getMessageTemplate() -> $template : Text</a></td>
-    <td class='table-success'></td>
+    <td class='table-success'>
+<a href='#getMessageTemplate'>getMessageTemplate() -> $template : Text</a>
+</td>
+    <td class='table-success'>
+
+</td>
   </tr>
 </tbody>
 </table>
@@ -71,82 +80,64 @@ graph TB
 
 <h3 id='test'>test</h3>
 
-<table class='table '>
+<table class=''>
   <thead>
-  <tr>  <td>Name</th>
-  <td>Type</th>
-  <td>Brief</th>
+  <tr>
+  <th>Name</th>
+  <th>Type</th>
+  <th>Brief</th>
   </tr></thead>
   <tbody>
   <tr>
-    <td class='table-secondary'>$result (return value)</td>
-    <td class='table-secondary'>Boolean</td>
-    <td class='table-secondary'><em>Declared on line 2.</n></td>
+    <td class='table-secondary'>
+$result (return value)
+</td>
+    <td class='table-secondary'>
+Boolean
+</td>
+    <td class='table-secondary'>
+<em>Declared on line 2.</em>
+</td>
   </tr>
   <tr>
-    <td class='table-info'>$value</td>
-    <td class='table-info'>Variant</td>
-    <td class='table-info'><em>Declared on line 3.</n></td>
+    <td class='table-info'>
+$value
+</td>
+    <td class='table-info'>
+Variant
+</td>
+    <td class='table-info'>
+<em>Declared on line 3.</em>
+</td>
   </tr>
 </tbody>
 </table>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
 <h3 id='getMessageTemplate'>getMessageTemplate</h3>
 
-<table class='table '>
+<table class=''>
   <thead>
-  <tr>  <td>Name</th>
-  <td>Type</th>
-  <td>Brief</th>
+  <tr>
+  <th>Name</th>
+  <th>Type</th>
+  <th>Brief</th>
   </tr></thead>
   <tbody>
   <tr>
-    <td class='table-secondary'>$template (return value)</td>
-    <td class='table-secondary'>Text</td>
-    <td class='table-secondary'><em>Declared on line 16.</n></td>
+    <td class='table-secondary'>
+$template (return value)
+</td>
+    <td class='table-secondary'>
+Text
+</td>
+    <td class='table-secondary'>
+<em>Declared on line 16.</em>
+</td>
   </tr>
 </tbody>
 </table>
-
-
 
 
 
@@ -155,5 +146,12 @@ graph TB
   <script>
     document.getElementById('content').innerHTML =
     marked(document.getElementById('content').innerHTML);
-    mermaid.initialize({startOnLoad:true});  </script>
+    mermaid.initialize({startOnLoad:true});
+    var nodes = document.querySelectorAll('#content table');
+    var i;
+    for (i=0; i< nodes.length; i++){
+      nodes[i].className=nodes[i].className+' table'; 
+    }
+  </script>
 </body>
+</html>

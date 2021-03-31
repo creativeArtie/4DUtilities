@@ -10,7 +10,7 @@ Class constructor
 		utils_assertParameter($1; ->$count; Count parameters:C259))
 	
 	Super:C1705(utils_getPointerDisplayName($pointer))
-	This:C1470.pointer:=$pointer  //! #todo check pointer is an widget
+	This:C1470.pointer:=$pointer  //! #todo check if `$pointer` is an widget
 	
 	utils_assertParameterCount($count; Count parameters:C259)
 	

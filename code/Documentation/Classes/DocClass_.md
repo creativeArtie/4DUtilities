@@ -36,6 +36,8 @@ graph TB
     classDocClass_([Current Class: cs.DocClass_])
     classDocClass_ --> classDocMethod_
     classDocMethod_[cs.DocMethod_]
+    classDocFile_ --> classDocCommon_
+    classDocCommon_[cs.DocCommon_]
     classDocSection_ --> classDocFunction_
     classDocFunction_[cs.DocFunction_]
 
@@ -45,23 +47,36 @@ graph TB
 
 <h2>Method list</h2>
 
-<table class='table table-hover'>
+<table class='table-hover'>
   <thead>
-  <tr>  <td>Method Name</th>
-  <td>Method Brief</th>
+  <tr>
+  <th>Method Name</th>
+  <th>Method Brief</th>
   </tr></thead>
   <tbody>
   <tr>
-    <td class='table-success'><a href='#class-constructor'><strong>Class constructor($name : Text; $path : cs.File)<strong> <span class='badge bg-primary' data-bs-toggle='tooltip' title='Class Constructor' >constructor</span></a></td>
-    <td class='table-success'></td>
+    <td class='table-success'>
+<a href='#class-constructor'><strong>Class constructor($name : Text; $path : cs.File; $common : cs.DocCommon_)<strong> <span class='badge bg-primary' data-bs-toggle='tooltip' title='Class Constructor' >constructor</span></a>
+</td>
+    <td class='table-success'>
+
+</td>
   </tr>
   <tr>
-    <td class='table-success'><a href='#getFile'>getFile() -> $file : 4D.File</a></td>
-    <td class='table-success'></td>
+    <td class='table-success'>
+<a href='#getFile'>getFile() -> $file : 4D.File</a>
+</td>
+    <td class='table-success'>
+
+</td>
   </tr>
   <tr>
-    <td class='table-success'><a href='#generateText'>generateText()</a></td>
-    <td class='table-success'>print the class</td>
+    <td class='table-success'>
+<a href='#generateText'>generateText()</a>
+</td>
+    <td class='table-success'>
+print the class
+</td>
   </tr>
 </tbody>
 </table>
@@ -70,266 +85,208 @@ graph TB
 
 <h3 id='class-constructor'><strong>Class Constructor</strong></h3>
 
-<table class='table '>
+<table class=''>
   <thead>
-  <tr>  <td>Name</th>
-  <td>Type</th>
-  <td>Brief</th>
+  <tr>
+  <th>Name</th>
+  <th>Type</th>
+  <th>Brief</th>
   </tr></thead>
   <tbody>
   <tr>
-    <td class='table-primary'>$name (parameter 1)</td>
-    <td class='table-primary'>Text</td>
-    <td class='table-primary'><em>Declared on line 2.</n></td>
+    <td class='table-primary'>
+$name (parameter 1)
+</td>
+    <td class='table-primary'>
+Text
+</td>
+    <td class='table-primary'>
+<em>Declared on line 2.</em>
+</td>
   </tr>
   <tr>
-    <td class='table-primary'>$path (parameter 2)</td>
-    <td class='table-primary'>cs.File</td>
-    <td class='table-primary'><em>Declared on line 2.</n></td>
+    <td class='table-primary'>
+$path (parameter 2)
+</td>
+    <td class='table-primary'>
+cs.File
+</td>
+    <td class='table-primary'>
+<em>Declared on line 2.</em>
+</td>
   </tr>
   <tr>
-    <td class='table-info'>$count</td>
-    <td class='table-info'>Real</td>
-    <td class='table-info'><em>Declared on line 6.</n></td>
+    <td class='table-primary'>
+$common (parameter 3)
+</td>
+    <td class='table-primary'>
+cs.DocCommon_
+</td>
+    <td class='table-primary'>
+<em>Declared on line 2.</em>
+</td>
   </tr>
   <tr>
-    <td class='table-info'>$details</td>
-    <td class='table-info'>cs.DocClass_</td>
-    <td class='table-info'><em>Declared on line 13.</n></td>
+    <td class='table-info'>
+$count
+</td>
+    <td class='table-info'>
+Real
+</td>
+    <td class='table-info'>
+<em>Declared on line 6.</em>
+</td>
   </tr>
   <tr>
-    <td class='table-info'>$comments</td>
-    <td class='table-info'>Collection</td>
-    <td class='table-info'><em>Declared on line 14.</n></td>
+    <td class='table-info'>
+$details
+</td>
+    <td class='table-info'>
+cs.DocClass_
+</td>
+    <td class='table-info'>
+<em>Declared on line 14.</em>
+</td>
   </tr>
   <tr>
-    <td class='table-info'>$parsed</td>
-    <td class='table-info'>cs.DocLine_</td>
-    <td class='table-info'><em>Declared on line 17.</n></td>
+    <td class='table-info'>
+$comments
+</td>
+    <td class='table-info'>
+Collection
+</td>
+    <td class='table-info'>
+<em>Declared on line 15.</em>
+</td>
   </tr>
   <tr>
-    <td class='table-info'>$function</td>
-    <td class='table-info'>cs.DocFunction_</td>
-    <td class='table-info'><em>Declared on line 18.</n></td>
+    <td class='table-info'>
+$parsed
+</td>
+    <td class='table-info'>
+cs.DocLine_
+</td>
+    <td class='table-info'>
+<em>Declared on line 18.</em>
+</td>
+  </tr>
+  <tr>
+    <td class='table-info'>
+$function
+</td>
+    <td class='table-info'>
+cs.DocFunction_
+</td>
+    <td class='table-info'>
+<em>Declared on line 19.</em>
+</td>
   </tr>
 </tbody>
 </table>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
 <h3 id='getFile'>getFile</h3>
 
-<table class='table '>
+<table class=''>
   <thead>
-  <tr>  <td>Name</th>
-  <td>Type</th>
-  <td>Brief</th>
+  <tr>
+  <th>Name</th>
+  <th>Type</th>
+  <th>Brief</th>
   </tr></thead>
   <tbody>
   <tr>
-    <td class='table-secondary'>$file (return value)</td>
-    <td class='table-secondary'>4D.File</td>
-    <td class='table-secondary'><em>Declared on line 54.</n></td>
+    <td class='table-secondary'>
+$file (return value)
+</td>
+    <td class='table-secondary'>
+4D.File
+</td>
+    <td class='table-secondary'>
+<em>Declared on line 55.</em>
+</td>
   </tr>
   <tr>
-    <td class='table-info'>$path</td>
-    <td class='table-info'>Text</td>
-    <td class='table-info'><em>Declared on line 55.</n></td>
+    <td class='table-info'>
+$path
+</td>
+    <td class='table-info'>
+Text
+</td>
+    <td class='table-info'>
+<em>Declared on line 56.</em>
+</td>
   </tr>
 </tbody>
 </table>
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <h3 id='generateText'>generateText</h3>
 
-<table class='table '>
+<table class=''>
   <thead>
-  <tr>  <td>Name</th>
-  <td>Type</th>
-  <td>Brief</th>
+  <tr>
+  <th>Name</th>
+  <th>Type</th>
+  <th>Brief</th>
   </tr></thead>
   <tbody>
   <tr>
-    <td class='table-info'>$text</td>
-    <td class='table-info'>Text</td>
-    <td class='table-info'><em>Declared on line 64.</n></td>
+    <td class='table-info'>
+$text
+</td>
+    <td class='table-info'>
+Text
+</td>
+    <td class='table-info'>
+<em>Declared on line 65.</em>
+</td>
   </tr>
   <tr>
-    <td class='table-info'>$classDoc</td>
-    <td class='table-info'>Text</td>
-    <td class='table-info'><em>Declared on line 65.</n></td>
+    <td class='table-info'>
+$classDoc
+</td>
+    <td class='table-info'>
+Text
+</td>
+    <td class='table-info'>
+<em>Declared on line 66.</em>
+</td>
   </tr>
   <tr>
-    <td class='table-info'>$commentLine</td>
-    <td class='table-info'>Text</td>
-    <td class='table-info'><em>Declared on line 66.</n></td>
+    <td class='table-info'>
+$commentLine
+</td>
+    <td class='table-info'>
+Text
+</td>
+    <td class='table-info'>
+<em>Declared on line 67.</em>
+</td>
   </tr>
   <tr>
-    <td class='table-info'>$htmlTable</td>
-    <td class='table-info'>cs.DocHtmlTable_</td>
-    <td class='table-info'><em>Declared on line 81.</n></td>
+    <td class='table-info'>
+$htmlTable
+</td>
+    <td class='table-info'>
+cs.DocHtmlTable_
+</td>
+    <td class='table-info'>
+<em>Declared on line 82.</em>
+</td>
   </tr>
   <tr>
-    <td class='table-info'>$function</td>
-    <td class='table-info'>cs.DocFunction_</td>
-    <td class='table-info'><em>Declared on line 82.</n></td>
+    <td class='table-info'>
+$function
+</td>
+    <td class='table-info'>
+cs.DocFunction_
+</td>
+    <td class='table-info'>
+<em>Declared on line 83.</em>
+</td>
   </tr>
 </tbody>
 </table>
@@ -337,101 +294,16 @@ graph TB
 print the class
 
 
-
-
-
-
-
-
-
-
- 1. Adds the header
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </div>
   <script>
     document.getElementById('content').innerHTML =
     marked(document.getElementById('content').innerHTML);
-    mermaid.initialize({startOnLoad:true});  </script>
+    mermaid.initialize({startOnLoad:true});
+    var nodes = document.querySelectorAll('#content table');
+    var i;
+    for (i=0; i< nodes.length; i++){
+      nodes[i].className=nodes[i].className+' table'; 
+    }
+  </script>
 </body>
+</html>

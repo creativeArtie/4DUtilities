@@ -15,9 +15,9 @@ Function hasData->$isFilled : Boolean
 Function getHTMLtable->$doc : Text
 	var $headers : Text
 	var $cell : Text
-	$headers:="  <tr>"
+	$headers:="  <tr>\n"
 	For each ($cell; This:C1470.headers)
-		$headers:=$headers+"  <td>"+$cell+"</th>\n"
+		$headers:=$headers+"  <th>"+$cell+"</th>\n"
 	End for each 
 	$headers:=$headers+"  </tr>"
 	
@@ -29,12 +29,12 @@ Function getHTMLtable->$doc : Text
 	For each ($row; This:C1470.row)
 		$content:=$content+"  <tr>\n"
 		For each ($cell; $row.data)
-			$content:=$content+"    <td class='"+$row.class+"'>"+$cell+"</td>\n"
+			$content:=$content+"    <td class='"+$row.class+"'>\n"+$cell+"\n</td>\n"
 		End for each 
 		$content:=$content+"  </tr>\n"
 	End for each 
 	
-	$0:="<table class='table "+This:C1470.classes+"'>\n"+\
+	$0:="<table class='"+This:C1470.classes+"'>\n"+\
 		"  <thead>\n"+$headers+"</thead>\n"+\
 		"  <tbody>\n"+$content+"</tbody>\n"+\
 		"</table>"

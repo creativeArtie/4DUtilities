@@ -23,10 +23,11 @@ $tree:=cs:C1710.DocTree_.new()
 var $leftover : Collection
 $leftover:=New collection:C1472
 
-
+var $common : cs:C1710.DocCommon_
+$common:=cs:C1710.DocCommon_.new()
 For each ($name; $paths.classes)
 	var $class : cs:C1710.DocClass_
-	$class:=cs:C1710.DocClass_.new($name; $paths.classes[$name])
+	$class:=cs:C1710.DocClass_.new($name; $paths.classes[$name]; $common)
 	$data.classes[$name]:=$class
 	If (Not:C34($tree.addClass($class)))
 		$leftover.push($class)
@@ -50,3 +51,5 @@ End while
 For each ($name; $data.classes)
 	$data.classes[$name].generate()
 End for each 
+
+$common.generate()

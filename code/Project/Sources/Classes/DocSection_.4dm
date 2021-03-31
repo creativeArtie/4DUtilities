@@ -6,12 +6,12 @@ Class constructor
 	This:C1470.local:=New collection:C1472
 	
 Function setPrivate_
-	/// #brief check if the name ends with "_" meaning private
+	//! #brief check if the name ends with "_" meaning private
 	If (This:C1470.name="@_")
 		This:C1470.type:="private"
 	End if 
 	
-Function paraseCommonTags($comment : cs:C1710.DocLine_)
+Function paraseCommonTags($comment : cs:C1710.DocLine_; $common : cs:C1710.DocCommon_)
 	Case of 
 		: ($comment.tag="brief")
 			This:C1470.brief:=$comment.doc
@@ -49,8 +49,8 @@ Function paraseCommonTags($comment : cs:C1710.DocLine_)
 					
 				: (Match regex:C1019("[\t]*C_.+\\(.+\\)"; $comment.code; 1; $pos; $len))
 					If ($pos=1)
-						C_LONGINT:C283($start; $end)  /// Start and end of the match
-						C_BOOLEAN:C305($match)  /// use to make Match regex happy
+						C_LONGINT:C283($start; $end)  //! Start and end of the match
+						C_BOOLEAN:C305($match)  //! use to make Match regex happy
 						$match:=Match regex:C1019("[\t]*C_"; $comment.code; 1; $start; $end)
 						$raw:=Substring:C12($comment.code; $end+1; Length:C16($comment.code)-$end-1)
 						var $split : Collection
@@ -66,9 +66,8 @@ Function paraseCommonTags($comment : cs:C1710.DocLine_)
 							This:C1470.local.push($value)
 						End for each 
 					End if 
-					
 				Else 
-					This:C1470.comments.push($comment.doc)
+					$common.addCode($comment; This:C1470)
 			End case 
 	End case 
 	

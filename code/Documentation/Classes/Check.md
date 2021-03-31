@@ -52,29 +52,46 @@ Runs the test and gets the template message
 
 <h2>Method list</h2>
 
-<table class='table table-hover'>
+<table class='table-hover'>
   <thead>
-  <tr>  <td>Method Name</th>
-  <td>Method Brief</th>
+  <tr>
+  <th>Method Name</th>
+  <th>Method Brief</th>
   </tr></thead>
   <tbody>
   <tr>
-    <td class='table-warning'><a href='#test'><em>test()</em> <span class='badge bg-warning' data-bs-toggle='tooltip' title='Needs implementation in subclass' >abstract</span>
-</a></td>
-    <td class='table-warning'>Test the values</td>
+    <td class='table-warning'>
+<a href='#test'><em>test()</em> <span class='badge bg-warning' data-bs-toggle='tooltip' title='Needs implementation in subclass' >abstract</span>
+</a>
+</td>
+    <td class='table-warning'>
+Test the values
+</td>
   </tr>
   <tr>
-    <td class='table-warning'><a href='#getMessageTemplate'><em>getMessageTemplate() -> $template : Text</em> <span class='badge bg-warning' data-bs-toggle='tooltip' title='Needs implementation in subclass' >abstract</span>
-</a></td>
-    <td class='table-warning'>Gets the template message</td>
+    <td class='table-warning'>
+<a href='#getMessageTemplate'><em>getMessageTemplate() -> $template : Text</em> <span class='badge bg-warning' data-bs-toggle='tooltip' title='Needs implementation in subclass' >abstract</span>
+</a>
+</td>
+    <td class='table-warning'>
+Gets the template message
+</td>
   </tr>
   <tr>
-    <td class='table-success'><a href='#setValue'>setValue($value : Variant)</a></td>
-    <td class='table-success'>Set the checking value</td>
+    <td class='table-success'>
+<a href='#setValue'>setValue($value : Variant)</a>
+</td>
+    <td class='table-success'>
+Set the checking value
+</td>
   </tr>
   <tr>
-    <td class='table-success'><a href='#getValue'>getValue() -> $result : Variant</a></td>
-    <td class='table-success'>Gets the checking value</td>
+    <td class='table-success'>
+<a href='#getValue'>getValue() -> $result : Variant</a>
+</td>
+    <td class='table-success'>
+Gets the checking value
+</td>
   </tr>
 </tbody>
 </table>
@@ -86,23 +103,27 @@ Runs the test and gets the template message
 
 Test the values
 
- By the time this method is called, 		`This.setValue()` will be called in cs.Validator
-
-
 <h3 id='getMessageTemplate'>getMessageTemplate <span class='badge bg-warning' data-bs-toggle='tooltip' title='Needs implementation in subclass' >abstract</span>
 </h3>
 
-<table class='table '>
+<table class=''>
   <thead>
-  <tr>  <td>Name</th>
-  <td>Type</th>
-  <td>Brief</th>
+  <tr>
+  <th>Name</th>
+  <th>Type</th>
+  <th>Brief</th>
   </tr></thead>
   <tbody>
   <tr>
-    <td class='table-secondary'>$template (return value)</td>
-    <td class='table-secondary'>Text</td>
-    <td class='table-secondary'><em>Declared on line 7.</n></td>
+    <td class='table-secondary'>
+$template (return value)
+</td>
+    <td class='table-secondary'>
+Text
+</td>
+    <td class='table-secondary'>
+<em>Declared on line 7.</em>
+</td>
   </tr>
 </tbody>
 </table>
@@ -111,57 +132,50 @@ Gets the template message
 
 <h3 id='setValue'>setValue</h3>
 
-<table class='table '>
+<table class=''>
   <thead>
-  <tr>  <td>Name</th>
-  <td>Type</th>
-  <td>Brief</th>
+  <tr>
+  <th>Name</th>
+  <th>Type</th>
+  <th>Brief</th>
   </tr></thead>
   <tbody>
   <tr>
-    <td class='table-primary'>$value (parameter 1)</td>
-    <td class='table-primary'>Variant</td>
-    <td class='table-primary'><em>Declared on line 10.</n></td>
+    <td class='table-primary'>
+$value (parameter 1)
+</td>
+    <td class='table-primary'>
+Variant
+</td>
+    <td class='table-primary'>
+<em>Declared on line 10.</em>
+</td>
   </tr>
 </tbody>
 </table>
 
 Set the checking value
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <h3 id='getValue'>getValue</h3>
 
-<table class='table '>
+<table class=''>
   <thead>
-  <tr>  <td>Name</th>
-  <td>Type</th>
-  <td>Brief</th>
+  <tr>
+  <th>Name</th>
+  <th>Type</th>
+  <th>Brief</th>
   </tr></thead>
   <tbody>
   <tr>
-    <td class='table-secondary'>$result (return value)</td>
-    <td class='table-secondary'>Variant</td>
-    <td class='table-secondary'><em>Declared on line 20.</n></td>
+    <td class='table-secondary'>
+$result (return value)
+</td>
+    <td class='table-secondary'>
+Variant
+</td>
+    <td class='table-secondary'>
+<em>Declared on line 20.</em>
+</td>
   </tr>
 </tbody>
 </table>
@@ -169,11 +183,16 @@ Set the checking value
 Gets the checking value
 
 
-
-
 </div>
   <script>
     document.getElementById('content').innerHTML =
     marked(document.getElementById('content').innerHTML);
-    mermaid.initialize({startOnLoad:true});  </script>
+    mermaid.initialize({startOnLoad:true});
+    var nodes = document.querySelectorAll('#content table');
+    var i;
+    for (i=0; i< nodes.length; i++){
+      nodes[i].className=nodes[i].className+' table'; 
+    }
+  </script>
 </body>
+</html>

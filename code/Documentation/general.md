@@ -15,61 +15,57 @@
     integrity='sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0'
     crossorigin='anonymous'
   ></script>
-  <title>Class DocMethod_</title>
+  <title>General</title>
   <meta charset='ASCII' />
   <meta name='generator' value='4D Documentation' />
 </header>
 <body>
 <div id='content' class='container'>
 
-<h1>Class <mark>cs.DocMethod_</mark> <span class='badge bg-danger' data-bs-toggle='tooltip' title='To be use internally in a namespace' >private</span>
-</h1>
-
-<h2>Description</h2>
-
-<pre class='mermaid'>
-graph TB
-    classDocSection_[cs.DocSection_]
-    classDocSection_ --> classDocFile_
-    classDocFile_[cs.DocFile_]
-    classDocFile_ --> classDocClass_
-    classDocClass_[cs.DocClass_]
-    classDocClass_ --> classDocMethod_
-    classDocMethod_([Current Class: cs.DocMethod_])
-    classDocFile_ --> classDocCommon_
-    classDocCommon_[cs.DocCommon_]
-    classDocSection_ --> classDocFunction_
-    classDocFunction_[cs.DocFunction_]
-
-</pre>
-
-
-
-<h2>Method list</h2>
-
-<table class='table-hover'>
+# todo
+<table class=''>
   <thead>
   <tr>
-  <th>Method Name</th>
-  <th>Method Brief</th>
+  <th>file</th>
+  <th>line</th>
+  <th>details</th>
   </tr></thead>
   <tbody>
   <tr>
-    <td class='table-success'>
-<a href='#class-constructor'><strong>Class constructor()<strong> <span class='badge bg-primary' data-bs-toggle='tooltip' title='Class Constructor' >constructor</span></a>
+    <td class=''>
+CheckValue
 </td>
-    <td class='table-success'>
-
+    <td class=''>
+10
+</td>
+    <td class=''>
+check type
+</td>
+  </tr>
+  <tr>
+    <td class=''>
+UseCombo
+</td>
+    <td class=''>
+12
+</td>
+    <td class=''>
+check if `$pointer` is an widget
+</td>
+  </tr>
+  <tr>
+    <td class=''>
+UseField
+</td>
+    <td class=''>
+10
+</td>
+    <td class=''>
+check pointer type
 </td>
   </tr>
 </tbody>
 </table>
-
-<h2>Methods</h2>
-
-<h3 id='class-constructor'><strong>Class Constructor</strong></h3>
-
-
 
 
 </div>
