@@ -14,12 +14,15 @@ Function hasData->$isFilled : Boolean
 	
 Function getHTMLtable->$doc : Text
 	var $headers : Text
+	var $separator : Text
 	var $cell : Text
-	$headers:="  <tr>\n"
+	$headers:="|"
+	$separator:="|"
 	For each ($cell; This:C1470.headers)
-		$headers:=$headers+"  <th>"+$cell+"</th>\n"
+		$headers:=$headers+Replace string:C233($cell; "\n"; "<br />")+"|"
+		$separator:=$separator+"--|"
 	End for each 
-	$headers:=$headers+"  </tr>"
+	
 	
 	var $content : Text
 	var $row : Object
@@ -27,14 +30,11 @@ Function getHTMLtable->$doc : Text
 	$content:=""
 	
 	For each ($row; This:C1470.row)
-		$content:=$content+"  <tr>\n"
+		$content:=$content+"|"
 		For each ($cell; $row.data)
-			$content:=$content+"    <td class='"+$row.class+"'>\n"+$cell+"\n</td>\n"
+			$content:=$content+Replace string:C233($cell; "\n"; "<br />")+"|"
 		End for each 
-		$content:=$content+"  </tr>\n"
+		$content:=$content+"|\n"
 	End for each 
 	
-	$0:="<table class='"+This:C1470.classes+"'>\n"+\
-		"  <thead>\n"+$headers+"</thead>\n"+\
-		"  <tbody>\n"+$content+"</tbody>\n"+\
-		"</table>"
+	$0:=$headers+"\n"+$separator+"\n"+$content+"\n"

@@ -1,9 +1,7 @@
 Class extends Check
 Class constructor
 	var $1 : Real
-	var $min : Real
 	var $2 : Real
-	var $max : Real
 	
 	var $count : Real
 	This:C1470.min:=utils_assertParameter($1; ->$count; Count parameters:C259)

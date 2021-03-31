@@ -1,6 +1,5 @@
 Case of 
 	: (Form event code:C388=On Load:K2:1)
-		var $validate : cs:C1710.Validator
 		Form:C1466.validate:=cs:C1710.Validator.new()
 		
 		Form:C1466.validate.addOptional(\

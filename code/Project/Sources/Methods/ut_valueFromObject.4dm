@@ -5,7 +5,6 @@ var $test : Object
 $test:=AJ_UnitTest.new("utils_valueFromObject"; Current method name:C684; "Utilities")
 
 var $object : Object
-var $output : Variant
 
 var $value : Text
 $value:="return value"

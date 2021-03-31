@@ -31,7 +31,7 @@
     var nodes = document.querySelectorAll('#content table');
     var i;
     for (i=0; i< nodes.length; i++){
-      nodes[i].className=nodes[i].className+' table'; 
+      nodes[i].className=nodes[i].className+' table table-striped'; 
     }
   </script>
 </body>

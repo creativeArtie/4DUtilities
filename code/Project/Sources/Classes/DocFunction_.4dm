@@ -34,7 +34,6 @@ Class constructor($parsed : cs:C1710.DocLine_)
 			$named:=$returnSplit[0]
 		End if 
 		
-		var $return : Text
 		This:C1470.return:=cs:C1710.DocReturn_.new($parsed; $returnSplit[1])
 	End if 
 	

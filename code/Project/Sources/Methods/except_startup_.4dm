@@ -7,8 +7,6 @@ Use (Storage:C1525.utils_except)
 	Storage:C1525.utils_except.uncaught:=New shared object:C1526
 End use 
 
-var $uncaught : Collection
-
 var $caller : Object
 $caller:=utils_getMethodCaller(Current method name:C684)
 

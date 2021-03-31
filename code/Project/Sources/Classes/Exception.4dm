@@ -1,6 +1,5 @@
 Class constructor
 	var $1 : Text
-	var $message : Text
 	var $2 : Object
 	var $3 : Integer
 	var $caller : Object

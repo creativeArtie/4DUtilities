@@ -45,7 +45,6 @@ Function runChecks
 			ASSERT:C1129(False:C215; "Wrong number of parameters.")
 	End case 
 	
-	var $result : Boolean
 	var $ptr : cs:C1710.Check
 	var $value : cs:C1710.Use
 	

@@ -1,7 +1,6 @@
 //%attributes = {}
 
 var $exception : Object
-var $chain : Collection
 
 ARRAY LONGINT:C221($codes; 0)
 ARRAY TEXT:C222($comp; 0)

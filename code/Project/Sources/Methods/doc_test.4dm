@@ -1,5 +1,5 @@
 //%attributes = {}
-
+#DECLARE->$help : Text
 var $path : Text
 var $doc : Time
 $path:=Convert path system to POSIX:C1106(Get 4D folder:C485(Database folder:K5:14))+"Documentation/Classes"

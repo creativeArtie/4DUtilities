@@ -4,7 +4,6 @@
 var $test : Object
 $test:=AJ_UnitTest.new("utilts_assertParameter, utils_assertParameterCount"; Current method name:C684; "Utilities")
 
-var $passed : Boolean
 var $expection : cs:C1710.Exception
 $test.given:="test_param(\"John\")"
 $test.should:="Returns a error"

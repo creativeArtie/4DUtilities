@@ -8,7 +8,6 @@ var $raw : Collection
 $raw:=Split string:C1554($code; "\n")
 $lines:=New collection:C1472
 var $line : Text
-var $final : Text
 var $nextLine : Text
 var $number : Integer
 $number:=1

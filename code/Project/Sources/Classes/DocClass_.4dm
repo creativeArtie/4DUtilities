@@ -11,7 +11,6 @@ Class constructor($name : Text; $path : cs:C1710.File; $common : cs:C1710.DocCom
 	utils_assertParameterCount($count; Count parameters:C259)
 	Super:C1706.setPrivate_()
 	
-	var $details : cs:C1710.DocClass_
 	var $comments : Collection
 	$comments:=New collection:C1472
 	
@@ -62,9 +61,6 @@ Function getFile->$file : 4D:C1709.File
 	
 Function generateText
 	//! #brief print the class
-	var $text : Text
-	var $classDoc : Text
-	var $commentLine : Text
 	
 	This:C1470.title:="Class "+This:C1470.name
 	

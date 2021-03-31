@@ -11,7 +11,8 @@ Function addCode($line : cs:C1710.DocLine_; $section : cs:C1710.DocSection_)
 			$section.comments.push("<div class='alert alert-warning'>\n"+\
 				"<h4 class='alert-heading'>TODO</h4>\n\n"+\
 				$line.doc+"\n</div>")
-			
+		: ($line.hasDoc)
+			$section.comments.push($line.doc)
 	End case 
 	
 Function generateText->$text : Text

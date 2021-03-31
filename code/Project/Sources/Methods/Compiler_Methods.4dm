@@ -71,3 +71,9 @@ C_VARIANT:C1683(utils_assertParameter; $1)
 C_POINTER:C301(utils_assertParameter; $2)
 C_LONGINT:C283(utils_assertParameter; $3)
 C_VARIANT:C1683(utils_assertParameter; $4)
+
+//doc_test
+C_TEXT:C284(doc_test; $0)
+
+//test_param
+C_LONGINT:C283(test_param; $5)
