@@ -17,10 +17,21 @@ Function generate
 	This:C1470.text_:=""
 	This:C1470.generateText()
 	
+	var $brief : Text
+	If (This:C1470.brief#"")
+		$brief:=This:C1470.brief
+	End if 
+	If (This:C1470.declare#"")
+		If (This:C1470.brief#"")
+			$brief:=$brief+"\n"
+		End if 
+		$brief:=$brief+This:C1470.declare
+	End if 
+	
 	var $text : Text  //! parsed text
 	var $template : Text  //! parsing template
 	$template:=Document to text:C1236(Get 4D folder:C485(Current resources folder:K5:16)+"template.shtml"; "UTF-8")
-	PROCESS 4D TAGS:C816($template; $text; "<!--"+This:C1470.brief+"-->"; This:C1470.title; This:C1470.text_)
+	PROCESS 4D TAGS:C816($template; $text; "<!--"+$brief+"-->"; This:C1470.title; This:C1470.text_)
 	
 	TEXT TO DOCUMENT:C1237(Convert path POSIX to system:C1107($file.path); $text; "ASCII")
 	

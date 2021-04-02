@@ -56,7 +56,6 @@ End for each
 
 
 //! 8. Output the documents
-
 For each ($name; $data.classes)
 	$data.classes[$name].generate()
 End for each 

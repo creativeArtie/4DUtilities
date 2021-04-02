@@ -12,8 +12,10 @@ Class constructor($text : Text; $file : Text; $line : Integer)
 	var $doc : Text
 	$doc:="//!"  // The line `$doc:="//!"` is sadly adding into 4D Docs...
 	If ($text=("@"+$doc+"@"))
-		This:C1470.doc:=Substring:C12($text; Position:C15($doc; $text)+Length:C16($doc))
-		This:C1470.code:=Substring:C12($text; 0; Position:C15($doc; $text)-1)
+		var $splitted : Collection
+		$splitted:=Split string:C1554($text; $doc)
+		This:C1470.code:=$splitted[0]
+		This:C1470.doc:=$splitted[1]
 		This:C1470.hasDoc:=True:C214
 	Else 
 		This:C1470.hasDoc:=False:C215

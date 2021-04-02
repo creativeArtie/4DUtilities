@@ -1,4 +1,5 @@
 //%attributes = {}
+//! #brief splits the lines in the `$file` into a collection of `cs.DocLines_`.
 #DECLARE($file : cs:C1710.File)->$lines : Collection
 
 var $code : Text

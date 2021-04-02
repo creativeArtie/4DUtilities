@@ -1,5 +1,6 @@
 Class constructor
 	This:C1470.brief:=""
+	This:C1470.declare:=""
 	This:C1470.comments:=New collection:C1472
 	This:C1470.type:=""
 	This:C1470.text_:=""
@@ -52,13 +53,14 @@ Function paraseCommonTags($comment : cs:C1710.DocLine_; $common : cs:C1710.DocCo
 						C_LONGINT:C283($start; $end)  //! Start and end of the match
 						C_BOOLEAN:C305($match)  //! use to make Match regex happy
 						$match:=Match regex:C1019("[\t]*C_"; $comment.code; 1; $start; $end)
-						$raw:=Substring:C12($comment.code; $end+1; Length:C16($comment.code)-$end-1)
+						$raw:=Substring:C12($comment.code; $end+1; Length:C16($comment.code)-$end-2)
 						var $split : Collection
 						$split:=Split string:C1554($raw; ":")
 						var $type : Text
 						$type:=$split[0]
 						$split:=Split string:C1554($split[1]; "(")
-						$split:=Split string:C1554($split[1]; ";")
+						$split:=Split string:C1554($split[1]; ")")
+						$split:=Split string:C1554($split[0]; ";")
 						var $name : Text
 						For each ($name; $split)
 							$value:=cs:C1710.DocValue_.new($comment; $name; $type)

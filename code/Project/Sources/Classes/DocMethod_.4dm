@@ -18,10 +18,11 @@ Class constructor($name : Text; $path : cs:C1710.File; $common : cs:C1710.DocCom
 		Case of 
 			: ($parsed.code="#DECLARE@")
 				var $raw : Text
-				$raw:=Substring:C12($parsed.code; Length:C16("#DECLARE"))
+				$raw:=Split string:C1554($parsed.code; "#DECLARE")[1]
 				If ($parsed.code="@(@")
 					var $params : Text
-					$params:=Split string:C1554(Substring:C12($raw; 1); ")")[0]
+					$params:=Split string:C1554($raw; "(")[1]
+					$params:=Split string:C1554($params; ")")[0]
 					var $param : Text
 					For each ($param; Split string:C1554($params; ";"))
 						This:C1470.params.push(cs:C1710.DocParam_.new($parsed; $param))
@@ -44,6 +45,7 @@ Function getFile->$file : 4D:C1709.File
 	$file.create()
 	
 Function generateText
+	This:C1470.declare:=This:C1470.name
 	This:C1470.title:="Method "+This:C1470.name
 	
 	This:C1470.addHeading("Method <mark>"+This:C1470.name+"</mark>"+This:C1470.getTypeBadge(); \
@@ -58,19 +60,32 @@ Function generateText
 	var $param : cs:C1710.DocParam_
 	var $i : Integer
 	$i:=1
+	var $params : Text
 	For each ($param; This:C1470.params)
 		$table.addData("table-primary"; \
 			New collection:C1472(\
 			$param.name+" (parameter "+String:C10($i)+")"; $param.type; $param.getDescription()\
 			))
+		If ($params="")
+			$params:="("
+		Else 
+			$params:=$params+";"
+		End if 
+		$params:=$params+$param.getDeclare()
 		$i:=$i+1
 		
 	End for each 
+	
+	If ($params#"")
+		This:C1470.declare:=This:C1470.declare+$params+")"
+	End if 
+	
 	If (OB Is defined:C1231(This:C1470; "return"))
 		$table.addData("table-secondary"; \
 			New collection:C1472(This:C1470.return.name+" (return value)"; This:C1470.return.type; \
 			This:C1470.return.getDescription())\
 			)
+		This:C1470.declare:=This:C1470.declare+"->"+This:C1470.return.getDeclare()
 	End if 
 	
 	var $value : cs:C1710.DocValue_
