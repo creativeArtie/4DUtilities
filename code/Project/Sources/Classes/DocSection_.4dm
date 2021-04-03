@@ -36,38 +36,7 @@ Function paraseCommonTags($comment : cs:C1710.DocLine_; $common : cs:C1710.DocCo
 			var $pos : Integer
 			var $len : Integer
 			Case of 
-				: (Match regex:C1019("[\t]*var[:space:]"; $comment.code; 1; $pos; $len))
-					var $raw : Text
-					$raw:=Substring:C12($comment.code; $len+1)
-					Case of 
-						: (Match regex:C1019("\\$[0-9]+"; $raw))
-						: (Match regex:C1019("\\$[:alpha:].*"; $raw))
-							var $value : cs:C1710.DocValue_
-							$value:=cs:C1710.DocValue_.new($comment; $raw)
-							$value.brief:=$comment.doc
-							This:C1470.local.push($value)
-					End case 
-					
-				: (Match regex:C1019("[\t]*C_.+\\(.+\\)"; $comment.code; 1; $pos; $len))
-					If ($pos=1)
-						C_LONGINT:C283($start; $end)  //! Start and end of the match
-						C_BOOLEAN:C305($match)  //! use to make Match regex happy
-						$match:=Match regex:C1019("[\t]*C_"; $comment.code; 1; $start; $end)
-						$raw:=Substring:C12($comment.code; $end+1; Length:C16($comment.code)-$end-2)
-						var $split : Collection
-						$split:=Split string:C1554($raw; ":")
-						var $type : Text
-						$type:=$split[0]
-						$split:=Split string:C1554($split[1]; "(")
-						$split:=Split string:C1554($split[1]; ")")
-						$split:=Split string:C1554($split[0]; ";")
-						var $name : Text
-						For each ($name; $split)
-							$value:=cs:C1710.DocValue_.new($comment; $name; $type)
-							$value.brief:=$comment.doc
-							This:C1470.local.push($value)
-						End for each 
-					End if 
+				: (doc_buildValue_($comment; This:C1470))
 				Else 
 					$common.addCode($comment; This:C1470)
 			End case 

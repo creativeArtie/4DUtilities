@@ -22,6 +22,7 @@
 	},
 	"documentation": {
 		"methods": [
+			"doc_buildValue_",
 			"doc_findFiles_",
 			"doc_outputBadge_",
 			"doc_run",

@@ -77,3 +77,8 @@ C_TEXT:C284(doc_test; $0)
 
 //test_param
 C_LONGINT:C283(test_param; $5)
+
+//doc_buildValue_
+C_BOOLEAN:C305(doc_buildValue_; $0)
+C_OBJECT:C1216(doc_buildValue_; $1)
+C_OBJECT:C1216(doc_buildValue_; $2)

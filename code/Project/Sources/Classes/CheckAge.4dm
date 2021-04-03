@@ -1,15 +1,12 @@
 Class extends Check
 Class constructor
-	var $1 : Real
-	var $2 : Real
-	
-	var $count : Real
+	var $1; $2; $count : Real
 	This:C1470.min:=utils_assertParameter($1; ->$count; Count parameters:C259)
 	This:C1470.max:=utils_assertParameter($2; ->$count; Count parameters:C259)
 	utils_assertParameterCount($count; Count parameters:C259)
 	
 Function test->$result : Boolean
-	var $value : Variant  //! value to check, can be number or date
+	var $value  //! value to check, can be number or date
 	var $age : Integer  //! the calculated age
 	$value:=This:C1470.getValue()
 	Case of 

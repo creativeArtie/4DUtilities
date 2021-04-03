@@ -7,7 +7,6 @@ Class constructor($name : Text; $path : cs:C1710.File; $common : cs:C1710.DocCom
 	$path:=utils_assertParameter($2; ->$count; Count parameters:C259)
 	$common:=utils_assertParameter($3; ->$count; Count parameters:C259)
 	utils_assertParameterCount($count; Count parameters:C259)
-	This:C1470.vales:=New collection:C1472
 	This:C1470.params:=New collection:C1472
 	This:C1470.title:="Method"+$path.name
 	Super:C1706.setPrivate_()
@@ -16,22 +15,6 @@ Class constructor($name : Text; $path : cs:C1710.File; $common : cs:C1710.DocCom
 	
 	For each ($parsed; doc_splitLines($path))
 		Case of 
-			: ($parsed.code="#DECLARE@")
-				var $raw : Text
-				$raw:=Split string:C1554($parsed.code; "#DECLARE")[1]
-				If ($parsed.code="@(@")
-					var $params : Text
-					$params:=Split string:C1554($raw; "(")[1]
-					$params:=Split string:C1554($params; ")")[0]
-					var $param : Text
-					For each ($param; Split string:C1554($params; ";"))
-						This:C1470.params.push(cs:C1710.DocParam_.new($parsed; $param))
-					End for each 
-				End if 
-				
-				If ($parsed.code="@->@")
-					This:C1470.return:=cs:C1710.DocReturn_.new($parsed; Split string:C1554($parsed.code; "->")[1])
-				End if 
 			Else 
 				This:C1470.paraseCommonTags($parsed; $common)
 		End case 

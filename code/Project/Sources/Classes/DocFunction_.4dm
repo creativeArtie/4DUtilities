@@ -4,45 +4,13 @@ Class constructor($parsed : cs:C1710.DocLine_)
 	This:C1470.name:=""
 	This:C1470.params:=New collection:C1472
 	
-	var $line : Text
-	$line:=$parsed.code
-	
-	var $paramSplit : Collection
-	$paramSplit:=Split string:C1554($line; "(")
-	
-	var $returnSplit : Collection
-	$returnSplit:=Split string:C1554($line; "->")
-	
-	var $named : Text
-	
-	If ($paramSplit.length>1)
-		$named:=$paramSplit[0]
-		var $rawParams : Text
-		$rawParams:=Split string:C1554($paramSplit[1]; ")")[0]
-		
-		var $params : Collection
-		$params:=Split string:C1554($rawParams; ";")
-		
-		var $param : Text
-		For each ($param; $params)
-			This:C1470.params.push(cs:C1710.DocParam_.new($parsed; $param))
-		End for each 
+	If (doc_buildValue_($parsed; This:C1470))
 	End if 
 	
-	If ($returnSplit.length>1)
-		If ($named="")
-			$named:=$returnSplit[0]
-		End if 
-		
-		This:C1470.return:=cs:C1710.DocReturn_.new($parsed; $returnSplit[1])
-	End if 
-	
-	If ($named="")
-		$named:=$paramSplit[0]
-	End if 
-	
-	If ($named="Function @")
-		This:C1470.name:=Split string:C1554($named; " ")[1]
+	If ($parsed.code="Function @")
+		This:C1470.name:=Split string:C1554($parsed.code; " ")[1]
+		This:C1470.name:=Split string:C1554(This:C1470.name; "(")[0]
+		This:C1470.name:=Split string:C1554(This:C1470.name; "->")[0]
 	Else 
 		This:C1470.name:="Class constructor"
 		This:C1470.type:="constructor"

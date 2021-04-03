@@ -5,3 +5,4 @@ Class constructor($line : cs:C1710.DocLine_; $value : Text; $type : Text)
 	Else 
 		Super:C1705($line; $value)
 	End if 
+	This:C1470.singler:=True:C214
