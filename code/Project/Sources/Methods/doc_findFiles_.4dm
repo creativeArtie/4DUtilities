@@ -1,4 +1,6 @@
 //%attributes = {}
+//! #brief finds the files for document generation
+//! #author Wai-Kin Chau
 #DECLARE($type : Text)->$collection : Object
 
 var $count : Real

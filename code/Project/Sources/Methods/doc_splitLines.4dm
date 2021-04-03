@@ -1,5 +1,6 @@
 //%attributes = {}
 //! #brief splits the lines in the `$file` into a collection of `cs.DocLines_`.
+//! #author Wai-Kin Chau
 #DECLARE($file : cs:C1710.File)->$lines : Collection
 
 var $code : Text

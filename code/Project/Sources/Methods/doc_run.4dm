@@ -1,7 +1,20 @@
 //%attributes = {}
 //! #brief generate documentation
+//! #author Wai-Kin Chau
 var $paths : Object  //! list of paths
 $paths:=New object:C1471
+
+var $process : Integer
+var $showProgress : Boolean
+$showProgress:=True:C214
+
+If ($showProgress)
+	$process:=Progress New
+	Progress SET BUTTON ENABLED($process; False:C215)
+	Progress SET TITLE($process; "Generating Documents")
+	Progress SET MESSAGE($process; "Loading Files")
+	Progress SET WINDOW VISIBLE(True:C214)
+End if 
 
 //! 1. Load Names and their paths
 $paths.classes:=doc_findFiles_("Classes")
@@ -24,6 +37,14 @@ $tree:=cs:C1710.DocTree_.new()
 var $common : cs:C1710.DocCommon_
 $common:=cs:C1710.DocCommon_.new()
 
+var $completed; $total : Integer
+
+If ($showProgress)
+	$completed:=0
+	$total:=$paths.classes.length
+	Progress SET PROGRESS($process; 0/$total; "Parsing Classes.")
+End if 
+
 //! 5. Parse the classes into documents
 For each ($name; $paths.classes)
 	var $class : cs:C1710.DocClass_
@@ -32,9 +53,18 @@ For each ($name; $paths.classes)
 	If (Not:C34($tree.addClass($class)))
 		$leftover.push($class)
 	End if 
+	If ($showProgress)
+		$completed:=$completed+1
+		Progress SET PROGRESS($process; $completed/$total)
+	End if 
 End for each 
 
 //! 6. Add the left over classes
+If ($showProgress)
+	$completed:=0
+	$total:=$paths.classes.length
+	Progress SET PROGRESS($process; -1; "Setup Class trees.")
+End if 
 var $use : Collection
 While ($leftover.length#0)
 	$use:=$leftover
@@ -48,20 +78,52 @@ While ($leftover.length#0)
 End while 
 
 //! 7. Parse the methods into documents
+
+If ($showProgress)
+	$completed:=0
+	$total:=$paths.methods.length
+	Progress SET PROGRESS($process; 0/$total; "Parsing Classes.")
+End if 
 For each ($name; $paths.methods)
 	var $method : cs:C1710.DocMethod_
 	$method:=cs:C1710.DocMethod_.new($name; $paths.methods[$name]; $common)
 	$data.methods[$name]:=$method
+	If ($showProgress)
+		$completed:=$completed+1
+		Progress SET PROGRESS($process; $completed/$total)
+	End if 
 End for each 
 
 
 //! 8. Output the documents
+If ($showProgress)
+	$completed:=0
+	$total:=$data.classes.length
+	Progress SET PROGRESS($process; 0/$total; "Generate Class docs.")
+End if 
 For each ($name; $data.classes)
 	$data.classes[$name].generate()
+	If ($showProgress)
+		$completed:=$completed+1
+		Progress SET PROGRESS($process; $completed/$total)
+	End if 
 End for each 
 
+If ($showProgress)
+	$completed:=0
+	$total:=$data.methods.length
+	Progress SET PROGRESS($process; 0/$total; "Generate Class docs.")
+End if 
 For each ($name; $data.methods)
 	$data.methods[$name].generate()
+	If ($showProgress)
+		$completed:=$completed+1
+		Progress SET PROGRESS($process; $completed/$total)
+	End if 
 End for each 
 
+If ($showProgress)
+	Progress QUIT($process)
+	Progress SET WINDOW VISIBLE(False:C215)
+End if 
 $common.generate()
