@@ -7,6 +7,7 @@ $used:=True:C214
 var $extracted; $raw : Text
 var $found : Collection
 $found:=New collection:C1472
+var $parts : Object
 
 Case of 
 	: (OB Instance of:C1731($section; cs:C1710.DocMethod_) & \
@@ -16,18 +17,17 @@ Case of
 			$extracted:=Split string:C1554($line.code; "(")[1]
 			$extracted:=Split string:C1554($extracted; ")")[0]
 			For each ($raw; Split string:C1554($extracted; ";"))
-				var $parts : Object
-				$found.push(New object:C1471(\
-					"value"; $raw; \
-					"type"; "param"))
+				$parts:=doc_splitValueType_($raw)
+				$parts.creates:="param"
+				$found.push($parts)
 			End for each 
 		End if 
 		
 		If ($line.code="@->@")
 			$extracted:=Split string:C1554($line.code; "->")[1]
-			$found.push(New object:C1471(\
-				"value"; $extracted; \
-				"type"; "return"))
+			$parts:=doc_splitValueType_($extracted)
+			$parts.creates:="return"
+			$found.push($parts)
 		End if 
 		
 	: (OB Instance of:C1731($section; cs:C1710.DocFunction_) & \
@@ -36,17 +36,17 @@ Case of
 			$extracted:=Split string:C1554($line.code; "(")[1]
 			$extracted:=Split string:C1554($extracted; ")")[0]
 			For each ($raw; Split string:C1554($extracted; ";"))
-				$found.push(New object:C1471(\
-					"value"; $raw; \
-					"type"; "param"))
+				$parts:=doc_splitValueType_($raw)
+				$parts.creates:="param"
+				$found.push($parts)
 			End for each 
 		End if 
 		
 		If ($line.code="@->@")
 			$extracted:=Split string:C1554($line.code; "->")[1]
-			$found.push(New object:C1471(\
-				"value"; $extracted; \
-				"type"; "return"))
+			$parts:=doc_splitValueType_($extracted)
+			$parts.creates:="return"
+			$found.push($parts)
 		End if 
 	Else 
 		$used:=False:C215
@@ -62,12 +62,13 @@ If (Not:C34($used))
 				$extracted:=Substring:C12($line.code; $start+$end)
 				If (Match regex:C1019(":"; $extracted; 1; $start; $end))
 					$type:=Substring:C12($extracted; $start+$end)
+					$type:=doc_splitValueType_($type; False:C215).type
 				Else 
 					$type:="Variant"
 				End if 
 				$extracted:=Substring:C12($extracted; 1; $start-1)
 				For each ($raw; Split string:C1554($extracted; ";"))
-					$found.push(New object:C1471("value"; $raw+" : "+$type))
+					$found.push(New object:C1471("name"; $raw; "type"; $type))
 				End for each 
 			End if 
 			
@@ -80,7 +81,7 @@ If (Not:C34($used))
 				$extracted:=Split string:C1554($line.code; "(")[1]
 				$extracted:=Split string:C1554($extracted; ")")[0]
 				For each ($raw; Split string:C1554($extracted; ";"))
-					$found.push(New object:C1471("value"; $raw+" : "+$type))
+					$found.push(New object:C1471("name"; $raw; "type"; $type))
 				End for each 
 				$used:=True:C214
 			End if 
@@ -91,11 +92,11 @@ End if
 
 var $input : Object
 For each ($input; $found)
-	If (Not:C34(OB Is defined:C1231($input; "type")))
+	If (Not:C34(OB Is defined:C1231($input; "creates")))
 		Case of 
-			: (Match regex:C1019("\\$[0-9]+ "; $input.value; 1; $start; $end))
+			: (Match regex:C1019("\\$[0-9]+ "; $input.name; 1; $start; $end))
 				var $num : Integer
-				$num:=Num:C11($input.value)
+				$num:=Num:C11($input.name)
 				//! #todo code for parameters
 				If (Not:C34(OB Is defined:C1231($section; "params")))
 					$section.params:=New collection:C1472
@@ -109,7 +110,7 @@ For each ($input; $found)
 							End if 
 							$section.return.brief:=$brief+$line.doc
 						Else 
-							$input.type:="return"
+							$input.creates:="return"
 						End if 
 						
 					: ($section.params.length>($num-1))
@@ -119,12 +120,10 @@ For each ($input; $found)
 							$brief:="<br />"+$brief
 						End if 
 						$section.params[$num-1].brief:=$brief+$line.doc
-						
-						
 					Else 
 						
 				End case 
-			: (Match regex:C1019("\\$\\{[0-9]\\}+ "; $input.value; 1; $start; $end))
+			: (Match regex:C1019("\\$\\{[0-9]\\}+ "; $input.name; 1; $start; $end))
 			Else 
 				var $searching : Boolean
 				$searching:=True:C214
@@ -132,29 +131,29 @@ For each ($input; $found)
 				If (OB Is defined:C1231($section; "params"))
 					var $param : cs:C1710.DocParam_
 					For each ($param; $section.params)
-						If (($param.name+"@")=$input.value)
+						If ($param.name=$input.name)
 							TRACE:C157
 						End if 
 					End for each 
 				End if 
 				
 				If ($searching)
-					$input.type:="value"
+					$input.creates:="value"
 				End if 
 		End case 
 	End if 
 	
-	If (OB Is defined:C1231($input; "type"))
+	If (OB Is defined:C1231($input; "creates"))
 		var $value : cs:C1710.DocValue_
 		Case of 
-			: ($input.type="param")
-				$value:=cs:C1710.DocParam_.new($line; $input.value)
+			: ($input.creates="param")
+				$value:=cs:C1710.DocParam_.new($line; $input.name; $input.type)
 				$section.params.push($value)
-			: ($input.type="return")
-				$value:=cs:C1710.DocReturn_.new($line; $input.value)
+			: ($input.creates="return")
+				$value:=cs:C1710.DocReturn_.new($line; $input.name; $input.type)
 				$section.return:=$value
-			: ($input.type="value")
-				$value:=cs:C1710.DocValue_.new($line; $input.value)
+			: ($input.creates="value")
+				$value:=cs:C1710.DocValue_.new($line; $input.name; $input.type)
 				$section.local.push($value)
 		End case 
 		$value.brief:=$line.doc

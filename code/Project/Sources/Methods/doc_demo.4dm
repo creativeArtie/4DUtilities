@@ -12,3 +12,4 @@ var ${3} : Integer  //! list input
 //! 2. Numberered Item 2
 
 var $number : Integer  //! *fun* number
+var $variant
