@@ -11,6 +11,7 @@ utils_assertParameterCount($count; Count parameters:C259)
 var $splitted : Collection
 $splitted:=Split string:C1554($raw; ":"; sk trim spaces:K86:2)
 
+var $type; $name : Text
 $type:="Variant"
 
 If ($extractName)

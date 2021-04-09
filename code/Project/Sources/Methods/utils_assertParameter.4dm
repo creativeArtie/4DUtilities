@@ -2,7 +2,7 @@
 #DECLARE($input : Variant; $forParamPtr : Pointer; $count : Integer; \
 $default : Variant)->$result : Variant
 //! #brief Assert parameter use \
-`utils_assertParameters($1;->$count;Count paramter;"Default Value`
+`utils_assertParameters($1;->$count;Count paramter;"Default Value")`
 
 //! assumes that Compilation Path is set to "All variables are typed"
 

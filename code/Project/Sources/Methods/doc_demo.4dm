@@ -6,7 +6,7 @@
 var $1 : Text  //! param data
 var $more : Real  //! add more
 var $3 : Object  //! more params
-var ${3} : Integer  //! list input
+var ${4} : Integer  //! list input
 
 //! 1. Numberered Item 1
 //! 2. Numberered Item 2

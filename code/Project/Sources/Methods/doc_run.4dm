@@ -6,7 +6,7 @@ $paths:=New object:C1471
 
 var $process : Integer
 var $showProgress : Boolean
-$showProgress:=False:C215
+$showProgress:=True:C214
 
 If ($showProgress)
 	$process:=Progress New
