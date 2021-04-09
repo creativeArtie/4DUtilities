@@ -16,6 +16,7 @@ Case of
 			$extracted:=Split string:C1554($line.code; "(")[1]
 			$extracted:=Split string:C1554($extracted; ")")[0]
 			For each ($raw; Split string:C1554($extracted; ";"))
+				var $parts : Object
 				$found.push(New object:C1471(\
 					"value"; $raw; \
 					"type"; "param"))
@@ -90,58 +91,72 @@ End if
 
 var $input : Object
 For each ($input; $found)
-	If (OB Is defined:C1231($input; "type"))
-		If ($input.type="param")
-			$section.params.push(cs:C1710.DocParam_.new($line; $input.value))
-		Else 
-			$section.return:=cs:C1710.DocReturn_.new($line; $input.value)
-		End if 
-	Else 
+	If (Not:C34(OB Is defined:C1231($input; "type")))
 		Case of 
 			: (Match regex:C1019("\\$[0-9]+ "; $input.value; 1; $start; $end))
 				var $num : Integer
 				$num:=Num:C11($input.value)
 				//! #todo code for parameters
-				If (OB Is defined:C1231($section; "params"))
-					Case of 
-						: ($section.params.length>$num)
-							var $brief : Text
-							$section.params[$num].brief:=$section.params[$num].brief+$line.doc
-						: ($section.params.length=$num)
-							
-						Else 
-					End case 
+				If (Not:C34(OB Is defined:C1231($section; "params")))
+					$section.params:=New collection:C1472
 				End if 
+				Case of 
+					: ($num=0)
+						If (OB Is defined:C1231($section; "return"))
+							$brief:=$section.return.brief
+							If ($brief#"")
+								$brief:="<br />"+$brief
+							End if 
+							$section.return.brief:=$brief+$line.doc
+						Else 
+							$input.type:="return"
+						End if 
+						
+					: ($section.params.length>($num-1))
+						var $brief : Text
+						$brief:=$section.params[$num-1].brief
+						If ($brief#"")
+							$brief:="<br />"+$brief
+						End if 
+						$section.params[$num-1].brief:=$brief+$line.doc
+						
+						
+					Else 
+						
+				End case 
 			: (Match regex:C1019("\\$\\{[0-9]\\}+ "; $input.value; 1; $start; $end))
-				
 			Else 
-				var $check : Text
-				$check:=Split string:C1554($input.value; ":"; sk trim spaces:K86:2)[0]
-				var $existed : cs:C1710.DocParam_
-				var $isNew : Boolean
-				$isNew:=True:C214
+				var $searching : Boolean
+				$searching:=True:C214
 				
 				If (OB Is defined:C1231($section; "params"))
-					For each ($existed; $section.params)
-						If ($existed.name=$check)
-							$existed.brief:=$existed.brief+$line.doc
-							$isNew:=False:C215
+					var $param : cs:C1710.DocParam_
+					For each ($param; $section.params)
+						If (($param.name+"@")=$input.value)
+							TRACE:C157
 						End if 
 					End for each 
 				End if 
 				
-				If ($isNew)
-					If (OB Is defined:C1231($section; "return"))
-						If ($section.return.name=$check)
-							$section.return.brief:=$section.return.brief+$line.doc
-							$isNew:=False:C215
-						End if 
-					End if 
-				End if 
-				
-				If ($isNew)
-					$section.local.push(cs:C1710.DocValue_.new($line; $input.value))
+				If ($searching)
+					$input.type:="value"
 				End if 
 		End case 
+	End if 
+	
+	If (OB Is defined:C1231($input; "type"))
+		var $value : cs:C1710.DocValue_
+		Case of 
+			: ($input.type="param")
+				$value:=cs:C1710.DocParam_.new($line; $input.value)
+				$section.params.push($value)
+			: ($input.type="return")
+				$value:=cs:C1710.DocReturn_.new($line; $input.value)
+				$section.return:=$value
+			: ($input.type="value")
+				$value:=cs:C1710.DocValue_.new($line; $input.value)
+				$section.local.push($value)
+		End case 
+		$value.brief:=$line.doc
 	End if 
 End for each 

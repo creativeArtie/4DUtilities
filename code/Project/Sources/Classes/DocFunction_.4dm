@@ -44,7 +44,7 @@ Function addDetail($class : cs:C1710.DocClass_)
 	End case 
 	
 	var $table : cs:C1710.DocHtmlTable_
-	$table:=cs:C1710.DocHtmlTable_.new("")
+	$table:=cs:C1710.DocHtmlTable_.new()
 	$table.addHeader("Name")
 	$table.addHeader("Type")
 	$table.addHeader("Brief")
@@ -53,25 +53,20 @@ Function addDetail($class : cs:C1710.DocClass_)
 	var $i : Integer
 	$i:=1
 	For each ($param; This:C1470.params)
-		$table.addData("table-primary"; \
-			New collection:C1472(\
-			$param.name+" (parameter "+String:C10($i)+")"; $param.type; $param.getDescription()\
-			))
+		$table.addData($param.name+" (parameter "+String:C10($i)+")"; \
+			$param.type; $param.getDescription()\
+			)
 		$i:=$i+1
 		
 	End for each 
 	If (OB Is defined:C1231(This:C1470; "return"))
-		$table.addData("table-secondary"; \
-			New collection:C1472(This:C1470.return.name+" (return value)"; This:C1470.return.type; \
-			This:C1470.return.getDescription())\
-			)
+		$table.addData(This:C1470.return.name+" (return value)"; This:C1470.return.type; \
+			This:C1470.return.getDescription())
 	End if 
 	
 	var $value : cs:C1710.DocValue_
 	For each ($value; This:C1470.local)
-		$table.addData("table-info"; \
-			New collection:C1472($value.name; $value.type; $value.getDescription())\
-			)
+		$table.addData($value.name; $value.type; $value.getDescription())
 	End for each 
 	
 	If ($table.hasData())
@@ -111,4 +106,4 @@ Function addSummaryRow($table : cs:C1710.DocFunctionTable_)
 			$name:="<a href='#"+$id+"'>"+$name+"("+This:C1470.getParams()+")"+\
 				This:C1470.getReturn()+This:C1470.getTypeBadge()+"</a>"
 	End case 
-	$table.addData($rowCss; New collection:C1472($name; This:C1470.brief))
+	$table.addData($name; This:C1470.brief)

@@ -20,18 +20,6 @@ Function paraseCommonTags($comment : cs:C1710.DocLine_; $common : cs:C1710.DocCo
 		: ($comment.tag="author")
 			This:C1470.author:=$comment.doc
 			
-			//: ($comment.tag="param")
-			//var $name : Text
-			//var $brief : Text
-			//If (Match regex(".* .*"; $comment.doc))
-			//var $pos : Integer
-			//$pos:=Position(" "; $comment.doc)
-			//$name:=Substring($comment.doc; 0; $pos-1)
-			//$brief:=Substring($comment.doc; $pos+1)
-			//Else 
-			//$name:=$comment.doc
-			//End if 
-			//This.params.push(cs.DocParam_.new($name); $brief)
 		Else 
 			var $pos : Integer
 			var $len : Integer

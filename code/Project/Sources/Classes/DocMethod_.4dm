@@ -35,7 +35,7 @@ Function generateText
 		1; ""; True:C214)
 	
 	var $table : cs:C1710.DocHtmlTable_
-	$table:=cs:C1710.DocHtmlTable_.new("")
+	$table:=cs:C1710.DocHtmlTable_.new()
 	$table.addHeader("Name")
 	$table.addHeader("Type")
 	$table.addHeader("Brief")
@@ -45,10 +45,8 @@ Function generateText
 	$i:=1
 	var $params : Text
 	For each ($param; This:C1470.params)
-		$table.addData("table-primary"; \
-			New collection:C1472(\
-			$param.name+" (parameter "+String:C10($i)+")"; $param.type; $param.getDescription()\
-			))
+		$table.addData($param.name+" (parameter "+String:C10($i)+")"; $param.type; \
+			$param.getDescription())
 		If ($params="")
 			$params:="("
 		Else 
@@ -64,18 +62,14 @@ Function generateText
 	End if 
 	
 	If (OB Is defined:C1231(This:C1470; "return"))
-		$table.addData("table-secondary"; \
-			New collection:C1472(This:C1470.return.name+" (return value)"; This:C1470.return.type; \
-			This:C1470.return.getDescription())\
-			)
+		$table.addData(This:C1470.return.name+" (return value)"; This:C1470.return.type; \
+			This:C1470.return.getDescription())
 		This:C1470.declare:=This:C1470.declare+"->"+This:C1470.return.getDeclare()
 	End if 
 	
 	var $value : cs:C1710.DocValue_
 	For each ($value; This:C1470.local)
-		$table.addData("table-info"; \
-			New collection:C1472($value.name; $value.type; $value.getDescription())\
-			)
+		$table.addData($value.name; $value.type; $value.getDescription())
 	End for each 
 	
 	If ($table.hasData())

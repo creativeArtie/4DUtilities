@@ -23,10 +23,12 @@
 	"documentation": {
 		"methods": [
 			"doc_buildValue_",
+			"doc_demo",
 			"doc_findFiles_",
 			"doc_outputBadge_",
 			"doc_run",
 			"doc_splitLines",
+			"doc_splitValueType_",
 			"doc_test"
 		],
 		"classes": [

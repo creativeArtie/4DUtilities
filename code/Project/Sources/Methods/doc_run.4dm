@@ -6,7 +6,7 @@ $paths:=New object:C1471
 
 var $process : Integer
 var $showProgress : Boolean
-$showProgress:=True:C214
+$showProgress:=False:C215
 
 If ($showProgress)
 	$process:=Progress New
@@ -82,7 +82,7 @@ End while
 If ($showProgress)
 	$completed:=0
 	$total:=$paths.methods.length
-	Progress SET PROGRESS($process; 0/$total; "Parsing Classes.")
+	Progress SET PROGRESS($process; 0/$total; "Parsing Methods.")
 End if 
 For each ($name; $paths.methods)
 	var $method : cs:C1710.DocMethod_
@@ -112,10 +112,12 @@ End for each
 If ($showProgress)
 	$completed:=0
 	$total:=$data.methods.length
-	Progress SET PROGRESS($process; 0/$total; "Generate Class docs.")
+	Progress SET PROGRESS($process; 0/$total; "Generate Methods docs.")
 End if 
 For each ($name; $data.methods)
-	$data.methods[$name].generate()
+	If ($name#"Compiler_@")
+		$data.methods[$name].generate()
+	End if 
 	If ($showProgress)
 		$completed:=$completed+1
 		Progress SET PROGRESS($process; $completed/$total)

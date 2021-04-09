@@ -1,13 +1,20 @@
-Class constructor($classes : Text)
-	This:C1470.classes:=$classes
+Class constructor
+	
 	This:C1470.headers:=New collection:C1472
 	This:C1470.row:=New collection:C1472
 	
 Function addHeader($header : Text)
 	This:C1470.headers.push($header)
 	
-Function addData($class : Text; $data : Collection)
-	This:C1470.row.push(New object:C1471("class"; $class; "data"; $data))
+Function addData
+	var ${1} : Variant
+	var $row : Collection
+	$row:=New collection:C1472
+	var $i : Integer
+	For ($i; 1; Count parameters:C259)
+		$row.push(${$i})
+	End for 
+	This:C1470.row.push($row)
 	
 Function hasData->$isFilled : Boolean
 	$isFilled:=This:C1470.row.length>0
@@ -25,13 +32,13 @@ Function getHTMLtable->$doc : Text
 	
 	
 	var $content : Text
-	var $row : Object
+	var $row : Collection
 	
 	$content:=""
 	
 	For each ($row; This:C1470.row)
 		$content:=$content+"|"
-		For each ($cell; $row.data)
+		For each ($cell; $row)
 			$content:=$content+Replace string:C233($cell; "\n"; "<br />")+"|"
 		End for each 
 		$content:=$content+"|\n"

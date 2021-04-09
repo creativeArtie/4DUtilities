@@ -79,7 +79,7 @@ Function generateText
 	var $htmlTable : cs:C1710.DocHtmlTable_
 	var $function : cs:C1710.DocFunction_
 	
-	$htmlTable:=cs:C1710.DocHtmlTable_.new("table-hover")
+	$htmlTable:=cs:C1710.DocHtmlTable_.new()
 	$htmlTable.addHeader("Method Name")
 	$htmlTable.addHeader("Method Brief")
 	

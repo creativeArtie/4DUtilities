@@ -20,13 +20,13 @@ Function generateText->$text : Text
 	This:C1470.text_:="# todo\n"
 	var $table : cs:C1710.DocHtmlTable_
 	
-	$table:=cs:C1710.DocHtmlTable_.new("")
+	$table:=cs:C1710.DocHtmlTable_.new()
 	$table.addHeader("file")
 	$table.addHeader("line")
 	$table.addHeader("details")
 	var $line : cs:C1710.DocLine_
 	For each ($line; This:C1470.todo)
-		$table.addData(""; New collection:C1472($line.file; String:C10($line.line); $line.doc))
+		$table.addData($line.file; String:C10($line.line); $line.doc)
 	End for each 
 	This:C1470.addLine($table.getHTMLtable())
 	
