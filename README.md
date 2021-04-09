@@ -170,7 +170,7 @@ Here are the optional methods
 - [ ] if using a constructor, pass nothing to `Super()`
 - [ ] if overriding `setValue($input;Variant)`, `Super.setValue($1)` must be called
 
-## Use Class
+### Use Class
 
 There are 4 classes for `Use`:
 
@@ -191,7 +191,7 @@ The following are optional but are recommanded to override
 - [ ] `setPass()`
 
 In all of these methods their super method must be called. If possible,
-extend the class from `UseCombo` and `UseField` which already overried 
+extend the class from `UseCombo` and `UseField` which already override
 these methods and change the colours of the form widget.
 
 ## Utilities
@@ -229,6 +229,7 @@ If (Ob is defined($object;"child"))
         $value:=$object.child.key
     Else
         $value:="default"
+    End if
 Else
     $value:="default"
 End If
