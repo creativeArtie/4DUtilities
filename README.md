@@ -10,6 +10,10 @@ sub projects:
 
 ## Generating Documentation
 
+![preview](./doc_support.jpg)
+
+![web browser](./doc_browser.jpg)
+
 The documentation generation generate documents directly from the source code and
 get be read from 4D code Explorer -> Documentation and from the web browser.
 
