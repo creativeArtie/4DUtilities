@@ -3,9 +3,51 @@
 The actual project is located in the [code](code/). It contains several
 sub projects:
 
-1. Exception handling
-2. Value assertions 
-3. Validation
+1. Generate documentation
+2. Exception handling
+3. Value assertions 
+4. Validation
+
+## Generating Documentation
+
+The documentation generation generate documents directly from the source code and
+get be read from 4D code Explorer -> Documentation and from the web browser.
+
+To use it just call `doc_run`.
+
+Without any additional comments, this will generates
+1. Class inherance diagram
+2. A list of class methods names and its parameters, return values and local value
+3. Method's parameters, return values and local value, with a better hover tool tip.
+4. Methods and classes that ends with an underscore is marked as "private"
+5. (more to come...)
+
+### Documentation support
+
+All documentation for the generator must starts with `\\!`. It can accept markdown,
+and even the web browser will parse it using a javascript library.
+
+Documentation in the same line as a `var` or methods starts with `C_` will become 
+the documentation of the variable declared.
+
+### Hashtags
+
+There are hashtags that can be use when documenting the code. Hashtags comment must
+have the following syntax:
+
+```4D
+
+//! #name details
+```
+
+This is the current list of hashtags:
+
+|Hashtag Name|Description|
+|------------|-----------|
+|#author     |the author of this file|
+|#brief      |the documentation to add into a class, class method, or function tooltip|
+|#todo       |the todo item, with a different file listing all of them|
+|#abstract   |that the class method is a abstract and need implementation in the subclass|
 
 ## Exception handling
 
@@ -79,24 +121,6 @@ with the debugger will let you know when the error is being thrown.
 
 The `ExceptionMonitor` form will work by clicking run form.
 
-## Value assertions
-
-This project will do several things on top of the current `#DECLARE`.
-
-- Adds a defualt value
-- Adds limits to a parameter (ie. a parameter must be between 3 to 5)
-- Make sure there is an argument and it is the right class.
-- Assert that the pointer is pointing to the right value type.
-- Produces a more meaningful assert message
-- Check if there is parameter count is not too many
-- Do the same for objects
-
-These methods are:
-- `utils_countParam`: Counts the paramters
-- `utils_getOptionValue`: Use either a defualt value or from the parameter
-- `utils_getRequireValue` : make sure there is a value to use
-- `utils_getObjectValue` : do the same for objects
-
 
 ## Validator
 
@@ -166,5 +190,48 @@ In all of these methods their super method must be called. If possible,
 extend the class from `UseCombo` and `UseField` which already overried 
 these methods and change the colours of the form widget.
 
+## Utilities
 
+### Paramter setting
 
+For parameters will do several things on top of the current `#DECLARE`. For the
+best result, the structure setting "Compilation Path" should set to 
+"All variables are typed"
+
+- Adds a defualt value
+- counts the parameters
+- make sure that the required value are being filled.
+
+To use this use the following code
+
+```4D
+#DECLARE($param1: Text; $param2: Integer; $param3 : 4D.Function)->$result : Boolean
+
+var $count : Real
+$param1:=utils_assertParameter($1; ->$count; Count parameters; "default value")
+$param2:=utils_assertParameter($2; ->$count; Count parameters; 23)
+$param3:=utils_assertParameter($3; ->$count; Count paramters; Formula(True))
+utils_assertParameterCount($count; Count parameters)
+```
+
+### Object variable getter
+
+Normally if you don't know if a key exists in a object's child, you'd need to:
+
+```4D
+
+If (Ob is defined($object;"child"))
+    If (Ob is defined($object.child; "key"))
+        $value:=$object.child.key
+    Else
+        $value:="default"
+Else
+    $value:="default"
+End If
+```
+
+With `utils_getValueFromObject`, you can now do this to produce the same result:
+
+```4D
+$value:=utils_getValueFromObject($object; "default"; "child"; "key")
+```
