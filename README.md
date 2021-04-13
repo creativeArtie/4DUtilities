@@ -8,6 +8,8 @@ sub projects:
 3. Value assertions 
 4. Validation
 
+**Please note that this code is not able to be use as a component, because it contains tables.**
+
 ## Generating Documentation
 
 ![preview](./doc_support.jpg)
