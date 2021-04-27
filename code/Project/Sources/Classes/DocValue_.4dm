@@ -33,7 +33,7 @@ Class constructor($line : cs:C1710.DocLine_; $value : Text; $type : Text)
 Function getDeclare->$text : Text
 	$text:=This:C1470.name+" : "+This:C1470.type
 	If (This:C1470.defaults#"")
-		$text:=$text+" = "+This:C1470.defaults
+		$text:=$text+" := "+This:C1470.defaults
 	End if 
 	
 Function getDescription()->$text : Text

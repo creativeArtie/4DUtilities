@@ -1,11 +1,14 @@
 //%attributes = {}
 //! #brief generate documentation
 //! #author Wai-Kin Chau
+
+utils_assertParameterCount(0; Count parameters:C259)
+
 var $paths : Object  //! list of paths
 $paths:=New object:C1471
 
-var $process : Integer
-var $showProgress : Boolean
+var $process : Integer  //! the process to show documentation
+var $showProgress : Boolean  //! `false` means testing
 $showProgress:=True:C214
 
 If ($showProgress)
@@ -85,12 +88,20 @@ If ($showProgress)
 	Progress SET PROGRESS($process; 0/$total; "Parsing Methods.")
 End if 
 For each ($name; $paths.methods)
-	var $method : cs:C1710.DocMethod_
-	$method:=cs:C1710.DocMethod_.new($name; $paths.methods[$name]; $common)
-	$data.methods[$name]:=$method
-	If ($showProgress)
-		$completed:=$completed+1
-		Progress SET PROGRESS($process; $completed/$total)
+	If ($name#"Compiler_@")
+		If (Not:C34($showProgress))
+			If ($name="doc_demo")
+				TRACE:C157
+			End if 
+		End if 
+		
+		var $method : cs:C1710.DocMethod_
+		$method:=cs:C1710.DocMethod_.new($name; $paths.methods[$name]; $common)
+		$data.methods[$name]:=$method
+		If ($showProgress)
+			$completed:=$completed+1
+			Progress SET PROGRESS($process; $completed/$total)
+		End if 
 	End if 
 End for each 
 
@@ -115,9 +126,12 @@ If ($showProgress)
 	Progress SET PROGRESS($process; 0/$total; "Generate Methods docs.")
 End if 
 For each ($name; $data.methods)
-	If ($name#"Compiler_@")
-		$data.methods[$name].generate()
+	If (Not:C34($showProgress))
+		If ($name="doc_demo")
+			TRACE:C157
+		End if 
 	End if 
+	$data.methods[$name].generate()
 	If ($showProgress)
 		$completed:=$completed+1
 		Progress SET PROGRESS($process; $completed/$total)

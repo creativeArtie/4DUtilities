@@ -45,7 +45,7 @@ Function generateText
 	$i:=1
 	var $params : Text
 	For each ($param; This:C1470.params)
-		$table.addData($param.name+" (parameter "+String:C10($i)+")"; $param.type; \
+		$table.addData($param.getDeclare()+" (parameter "+String:C10($i)+")"; $param.type; \
 			$param.getDescription())
 		If ($params="")
 			$params:="("
@@ -62,7 +62,7 @@ Function generateText
 	End if 
 	
 	If (OB Is defined:C1231(This:C1470; "return"))
-		$table.addData(This:C1470.return.name+" (return value)"; This:C1470.return.type; \
+		$table.addData(This:C1470.return.getDeclare()+" (return value)"; This:C1470.return.type; \
 			This:C1470.return.getDescription())
 		This:C1470.declare:=This:C1470.declare+"->"+This:C1470.return.getDeclare()
 	End if 

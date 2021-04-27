@@ -53,20 +53,20 @@ Function addDetail($class : cs:C1710.DocClass_)
 	var $i : Integer
 	$i:=1
 	For each ($param; This:C1470.params)
-		$table.addData($param.name+" (parameter "+String:C10($i)+")"; \
+		$table.addData($param.getDeclare()+" (parameter "+String:C10($i)+")"; \
 			$param.type; $param.getDescription()\
 			)
 		$i:=$i+1
 		
 	End for each 
 	If (OB Is defined:C1231(This:C1470; "return"))
-		$table.addData(This:C1470.return.name+" (return value)"; This:C1470.return.type; \
+		$table.addData(This:C1470.return.getDeclare()+" (return value)"; This:C1470.return.type; \
 			This:C1470.return.getDescription())
 	End if 
 	
 	var $value : cs:C1710.DocValue_
 	For each ($value; This:C1470.local)
-		$table.addData($value.name; $value.type; $value.getDescription())
+		$table.addData($value.getDeclare(); $value.type; $value.getDescription())
 	End for each 
 	
 	If ($table.hasData())

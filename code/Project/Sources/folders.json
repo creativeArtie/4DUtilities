@@ -21,30 +21,14 @@
 		]
 	},
 	"documentation": {
-		"methods": [
-			"doc_buildValue_",
-			"doc_demo",
-			"doc_findFiles_",
-			"doc_outputBadge_",
-			"doc_run",
-			"doc_splitLines",
-			"doc_splitValueType_",
-			"doc_test"
+		"groups": [
+			"section",
+			"utils",
+			"value"
 		],
-		"classes": [
-			"DocClass_",
-			"DocCommon_",
-			"DocFile_",
-			"DocFunction_",
-			"DocHtmlTable_",
-			"DocLine_",
-			"DocMermaid_",
-			"DocMethod_",
-			"DocParam_",
-			"DocReturn_",
-			"DocSection_",
-			"DocTree_",
-			"DocValue_"
+		"methods": [
+			"doc_demo",
+			"doc_run"
 		]
 	},
 	"exception": {
@@ -86,6 +70,19 @@
 			"param_runParams"
 		]
 	},
+	"section": {
+		"methods": [
+			"doc_findFiles_"
+		],
+		"classes": [
+			"DocClass_",
+			"DocCommon_",
+			"DocFile_",
+			"DocFunction_",
+			"DocMethod_",
+			"DocSection_"
+		]
+	},
 	"templates": {
 		"methods": [
 			"except_demo",
@@ -119,6 +116,17 @@
 			"utils_getPointerDisplayName",
 			"utils_saveToStorage",
 			"utils_ut_exceptions"
+		]
+	},
+	"utils": {
+		"methods": [
+			"doc_outputBadge_",
+			"doc_splitLines"
+		],
+		"classes": [
+			"DocHtmlTable_",
+			"DocLine_",
+			"DocMermaid_"
 		]
 	},
 	"utils_lazy": {
@@ -165,6 +173,18 @@
 			"Check",
 			"Use",
 			"Validator"
+		]
+	},
+	"value": {
+		"methods": [
+			"doc_buildValue_",
+			"doc_splitValueType_"
+		],
+		"classes": [
+			"DocParam_",
+			"DocReturn_",
+			"DocTree_",
+			"DocValue_"
 		]
 	},
 	"trash": {

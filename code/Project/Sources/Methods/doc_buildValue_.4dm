@@ -9,6 +9,8 @@ var $found : Collection
 $found:=New collection:C1472
 var $parts : Object
 
+
+
 Case of 
 	: (OB Instance of:C1731($section; cs:C1710.DocMethod_) & \
 		Match regex:C1019("[\t]*#DECLARE.*"; $line.code))
@@ -161,3 +163,39 @@ For each ($input; $found)
 		$creates.brief:=$line.doc
 	End if 
 End for each 
+
+
+If (Not:C34($used) & ($line.code="@:=utils_assertParameter(@") & OB Is defined:C1231($section; "params"))
+	var $name : Text
+	$name:=Split string:C1554($line.code; ":="; sk trim spaces:K86:2)[1]
+	$name:=Split string:C1554($name; "("; sk trim spaces:K86:2)[1]
+	$name:=Split string:C1554($name; ";"; sk trim spaces:K86:2)[0]
+	var $splitted : Collection
+	$splitted:=Split string:C1554($line.code; ";")
+	If ($splitted.length=4)
+		$extracted:=Substring:C12($splitted[3]; 2; Length:C16($splitted[3])-2)
+		var $result : Text
+		var $pos; $length : Real
+		While (Match regex:C1019(":C[0-9]+"; $extracted; 1; $pos; $length))
+			$extracted:=Delete string:C232($extracted; $pos; $length)
+		End while 
+		
+		If (Match regex:C1019("\\$[1-9][0-9]*"; $name))
+			var $pos : Real
+			$pos:=Num:C11($name)-1
+			If ($section.params.length>$pos)
+				$section.params[$pos].defaults:=$extracted
+			End if 
+			
+		Else 
+			var $param : cs:C1710.DocParam_
+			For each ($param; $section.params)
+				If ($param.name=$name)
+					$param.defaults:=$extracted
+					$used:=True:C214
+				End if 
+			End for each 
+		End if 
+		
+	End if 
+End if 
