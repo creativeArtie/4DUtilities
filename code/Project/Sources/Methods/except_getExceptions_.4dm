@@ -1,4 +1,7 @@
 //%attributes = {}
+//! #brief gets the list of exceptions
+//! #author Wai-Kin Chau
+
 utils_assertParameterCount(0; Count parameters:C259)
 
 var $process : Text

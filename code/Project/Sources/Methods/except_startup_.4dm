@@ -1,4 +1,8 @@
 //%attributes = {}
+//! #brief Method run as Utlities Exception Manager
+//! #author Wai-Kin Chau
+
+utils_assertParameterCount(0; Count parameters:C259)
 Use (Storage:C1525)
 	Storage:C1525.utils_except:=New shared object:C1526
 End use 

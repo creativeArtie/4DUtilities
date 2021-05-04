@@ -34,6 +34,12 @@ Function generateText
 	This:C1470.addHeading("Method <mark>"+This:C1470.name+"</mark>"+This:C1470.getTypeBadge(); \
 		1; ""; True:C214)
 	
+	If (This:C1470.brief#"")
+		This:C1470.addLine("\n**Brief**: "+This:C1470.brief+"\n")
+	End if 
+	
+	This:C1470.addHeading("Parameters and Variables"; 2)
+	
 	var $table : cs:C1710.DocHtmlTable_
 	$table:=cs:C1710.DocHtmlTable_.new()
 	$table.addHeader("Name")
@@ -77,11 +83,7 @@ Function generateText
 	End if 
 	
 	This:C1470.addHeading("Description"; 2)
-	This:C1470.addLine(This:C1470.brief)
 	
-	var $line : Text
-	For each ($line; This:C1470.comments)
-		This:C1470.addLine($line+"\n")
-	End for each 
+	This:C1470.addDescription()
 	
 	

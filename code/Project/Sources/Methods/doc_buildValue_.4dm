@@ -1,8 +1,13 @@
 //%attributes = {}
 //! #brief factory for `cs.DocValue_`
-//! #author Wai-Kin 2021-Apr-3
+//! #author Wai-Kin
 #DECLARE($line : cs:C1710.DocLine_; $section : cs:C1710.DocSection_)->$used : Boolean
 $used:=True:C214
+
+var $count : Real
+$1:=utils_assertParameter($1; ->$count; Count parameters:C259; 2)
+$2:=utils_assertParameter($2; ->$count; Count parameters:C259; 2)
+utils_assertParameterCount($count; Count parameters:C259)
 
 var $extracted; $raw : Text
 var $found : Collection
@@ -179,23 +184,37 @@ If (Not:C34($used) & ($line.code="@:=utils_assertParameter(@") & OB Is defined:C
 		While (Match regex:C1019(":C[0-9]+"; $extracted; 1; $pos; $length))
 			$extracted:=Delete string:C232($extracted; $pos; $length)
 		End while 
-		
-		If (Match regex:C1019("\\$[1-9][0-9]*"; $name))
-			var $pos : Real
-			$pos:=Num:C11($name)-1
-			If ($section.params.length>$pos)
-				$section.params[$pos].defaults:=$extracted
-			End if 
-			
-		Else 
-			var $param : cs:C1710.DocParam_
-			For each ($param; $section.params)
-				If ($param.name=$name)
-					$param.defaults:=$extracted
-					$used:=True:C214
+	Else 
+		$extracted:=""
+	End if 
+	
+	If (Match regex:C1019("\\$[1-9][0-9]*"; $name))
+		var $pos : Real
+		$pos:=Num:C11($name)-1
+		If ($section.params.length>$pos)
+			$section.params[$pos].defaults:=$extracted
+			If ($line.doc#"")
+				If ($section.params[$pos].brief#"")
+					$section.params[$pos].brief:=$section.params[$pos].brief+"<br />"
 				End if 
-			End for each 
+				$section.params[$pos].brief:=$section.params[$pos].brief+$line.doc
+			End if 
 		End if 
 		
+	Else 
+		var $param : cs:C1710.DocParam_
+		For each ($param; $section.params)
+			If ($param.name=$name)
+				$param.defaults:=$extracted
+				If ($line.doc#"")
+					If ($param.brief#"")
+						$param.brief:=$param.brief+"<br />"
+					End if 
+					$param.brief:=$param.brief+$line.doc
+				End if 
+			End if 
+		End for each 
 	End if 
+	
+	$used:=True:C214
 End if 

@@ -3,6 +3,10 @@
 //! #author Wai-Kin Chau
 #DECLARE($file : cs:C1710.File)->$lines : Collection
 
+var $count : Real
+$1:=utils_assertParameter($1; ->$count; Count parameters:C259)
+utils_assertParameterCount($count; Count parameters:C259)
+
 var $code : Text
 $code:=Document to text:C1236(Convert path POSIX to system:C1107($file.path); "UTF-8"; Document with LF:K24:22)
 

@@ -38,7 +38,7 @@ Function generate
 Function addDescription
 	//! #brief add the file discription
 	
-	This:C1470.addLine(This:C1470.brief)
+	This:C1470.addLine(This:C1470.brief+"\n\n")
 	
 	var $line : Text  //! a single line from `This.comments` loop
 	For each ($line; This:C1470.comments)
@@ -61,15 +61,15 @@ Function addHeading($header : Text; $level : Integer; $id : Text; $withSummary :
 	Else 
 		$idAttr:=" id='"+$id+"'"
 	End if 
-	This:C1470.addLine("<h"+String:C10($level)+$idAttr+">"+$header+"</h"+String:C10($level)+">")
+	This:C1470.addLine("<h"+String:C10($level)+$idAttr+">"+$header+"</h"+String:C10($level)+">\n\n")
 	
 	If ($withSummary)
 		If (OB Is defined:C1231(This:C1470; "author"))
-			This:C1470.addLine("**Author**: *"+This:C1470.author+"*")
+			This:C1470.addLine("**Author**: *"+This:C1470.author+"*\n")
 		End if 
 	End if 
 	
 Function addLine($line : Text)
 	//! #brief helper function for adding a markdown paragraph
-	This:C1470.text_:=This:C1470.text_+$line+"\n\n"
+	This:C1470.text_:=This:C1470.text_+$line
 	

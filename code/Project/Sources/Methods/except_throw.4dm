@@ -1,4 +1,7 @@
 //%attributes = {"shared":true}
+//! #brief throws an exception, use `except_assert` if there is a test value
+//! #author Wai-Kin Chau
+
 #DECLARE($message : Text)->$thrown : cs:C1710.Exception
 
 var $count : Real

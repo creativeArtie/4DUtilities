@@ -1,5 +1,13 @@
 //%attributes = {}
+//! #brief Test for uncaught exceptions with AJ_Tools_UnitTest
+//! #author Wai-Kin Chau
+
 #DECLARE($unitTest : Object)->$result : Boolean
+
+var $count : Real
+$unitTest:=utils_assertParameter($1; ->$count; Count parameters:C259)
+utils_assertParameterCount($count; Count parameters:C259)
+
 
 var $exceptions : Collection
 $exceptions:=except_getExceptions_

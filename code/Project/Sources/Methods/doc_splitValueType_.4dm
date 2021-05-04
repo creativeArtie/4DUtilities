@@ -1,5 +1,6 @@
 //%attributes = {}
 //! #brief splits the extract variable into value and its type
+//! #author Wai-Kin Chau
 #DECLARE($raw : Text; $extractName : Boolean)->$value : Object
 
 var $count : Real

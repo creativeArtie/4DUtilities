@@ -1,5 +1,28 @@
 //%attributes = {}
+//! #brief catches the exception
+//! #author Wai-Kin Chau
+//! The common way to use this method is:
+//! ~~~4D
+//! var $exception : cs.Exception
+//! While(except_catch(->$exception))
+//!    // error found
+//! End while
+//! ~~~
+//! or
+//! ~~~4D
+//! var $exception : cs.Exception
+//! If (exception_catch(->$exception))
+//!     // code for errors
+//! Else
+//!     // code for passed
+//! End if
+//! ~~~
 #DECLARE($export : Pointer)->$hasErrors : Boolean
+
+var $count : Real
+$1:=utils_assertParameter($1; ->$count; Count parameters:C259)
+utils_assertParameterCount($count; Count parameters:C259)
+
 
 var $collection : Collection
 $collection:=except_getExceptions_

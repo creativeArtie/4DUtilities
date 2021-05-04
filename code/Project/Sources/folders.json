@@ -1,4 +1,11 @@
 ﻿{
+	"(research)": {
+		"methods": [
+			"(param_method1)",
+			"(param_method2)",
+			"(param_runParams)"
+		]
+	},
 	"(tests)": {
 		"methods": [
 			"(test_params)",
@@ -61,13 +68,6 @@
 			"except_getExceptions_",
 			"except_startup_",
 			"except_startup_thread_"
-		]
-	},
-	"research": {
-		"methods": [
-			"param_method1",
-			"param_method2",
-			"param_runParams"
 		]
 	},
 	"section": {
@@ -144,9 +144,6 @@
 		]
 	},
 	"utils_params": {
-		"groups": [
-			"research"
-		],
 		"methods": [
 			"test_param",
 			"ut_param",
@@ -189,6 +186,7 @@
 	},
 	"trash": {
 		"groups": [
+			"(research)",
 			"(tests)"
 		]
 	}

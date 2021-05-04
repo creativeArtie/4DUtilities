@@ -1,5 +1,8 @@
 //%attributes = {}
+//! #brief the method used in `On Err Call` see `except_trapErrors`
+//! #author Wai-Kin Chau
 
+utils_assertParameterCount(0; Count parameters:C259)
 var $exception : Object
 
 ARRAY LONGINT:C221($codes; 0)

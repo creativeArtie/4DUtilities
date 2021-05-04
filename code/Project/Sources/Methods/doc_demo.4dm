@@ -21,4 +21,4 @@ var $variant
 
 var $count : Real
 $text:=utils_assertParameter($1; ->$count; Count parameters:C259; "Default")
-$2:=utils_assertParameter($more; ->$count; Count parameters:C259; 23)
+$2:=utils_assertParameter($more; ->$count; Count parameters:C259; 23)  //! had default

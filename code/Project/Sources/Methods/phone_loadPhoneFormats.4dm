@@ -1,4 +1,6 @@
 //%attributes = {}
+//! #brief list of default PhoneFormats records
+//! #author Wai-Kin
 phone_createFormat(25; "AE"; "971"; "0"; "971[0-9]{8}"; "+###-#-###-####")
 phone_createFormat(26; "AE"; "971"; "0"; "971[0-9]{7}"; "+###-###-####")
 phone_createFormat(27; "AE"; "971"; "0"; "971[0-9]{9}"; "+###-##-###-####")

@@ -1,4 +1,6 @@
 //%attributes = {}
+//! #brief part of `except_demo`
+//! #author Wai-Kin Chau
 var $randomer : Object
 var $exception : cs:C1710.Exception
 

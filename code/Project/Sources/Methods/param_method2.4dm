@@ -1,2 +1,0 @@
-//%attributes = {}
-#DECLARE($pointer : Pointer)

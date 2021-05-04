@@ -1,3 +1,4 @@
+//! #brief a function of a class
 Class extends DocSection_
 Class constructor($parsed : cs:C1710.DocLine_)
 	Super:C1705()

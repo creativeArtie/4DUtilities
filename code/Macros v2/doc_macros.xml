@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<!DOCTYPE macros SYSTEM "http://www.4d.com/dtd/2007/macros.dtd" >
+<macros>
+
+-<macro name="Document_Header" in_menu="true" type_ahead="true" type_ahead_text="_doc_header">
+<text> //! #brief {short description}
+//! #author name
+</text>
+</macro>
+
+</macros>

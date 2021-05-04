@@ -44,4 +44,4 @@ Function getHTMLtable->$doc : Text
 		$content:=$content+"|\n"
 	End for each 
 	
-	$0:=$headers+"\n"+$separator+"\n"+$content+"\n"
+	$0:="\n"+$headers+"\n"+$separator+"\n"+$content+"\n"

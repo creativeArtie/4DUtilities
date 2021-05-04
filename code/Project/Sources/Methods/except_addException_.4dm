@@ -1,4 +1,6 @@
 //%attributes = {}
+//! #brief adds an excption to `Shared Object` and Exception table
+//! #author Wai-Kin Chau
 #DECLARE($exception : cs:C1710.Exception)
 var $count : Integer
 $exception:=utils_assertParameter($1; ->$count; Count parameters:C259)

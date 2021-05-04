@@ -36,7 +36,7 @@ Class constructor($text : Text; $file : Text; $line : Integer)
 		End if 
 	End if 
 Function addDoc($doc : Text)
-	If (This:C1470.doc#"")
-		This:C1470.doc:=This:C1470.doc+"\n"
-	End if 
+	//If (This.doc#"")
+	//This.doc:=This.doc+"\n"
+	//End if 
 	This:C1470.doc:=This:C1470.doc+$doc
