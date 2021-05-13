@@ -16,9 +16,9 @@ $entity.callingCode:=utils_assertParameter($3; ->$count; Count parameters:C259)\
   //! [PhoneFormats]callingCode
 $entity.trunkCode:=utils_assertParameter($4; ->$count; Count parameters:C259)\
   //! [PhoneFormats]trunkCode
-$entity.matchFormat:=utils_assertParameter($5; ->$count; Count parameters:C259))\
+$entity.matchFormat:=utils_assertParameter($5; ->$count; Count parameters:C259)\
   //! [PhoneFormats]matchFormat
-$entity.outputFormat:=utils_assertParameter($6; ->$count; Count parameters:C259))\
+$entity.outputFormat:=utils_assertParameter($6; ->$count; Count parameters:C259)\
   //! [PhoneFormats]outputFormat
 utils_assertParameterCount($count; Count parameters:C259)
 

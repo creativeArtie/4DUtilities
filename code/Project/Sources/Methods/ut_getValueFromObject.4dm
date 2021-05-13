@@ -2,7 +2,7 @@
 // __UNIT_TEST
 
 var $test : Object
-$test:=AJ_UnitTest.new("utils_valueFromObject"; Current method name:C684; "Utilities")
+$test:=AJ_UnitTest.new("utils_getValueFromObject"; Current method name:C684; "Utilities")
 
 var $object : Object
 

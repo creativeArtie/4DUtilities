@@ -1,0 +1,2 @@
+//%attributes = {}
+#DECLARE($integer : Text)

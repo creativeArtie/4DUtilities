@@ -1,6 +1,7 @@
 //%attributes = {}
 #DECLARE($input : Object; $default : Variant)->$value : Variant
 
+
 C_TEXT:C284(${3})
 
 If (OB Is defined:C1231($input))

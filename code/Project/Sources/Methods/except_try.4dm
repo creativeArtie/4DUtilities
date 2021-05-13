@@ -18,10 +18,8 @@ $forumla:=utils_assertParameter($1; ->$count; Count parameters:C259)
 $exceptPtr:=utils_assertParameter($2; ->$count; Count parameters:C259)\
   // return the last error thrown
 $countPtr:=utils_assertParameter($3; ->$count; Count parameters:C259; ->$errors)
-utils_assertParameterCount($count; Count parameters:C259)
 
-
-C_VARIANT:C1683(${3})
+C_VARIANT:C1683(${4})
 var $params : Collection
 $params:=New collection:C1472
 var $i : Integer

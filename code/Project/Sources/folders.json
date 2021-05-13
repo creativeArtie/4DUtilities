@@ -70,6 +70,14 @@
 			"except_startup_thread_"
 		]
 	},
+	"research": {
+		"methods": [
+			"try_methodCalls",
+			"try_methodWithObject",
+			"try_methodWithObjectClass",
+			"try_methodWithText"
+		]
+	},
 	"section": {
 		"methods": [
 			"doc_findFiles_"
@@ -110,6 +118,7 @@
 		"groups": [
 			"utils_lazy",
 			"utils_methodCaller",
+			"utils_objects",
 			"utils_params"
 		],
 		"methods": [
@@ -143,14 +152,23 @@
 			"utils_getMethodCaller"
 		]
 	},
+	"utils_objects": {
+		"methods": [
+			"ut_getValueFromObject",
+			"ut_setValueToObject",
+			"utils_getValueFromObject",
+			"utils_setValueToObject"
+		]
+	},
 	"utils_params": {
+		"groups": [
+			"research"
+		],
 		"methods": [
 			"test_param",
 			"ut_param",
-			"ut_valueFromObject",
 			"utils_assertParameter",
-			"utils_assertParameterCount",
-			"utils_getValueFromObject"
+			"utils_assertParameterCount"
 		]
 	},
 	"validator": {
