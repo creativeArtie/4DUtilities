@@ -1,6 +1,6 @@
-code/Data
-code/userPreferences.admin
-code/Project/DerivedData
-code/Project/Trash/*
-code/Documentation/
+Data/
+userPreferences.admin
+DerivedData/
+Trash/
+Documentation/
 Utlities_Build/
