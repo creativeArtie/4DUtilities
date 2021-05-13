@@ -1,0 +1,3 @@
+[submodule "submodules/AJ_Tools_UnitTest"]
+	path = submodules/AJ_Tools_UnitTest
+	url = https://github.com/AJARProject/AJ_Tools_UnitTest.git
