@@ -1,4 +1,4 @@
-//%attributes = {}
+//%attributes = {"shared":true}
 // assert the paramters
 #DECLARE($atMost : Real; $actual : Integer)
 

@@ -1,4 +1,4 @@
-//%attributes = {}
+//%attributes = {"shared":true}
 //! #brief Checks if there are at least one error thrown
 //! #author Wai-Kin
 //! Common Usage:

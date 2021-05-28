@@ -1,4 +1,4 @@
-//%attributes = {}
+//%attributes = {"shared":true}
 //! #brief exception demo
 //! #author Wai-Kin Chau
 utils_assertParameterCount(0; Count parameters:C259)

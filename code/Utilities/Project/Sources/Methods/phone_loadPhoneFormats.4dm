@@ -1,4 +1,4 @@
-//%attributes = {}
+//%attributes = {"shared":true}
 //! #brief list of default PhoneFormats records
 //! #author Wai-Kin
 phone_createFormat(25; "AE"; "971"; "0"; "971[0-9]{8}"; "+###-#-###-####")

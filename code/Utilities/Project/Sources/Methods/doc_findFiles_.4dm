@@ -1,11 +1,17 @@
-//%attributes = {}
+//%attributes = {"shared":true}
 //! #brief finds the files for document generation
 //! #author Wai-Kin Chau
-#DECLARE($type : Text)->$collection : Object
+//#DECLARE($type : Text)->$collection : Object
+
+var $1; $type : Text
+var $0; $collection : Object
 
 var $count : Real
-$type:=utils_assertParameter($type; ->$count; Count parameters:C259)
+For ($count; 0; Count parameters:C259)
+	// $type required
+End for 
 utils_assertParameterCount($count; Count parameters:C259)
+
 
 var $path : Text
 var $baseFolder : 4D:C1709.Folder
@@ -18,3 +24,5 @@ var $file : 4D:C1709.File
 For each ($file; $baseFolder.files())
 	$collection[$file.name]:=$file
 End for each 
+
+$0:=$collection

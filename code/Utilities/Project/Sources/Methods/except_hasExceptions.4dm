@@ -1,4 +1,4 @@
-//%attributes = {}
+//%attributes = {"shared":true}
 //! #brief Test for uncaught exceptions with AJ_Tools_UnitTest
 //! #author Wai-Kin Chau
 

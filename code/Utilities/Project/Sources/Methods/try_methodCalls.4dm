@@ -1,4 +1,4 @@
-//%attributes = {}
+//%attributes = {"shared":true}
 var $object; $null : Object
 var $check; $nullCheck : cs:C1710.Check
 $object:=New object:C1471

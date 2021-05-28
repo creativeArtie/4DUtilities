@@ -2,7 +2,7 @@
 <!DOCTYPE macros SYSTEM "http://www.4d.com/dtd/2007/macros.dtd" >
 <macros>
 
--<macro name="Parameters_Asserts" in_menu="true" type_ahead="true" type_ahead_text="_param_assert">
+-<macro name="Parameters_Asserts" in_menu="true" type_ahead="true" type_ahead_text="_param_declare">
 <text> var $count : Real
 $1:=utils_assertParameter($1; ->$count; Count parameters; 2)
 $2:=utils_assertParameter($2; ->$count; Count parameters; 2)

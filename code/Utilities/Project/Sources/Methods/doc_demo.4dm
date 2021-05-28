@@ -1,4 +1,4 @@
-//%attributes = {}
+//%attributes = {"shared":true}
 //! #brief test demo
 //! This demoes every documtation options available to a method
 //! #author Wai-Kin

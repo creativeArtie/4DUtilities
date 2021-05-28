@@ -1,0 +1,2 @@
+//%attributes = {}
+test_shared

@@ -1,4 +1,4 @@
-//%attributes = {}
+//%attributes = {"shared":true}
 //! #brief generate documentation
 //! #author Wai-Kin Chau
 

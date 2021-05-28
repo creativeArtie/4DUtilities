@@ -1,1 +1,1 @@
-//%attributes = {}
+//%attributes = {"shared":true}

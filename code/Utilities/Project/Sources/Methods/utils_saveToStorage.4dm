@@ -1,4 +1,4 @@
-//%attributes = {}
+//%attributes = {"shared":true}
 #DECLARE($value : Variant; $key : Text; $storage : Object)
 
 var $count : Real

@@ -1,4 +1,4 @@
-//%attributes = {}
+//%attributes = {"shared":true}
 #DECLARE($a : Text; $b : Integer; $opt1 : Variant; $opt2)->$result : Object
 
 var $count : Integer

@@ -1,4 +1,4 @@
-//%attributes = {}
+//%attributes = {"shared":true}
 //! #brief Method called at program starts
 //! #author Wai-Kin Chau
 

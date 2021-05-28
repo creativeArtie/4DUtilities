@@ -62,6 +62,7 @@
 			"Exception"
 		]
 	},
+	"internal": {},
 	"manager": {
 		"methods": [
 			"except_addException_",

@@ -1,4 +1,4 @@
-//%attributes = {}
+//%attributes = {"shared":true}
 //! #brief the method used in `On Err Call` see `except_trapErrors`
 //! #author Wai-Kin Chau
 

@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE base SYSTEM "http://www.4d.com/dtd/2007/base.dtd" >
-<base name="Utlities" uuid="328C30C9000610489A5B36D59F114E78" collation_locale="en-ca">
+<base name="Utlities" uuid="328C30C9000610489A5B36D59F114E78" collation_locale="en">
 	<schema name="DEFAULT_SCHEMA"/>
 	<table name="PhoneFormats" uuid="9EE6CD4AE856C240933998C5CFF00898" id="1" hide_in_REST="true">
 		<field name="ID" uuid="6BD4B9BDD425D849BB80563E3475A1C2" type="4" unique="true" autosequence="true" not_null="true" id="1"/>
@@ -47,7 +47,7 @@
 			<table_ref uuid="9EE6CD4AE856C240933998C5CFF00898" name="PhoneFormats"/>
 		</field_ref>
 	</index>
-	<base_extra __stringCompHash="icu:63.1.0" __keywordBuildingHash="icu:63.1.0">
+	<base_extra __stringCompHash="icu:68.1.0" __keywordBuildingHash="icu:68.1.0">
 		<journal_file journal_file_enabled="true"/>
 	</base_extra>
 </base>

@@ -1,4 +1,4 @@
-//%attributes = {}
+//%attributes = {"shared":true}
 //! #brief creates a new phone format entity and save it
 //! #author Wai-Kin
 #DECLARE($order : Real; $countryCode : Text; $callingCode : Text; \

@@ -1,4 +1,4 @@
-//%attributes = {}
+//%attributes = {"shared":true}
 //! #brief catches the exception
 //! #author Wai-Kin Chau
 //! The common way to use this method is:

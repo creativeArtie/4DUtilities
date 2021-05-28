@@ -1,4 +1,4 @@
-//%attributes = {}
+//%attributes = {"shared":true}
 //! #brief throws an exception if the `$passed` return false
 //! #author Wai-Kin Chau
 //! Use `except_throw` if there is no check

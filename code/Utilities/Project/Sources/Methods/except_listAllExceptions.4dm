@@ -1,4 +1,4 @@
-//%attributes = {}
+//%attributes = {"shared":true}
 //! #brief part of `except_demo`
 //! #author Wai-Kin Chau
 

@@ -27,7 +27,7 @@
       <HardLink></HardLink>
     </CS>
     <BuildApplicationName>Utlities</BuildApplicationName>
-    <BuildWinDestFolder>..\Utlities_Build</BuildWinDestFolder>
+    <BuildWinDestFolder>..\Utlities_Build\</BuildWinDestFolder>
     <ArrayExcludedPluginName>
       <ItemsCount>0</ItemsCount>
     </ArrayExcludedPluginName>

@@ -1,4 +1,4 @@
-//%attributes = {}
+//%attributes = {"shared":true}
 #DECLARE($input : Variant; $forParamPtr : Pointer; $count : Integer; \
 $default : Variant)->$result : Variant
 //! #brief Assert parameter use \

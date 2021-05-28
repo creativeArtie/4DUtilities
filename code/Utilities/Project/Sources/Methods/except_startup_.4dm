@@ -1,4 +1,4 @@
-//%attributes = {}
+//%attributes = {"shared":true}
 //! #brief Method run as Utlities Exception Manager
 //! #author Wai-Kin Chau
 

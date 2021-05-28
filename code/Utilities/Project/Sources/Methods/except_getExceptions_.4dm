@@ -1,4 +1,4 @@
-//%attributes = {}
+//%attributes = {"shared":true}
 //! #brief gets the list of exceptions
 //! #author Wai-Kin Chau
 

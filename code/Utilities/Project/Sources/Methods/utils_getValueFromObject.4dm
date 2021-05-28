@@ -1,4 +1,4 @@
-//%attributes = {}
+//%attributes = {"shared":true}
 #DECLARE($input : Object; $default : Variant)->$value : Variant
 
 

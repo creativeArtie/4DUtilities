@@ -1,4 +1,4 @@
-//%attributes = {}
+//%attributes = {"shared":true}
 //! #brief splits the extract variable into value and its type
 //! #author Wai-Kin Chau
 #DECLARE($raw : Text; $extractName : Boolean)->$value : Object

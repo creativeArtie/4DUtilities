@@ -1,4 +1,4 @@
-//%attributes = {}
+//%attributes = {"shared":true}
 //! #brief sets a value 
 #DECLARE($input : Object; $value : Variant)->$output : Object
 
