@@ -14,6 +14,7 @@
 	"Parameters": {
 		"methods": [
 			"assertLocalParameter",
+			"assertObjectParameter",
 			"assertParameterCount",
 			"setupParameterAsserts"
 		]

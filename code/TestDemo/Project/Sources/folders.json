@@ -1,14 +1,17 @@
 ﻿{
+	"(Utilities)": {},
 	"Parameters": {
 		"methods": [
-			"test_param",
+			"test_localParameter",
+			"test_objectParameter",
+			"ut_localParameter",
+			"ut_objectParameter",
 			"ut_param"
 		]
 	},
-	"Utilities": {
+	"trash": {
 		"groups": [
-			"Parameters"
+			"(Utilities)"
 		]
-	},
-	"trash": {}
+	}
 }
