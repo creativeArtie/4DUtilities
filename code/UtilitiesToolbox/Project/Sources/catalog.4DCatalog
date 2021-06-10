@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE base SYSTEM "http://www.4d.com/dtd/2007/base.dtd" >
+<base name="UtilitiesToolbox" uuid="81C73E08FE6552419482FF38B99C93D8" collation_locale="en-ca">
+	<schema name="DEFAULT_SCHEMA"/>
+</base>

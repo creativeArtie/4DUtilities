@@ -1,0 +1,26 @@
+﻿{
+	"(Default Classes)": {},
+	"(Default Folder)": {
+		"groups": [
+			"(Default Classes)",
+			"(Default Forms)",
+			"(Default Project Methods)",
+			"(Default Tables)"
+		]
+	},
+	"(Default Forms)": {},
+	"(Default Project Methods)": {},
+	"(Default Tables)": {},
+	"Parameters": {
+		"methods": [
+			"assertLocalParameter",
+			"assertParameterCount",
+			"setupParameterAsserts"
+		]
+	},
+	"trash": {
+		"groups": [
+			"(Default Folder)"
+		]
+	}
+}

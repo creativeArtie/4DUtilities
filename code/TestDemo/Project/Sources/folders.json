@@ -1,31 +1,14 @@
 ﻿{
-	"(Default Classes)": {},
-	"(Default Folder)": {
-		"groups": [
-			"(Default Classes)",
-			"(Default Forms)",
-			"(Default Project Methods)",
-			"(Default Tables)"
-		]
-	},
-	"(Default Forms)": {},
-	"(Default Project Methods)": {},
-	"(Default Tables)": {},
-	"parameters": {
+	"Parameters": {
 		"methods": [
-			"test_declare"
+			"test_param",
+			"ut_param"
 		]
 	},
-	"tests": {
-		"methods": [
-			"test_someOptionalParams",
-			"test_zeroParams",
-			"ut_parameters"
-		]
-	},
-	"trash": {
+	"Utilities": {
 		"groups": [
-			"(Default Folder)"
+			"Parameters"
 		]
-	}
+	},
+	"trash": {}
 }
