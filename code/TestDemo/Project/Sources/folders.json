@@ -1,14 +1,36 @@
 ﻿{
 	"(Utilities)": {},
+	"exceptions": {
+		"tables": [
+			"Exceptions"
+		],
+		"methods": [
+			"error_demo",
+			"error_observe",
+			"error_runTest"
+		]
+	},
+	"Object": {
+		"methods": [
+			"ut_getValueFromObject",
+			"ut_setValueToObject"
+		]
+	},
 	"Parameters": {
 		"methods": [
+			"test_constructorParameter",
 			"test_localParameter",
 			"test_objectParameter",
+			"ut_constructorParameters",
 			"ut_localParameter",
 			"ut_objectParameter",
 			"ut_param"
+		],
+		"classes": [
+			"ParamTest"
 		]
 	},
+	"Validator": {},
 	"trash": {
 		"groups": [
 			"(Utilities)"

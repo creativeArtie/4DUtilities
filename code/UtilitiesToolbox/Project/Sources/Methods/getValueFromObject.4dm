@@ -1,8 +1,17 @@
 //%attributes = {"shared":true}
-#DECLARE($input : Object; $default : Variant)->$value : Variant
+#DECLARE($inputParam : Object; $defaultParam : Variant)->$value : Variant
 
-
+var $assert : Object
+$assert:=assertParameterSetup(Count parameters:C259)
+If (assertLocalParameter($assert; ->$input))
+	$input:=$inputParam
+End if 
+If (assertLocalParameter($assert; ->$default))
+	$default:=$defaultParam
+End if 
 C_TEXT:C284(${3})
+$assert.count:=$assert.count+1
+assertParameterAtLeast($assert; 3)
 
 If (OB Is defined:C1231($input))
 	var $pointer : Object

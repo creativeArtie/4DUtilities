@@ -3,7 +3,7 @@
 
 $result:=New object:C1471
 var $assert : Object
-$assert:=setupParameterAsserts(Count parameters:C259)
+$assert:=assertParameterSetup(Count parameters:C259)
 
 If (assertObjectParameter($assert; $result; "param1"))
 	$result.param1:=$input1Param
@@ -14,7 +14,7 @@ End if
 /*
 var $_local
 If (assertLocalParameter($assert; $_object; "_key"))
-$_object_key:=$_keyParam
+$_object._key:=$_keyParam
 End if 
 */
 assertParameterCount($assert)

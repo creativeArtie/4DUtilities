@@ -1,9 +1,13 @@
 //%attributes = {"shared":true}
 #DECLARE($testParam : Object; $methodParam : Text)
 
+error_flagForTest
+ON ERR CALL:C155("error_onErrCall")
+error_trapToolboxErrors
+
 var $assert; $test : Object
 $test:=New object:C1471
-$assert:=setupParameterAsserts(Count parameters:C259)
+$assert:=assertParameterSetup(Count parameters:C259)
 If (assertLocalParameter($assert; ->$test))
 	$test:=$testParam
 End if 
@@ -34,6 +38,24 @@ $test.expected:=$expect
 $test.actual:=$actual
 $test.assert()
 
-//$object:=test_param
+var $exception : Object
+EXECUTE METHOD:C1007($method; $actual)
+$test.given:="No parameter"
+$test.should:="Exception caught."
+$test.expected:=True:C214
+$test.actual:=error_catch(->$exception)
+$test.assert()
 
-//$object:=test_param("abc"; "cde"; "")
+EXECUTE METHOD:C1007($method; $actual; "abc"; "cde"; "")
+$test.given:="Too many parameters"
+$test.should:="Exception caught."
+$test.expected:=True:C214
+$test.actual:=error_catch(->$exception)
+$test.assert()
+
+
+$test.given:="Add exception captured."
+$test.should:="clean up and returns true."
+$test.expected:=True:C214
+$test.actual:=error_clearUncaughtExceptions
+$test.assert()

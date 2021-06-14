@@ -1,13 +1,18 @@
 //%attributes = {"shared":true}
-//! #brief sets a value 
-#DECLARE($input : Object; $value : Variant)->$output : Object
+//! #brief sets a value
+#DECLARE($inputParam : Object; $valueParam : Variant)->$output : Object
 
+var $assert : Object
+$assert:=assertParameterSetup(Count parameters:C259)
+If (assertLocalParameter($assert; ->$input))
+	$input:=$inputParam
+End if 
+If (assertLocalParameter($assert; ->$value))
+	$value:=$valueParam
+End if 
 var ${3} : Text  //! property keys
-
-var $count : Real
-$input:=utils_assertParameter($1; ->$count; Count parameters:C259)
-$value:=utils_assertParameter($2; ->$count; Count parameters:C259)
-$3:=utils_assertParameter($3; ->$count; Count parameters:C259)
+$assert.count:=$assert.count+1
+assertParameterAtLeast($assert; 3)
 
 var $child : Object
 $child:=$input

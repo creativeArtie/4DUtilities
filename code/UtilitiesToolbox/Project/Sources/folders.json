@@ -1,27 +1,39 @@
 ﻿{
-	"(Default Classes)": {},
-	"(Default Folder)": {
-		"groups": [
-			"(Default Classes)",
-			"(Default Forms)",
-			"(Default Project Methods)",
-			"(Default Tables)"
+	"Exceptions": {
+		"methods": [
+			"error_addException",
+			"error_assert",
+			"error_assertIf",
+			"error_catch",
+			"error_clearUncaughtExceptions",
+			"error_create",
+			"error_flagForTest",
+			"error_importanceToText",
+			"error_listUncaught",
+			"error_log",
+			"error_onErrCall",
+			"error_startup",
+			"error_throw",
+			"error_trapToolboxErrors",
+			"error_viewLog",
+			"error_warn"
 		]
 	},
-	"(Default Forms)": {},
-	"(Default Project Methods)": {},
-	"(Default Tables)": {},
+	"Objects": {
+		"methods": [
+			"getValueFromObject",
+			"setValueToObject"
+		]
+	},
 	"Parameters": {
 		"methods": [
 			"assertLocalParameter",
+			"assertNoParameters",
 			"assertObjectParameter",
+			"assertParameterAtLeast",
 			"assertParameterCount",
-			"setupParameterAsserts"
+			"assertParameterSetup"
 		]
 	},
-	"trash": {
-		"groups": [
-			"(Default Folder)"
-		]
-	}
+	"trash": {}
 }

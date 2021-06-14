@@ -2,7 +2,16 @@
 #DECLARE($counter : Object; $local : Pointer; $default : Variant)\
 ->$filled : Boolean
 ASSERT:C1129((Count parameters:C259>=2) & (Count parameters:C259<=3))
+/*
+var $assert : Object
+$assert:=assertParameterSetup(Count parameters)
 
+If (assertLocalParameter($assert; ->$_local))
+$_local:=$_localParam
+End if 
+
+assertParameterCount($assert)
+*/
 var $counter : Object
 var $contain : Boolean
 

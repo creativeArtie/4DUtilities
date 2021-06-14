@@ -3,7 +3,7 @@
 
 var $input1; $input2 : Text
 var $assert : Object
-$assert:=setupParameterAsserts(Count parameters:C259)
+$assert:=assertParameterSetup(Count parameters:C259)
 
 If (assertLocalParameter($assert; ->$input1))
 	$input1:=$input1Param
