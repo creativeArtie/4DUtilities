@@ -30,7 +30,11 @@
 			"ParamTest"
 		]
 	},
-	"Validator": {},
+	"Validator": {
+		"forms": [
+			"Form1"
+		]
+	},
 	"trash": {
 		"groups": [
 			"(Utilities)"

@@ -1,4 +1,22 @@
 ﻿{
+	"Accessors": {
+		"methods": [
+			"validate_fieldWidget"
+		],
+		"classes": [
+			"AccessField"
+		]
+	},
+	"Checkers": {
+		"methods": [
+			"validate_ageValue",
+			"validate_fillValue"
+		],
+		"classes": [
+			"CheckAge",
+			"CheckFilled"
+		]
+	},
 	"Exceptions": {
 		"methods": [
 			"error_addException",
@@ -33,6 +51,21 @@
 			"assertParameterAtLeast",
 			"assertParameterCount",
 			"assertParameterSetup"
+		]
+	},
+	"Validator": {
+		"groups": [
+			"Accessors",
+			"Checkers"
+		],
+		"methods": [
+			"getPointerName",
+			"validate_create"
+		],
+		"classes": [
+			"Accessor",
+			"Checker",
+			"Validator"
 		]
 	},
 	"trash": {}

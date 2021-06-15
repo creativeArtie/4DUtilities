@@ -1,0 +1,186 @@
+﻿{
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	},
+	"windowSizingX": "variable",
+	"windowSizingY": "variable",
+	"windowMinWidth": 0,
+	"windowMinHeight": 0,
+	"windowMaxWidth": 32767,
+	"windowMaxHeight": 32767,
+	"rightMargin": 20,
+	"bottomMargin": 20,
+	"events": [
+		"onLoad",
+		"onPageChange",
+		"onValidate",
+		"onClick",
+		"onDoubleClick",
+		"onOutsideCall",
+		"onBeginDragOver",
+		"onDragOver",
+		"onDrop",
+		"onAfterKeystroke",
+		"onMenuSelect",
+		"onPluginArea",
+		"onAfterEdit",
+		"onTimer",
+		"onBoundVariableChange"
+	],
+	"windowTitle": "window title",
+	"destination": "detailScreen",
+	"pages": [
+		{
+			"objects": {}
+		},
+		{
+			"objects": {
+				"fristName": {
+					"type": "input",
+					"left": 90,
+					"top": 39,
+					"width": 111,
+					"height": 16,
+					"dataSource": ""
+				},
+				"lastName": {
+					"type": "input",
+					"left": 90,
+					"top": 63,
+					"width": 111,
+					"height": 16,
+					"dataSource": ""
+				},
+				"Text": {
+					"type": "text",
+					"text": "First Name:",
+					"top": 40,
+					"left": 12,
+					"width": 63,
+					"height": 15
+				},
+				"Text1": {
+					"type": "text",
+					"text": "Last Name:",
+					"top": 64,
+					"left": 12,
+					"width": 63,
+					"height": 15
+				},
+				"company": {
+					"type": "input",
+					"left": 90,
+					"top": 87,
+					"width": 111,
+					"height": 16,
+					"dataSource": ""
+				},
+				"Text2": {
+					"type": "text",
+					"text": "Company",
+					"top": 88,
+					"left": 12,
+					"width": 63,
+					"height": 15
+				},
+				"Button": {
+					"type": "button",
+					"text": "Check",
+					"top": 335,
+					"left": 419,
+					"width": 79,
+					"height": 27,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button.4dm"
+				},
+				"List Box": {
+					"type": "listbox",
+					"left": 212,
+					"top": 34,
+					"width": 286,
+					"height": 135,
+					"events": [
+						"onClick",
+						"onHeaderClick",
+						"onDataChange",
+						"onSelectionChange"
+					],
+					"listboxType": "collection",
+					"dataSource": "Form:C1466.validator.warnings",
+					"columns": [
+						{
+							"header": {
+								"text": "Warrnings",
+								"name": "Header1"
+							},
+							"name": "Column1",
+							"footer": {
+								"name": "Footer1"
+							},
+							"dataSource": "This:C1470.message",
+							"width": 266
+						}
+					]
+				},
+				"List Box1": {
+					"type": "listbox",
+					"left": 212,
+					"top": 180,
+					"width": 286,
+					"height": 135,
+					"events": [
+						"onClick",
+						"onHeaderClick",
+						"onDataChange",
+						"onSelectionChange"
+					],
+					"listboxType": "collection",
+					"dataSource": "Form:C1466.validator.errors",
+					"columns": [
+						{
+							"header": {
+								"text": "Errors",
+								"name": "Header2"
+							},
+							"name": "Column2",
+							"footer": {
+								"name": "Footer2"
+							},
+							"dataSource": "This:C1470.message",
+							"width": 266
+						}
+					]
+				},
+				"age": {
+					"type": "input",
+					"left": 90,
+					"top": 112,
+					"width": 111,
+					"height": 16,
+					"dataSource": "",
+					"dataSourceTypeHint": "number"
+				},
+				"Text3": {
+					"type": "text",
+					"text": "Age",
+					"top": 113,
+					"left": 12,
+					"width": 63,
+					"height": 15
+				}
+			}
+		}
+	],
+	"geometryStamp": 56,
+	"method": "method.4dm",
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {}
+		}
+	}
+}

@@ -67,3 +67,34 @@ C_POINTER:C301(error_catch; $1)
 C_OBJECT:C1216(error_throw; $0)
 C_TEXT:C284(error_throw; $1)
 C_OBJECT:C1216(error_throw; $2)
+
+//error_clearUncaughtExceptions
+C_BOOLEAN:C305(error_clearUncaughtExceptions; $0)
+
+//error_importanceToText
+C_TEXT:C284(error_importanceToText; $0)
+C_REAL:C285(error_importanceToText; $1)
+
+//error_log
+C_TEXT:C284(error_log; $1)
+
+//error_warn
+C_TEXT:C284(error_warn; $1)
+
+//getExceptionDataClass
+C_OBJECT:C1216(getExceptionDataClass; $0)
+
+//getPointerName
+C_TEXT:C284(getPointerName; $0)
+C_POINTER:C301(getPointerName; $1)
+
+//validate_create
+C_OBJECT:C1216(validate_create; $0)
+
+//validate_fieldWidget
+C_OBJECT:C1216(validate_fieldWidget; $0)
+C_TEXT:C284(validate_fieldWidget; $1)
+C_TEXT:C284(validate_fieldWidget; $2)
+
+//validate_fillValue
+C_OBJECT:C1216(validate_fillValue; $0)
