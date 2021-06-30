@@ -3,18 +3,18 @@
 
 $result:=New object:C1471
 var $assert : Object
-$assert:=assertParameterSetup(Count parameters:C259)
+$assert:=wk_assertParameterSetup(Count parameters:C259)
 
-If (assertObjectParameter($assert; $result; "param1"))
+If (wk_assertObjectParameter($assert; $result; "param1"))
 	$result.param1:=$input1Param
 End if 
-If (assertObjectParameter($assert; $result; "param2"; "World"))
+If (wk_assertObjectParameter($assert; $result; "param2"; "World"))
 	$result.param2:=$input2Param
 End if 
 /*
 var $_local
-If (assertLocalParameter($assert; $_object; "_key"))
+If (wk_assertLocalParameter($assert; $_object; "_key"))
 $_object._key:=$_keyParam
 End if 
 */
-assertParameterCount($assert)
+wk_assertParameterCount($assert)

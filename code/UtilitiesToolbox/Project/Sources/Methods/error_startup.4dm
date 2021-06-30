@@ -1,5 +1,5 @@
 //%attributes = {}
-assertNoParameters(Count parameters:C259)
+wk_assertNoParameters(Count parameters:C259)
 
 Use (Storage:C1525)
 	Storage:C1525.utils_except:=New shared object:C1526
@@ -19,7 +19,7 @@ While (True:C214)
 			
 			$id:=Num:C11($key)
 			If (Process state:C330($id)=Aborted:K13:1)
-				// Add error to 
+				// Add error to
 				var $throwable : Object
 				For each ($throwable; Storage:C1525.utils_except.uncaught[$key])
 					var $exception : Object

@@ -2,20 +2,20 @@
 #DECLARE($passedParam : Boolean; $messageParam : Text)->$thrown : Object
 
 var $assert : Object
-$assert:=assertParameterSetup(Count parameters:C259)
+$assert:=wk_assertParameterSetup(Count parameters:C259)
 
 var $passed : Boolean
-If (assertLocalParameter($assert; ->$passed))
+If (wk_assertLocalParameter($assert; ->$passed))
 	$passed:=$passedParam
 End if 
 
 var $message
-If (assertLocalParameter($assert; ->$message))
+If (wk_assertLocalParameter($assert; ->$message))
 	$message:=$messageParam
 End if 
 
-assertParameterCount($assert)
+wk_assertParameterCount($assert)
 
 If (Not:C34($passed))
-	$thrown:=error_throw($message)
+	$thrown:=wk_error_throw($message)
 End if 

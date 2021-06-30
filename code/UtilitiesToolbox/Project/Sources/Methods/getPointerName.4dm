@@ -2,14 +2,14 @@
 #DECLARE($pointerParam : Pointer)->$result : Text
 
 var $assert : Object
-$assert:=assertParameterSetup(Count parameters:C259)
+$assert:=wk_assertParameterSetup(Count parameters:C259)
 
 var $pointer
-If (assertLocalParameter($assert; ->$pointer))
+If (wk_assertLocalParameter($assert; ->$pointer))
 	$pointer:=$pointerParam
 End if 
 
-assertParameterCount($assert)
+wk_assertParameterCount($assert)
 
 
 var $name : Text

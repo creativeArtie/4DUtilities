@@ -1,13 +1,13 @@
 Class constructor($input1Param : Text; $input2Param : Text)
 	var $assert : Object
-	$assert:=assertParameterSetup(Count parameters:C259)
+	$assert:=wk_assertParameterSetup(Count parameters:C259)
 	
-	If (assertObjectParameter($assert; This:C1470; "param1"))
+	If (wk_assertObjectParameter($assert; This:C1470; "param1"))
 		This:C1470.param1:=$input1Param
 	End if 
-	If (assertObjectParameter($assert; This:C1470; "param2"; "World"))
+	If (wk_assertObjectParameter($assert; This:C1470; "param2"; "World"))
 		This:C1470.param2:=$input2Param
 	End if 
-	assertParameterCount($assert)
+	wk_assertParameterCount($assert)
 	
 	

@@ -1,2 +1,2 @@
 //%attributes = {}
-error_viewLog
+wk_error_viewLog

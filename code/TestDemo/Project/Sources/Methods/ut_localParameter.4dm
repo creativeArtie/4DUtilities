@@ -2,6 +2,6 @@
 // __UNIT_TEST
 
 var $test : Object
-$test:=AJ_UnitTest.new("assertLocalParameter"; Current method name:C684; "Parameters")
+$test:=AJ_UnitTest.new("wk_assertLocalParameter"; Current method name:C684; "Parameters")
 
 ut_param($test; "test_localParameter")

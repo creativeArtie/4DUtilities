@@ -3,14 +3,14 @@
 
 
 var $assert : Object
-$assert:=assertParameterSetup(Count parameters:C259)
+$assert:=wk_assertParameterSetup(Count parameters:C259)
 
 var $export
-If (assertLocalParameter($assert; ->$export))
+If (wk_assertLocalParameter($assert; ->$export))
 	$export:=$exportParam
 End if 
 
-assertParameterCount($assert)
+wk_assertParameterCount($assert)
 
 var $collection : Collection
 $collection:=error_listUncaught

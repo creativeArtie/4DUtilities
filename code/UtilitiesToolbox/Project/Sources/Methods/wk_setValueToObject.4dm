@@ -3,16 +3,20 @@
 #DECLARE($inputParam : Object; $valueParam : Variant)->$output : Object
 
 var $assert : Object
-$assert:=assertParameterSetup(Count parameters:C259)
-If (assertLocalParameter($assert; ->$input))
+$assert:=wk_assertParameterSetup(Count parameters:C259)
+
+var $input : Object
+If (wk_assertLocalParameter($assert; ->$input))
 	$input:=$inputParam
 End if 
-If (assertLocalParameter($assert; ->$value))
+
+var $value : Variant
+If (wk_assertLocalParameter($assert; ->$value))
 	$value:=$valueParam
 End if 
 var ${3} : Text  //! property keys
 $assert.count:=$assert.count+1
-assertParameterAtLeast($assert; 3)
+wk_assertParameterAtLeast($assert; 3)
 
 var $child : Object
 $child:=$input

@@ -13,7 +13,8 @@
 	"Object": {
 		"methods": [
 			"ut_getValueFromObject",
-			"ut_setValueToObject"
+			"ut_setValueToObject",
+			"ut_updateValuesFromObject"
 		]
 	},
 	"Parameters": {
@@ -31,8 +32,13 @@
 		]
 	},
 	"Validator": {
+		"tables": [
+			"Customers"
+		],
 		"forms": [
-			"Form1"
+			"[Customers]Edit",
+			"[Customers]Form1",
+			"Validation"
 		]
 	},
 	"trash": {

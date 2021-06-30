@@ -36,51 +36,51 @@
 		},
 		{
 			"objects": {
-				"fristName": {
+				"firstName": {
 					"type": "input",
-					"left": 90,
-					"top": 39,
+					"left": 91,
+					"top": 19,
 					"width": 111,
 					"height": 16,
-					"dataSource": ""
+					"dataSource": "[Customer:2]firstName:2"
 				},
 				"lastName": {
 					"type": "input",
-					"left": 90,
-					"top": 63,
+					"left": 91,
+					"top": 43,
 					"width": 111,
 					"height": 16,
-					"dataSource": ""
+					"dataSource": "[Customers:2]lastName:3"
 				},
 				"Text": {
 					"type": "text",
 					"text": "First Name:",
-					"top": 40,
-					"left": 12,
+					"top": 20,
+					"left": 13,
 					"width": 63,
 					"height": 15
 				},
 				"Text1": {
 					"type": "text",
 					"text": "Last Name:",
-					"top": 64,
-					"left": 12,
+					"top": 44,
+					"left": 13,
 					"width": 63,
 					"height": 15
 				},
 				"company": {
 					"type": "input",
-					"left": 90,
-					"top": 87,
+					"left": 91,
+					"top": 67,
 					"width": 111,
 					"height": 16,
-					"dataSource": ""
+					"dataSource": "[Customers:2]company:5"
 				},
 				"Text2": {
 					"type": "text",
-					"text": "Company",
-					"top": 88,
-					"left": 12,
+					"text": "Company:",
+					"top": 68,
+					"left": 13,
 					"width": 63,
 					"height": 15
 				},
@@ -94,12 +94,14 @@
 					"events": [
 						"onClick"
 					],
-					"method": "ObjectMethods/Button.4dm"
+					"method": "ObjectMethods/Button.4dm",
+					"sizingY": "move",
+					"sizingX": "move"
 				},
 				"List Box": {
 					"type": "listbox",
 					"left": 212,
-					"top": 34,
+					"top": 19,
 					"width": 286,
 					"height": 135,
 					"events": [
@@ -110,6 +112,7 @@
 					],
 					"listboxType": "collection",
 					"dataSource": "Form:C1466.validator.warnings",
+					"sizingX": "grow",
 					"columns": [
 						{
 							"header": {
@@ -128,7 +131,7 @@
 				"List Box1": {
 					"type": "listbox",
 					"left": 212,
-					"top": 180,
+					"top": 165,
 					"width": 286,
 					"height": 135,
 					"events": [
@@ -139,6 +142,8 @@
 					],
 					"listboxType": "collection",
 					"dataSource": "Form:C1466.validator.errors",
+					"sizingX": "grow",
+					"sizingY": "grow",
 					"columns": [
 						{
 							"header": {
@@ -156,25 +161,25 @@
 				},
 				"age": {
 					"type": "input",
-					"left": 90,
-					"top": 112,
+					"left": 91,
+					"top": 92,
 					"width": 111,
 					"height": 16,
-					"dataSource": "",
-					"dataSourceTypeHint": "number"
+					"dataSource": "[Customers:2]birthday:4",
+					"dataSourceTypeHint": "date"
 				},
 				"Text3": {
 					"type": "text",
 					"text": "Age",
-					"top": 113,
-					"left": 12,
+					"top": 93,
+					"left": 13,
 					"width": 63,
 					"height": 15
 				}
 			}
 		}
 	],
-	"geometryStamp": 56,
+	"geometryStamp": 9,
 	"method": "method.4dm",
 	"editor": {
 		"activeView": "View 1",

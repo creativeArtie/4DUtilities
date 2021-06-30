@@ -1,18 +1,23 @@
 Class extends Checker
-Class constructor($min : Real; $max : Real)
+Class constructor($minParam : Real; $maxParam : Real)
 	
 	var $assert : Object
-	$assert:=assertParameterSetup(Count parameters:C259)
+	$assert:=wk_assertParameterSetup(Count parameters:C259)
 	
-	If (assertObjectParameter($assert; This:C1470; "min"))
-		This:C1470.min:=$min
-	End if 
-	If (assertObjectParameter($assert; This:C1470; "max"))
-		This:C1470.max:=$max
+	var $min : Real
+	If (wk_assertLocalParameter($assert; ->$min; 18))
+		$min:=$minParam
 	End if 
 	
-	assertParameterCount($assert)
-	
+	var $max : Real
+	If (wk_assertLocalParameter($assert; ->$max; 100))
+		$max:=$maxParam
+	End if 
+	wk_assertParameterCount($assert)
+	Super:C1705("$1 is not within the ages of "+String:C10($min)+\
+		" and "+String:C10($max))
+	This:C1470.min:=$min
+	This:C1470.max:=$max
 	
 Function test($value : Variant)->$result : Boolean
 	var $age : Integer  //! the calculated age
@@ -23,7 +28,3 @@ Function test($value : Variant)->$result : Boolean
 			$age:=Num:C11($value)
 	End case 
 	$0:=(This:C1470.min<=$age) & ($age<=This:C1470.max)
-	
-Function getMessageTemplate($type : Real)->$template : Text
-	$0:="$1 is not within the ages of "+String:C10(This:C1470.min)+\
-		" and "+String:C10(This:C1470.max)

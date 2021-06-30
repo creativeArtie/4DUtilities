@@ -1,6 +1,6 @@
 //%attributes = {"shared":true}
 #DECLARE->$hadErrors : Boolean
-assertNoParameters(Count parameters:C259)
+wk_assertNoParameters(Count parameters:C259)
 
 var $errors : Collection
 $errors:=error_listUncaught

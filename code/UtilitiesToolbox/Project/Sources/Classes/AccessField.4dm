@@ -10,13 +10,13 @@ Function getValue
 Function updateWidget($typeParam : Integer)
 	
 	var $assert : Object
-	$assert:=assertParameterSetup(Count parameters:C259)
+	$assert:=wk_assertParameterSetup(Count parameters:C259)
 	
 	var $type
-	If (assertLocalParameter($assert; ->$type))
+	If (wk_assertLocalParameter($assert; ->$type))
 		$type:=$typeParam
 	End if 
-	assertParameterCount($assert)
+	wk_assertParameterCount($assert)
 	
 	var $background : Variant
 	Case of 

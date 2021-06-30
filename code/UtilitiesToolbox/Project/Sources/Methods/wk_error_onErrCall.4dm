@@ -1,5 +1,5 @@
 //%attributes = {"shared":true}
-assertNoParameters(Count parameters:C259)
+wk_assertNoParameters(Count parameters:C259)
 
 var $reason : Object
 $reason:=New object:C1471
@@ -20,4 +20,4 @@ ARRAY TO COLLECTION:C1563($reason.codes; $codes)
 ARRAY TO COLLECTION:C1563($reason.intComp; $comp)
 ARRAY TO COLLECTION:C1563($reason.text; $text)
 
-error_throw("Error code from 4d: "+$text{1}; $reason)
+wk_error_throw("Error code from 4d: "+$text{1}; $reason)

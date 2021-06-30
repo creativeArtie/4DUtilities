@@ -3,13 +3,13 @@
 
 
 var $assert : Object
-$assert:=assertParameterSetup(Count parameters:C259)
+$assert:=wk_assertParameterSetup(Count parameters:C259)
 
 var $importance
-If (assertLocalParameter($assert; ->$importance))
+If (wk_assertLocalParameter($assert; ->$importance))
 	$importance:=$importanceParam
 End if 
-assertParameterCount($assert)
+wk_assertParameterCount($assert)
 
 Case of 
 	: ($importance=Information message:K38:1)

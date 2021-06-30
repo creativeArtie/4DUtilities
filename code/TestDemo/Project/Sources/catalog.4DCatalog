@@ -38,6 +38,26 @@
 			</editor_table_info>
 		</table_extra>
 	</table>
+	<table name="Customers" uuid="54DBB5C529CB184F9923017E6A90BFB3" id="2">
+		<field name="ID" uuid="A2C24FA834B4274A8FEDA79A928FEA7A" type="4" unique="true" autosequence="true" not_null="true" id="1"/>
+		<field name="firstName" uuid="E960436CE89BD84C81585A0C47B183BE" type="10" limiting_length="255" never_null="true" id="2"/>
+		<field name="lastName" uuid="91363BC0D9244B42BF4671DD8D7CA3D4" type="10" limiting_length="255" never_null="true" id="3"/>
+		<field name="birthday" uuid="0C0C1779A8AD2C4EAFAD1C3F80AC10C1" type="10" limiting_length="255" never_null="true" id="4"/>
+		<field name="company" uuid="2B13A3D5CAB0C34DB582D851A189ED92" type="10" limiting_length="255" never_null="true" id="5"/>
+		<field name="city" uuid="E45FE16896FBD240B383FD47A5E3FF66" type="10" limiting_length="255" never_null="true" id="6"/>
+		<primary_key field_name="ID" field_uuid="A2C24FA834B4274A8FEDA79A928FEA7A"/>
+		<table_extra input_form="Edit" output_form="Form1">
+			<editor_table_info displayable_fields_count="6">
+				<color red="255" green="255" blue="255" alpha="0"/>
+				<coordinates left="417" top="85" width="120" height="167.33203125"/>
+			</editor_table_info>
+		</table_extra>
+	</table>
+	<index kind="regular" unique_keys="true" uuid="326DE591461E474984638D4AE1007ABF" type="7">
+		<field_ref uuid="A2C24FA834B4274A8FEDA79A928FEA7A" name="ID">
+			<table_ref uuid="54DBB5C529CB184F9923017E6A90BFB3" name="Customers"/>
+		</field_ref>
+	</index>
 	<index kind="regular" unique_keys="true" uuid="63CADAE722467E4EBE201B4E2EB4C1C2" type="7">
 		<field_ref uuid="518338F1F9FBCF4392A56C4529B72895" name="ID">
 			<table_ref uuid="3F43B832668BA748BD327465E5988FF3" name="Exceptions"/>

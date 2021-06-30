@@ -1,56 +1,63 @@
 ﻿{
 	"Accessors": {
 		"methods": [
-			"validate_fieldWidget"
+			"wk_validate_fieldWidget"
 		],
 		"classes": [
-			"AccessField"
+			"AccessField",
+			"AccessValue"
 		]
 	},
 	"Checkers": {
 		"methods": [
-			"validate_ageValue",
-			"validate_fillValue"
+			"wk_validate_ageValue",
+			"wk_validate_comparedValue",
+			"wk_validate_fillValue",
+			"wk_validate_notValue",
+			"wk_validate_whenValue"
 		],
 		"classes": [
 			"CheckAge",
-			"CheckFilled"
+			"CheckFilled",
+			"CheckNot",
+			"CheckNumber",
+			"CheckWhen"
 		]
 	},
 	"Exceptions": {
 		"methods": [
 			"error_addException",
-			"error_assert",
-			"error_assertIf",
-			"error_catch",
-			"error_clearUncaughtExceptions",
 			"error_create",
-			"error_flagForTest",
 			"error_importanceToText",
 			"error_listUncaught",
-			"error_log",
-			"error_onErrCall",
 			"error_startup",
-			"error_throw",
-			"error_trapToolboxErrors",
-			"error_viewLog",
-			"error_warn"
+			"wk_error_assert",
+			"wk_error_assertIf",
+			"wk_error_catch",
+			"wk_error_clearUncaught",
+			"wk_error_flagForTest",
+			"wk_error_log",
+			"wk_error_throw",
+			"wk_error_trapToolboxErrors",
+			"wk_error_viewLog",
+			"wk_error_warn"
 		]
 	},
 	"Objects": {
 		"methods": [
-			"getValueFromObject",
-			"setValueToObject"
+			"wk_getValueFromObject",
+			"wk_setValueToObject",
+			"wk_updateValueFromObject"
 		]
 	},
 	"Parameters": {
 		"methods": [
-			"assertLocalParameter",
-			"assertNoParameters",
-			"assertObjectParameter",
-			"assertParameterAtLeast",
-			"assertParameterCount",
-			"assertParameterSetup"
+			"wk_assertLocalParameter",
+			"wk_assertNoParameters",
+			"wk_assertObjectParameter",
+			"wk_assertParameterAtLeast",
+			"wk_assertParameterCount",
+			"wk_assertParameterSetup"
 		]
 	},
 	"Validator": {
@@ -60,7 +67,7 @@
 		],
 		"methods": [
 			"getPointerName",
-			"validate_create"
+			"wk_validate_create"
 		],
 		"classes": [
 			"Accessor",

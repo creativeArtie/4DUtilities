@@ -2,19 +2,20 @@
 #DECLARE($idParam : Text; $nameParam : Text)->$accessor : Object
 
 var $assert : Object
-$assert:=assertParameterSetup(Count parameters:C259)
+$assert:=wk_assertParameterSetup(Count parameters:C259)
 
 var $id : Text
-If (assertLocalParameter($assert; ->$id))
+If (wk_assertLocalParameter($assert; ->$id))
 	$id:=$idParam
 End if 
 
 var $pointer : Pointer
 $pointer:=OBJECT Get pointer:C1124(Object named:K67:5; $id)
+ASSERT:C1129($pointer#Null:C1517)
 var $name : Text
-If (assertLocalParameter($assert; ->$name; getPointerName($pointer)))
+If (wk_assertLocalParameter($assert; ->$name; getPointerName($pointer)))
 	$name:=$nameParam
 End if 
 
 $accessor:=cs:C1710.AccessField.new($id; $name)
-assertParameterCount($assert)
+wk_assertParameterCount($assert)
