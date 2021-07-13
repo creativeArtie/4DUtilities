@@ -4,11 +4,11 @@ Case of
 		var $checker; $field : Object
 		var $ptr : Pointer
 		
-		$checker:=wk_validate_whenValue(Formula:C1597([Customers:2]lastName:3#""))
+		$checker:=wk_validate_ifValue(Formula:C1597([Customers:2]lastName:3#""))
 		$field:=wk_validate_fieldWidget("firstName"; "First Name")
 		Form:C1466.validator.addManadatory($checker; $field)
 		
-		$checker:=wk_validate_whenValue(Formula:C1597([Customers:2]firstName:2#""))
+		$checker:=wk_validate_ifValue(Formula:C1597([Customers:2]firstName:2#""))
 		$field:=wk_validate_fieldWidget("lastName"; "Last Name")
 		Form:C1466.validator.addManadatory($checker; $field)
 		

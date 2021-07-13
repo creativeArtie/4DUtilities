@@ -19,4 +19,4 @@ End if
 
 wk_assertParameterCount($assert)
 
-$accessor:=cs:C1710.AccessField.new($id; $name)
+$accessor:=cs:C1710.AccessComboBox.new($id; $name)

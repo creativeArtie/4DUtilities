@@ -13,20 +13,23 @@
 	"bottomMargin": 20,
 	"events": [
 		"onLoad",
-		"onPageChange",
 		"onValidate",
 		"onClick",
-		"onDoubleClick",
 		"onOutsideCall",
-		"onBeginDragOver",
-		"onDragOver",
+		"onDoubleClick",
+		"onLosingFocus",
+		"onGettingFocus",
 		"onDrop",
-		"onAfterKeystroke",
 		"onMenuSelect",
 		"onPluginArea",
-		"onAfterEdit",
+		"onDataChange",
+		"onDragOver",
 		"onTimer",
-		"onBoundVariableChange"
+		"onAfterKeystroke",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
 	],
 	"windowTitle": "window title",
 	"destination": "detailScreen",
@@ -56,7 +59,7 @@
 					"type": "text",
 					"text": "First Name:",
 					"top": 40,
-					"left": 12,
+					"left": 17,
 					"width": 63,
 					"height": 15
 				},
@@ -64,7 +67,7 @@
 					"type": "text",
 					"text": "Last Name:",
 					"top": 64,
-					"left": 12,
+					"left": 17,
 					"width": 63,
 					"height": 15
 				},
@@ -80,21 +83,22 @@
 					"type": "text",
 					"text": "Company:",
 					"top": 88,
-					"left": 12,
+					"left": 17,
 					"width": 63,
 					"height": 15
 				},
-				"Button": {
+				"commit": {
 					"type": "button",
-					"text": "Check",
-					"top": 335,
+					"text": "Commit",
+					"top": 320,
 					"left": 419,
 					"width": 79,
 					"height": 27,
 					"events": [
 						"onClick"
 					],
-					"method": "ObjectMethods/Button.4dm"
+					"action": "accept",
+					"sizingX": "move"
 				},
 				"List Box": {
 					"type": "listbox",
@@ -110,6 +114,7 @@
 					],
 					"listboxType": "collection",
 					"dataSource": "Form:C1466.validator.warnings",
+					"sizingX": "grow",
 					"columns": [
 						{
 							"header": {
@@ -139,6 +144,7 @@
 					],
 					"listboxType": "collection",
 					"dataSource": "Form:C1466.validator.errors",
+					"sizingX": "grow",
 					"columns": [
 						{
 							"header": {
@@ -167,7 +173,7 @@
 					"type": "text",
 					"text": "Age",
 					"top": 113,
-					"left": 12,
+					"left": 17,
 					"width": 63,
 					"height": 15
 				},
@@ -181,11 +187,67 @@
 					"events": [
 						"onClick"
 					]
+				},
+				"Text4": {
+					"type": "text",
+					"text": "Gender:",
+					"top": 140,
+					"left": 17,
+					"width": 63,
+					"height": 15
+				},
+				"gender": {
+					"type": "combo",
+					"left": 90,
+					"top": 136,
+					"width": 111,
+					"height": 19,
+					"events": [
+						"onDataChange"
+					],
+					"choiceList": [
+						"Male",
+						"Female"
+					]
+				},
+				"ignore": {
+					"type": "button",
+					"text": "Ignore and Commit",
+					"top": 320,
+					"left": 291,
+					"width": 120,
+					"height": 27,
+					"events": [
+						"onClick"
+					],
+					"action": "accept",
+					"sizingX": "move"
+				},
+				"Text5": {
+					"type": "text",
+					"text": "Phone",
+					"top": 165,
+					"left": 17,
+					"width": 63,
+					"height": 15
+				},
+				"homephone": {
+					"type": "input",
+					"left": 90,
+					"top": 165,
+					"width": 111,
+					"height": 16,
+					"dataSource": "",
+					"dataSourceTypeHint": "text",
+					"method": "ObjectMethods/homephone.4dm",
+					"events": [
+						"onDataChange"
+					]
 				}
 			}
 		}
 	],
-	"geometryStamp": 62,
+	"geometryStamp": 103,
 	"method": "method.4dm",
 	"editor": {
 		"activeView": "View 1",

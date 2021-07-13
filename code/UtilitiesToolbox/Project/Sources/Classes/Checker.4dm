@@ -12,5 +12,5 @@ Class constructor($warningParam : Text; $errorParam : Text)
 	
 	wk_assertParameterCount($assert)
 	
-Function test($value : Variant)->$result : Integer
+Function test($value : Variant)->$result : Boolean
 	ASSERT:C1129(False:C215; "Needs implementation.")

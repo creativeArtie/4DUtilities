@@ -1,12 +1,13 @@
 Class extends Checker
-Class constructor($checkerParam : cs:C1710.checkerer)
+Class constructor($checkerParam : cs:C1710.Checker)
 	
 	var $assert : Object
 	$assert:=wk_assertParameterSetup(Count parameters:C259)
 	
-	var $checker : cs:C1710.checkerer
+	var $checker : cs:C1710.Checker
 	If (wk_assertLocalParameter($assert; ->$checker))
 		$checker:=$checkerParam
+		ASSERT:C1129(OB Instance of:C1731($checkerParam; cs:C1710.Checker))
 	End if 
 	
 	wk_assertParameterCount($assert)

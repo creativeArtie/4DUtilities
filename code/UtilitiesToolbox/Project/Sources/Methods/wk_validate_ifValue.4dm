@@ -18,4 +18,4 @@ End if
 
 wk_assertParameterCount($assert)
 
-$answer:=cs:C1710.CheckWhen.new($onlyWhen; $checker)
+$answer:=cs:C1710.CheckIf.new($onlyWhen; $checker)

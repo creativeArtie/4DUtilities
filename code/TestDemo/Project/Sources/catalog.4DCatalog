@@ -49,7 +49,23 @@
 		<table_extra input_form="Edit" output_form="Form1">
 			<editor_table_info displayable_fields_count="6">
 				<color red="255" green="255" blue="255" alpha="0"/>
-				<coordinates left="417" top="85" width="120" height="167.33203125"/>
+				<coordinates left="532" top="77" width="120" height="167.33203125"/>
+			</editor_table_info>
+		</table_extra>
+	</table>
+	<table name="PhoneFormats" uuid="734326C7C90E2441883CD2230D5A5DD6" id="3">
+		<field name="ID" uuid="493CB65D9A6AB84CA2C4C0FF4EA4D5DE" type="4" unique="true" autosequence="true" not_null="true" id="1"/>
+		<field name="formatOrder" uuid="D9B2CB104256DE438497F53E58B9AE58" type="3" never_null="true" id="2"/>
+		<field name="countryCode" uuid="9EFC052EC2CE964EAE38B827C834DB52" type="10" limiting_length="255" never_null="true" id="3"/>
+		<field name="callingCode" uuid="9A71D946CD1BF8459899C561EF745715" type="10" limiting_length="255" never_null="true" id="4"/>
+		<field name="trunkCode" uuid="461E4D4D985B5F44930F297E99BE3F22" type="10" limiting_length="255" never_null="true" id="5"/>
+		<field name="matchFormat" uuid="33AE81972737B04B8ED219BB06F4BFE9" type="10" limiting_length="255" never_null="true" id="6"/>
+		<field name="outputFormat" uuid="BECFD11425D687419B287B8D02712A6D" type="10" limiting_length="255" never_null="true" id="7"/>
+		<primary_key field_name="ID" field_uuid="493CB65D9A6AB84CA2C4C0FF4EA4D5DE"/>
+		<table_extra>
+			<editor_table_info displayable_fields_count="7">
+				<color red="255" green="255" blue="255" alpha="0"/>
+				<coordinates left="281" top="52" width="120" height="191.33203125"/>
 			</editor_table_info>
 		</table_extra>
 	</table>
@@ -61,6 +77,11 @@
 	<index kind="regular" unique_keys="true" uuid="63CADAE722467E4EBE201B4E2EB4C1C2" type="7">
 		<field_ref uuid="518338F1F9FBCF4392A56C4529B72895" name="ID">
 			<table_ref uuid="3F43B832668BA748BD327465E5988FF3" name="Exceptions"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="CBD61A043C1FF34A878BE33C579D0145" type="7">
+		<field_ref uuid="493CB65D9A6AB84CA2C4C0FF4EA4D5DE" name="ID">
+			<table_ref uuid="734326C7C90E2441883CD2230D5A5DD6" name="PhoneFormats"/>
 		</field_ref>
 	</index>
 	<base_extra __stringCompHash="icu:68.1.0" __keywordBuildingHash="icu:68.1.0"/>

@@ -10,3 +10,5 @@
 //declare_free
 
 declared_filled
+
+//declared_counter

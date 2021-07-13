@@ -1,11 +1,16 @@
 ﻿{
 	"Accessors": {
 		"methods": [
-			"wk_validate_fieldWidget"
+			"orderPhoneFormats",
+			"wk_validate_comboboxWidget",
+			"wk_validate_fieldWidget",
+			"wk_validate_pointerWidget"
 		],
 		"classes": [
+			"AccessComboBox",
 			"AccessField",
-			"AccessValue"
+			"AccessFormat",
+			"AccessPointer"
 		]
 	},
 	"Checkers": {
@@ -13,15 +18,17 @@
 			"wk_validate_ageValue",
 			"wk_validate_comparedValue",
 			"wk_validate_fillValue",
+			"wk_validate_ifValue",
 			"wk_validate_notValue",
-			"wk_validate_whenValue"
+			"wk_validate_trueValue"
 		],
 		"classes": [
 			"CheckAge",
 			"CheckFilled",
+			"CheckFormat",
 			"CheckNot",
 			"CheckNumber",
-			"CheckWhen"
+			"CheckTrue"
 		]
 	},
 	"Exceptions": {
@@ -37,10 +44,27 @@
 			"wk_error_clearUncaught",
 			"wk_error_flagForTest",
 			"wk_error_log",
+			"wk_error_onErrCall",
 			"wk_error_throw",
 			"wk_error_trapToolboxErrors",
 			"wk_error_viewLog",
 			"wk_error_warn"
+		],
+		"forms": [
+			"ExceptionLog"
+		]
+	},
+	"Formatted": {
+		"methods": [
+			"createPhoneFormat",
+			"validate_format",
+			"wk_seedPhoneFormats",
+			"wk_validateOptionalFormat",
+			"wk_validateRequireFormat"
+		],
+		"classes": [
+			"Formatter",
+			"PhoneFormatter"
 		]
 	},
 	"Objects": {
@@ -63,7 +87,8 @@
 	"Validator": {
 		"groups": [
 			"Accessors",
-			"Checkers"
+			"Checkers",
+			"Formatted"
 		],
 		"methods": [
 			"getPointerName",

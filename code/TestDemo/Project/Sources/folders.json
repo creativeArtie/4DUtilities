@@ -1,9 +1,6 @@
 ﻿{
 	"(Utilities)": {},
 	"exceptions": {
-		"tables": [
-			"Exceptions"
-		],
 		"methods": [
 			"error_demo",
 			"error_observe",
