@@ -26,9 +26,20 @@
 			"CheckAge",
 			"CheckFilled",
 			"CheckFormat",
+			"CheckIf",
 			"CheckNot",
 			"CheckNumber",
 			"CheckTrue"
+		]
+	},
+	"Documentation": {
+		"groups": [
+			"sections",
+			"utils",
+			"values"
+		],
+		"methods": [
+			"wk_doc_run"
 		]
 	},
 	"Exceptions": {
@@ -84,6 +95,29 @@
 			"wk_assertParameterSetup"
 		]
 	},
+	"sections": {
+		"classes": [
+			"DocClass_",
+			"DocFile_",
+			"DocFunction_",
+			"DocMethod_",
+			"DocSection_",
+			"DocTree_"
+		]
+	},
+	"utils": {
+		"methods": [
+			"doc_findFiles_",
+			"doc_outputBadge_",
+			"doc_splitLines"
+		],
+		"classes": [
+			"DocCommon_",
+			"DocHtmlTable_",
+			"DocLine_",
+			"DocMermaid_"
+		]
+	},
 	"Validator": {
 		"groups": [
 			"Accessors",
@@ -98,6 +132,17 @@
 			"Accessor",
 			"Checker",
 			"Validator"
+		]
+	},
+	"values": {
+		"methods": [
+			"doc_buildValue_",
+			"doc_splitValueType_"
+		],
+		"classes": [
+			"DocParam_",
+			"DocReturn_",
+			"DocValue_"
 		]
 	},
 	"trash": {}
