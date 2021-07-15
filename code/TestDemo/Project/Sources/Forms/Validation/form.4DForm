@@ -235,7 +235,7 @@
 					"type": "input",
 					"left": 90,
 					"top": 165,
-					"width": 111,
+					"width": 90,
 					"height": 16,
 					"dataSource": "",
 					"dataSourceTypeHint": "text",
@@ -243,11 +243,22 @@
 					"events": [
 						"onDataChange"
 					]
+				},
+				"countryCode": {
+					"type": "input",
+					"left": 184,
+					"top": 165,
+					"width": 17,
+					"height": 16,
+					"dataSource": "Form:C1466.phoneFormat.category",
+					"enterable": false,
+					"borderStyle": "none",
+					"focusable": false
 				}
 			}
 		}
 	],
-	"geometryStamp": 103,
+	"geometryStamp": 116,
 	"method": "method.4dm",
 	"editor": {
 		"activeView": "View 1",

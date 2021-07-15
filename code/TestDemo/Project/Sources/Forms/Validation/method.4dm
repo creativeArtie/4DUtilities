@@ -20,8 +20,10 @@ Case of
 		Form:C1466.validator.addOptional($checker; $field)
 		
 		wk_seedPhoneFormats
-		Form:C1466.phoneFormat:=wk_validateOptionalFormat(Form:C1466.validator; \
-			"phone"; "homephone"; "Home Phone"; "CA")
+		Form:C1466.phoneFormat:=wk_validate_formattedWidget("homephone"; "Home Phone")
+		var $formatter : Object
+		$formatter:=wk_createPhoneFormat("CA")
+		Form:C1466.validator.addManadatoryFormat(Form:C1466.phoneFormat; $formatter)
 End case 
 
 Form:C1466.validator.runCheck()

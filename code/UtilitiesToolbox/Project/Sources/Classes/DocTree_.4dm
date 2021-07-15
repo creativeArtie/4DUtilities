@@ -25,7 +25,7 @@ Function addClass($classParam : cs:C1710.DocClass_; $rootParam : cs:C1710.DocTre
 	End if 
 	var $root; $current : cs:C1710.DocTree_
 	$current:=cs:C1710.DocTree_.new($class.name)
-	If (wk_assertLocalParameter($assert; ->$root; $current)
+	If (wk_assertLocalParameter($assert; ->$root; $current))
 		$root:=$rootParam
 	End if 
 	

@@ -1,9 +1,11 @@
 ﻿{
 	"Accessors": {
 		"methods": [
+			"Compiler_Variables",
 			"orderPhoneFormats",
 			"wk_validate_comboboxWidget",
 			"wk_validate_fieldWidget",
+			"wk_validate_formattedWidget",
 			"wk_validate_pointerWidget"
 		],
 		"classes": [
@@ -16,14 +18,17 @@
 	"Checkers": {
 		"methods": [
 			"wk_validate_ageValue",
+			"wk_validate_caseSensitiveValue",
 			"wk_validate_comparedValue",
 			"wk_validate_fillValue",
 			"wk_validate_ifValue",
 			"wk_validate_notValue",
+			"wk_validate_regexValue",
 			"wk_validate_trueValue"
 		],
 		"classes": [
 			"CheckAge",
+			"CheckCaseSenitiveText",
 			"CheckFilled",
 			"CheckFormat",
 			"CheckIf",
@@ -68,12 +73,12 @@
 	"Formatted": {
 		"methods": [
 			"createPhoneFormat",
-			"validate_format",
-			"wk_seedPhoneFormats",
-			"wk_validateOptionalFormat",
-			"wk_validateRequireFormat"
+			"wk_createEmailFormat",
+			"wk_createPhoneFormat",
+			"wk_seedPhoneFormats"
 		],
 		"classes": [
+			"EmailFormatter",
 			"Formatter",
 			"PhoneFormatter"
 		]

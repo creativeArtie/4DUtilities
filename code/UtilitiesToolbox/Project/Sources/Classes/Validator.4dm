@@ -23,6 +23,32 @@ $accessParam : cs:C1710.Accessor)->$self : cs:C1710.Validator
 	
 	This:C1470.checking.push($checker)
 	
+Function addManadatoryFormat($accessParam : cs:C1710.AccessFormat; \
+$formatterParam : cs:C1710.Formatter)->$self : cs:C1710.Validator
+	
+	var $assert : Object
+	$assert:=wk_assertParameterSetup(Count parameters:C259)
+	
+	var $checker : Object
+	$checker:=New object:C1471("manadatory"; True:C214)
+	
+	If (wk_assertObjectParameter($assert; $checker; "access"))
+		$checker.access:=$accessParam
+	End if 
+	
+	var $formatter : cs:C1710.Formatter
+	If (wk_assertLocalParameter($assert; ->$formatter))
+		$formatter:=$formatterParam
+	End if 
+	
+	wk_assertParameterCount($assert)
+	
+	$checker.access.formatter:=$formatter
+	
+	$checker.check:=cs:C1710.CheckFormat.new($formatter)
+	
+	This:C1470.checking.push($checker)
+	
 Function addOptional($checkParam : cs:C1710.Checker; \
 $accessParam : cs:C1710.Accessor)->$self : cs:C1710.Validator
 	
@@ -42,6 +68,31 @@ $accessParam : cs:C1710.Accessor)->$self : cs:C1710.Validator
 	
 	This:C1470.checking.push($checker)
 	
+Function addOptionalFormat($accessParam : cs:C1710.AccessFormat; \
+$formatterParam : cs:C1710.Formatter)->$self : cs:C1710.Validator
+	
+	var $assert : Object
+	$assert:=wk_assertParameterSetup(Count parameters:C259)
+	
+	var $checker : Object
+	$checker:=New object:C1471("manadatory"; False:C215)
+	
+	If (wk_assertObjectParameter($assert; $checker; "access"))
+		$checker.access:=$accessParam
+	End if 
+	
+	var $formatter : cs:C1710.Formatter
+	If (wk_assertLocalParameter($assert; ->$formatter))
+		$formatter:=$formatterParam
+	End if 
+	
+	wk_assertParameterCount($assert)
+	
+	$checker.access.formatter:=$formatter
+	
+	$checker.check:=cs:C1710.CheckFormat.new($formatter)
+	
+	This:C1470.checking.push($checker)
 Function runCheck
 	wk_assertNoParameters(Count parameters:C259)
 	var $check : Object

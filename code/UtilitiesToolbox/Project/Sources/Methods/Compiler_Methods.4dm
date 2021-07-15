@@ -27,13 +27,6 @@ C_TEXT:C284(getPointerName; $0)
 C_POINTER:C301(getPointerName; $1)
 C_LONGINT:C283(orderPhoneFormats; $0)
 C_TEXT:C284(orderPhoneFormats; $1)
-C_OBJECT:C1216(validate_format; $0)
-C_OBJECT:C1216(validate_format; $1)
-C_TEXT:C284(validate_format; $2)
-C_TEXT:C284(validate_format; $3)
-C_TEXT:C284(validate_format; $4)
-C_TEXT:C284(validate_format; $5)
-C_BOOLEAN:C305(validate_format; $6)
 C_BOOLEAN:C305(wk_assertLocalParameter; $0)
 C_OBJECT:C1216(wk_assertLocalParameter; $1)
 C_POINTER:C301(wk_assertLocalParameter; $2)
@@ -76,18 +69,6 @@ C_VARIANT:C1683(wk_setValueToObject; $2)
 C_OBJECT:C1216(wk_updateValueFromObject; $0)
 C_OBJECT:C1216(wk_updateValueFromObject; $1)
 C_OBJECT:C1216(wk_updateValueFromObject; $2)
-C_OBJECT:C1216(wk_validateOptionalFormat; $0)
-C_OBJECT:C1216(wk_validateOptionalFormat; $1)
-C_TEXT:C284(wk_validateOptionalFormat; $2)
-C_TEXT:C284(wk_validateOptionalFormat; $3)
-C_TEXT:C284(wk_validateOptionalFormat; $4)
-C_TEXT:C284(wk_validateOptionalFormat; $5)
-C_OBJECT:C1216(wk_validateRequireFormat; $0)
-C_OBJECT:C1216(wk_validateRequireFormat; $1)
-C_TEXT:C284(wk_validateRequireFormat; $2)
-C_TEXT:C284(wk_validateRequireFormat; $3)
-C_TEXT:C284(wk_validateRequireFormat; $4)
-C_TEXT:C284(wk_validateRequireFormat; $5)
 C_OBJECT:C1216(wk_validate_ageValue; $0)
 C_REAL:C285(wk_validate_ageValue; $1)
 C_REAL:C285(wk_validate_ageValue; $2)
@@ -115,3 +96,40 @@ C_OBJECT:C1216(wk_validate_trueValue; $1)
 C_OBJECT:C1216(wk_validate_ifValue; $0)
 C_OBJECT:C1216(wk_validate_ifValue; $1)
 C_OBJECT:C1216(wk_validate_ifValue; $2)
+
+//doc_buildValue_
+C_BOOLEAN:C305(doc_buildValue_; $0)
+C_OBJECT:C1216(doc_buildValue_; $1)
+C_OBJECT:C1216(doc_buildValue_; $2)
+
+//doc_findFiles_
+C_OBJECT:C1216(doc_findFiles_; $0)
+C_TEXT:C284(doc_findFiles_; $1)
+
+//doc_outputBadge_
+C_TEXT:C284(doc_outputBadge_; $0)
+C_TEXT:C284(doc_outputBadge_; $1)
+C_TEXT:C284(doc_outputBadge_; $2)
+C_TEXT:C284(doc_outputBadge_; $3)
+
+//doc_splitLines
+C_COLLECTION:C1488(doc_splitLines; $0)
+C_OBJECT:C1216(doc_splitLines; $1)
+
+//doc_splitValueType_
+C_OBJECT:C1216(doc_splitValueType_; $0)
+C_TEXT:C284(doc_splitValueType_; $1)
+C_BOOLEAN:C305(doc_splitValueType_; $2)
+
+//wk_validate_formattedWidget
+C_OBJECT:C1216(wk_validate_formattedWidget; $0)
+C_TEXT:C284(wk_validate_formattedWidget; $1)
+C_TEXT:C284(wk_validate_formattedWidget; $2)
+
+//wk_createPhoneFormat
+C_OBJECT:C1216(wk_createPhoneFormat; $0)
+C_TEXT:C284(wk_createPhoneFormat; $1)
+
+//wk_createEmailFormat
+C_OBJECT:C1216(wk_createEmailFormat; $0)
+C_TEXT:C284(wk_createEmailFormat; $1)

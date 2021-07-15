@@ -3,6 +3,7 @@ Class constructor($type : Text)
 	This:C1470.findMatch:=False:C215
 	This:C1470.formatted:=""
 	This:C1470.value:=""
+	This:C1470.category:=""
 Function test($value : Text)->$result : Boolean
 	ASSERT:C1129(False:C215; "Needs implementation.")
 	

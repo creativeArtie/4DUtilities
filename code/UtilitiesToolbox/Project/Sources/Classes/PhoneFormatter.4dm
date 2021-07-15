@@ -1,8 +1,9 @@
 Class extends Formatter
-Class constructor($countryCode : Text)
+Class constructor($homeCountry : Text)
 	Super:C1705("phone")
 	
-	This:C1470.countryCode:=$countryCode
+	This:C1470.homeCountry:=$homeCountry
+	This:C1470.category:=""
 	
 Function extract($input : Text)->$answer : Text
 	var $input : Text
@@ -24,8 +25,8 @@ Function update($token : Text)
 		$search:=""
 		var $phoneFormats : 4D:C1709.DataClass
 		EXECUTE METHOD:C1007(<>TABLE_LOADER; $phoneFormats; "PhoneFormats")
-		If (This:C1470.countryCode#"")
-			$search:="(countryCode='"+This:C1470.countryCode+"') OR "
+		If (This:C1470.homeCountry#"")
+			$search:="(countryCode='"+This:C1470.homeCountry+"') OR "
 		End if 
 		
 		If (Length:C16($token)>=1)
@@ -43,7 +44,7 @@ Function update($token : Text)
 		$selection:=$phoneFormats.query($search)
 		
 		$selection:=$selection.orderByFormula(\
-			Formula:C1597(orderPhoneFormats(This:C1470.countryCode))\
+			Formula:C1597(orderPhoneFormats(This:C1470.homeCountry))\
 			)
 		
 		var $copy : Text
@@ -57,14 +58,16 @@ Function update($token : Text)
 			If (Match regex:C1019($entity.matchFormat; $copy))
 				This:C1470.formatted:=String:C10(Num:C11($copy); $entity.outputFormat)
 				This:C1470.findMatch:=True:C214
+				This:C1470.category:=$entity.countryCode
 				$trying:=False:C215
 				$i:=$selection.length
 			End if 
 			
-			If ($trying & (This:C1470.countryCode=$entity.countryCode))
+			If ($trying & (This:C1470.homeCountry=$entity.countryCode))
 				If (Match regex:C1019($entity.matchFormat; $entity.callingCode+$copy))
 					This:C1470.formatted:=String:C10(Num:C11($entity.callingCode+$copy); $entity.outputFormat)
 					This:C1470.findMatch:=True:C214
+					This:C1470.category:=$entity.countryCode
 					$trying:=False:C215
 					$i:=$selection.length
 				End if 

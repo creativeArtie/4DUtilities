@@ -1,5 +1,5 @@
 Class extends AccessField
-Class constructor($idParam : Text; $nameParam : Text; $formatterParam : cs:C1710.Formatter)
+Class constructor($idParam : Text; $nameParam : Text)
 	
 	var $assert : Object
 	$assert:=wk_assertParameterSetup(Count parameters:C259)
@@ -16,9 +16,8 @@ Class constructor($idParam : Text; $nameParam : Text; $formatterParam : cs:C1710
 	
 	Super:C1705($id; $name)
 	
-	If (wk_assertObjectParameter($assert; This:C1470; "formatter"))
-		This:C1470.formatter:=$formatterParam
-	End if 
+	This:C1470.formatter:=cs:C1710.Formatter.new("")
+	This:C1470.category:=""
 	
 	wk_assertParameterCount($assert)
 	
@@ -31,3 +30,15 @@ Function handleEvents
 		OBJECT Get pointer:C1124(Object named:K67:5; This:C1470.id)->:=This:C1470.formatter.formatted
 	End if 
 	
+Function updateWidget($typeParam : Integer)
+	
+	var $assert : Object
+	$assert:=wk_assertParameterSetup(Count parameters:C259)
+	
+	var $type
+	If (wk_assertLocalParameter($assert; ->$type))
+		$type:=$typeParam
+	End if 
+	wk_assertParameterCount($assert)
+	Super:C1706.updateWidget($type)
+	This:C1470.category:=This:C1470.formatter.category
