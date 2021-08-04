@@ -1,2 +1,0 @@
-//%attributes = {}
-$param:=${-1}

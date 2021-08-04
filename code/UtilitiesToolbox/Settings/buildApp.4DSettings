@@ -2,7 +2,7 @@
 <Preferences4D>
 
   <BuildApp>
-    <BuildCompiled>False</BuildCompiled>
+    <BuildCompiled>True</BuildCompiled>
     <IncludeAssociatedFolders>True</IncludeAssociatedFolders>
     <BuildComponent>True</BuildComponent>
     <BuildApplicationSerialized>False</BuildApplicationSerialized>
@@ -27,7 +27,7 @@
       <HardLink></HardLink>
     </CS>
     <BuildApplicationName>UtilitiesToolbox</BuildApplicationName>
-    <BuildWinDestFolder>..\UtilitiesToolbox_Build\</BuildWinDestFolder>
+    <BuildWinDestFolder>..\TestDemo\</BuildWinDestFolder>
     <ArrayExcludedPluginName>
       <ItemsCount>0</ItemsCount>
     </ArrayExcludedPluginName>

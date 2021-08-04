@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<!DOCTYPE macros SYSTEM "http://www.4d.com/dtd/2007/macros.dtd" >
+<macros>
+
+<macro name="Assert Parameter" in_menu="true" type_ahead="true" type_ahead_text="wk_assertParam">
+<text>var $assert : Object
+$assert:=wk_assertParameterSetup(Count parameters)
+
+// Check parameters with wk_localParam or wk_objectParam
+
+wk_assertParameterCount($assert)
+</text>
+</macro>
+
+<macro name="Assert Local Param" in_menu="true" type_ahead="true" type_ahead_text="wk_localParam">
+<text>var $_local
+If (wk_assertLocalParameter($assert; ->$_local))
+$_local:=$_localParam
+End if 
+
+</text>
+</macro>
+
+<macro name="Assert Object Parameter" in_menu="true" type_ahead="true" type_ahead_text="wk_objectParam">
+<text>If (wk_assertObjectParameter($assert; $_object; "_key"))
+$_object._key:=$_keyParam
+End if 
+</text>
+</macro>
+
+
+<macro name="Assert No Parameter" in_menu="true" type_ahead="true" type_ahead_text="wk_noParameter">
+<text>wk_assertNoParameters(Count parameters)
+</text>
+</macro>
+
+</macros>
