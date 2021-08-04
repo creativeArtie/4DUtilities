@@ -1,4 +1,4 @@
-//%attributes = {"shared":true}
+//%attributes = {}
 //! #brief factory for `cs.DocValue_`
 //! #author Wai-Kin
 #DECLARE($lineParam : cs:C1710.DocLine_; $sectionParam : cs:C1710.DocSection_)->$used : Boolean

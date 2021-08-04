@@ -8,7 +8,7 @@ sub projects:
 3. Value assertions 
 4. Validation
 
-**Please note that this code is not able to be use as a component, because it contains tables.**
+The compiled component is located as one the [Test Demo component](code/TestDemo/Components/UtilitiesToolbox.4dbase)
 
 ## Generating Documentation
 

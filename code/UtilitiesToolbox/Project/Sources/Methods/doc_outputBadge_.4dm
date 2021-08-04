@@ -1,4 +1,4 @@
-//%attributes = {"shared":true}
+//%attributes = {}
 //! #brief creates a bootstrap badge
 //! #author Wai-Kin Chau
 #DECLARE($typeParam : Text; $titleParam : Text; $textParam : Text)->$ans : Text

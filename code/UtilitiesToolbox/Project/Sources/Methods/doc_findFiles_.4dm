@@ -1,4 +1,4 @@
-//%attributes = {"shared":true}
+//%attributes = {}
 //! #brief finds the files for document generation
 //! #author Wai-Kin Chau
 #DECLARE($typeParam : Text)->$collection : Object

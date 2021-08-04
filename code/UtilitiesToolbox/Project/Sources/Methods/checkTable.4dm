@@ -1,4 +1,5 @@
 //%attributes = {}
+//! #brief Checks if a certain table is filled
 #DECLARE($issues : Collection; $tableName : Text; $fields : Collection)->$pass : Boolean
 var $continue : Boolean
 $continue:=True:C214
