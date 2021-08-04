@@ -1,5 +1,5 @@
 //%attributes = {}
-#DECLARE($text : Text)->$result : cs:C1710.CheckCaseSenitiveText
+#DECLARE($textParam : Text)->$result : cs:C1710.CheckCaseSenitiveText
 
 var $assert : Object
 $assert:=wk_assertParameterSetup(Count parameters:C259)

@@ -18,13 +18,14 @@ Class constructor($textParam : Text)
 	
 Function test($value : Variant)->$result : Boolean
 	
-	$0:=Length:C16($input)=Length:C16(This:C1470.text)
+	$0:=Length:C16($value)=Length:C16(This:C1470.text)
 	If ($0)
-		For ($elmt; 1; Length:C16($input))
-			If (Character code:C91(Substring:C12($input; $elmt; 1))#\
+		var $elmt : Integer
+		For ($elmt; 1; Length:C16($value))
+			If (Character code:C91(Substring:C12($value; $elmt; 1))#\
 				Character code:C91(Substring:C12(This:C1470.text; $elmt; 1)))
 				$0:=False:C215
-				$elmt:=Length:C16($input)
+				$elmt:=Length:C16($value)
 			End if 
 		End for 
 	End if 

@@ -133,3 +133,12 @@ C_TEXT:C284(wk_createPhoneFormat; $1)
 //wk_createEmailFormat
 C_OBJECT:C1216(wk_createEmailFormat; $0)
 C_TEXT:C284(wk_createEmailFormat; $1)
+
+//wk_validate_caseSensitiveValue
+C_OBJECT:C1216(wk_validate_caseSensitiveValue; $0)
+C_TEXT:C284(wk_validate_caseSensitiveValue; $1)
+
+//wk_validate_regexValue
+C_OBJECT:C1216(wk_validate_regexValue; $0)
+C_VARIANT:C1683(wk_validate_regexValue; ${2})
+C_TEXT:C284(wk_validate_regexValue; $1)

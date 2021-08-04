@@ -6,7 +6,7 @@ var ${2} : Variant
 var $assert : Object
 $assert:=wk_assertParameterSetup(Count parameters:C259)
 
-var $regex : Object
+var $regex : Text
 If (wk_assertLocalParameter($assert; ->$regex; \
 Formula:C1597(Bool:C1537(This:C1470.value))\
 ))

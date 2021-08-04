@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE base SYSTEM "http://www.4d.com/dtd/2007/base.dtd" >
 <base name="TestDemo" uuid="09F654AB10492F4A84CB54EAA4684414" collation_locale="en">
 	<schema name="DEFAULT_SCHEMA"/>
