@@ -2,7 +2,7 @@
 <Preferences4D>
 
   <BuildApp>
-    <BuildCompiled>True</BuildCompiled>
+    <BuildCompiled>False</BuildCompiled>
     <IncludeAssociatedFolders>True</IncludeAssociatedFolders>
     <BuildComponent>True</BuildComponent>
     <BuildApplicationSerialized>False</BuildApplicationSerialized>
