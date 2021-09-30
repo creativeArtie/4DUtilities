@@ -8,7 +8,7 @@ $default:=New object:C1471(\
 "key1"; 123; \
 "key2"; "World"; \
 "filledChild"; New object:C1471("key3"; 123; \
-"key4"; "Joy"; \
+"key4"; "Joy"\
 ); \
 "emptyChild"; New object:C1471()\
 )
