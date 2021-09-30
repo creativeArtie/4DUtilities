@@ -1,4 +1,4 @@
-﻿{
+{
 	"Accessors": {
 		"methods": [
 			"Compiler_Variables",
@@ -81,6 +81,19 @@
 			"EmailFormatter",
 			"Formatter",
 			"PhoneFormatter"
+		]
+	},
+	"JSONViewer": {
+		"methods": [
+			"jsonToList",
+			"jsonToList1",
+			"wk_viewJSON"
+		],
+		"forms": [
+			"Test"
+		],
+		"classes": [
+			"JsonTree"
 		]
 	},
 	"Objects": {
