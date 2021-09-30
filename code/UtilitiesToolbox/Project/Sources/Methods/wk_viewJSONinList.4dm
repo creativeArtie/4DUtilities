@@ -1,4 +1,4 @@
-//%attributes = {}
+//%attributes = {"shared":true}
 #DECLARE($jsonParam : Object; $listPtrParam : Pointer)->$root : Integer
 
 var $assert : Object
@@ -32,4 +32,4 @@ End if
 
 wk_assertParameterCount($assert)
 
-$root:=jsonToList1($json)
+$root:=jsonToList($json)

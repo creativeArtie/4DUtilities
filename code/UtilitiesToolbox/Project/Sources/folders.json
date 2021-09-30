@@ -86,11 +86,8 @@
 	"JSONViewer": {
 		"methods": [
 			"jsonToList",
-			"jsonToList1",
-			"wk_viewJSON"
-		],
-		"forms": [
-			"Test"
+			"wk_viewJSONinList",
+			"wk_viewJSONinListBox"
 		],
 		"classes": [
 			"JsonTree"

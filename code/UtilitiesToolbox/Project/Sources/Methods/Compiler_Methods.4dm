@@ -142,3 +142,16 @@ C_TEXT:C284(wk_validate_caseSensitiveValue; $1)
 C_OBJECT:C1216(wk_validate_regexValue; $0)
 C_VARIANT:C1683(wk_validate_regexValue; ${2})
 C_TEXT:C284(wk_validate_regexValue; $1)
+
+//jsonToList
+C_LONGINT:C283(jsonToList; $0)
+C_VARIANT:C1683(jsonToList; $1)
+
+//wk_viewJSONinList
+C_LONGINT:C283(wk_viewJSONinList; $0)
+C_OBJECT:C1216(wk_viewJSONinList; $1)
+C_POINTER:C301(wk_viewJSONinList; $2)
+
+//wk_viewJSONinListBox
+C_OBJECT:C1216(wk_viewJSONinListBox; $1)
+C_POINTER:C301(wk_viewJSONinListBox; $2)

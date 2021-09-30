@@ -1,4 +1,4 @@
-//%attributes = {}
+//%attributes = {"shared":true}
 #DECLARE($jsonParam : Object; $listBoxParam : Pointer)
 
 var $assert : Object
@@ -37,6 +37,7 @@ If ($number>0)
 	var $tree : cs:C1710.JsonTree
 	$tree:=cs:C1710.JsonTree.new($json)
 	
+	var $rows : Collection
 	$rows:=$tree.listRows(LISTBOX Get number of columns:C831($listBox->))
 	
 	ARRAY TEXT:C222($arrColNames; 0)

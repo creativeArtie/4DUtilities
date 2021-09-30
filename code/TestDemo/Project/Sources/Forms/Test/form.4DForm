@@ -39,18 +39,17 @@
 				"List Box": {
 					"type": "listbox",
 					"left": 32,
-					"top": 41,
-					"width": 411,
+					"top": 35,
+					"width": 253,
 					"height": 262,
 					"events": [
-						"onLoad",
-						"onClick",
-						"onDataChange",
-						"onSelectionChange",
-						"onHeaderClick"
+						"onLoad"
 					],
 					"method": "ObjectMethods/List Box.4dm",
 					"staticColumnCount": 2,
+					"dataSource": "wk_viewJSONinListBox",
+					"showHeaders": false,
+					"stroke": "automatic",
 					"columns": [
 						{
 							"header": {
@@ -61,7 +60,9 @@
 							"footer": {
 								"name": "Footer1"
 							},
-							"dataSource": ""
+							"dataSource": "",
+							"width": 230,
+							"stroke": "automatic"
 						},
 						{
 							"header": {
@@ -72,7 +73,8 @@
 							"footer": {
 								"name": "Footer3"
 							},
-							"dataSource": ""
+							"dataSource": "",
+							"visibility": "hidden"
 						},
 						{
 							"header": {
@@ -83,7 +85,8 @@
 							"footer": {
 								"name": "Footer2"
 							},
-							"dataSource": ""
+							"dataSource": "",
+							"visibility": "hidden"
 						},
 						{
 							"header": {
@@ -93,24 +96,25 @@
 							"name": "Column4",
 							"footer": {
 								"name": "Footer4"
-							}
+							},
+							"visibility": "hidden",
+							"stroke": "automatic",
+							"fontWeight": "bold"
 						}
 					]
 				},
 				"JsonList": {
 					"type": "list",
-					"left": 463,
-					"top": 50,
-					"width": 193,
-					"height": 176,
-					"events": [
-						"onSelectionChange"
-					]
+					"left": 305,
+					"top": 35,
+					"width": 253,
+					"height": 256,
+					"events": []
 				}
 			}
 		}
 	],
-	"geometryStamp": 8,
+	"geometryStamp": 36,
 	"editor": {
 		"activeView": "View 1",
 		"defaultView": "View 1",

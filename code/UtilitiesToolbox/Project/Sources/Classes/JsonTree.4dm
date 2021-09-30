@@ -48,9 +48,9 @@ Function getSize()->$result : Integer
 		$result:=1
 	Else 
 		var $child : cs:C1710.JsonTree
-		For ($child; This:C1470.children)
+		For each ($child; This:C1470.children)
 			$result:=$result+$child.getSize()
-		End for 
+		End for each 
 	End if 
 	
 Function listRows($columnsParam : Integer; $keysParam : Collection)->$result : Collection
