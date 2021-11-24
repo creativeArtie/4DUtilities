@@ -47,6 +47,25 @@
 			"wk_doc_run"
 		]
 	},
+	"Documenting": {
+		"methods": [
+			"doc_parseColonDeclare",
+			"doc_parseDeclareLine",
+			"doc_parseFile",
+			"doc_parseFolders",
+			"doc_parseLine",
+			"doc_parseMethod",
+			"doc_parseVarLine",
+			"test_parser"
+		],
+		"classes": [
+			"ParsedParamVar",
+			"ParsedReturnVar",
+			"ParsedVariable",
+			"RawFile",
+			"RawLine"
+		]
+	},
 	"Exceptions": {
 		"methods": [
 			"error_addException",

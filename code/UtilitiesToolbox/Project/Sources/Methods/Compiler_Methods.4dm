@@ -20,7 +20,6 @@ C_OBJECT:C1216(error_create; $3)
 C_TEXT:C284(error_importanceToText; $0)
 C_REAL:C285(error_importanceToText; $1)
 C_COLLECTION:C1488(error_listUncaught; $0)
-C_OBJECT:C1216(getExceptionDataClass; $0)
 C_OBJECT:C1216(getMethodCaller; $0)
 C_TEXT:C284(getMethodCallerText; $0)
 C_TEXT:C284(getPointerName; $0)
@@ -155,3 +154,38 @@ C_POINTER:C301(wk_viewJSONinList; $2)
 //wk_viewJSONinListBox
 C_OBJECT:C1216(wk_viewJSONinListBox; $1)
 C_POINTER:C301(wk_viewJSONinListBox; $2)
+
+//doc_parseDoc
+C_OBJECT:C1216(doc_parseLine; $0)
+C_TEXT:C284(doc_parseLine; $1)
+
+//doc_parseFile
+C_OBJECT:C1216(doc_parseFile; $0)
+C_OBJECT:C1216(doc_parseFile; $1)
+
+//doc_parseMethod
+C_OBJECT:C1216(doc_parseMethod; $0)
+C_OBJECT:C1216(doc_parseMethod; $1)
+
+//test_parser
+C_TEXT:C284(test_parser; $1)
+C_VARIANT:C1683(test_parser; $2)
+
+//doc_parseColonDeclare
+C_OBJECT:C1216(doc_parseColonDeclare; $0)
+C_TEXT:C284(doc_parseColonDeclare; $1)
+
+//doc_parseDeclareLine
+C_OBJECT:C1216(doc_parseDeclareLine; $1)
+C_LONGINT:C283(doc_parseDeclareLine; $2)
+C_LONGINT:C283(doc_parseDeclareLine; $3)
+C_COLLECTION:C1488(doc_parseDeclareLine; $4)
+
+//doc_parseVarLine
+C_OBJECT:C1216(doc_parseVarLine; $1)
+C_LONGINT:C283(doc_parseVarLine; $2)
+C_LONGINT:C283(doc_parseVarLine; $3)
+C_COLLECTION:C1488(doc_parseVarLine; $4)
+
+//test_parser
+C_TEXT:C284(test_parser; $0)
