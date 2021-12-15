@@ -1,7 +1,6 @@
 {
 	"Accessors": {
 		"methods": [
-			"Compiler_Variables",
 			"orderPhoneFormats",
 			"wk_validate_comboboxWidget",
 			"wk_validate_fieldWidget",
@@ -44,19 +43,23 @@
 			"values"
 		],
 		"methods": [
-			"wk_doc_run"
+			"wk_docRun"
 		]
 	},
 	"Documenting": {
 		"methods": [
 			"doc_parseColonDeclare",
 			"doc_parseDeclareLine",
-			"doc_parseFile",
-			"doc_parseFolders",
 			"doc_parseLine",
 			"doc_parseMethod",
 			"doc_parseVarLine",
-			"test_parser"
+			"doc_scanFile",
+			"doc_scanFolder",
+			"doc_scanForms",
+			"doc_scanTableForms",
+			"doc_toFolderSource",
+			"test_parser",
+			"wk_docProject"
 		],
 		"classes": [
 			"ParsedParamVar",

@@ -21,12 +21,13 @@ Class constructor($nameParam : Text; $typeParam : Text; $commentParam : cs:C1710
 	wk_assertParameterCount($assert)
 	
 	This:C1470.uses:=New collection:C1472
-	This:C1470.useCount:=0
 	Case of 
-		: (This:C1470.name:="$@")
+		: (This:C1470.name="$@")
 			This:C1470.scope:="local"
-		: (This:C1470.name:="<>@")
+		: (This:C1470.name="<>@")
 			This:C1470.scope:="global"
 		Else 
 			This:C1470.scope:="processor"
 	End case 
+Function addUse($line : cs:C1710.RawLine)
+	This:C1470.uses.append($line)

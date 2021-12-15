@@ -16,8 +16,6 @@ End if
 
 wk_assertParameterCount($assert)
 
-
-
 var $path : Text
 var $baseFolder : 4D:C1709.Folder
 $collection:=New object:C1471

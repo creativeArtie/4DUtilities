@@ -1,5 +1,5 @@
 //%attributes = {}
-#DECLARE($fileParam : 4D:C1709.File)->$data : cs:C1710.RawFile
+#DECLARE($fileParam : 4D:C1709.File; $hasAttrParam : Boolean)->$data : cs:C1710.RawFile
 
 // List of watching varibles
 // $lines.length
@@ -17,16 +17,17 @@ $lines:=New collection:C1472
 
 var $assert : Object
 $assert:=wk_assertParameterSetup(Count parameters:C259)
-var $folder : 4D:C1709.Folder
-var $default : 4D:C1709.File
-$folder:=Folder:C1567(Get 4D folder:C485(Database folder:K5:14); fk platform path:K87:2)
-$folder:=Folder:C1567($folder.path+"Project"; fk posix path:K87:1)
-$folder:=Folder:C1567($folder.path+"Sources"; fk posix path:K87:1)
-$folder:=Folder:C1567($folder.path+"Methods"; fk posix path:K87:1)
-$default:=File:C1566($folder.path+"test_parser.4dm"; fk posix path:K87:1)
 var $file : 4D:C1709.File
-If (wk_assertLocalParameter($assert; ->$file; $default))
+If (wk_assertLocalParameter($assert; ->$file; File:C1566(Backup log file:K5:45)))
 	$file:=$fileParam
+Else 
+	$file:=File:C1566(\
+		doc_toFolderSource("Methods").path+"test_parser.4dm"; fk posix path:K87:1)
+End if 
+
+var $hasAttr
+If (wk_assertLocalParameter($assert; ->$hasAttr; False:C215))
+	$hasAttr:=$hasAttrParam
 End if 
 
 wk_assertParameterCount($assert)
@@ -59,7 +60,11 @@ $MULTI_DOC:=Get call chain:C1662[0].line
 $MULTI_DOC_END:=Get call chain:C1662[0].line
 
 var $state; $ptr : Integer
-$state:=$BEGIN
+If ($hasAttr)
+	$state:=$BEGIN
+Else 
+	$state:=$CODE_PARSED
+End if 
 
 var $attributes : Object
 var $text : Text

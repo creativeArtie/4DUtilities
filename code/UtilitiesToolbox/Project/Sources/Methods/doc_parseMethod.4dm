@@ -6,8 +6,10 @@ var $assert : Object
 $assert:=wk_assertParameterSetup(Count parameters:C259)
 
 var $methodFile
-If (wk_assertLocalParameter($assert; ->$methodFile; doc_parseFile))
+If (wk_assertLocalParameter($assert; ->$methodFile; Null:C1517))
 	$methodFile:=$methodFileParam
+Else 
+	$methodFile:=doc_scanFile
 End if 
 
 wk_assertParameterCount($assert)

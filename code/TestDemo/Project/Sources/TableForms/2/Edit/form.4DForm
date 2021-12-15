@@ -1,4 +1,4 @@
-﻿{
+{
 	"$4d": {
 		"version": "1",
 		"kind": "form"
@@ -182,6 +182,12 @@
 	"geometryStamp": 9,
 	"method": "method.4dm",
 	"editor": {
+		"groups": {
+			"Group": [
+				"age",
+				"Text3"
+			]
+		},
 		"activeView": "View 1",
 		"defaultView": "View 1",
 		"views": {
