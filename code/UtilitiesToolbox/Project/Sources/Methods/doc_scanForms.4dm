@@ -30,34 +30,19 @@ If ($folders.exists)
 	
 	For each ($folder; $folders.folders())
 		Progress SET PROGRESS($process; $ptr/$total; "Scanning "+$folder.name)
-		var $file; $files
-		If ($slowDown>0)
-			DELAY PROCESS:C323(Current process:C322; $slowDown)
+		var $file : 4D:C1709.File
+		var $method : cs:C1710.RawFile
+		var $form : Object
+		$form:=New object:C1471
+		$form.interface:=doc_scanInterface($name+"/"+$folder.name)
+		$form.objectMethods:=New object:C1471
+		For each ($file; Folder:C1567($folder.path+"ObjectMethods").files())
+			OB SET:C1220($form.objectMethods; $file.name; doc_scanFile($file))
+		End for each 
+		$file:=File:C1566($folder.path+"method.4dm")
+		If ($file.exists)
+			$form.main:=doc_scanFile($file)
 		End if 
-		var $folderPath : Text
-		var $method : Object
-		$folderPath:="Forms/"+$folder.name
-		If (Folder:C1567($folderPath+"/ProjectMethods").exists)
-			$files:=doc_scanFolder($folderPath+"/ObjectMethods"; False:C215; $slowDown)
-		Else 
-			$files:=New object:C1471
-		End if 
-		
-		var $main : 4D:C1709.File
-		$main:=File:C1566(doc_toFolderSource($folderPath).path+"method.4dm")
-		If ($main.exists)
-			Progress SET PROGRESS($process; -1; "Scaninng main method")
-			If ($slowDown>0)
-				DELAY PROCESS:C323(Current process:C322; $slowDown)
-			End if 
-			
-			$method:=doc_scanFile($main; False:C215)
-			OB SET:C1220($data; $folder.name; New object:C1471("objectMethods"; $files; "main"; $method))
-		Else 
-			
-			OB SET:C1220($data; $folder.name; New object:C1471("objectMethods"; $files))
-		End if 
-		
 		$ptr:=$ptr+1
 	End for each 
 	

@@ -51,5 +51,21 @@ If ($continue)
 			$build.call(Null:C1517; "matchFormat"; "string"); \
 			$build.call(Null:C1517; "outputFormat"; "string")\
 			))
+		
+		$result:=$result & checkTable($issues; "UnitTests"; New collection:C1472(\
+			$build.call(Null:C1517; "testName"; "string"); \
+			$build.call(Null:C1517; "category"; "string"); \
+			$build.call(Null:C1517; "methodName"; "string")\
+			))
+		
+		$result:=$result & checkTable($issues; "TestResults"; New collection:C1472(\
+			$build.call(Null:C1517; "dateTested"; "date"); \
+			$build.call(Null:C1517; "testCounts"; "number"); \
+			$build.call(Null:C1517; "testFails"; "number"); \
+			$build.call(Null:C1517; "testPasses"; "number"); \
+			$build.call(Null:C1517; "categoryTested"; "string"); \
+			$build.call(Null:C1517; "report"; "object")\
+			))
+		
 	End if 
 End if 

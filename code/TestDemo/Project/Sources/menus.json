@@ -1,17 +1,17 @@
-﻿{
+{
 	"bars": [
 		{
-			"id": 1,
-			"name": "Barre #1",
+			"id": 3,
+			"name": "Test Bar",
 			"items": [
 				{
 					"link": 32001
 				},
 				{
-					"link": 32002
+					"link": 32003
 				},
 				{
-					"link": 32003
+					"link": 32000
 				}
 			]
 		}
@@ -88,6 +88,24 @@
 				{
 					"title": ":xliff:CommonMenuItemDesign",
 					"action": "design"
+				}
+			]
+		},
+		{
+			"link": 32000,
+			"title": "Testing",
+			"items": [
+				{
+					"title": "Unit Test",
+					"method": "runTest"
+				},
+				{
+					"title": "Documentation",
+					"method": "runDoc"
+				},
+				{
+					"title": "Error Demo",
+					"method": "error_demo"
 				}
 			]
 		}

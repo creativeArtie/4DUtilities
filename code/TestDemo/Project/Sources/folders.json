@@ -1,4 +1,4 @@
-﻿{
+{
 	"(Utilities)": {},
 	"exceptions": {
 		"methods": [
@@ -10,8 +10,7 @@
 	"Object": {
 		"methods": [
 			"ut_getValueFromObject",
-			"ut_setValueToObject",
-			"ut_updateValuesFromObject"
+			"ut_setValueToObject"
 		]
 	},
 	"Parameters": {

@@ -47,26 +47,14 @@
 		]
 	},
 	"Documenting": {
+		"groups": [
+			"old",
+			"parsing",
+			"scanning"
+		],
 		"methods": [
-			"doc_parseColonDeclare",
-			"doc_parseDeclareLine",
-			"doc_parseLine",
-			"doc_parseMethod",
-			"doc_parseVarLine",
-			"doc_scanFile",
-			"doc_scanFolder",
-			"doc_scanForms",
-			"doc_scanTableForms",
-			"doc_toFolderSource",
 			"test_parser",
 			"wk_docProject"
-		],
-		"classes": [
-			"ParsedParamVar",
-			"ParsedReturnVar",
-			"ParsedVariable",
-			"RawFile",
-			"RawLine"
 		]
 	},
 	"Exceptions": {
@@ -118,8 +106,22 @@
 	"Objects": {
 		"methods": [
 			"wk_getValueFromObject",
-			"wk_setValueToObject",
-			"wk_updateValueFromObject"
+			"wk_runIfObjectValueSet",
+			"wk_setUndefinedObjectValue"
+		]
+	},
+	"old": {
+		"methods": [
+			"doc_parseColonDeclare",
+			"doc_parseDeclareLine",
+			"doc_parseLine",
+			"doc_parseMethod",
+			"doc_parseVarLine"
+		],
+		"classes": [
+			"ParsedParamVar",
+			"ParsedReturnVar",
+			"ParsedVariable"
 		]
 	},
 	"Parameters": {
@@ -132,6 +134,40 @@
 			"wk_assertParameterSetup"
 		]
 	},
+	"parsing": {
+		"methods": [
+			"doc_findLocalVariable",
+			"doc_findParameter"
+		],
+		"classes": [
+			"DocBase",
+			"DocClass",
+			"DocClassConstructor",
+			"DocClassFunction",
+			"DocClassMethodBase",
+			"DocCode",
+			"DocLocalVariable",
+			"DocNamedMethod",
+			"DocParameter",
+			"DocRoot",
+			"DocVariable"
+		]
+	},
+	"scanning": {
+		"methods": [
+			"doc_scanFile",
+			"doc_scanFolder",
+			"doc_scanForms",
+			"doc_scanInterface",
+			"doc_scanMenus",
+			"doc_scanTableForms",
+			"doc_toFolderSource"
+		],
+		"classes": [
+			"RawFile",
+			"RawLine"
+		]
+	},
 	"sections": {
 		"classes": [
 			"DocClass_",
@@ -140,6 +176,16 @@
 			"DocMethod_",
 			"DocSection_",
 			"DocTree_"
+		]
+	},
+	"UnitTesting": {
+		"methods": [
+			"wk_assertValue",
+			"wk_createUnitTest"
+		],
+		"classes": [
+			"Test",
+			"UnitTest"
 		]
 	},
 	"utils": {

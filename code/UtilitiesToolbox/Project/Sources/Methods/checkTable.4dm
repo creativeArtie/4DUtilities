@@ -3,7 +3,7 @@
 #DECLARE($issues : Collection; $tableName : Text; $fields : Collection)->$pass : Boolean
 var $continue : Boolean
 $continue:=True:C214
-var $table : 4D:C1709.DataClass
+var $table : 4D:C1709.DataClass  //! the table to check
 EXECUTE METHOD:C1007(<>TABLE_LOADER; $table; $tableName)
 If ($table=Null:C1517)
 	$issues.push("Missing "+$tableName+" table.")
