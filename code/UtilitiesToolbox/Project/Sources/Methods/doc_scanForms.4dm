@@ -9,9 +9,12 @@ If (wk_assertLocalParameter($assert; ->$slowDown))
 End if 
 
 var $name : Text
+var $table : Text
 If (wk_assertLocalParameter($assert; ->$name; "Forms"))
 	$name:=$nameParam
 End if 
+
+$data:=New object:C1471
 
 wk_assertParameterCount($assert)
 
@@ -19,7 +22,7 @@ var $folder; $folders : 4D:C1709.Folder
 $folders:=doc_toFolderSource($name)
 If ($folders.exists)
 	var $ptr; $total : Integer
-	$total:=$folders.length
+	$total:=$folders.folders().length
 	$ptr:=0
 	
 	$data:=New object:C1471
@@ -30,6 +33,7 @@ If ($folders.exists)
 	
 	For each ($folder; $folders.folders())
 		Progress SET PROGRESS($process; $ptr/$total; "Scanning "+$folder.name)
+		DELAY PROCESS:C323(Current process:C322; $slowDown)
 		var $file : 4D:C1709.File
 		var $method : cs:C1710.RawFile
 		var $form : Object
@@ -43,8 +47,12 @@ If ($folders.exists)
 		If ($file.exists)
 			$form.main:=doc_scanFile($file)
 		End if 
+		
+		var $formName : Text
+		$formName:=$name+"/"+$folder.name
+		$data[$formName]:=$form
+		
 		$ptr:=$ptr+1
 	End for each 
-	
 	Progress QUIT($process)
 End if 

@@ -14,6 +14,7 @@
 
 var $lines : Collection
 $lines:=New collection:C1472
+$functions:=New collection:C1472
 
 var $assert : Object
 $assert:=wk_assertParameterSetup(Count parameters:C259)
@@ -223,6 +224,14 @@ For ($ptr; 1; Length:C16($text))
 		If (($code#"") | ($comment#"") | ($doc#""))
 			$lines.push(cs:C1710.RawLine.new($code; $comment; $doc; $row))
 		End if 
+		
+		var $FUNCTION_CONST : Text
+		$FUNCTION_CONST:="Function "
+		If ($code=($FUNCTION_CONST+"@"))
+			var $funcName : Text
+			$funcName:=Substring:C12($code; Length:C16($FUNCTION_CONST)+1)
+			$functions.push($funcName)
+		End if 
 		$code:=""
 		$comment:=""
 		$doc:=""
@@ -230,4 +239,4 @@ For ($ptr; 1; Length:C16($text))
 	End if 
 End for 
 
-$data:=cs:C1710.RawFile.new($file; $attributes; $lines)
+$data:=cs:C1710.RawFile.new($file; $attributes; $lines; $functions)

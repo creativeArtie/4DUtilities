@@ -1,5 +1,11 @@
 {
 	"(Utilities)": {},
+	"Class": {
+		"classes": [
+			"BaseClass",
+			"TestClass"
+		]
+	},
 	"exceptions": {
 		"methods": [
 			"error_demo",

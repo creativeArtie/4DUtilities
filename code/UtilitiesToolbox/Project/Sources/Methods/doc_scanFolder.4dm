@@ -42,10 +42,8 @@ If ($folder.exists)
 	
 	For each ($file; $files)
 		Progress SET PROGRESS($process; $ptr/$total; "Scanning "+$file.name)
+		DELAY PROCESS:C323(Current process:C322; $slowDown)
 		var $method : cs:C1710.RawFile
-		If ($slowDown>0)
-			DELAY PROCESS:C323(Current process:C322; $slowDown)
-		End if 
 		$return[$file.name]:=doc_scanFile($file; $hasAttr)
 		$ptr:=$ptr+1
 	End for each 
